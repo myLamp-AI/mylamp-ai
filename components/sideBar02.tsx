@@ -118,7 +118,7 @@ export default function SideBar(){
         onChange={handleChange}
         className=" w-12 appearance-none font-bold text-right"
         style={{ WebkitAppearance: 'none' }}
-      />
+      />%
       
       <CircleProgress percentage={percentage} />
         </div>

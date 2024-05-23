@@ -42,9 +42,9 @@ const CircleProgress: React.FC<CircleProgressProps> = ({ percentage }) => {
       </div>
            <div className='z=0 relative -top-[68px] left-[1.5px]'>
       <Image
-             src="/robot icon.svg"
+             src="/robot icon (1).svg"
              alt="Verceldcjncn Logo"
-             className="dark:invert"
+             className=""
              width={45}
              height={45}
             />
