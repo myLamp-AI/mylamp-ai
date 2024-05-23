@@ -16,7 +16,7 @@ const ImageComponent: React.FC<ImageProps> = ({ src, alt, width, height, priorit
       width={width}
       height={height}
       loading={priority ? "eager" : "lazy"}
-      className="dark:invert" 
+      className="" 
     />
   );
 };
