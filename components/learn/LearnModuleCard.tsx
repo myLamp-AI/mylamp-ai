@@ -11,23 +11,22 @@ export default function LearnModuleCard() {
 
     return (
         <>
-            <div  className="bg-white my-3 rounded-lg">
-                <div className=" flex sm:w-30 shadow rounded-t-md p-2 rouned-b-none mb-3">
-                    <div className="w-full xl:w-1/6  ">
-                        <Image
+            <div  className="bg-white my-3 rounded-lg mb-5">
+                <div className=" lg:flex grid grid-flow-row  sm:w-30 shadow rounded-t-md p-2 rouned-b-none mb-3">
+                    <div className="w-full lg:w-1/6  ">
+                        <img
                             src="/ai.svg"
                             alt="Verceldcjncn Logo"
-                            className="    mt-6 ml-5 mb-5 border-rad mr-4"
-                            width={90}
-                            height={90}
-                            priority
+                            className="border lg:ml-4 bg-purple-100 rounded-full p-2 lg:w-30    mt-6  mb-5 border-rad mr-4"
+                          
+                            
                         />
                     </div>
-                    <div  className="w-full sm:w-1/2  ">
-                        <h4   className="mb-2 mt-3 underline text-purple-700 font-bold">
+                    <div  className="lg:w-3/6 lg:grid lg:grid-flow-row ">
+                        <h4   className="mb-2 lg:mt-2 underline text-purple-700 font-bold">
                             Module 1
                         </h4>
-                        <h1 className=" sm:text-xs md:text-md mb-4 mt-2 xl:text-4xl font-bold">
+                        <h1 className=" sm:text-xs md:text-md mb-4  xl:text-4xl font-bold">
                             {" "}
                             Tech 101: Starting in Tech
                         </h1>
@@ -36,12 +35,12 @@ export default function LearnModuleCard() {
                             7 Lessons 7 weeks 7 credits
                         </p>
                     </div>
-                    <div className=" mt-6 w-40">
-                        <h1 className="font-bold text-gray-600 xl:text-md sm:text-xs">Grade</h1>
+                    <div className=" lg:grid lg:justify-center lg:mt-3 lg:w-1/6 lg:mx-auto ">
+                        <h1 className="  font-bold text-gray-600 xl:text-md sm:text-xs lg:mt-5">Grade</h1>
                         <span className="text-sm">66%</span>
                     </div>
 
-                    <div className="flex">
+                    <div className="lg:flex  hidden ">
                         <Image
                             src="/Line 1.svg"
                             alt="Verceldcjncn Logo"
@@ -52,16 +51,17 @@ export default function LearnModuleCard() {
                         />
                     </div>
 
-                    <div className="mt-4">
-                        <div className="bg-gray-200 rounded-full h-2">
-                            <div className="bg-blue-500 mt-7 rounded-full h-2"></div>
-                        </div>
+                    <div className="mt-4 lg:w-2/6">
+                       
 
                         <div>
-                            <p className="text-gray-600 text-sm mt-2">Progress: 66%</p>
+                            <p className="text-gray-600 lg:mb-4 font-bold text-sm mt-2 mb-3">Progress: 66%</p>
+                        </div>
+                        <div className="bg-gray-200 rounded-full h-2">
+                            <div className="bg-blue-500  rounded-full h-2"></div>
                         </div>
                     </div>
-                    <div  className="ml-5 mt-10" onClick={() => setShowCollapse(!showCollapse)}>
+                    <div  className="lg:mt-10 mt-5 grid justify-center" onClick={() => setShowCollapse(!showCollapse)}>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
