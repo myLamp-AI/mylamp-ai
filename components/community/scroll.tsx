@@ -27,7 +27,7 @@ const Carousel2: React.FC = () => {
   };
 
   return (
-    <div className="carousel-container relative h-fit  p-4 mt-2 w-full ">
+    <div className="carousel-container relative h-fit  pt-4 pr-4 pl-4 mt-2 w-full ">
        <div className='w-full flex h-fit justify-between mt-2 mb-4 '>
       <div className='flex-grow text-left text-xl md:text-xl lg:text-2xl font-bold'>All Communities</div>
       <div className='flex-grow text-right text-[17px] text-[#8C52FF]  md:text-xl lg:text-xl font-semibold '>See All</div>
