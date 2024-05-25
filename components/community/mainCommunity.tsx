@@ -1,12 +1,12 @@
 import Image from 'next/image';
-import MyCarousel from './MyCarousel'; 
+import MyCarousel from './MyCarousel';
 import ExistingContainer from './scroll';
 import Carousel2 from './scroll';
 
 export default function ResponsiveDiv() {
   return (
     <div style={{ margin: 0 }} className="flex flex-wrap">
-      <div className="w-full md:w-2/5 p-0">
+      <div className="w-full md:w-2/5 p-0 overflow-y-auto ">
         <div className="w-full flex justify-center items-start font-semibold flex-col ml-2 md:ml-3">
           <div className="text-xl sm:text-xl md:text-xl lg:text-2xl font-semibold text-[#737373]">Hello Raj!</div>
           <div className="text-sm sm:text-sm md:text-sm lg:text-xl text-[#A6A6A6]">Learns with your peers to maximise learning.</div>
@@ -37,14 +37,13 @@ export default function ResponsiveDiv() {
           <MyCarousel />
         </div>
 
-      
-      <Carousel2 />
-     
-        
+
+        <Carousel2 />
+
+
       </div>
-      
+
       <div className="w-full md:w-3/5 bg-green-200 hidden md:block">
-        {/* Content for the right div */}
         Right Div (60%)
       </div>
     </div>
