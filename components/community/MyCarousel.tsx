@@ -4,9 +4,12 @@ import React, { useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import Image from "next/image";
+import { useState } from "react";
+
 
 const Carousel: React.FC = () => {
   const carouselRef = useRef<HTMLDivElement>(null);
+
 
   const handlePrevClick = () => {
     if (carouselRef.current) {
@@ -26,6 +29,9 @@ const Carousel: React.FC = () => {
     }
   };
 
+
+
+
   return (
     <div className="carousel-container relative p-4">
     <button 
@@ -34,16 +40,16 @@ const Carousel: React.FC = () => {
     >
       <FontAwesomeIcon icon={faChevronLeft} />
     </button>
-    <div className="carousel flex space-x-4 overflow-x-auto " ref={carouselRef}>
-      <div className=" w-64 h-64 flex-shrink-0 rounded-lg mb-6 md:mb-8  ">
+    <div className="carousel flex space-x-4 overflow-x-auto  " ref={carouselRef}>
+      <div className=" w-64 h-64 flex-shrink-0 rounded-lg mb-6 md:mb-8 ">
        
       <div className='w-full h-3/4  relative rounded-lg'>
       <Image
        src="/group 16.svg"
-       alt="Verceldcjncn Logo"
-       layout="fill"
-       objectFit="cover"
-       className="w-full h-full rounded-lg"
+        alt="Verceldcjncn Logo"
+        fill
+        style={{objectFit:"cover"}}
+        className="w-full h-full rounded-lg"
        />
        </div>
         <div className='w-full h-1/4 flex relative'>
@@ -57,8 +63,8 @@ const Carousel: React.FC = () => {
       <Image
        src="/image copy.svg"
        alt="Verceldcjncn Logo"
-       layout="fill"
-       objectFit="cover"
+       fill
+        style={{objectFit:"cover"}}
        className="w-full h-full rounded-lg"
        />
        </div>
@@ -76,6 +82,7 @@ const Carousel: React.FC = () => {
       onClick={handleNextClick}
       className="absolute -top-7 right-2"
     >
+
       <FontAwesomeIcon icon={faChevronRight} />
     </button>
   </div>
