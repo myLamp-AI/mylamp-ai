@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function MainNavbar() {
   return (
-    <div className="  sticky  bg-white   text-black w-64 flex-shrink-0 hidden md:block">
+    <div className=" sticky  bg-white   text-black w-64 flex-shrink-0 hidden md:block ">
       <nav className="mt-4 ">
         <div className="flex">
           <div>
