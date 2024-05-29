@@ -27,7 +27,7 @@ const carouselRef = useRef<HTMLDivElement>(null);
     const handleDownClick = () => {
       if (carouselRef.current) {
         carouselRef.current.scrollBy({
-          top: 100, // Adjust the scroll distance as needed
+          top: 100, 
           behavior: 'smooth'
         });
       }
@@ -51,13 +51,13 @@ const carouselRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 768); // Adjust breakpoint as needed
+      setIsMobile(window.innerWidth < 768); 
     };
 
-    handleResize(); // Check initial screen width
-    window.addEventListener('resize', handleResize); // Listen for window resize
+    handleResize(); 
+    window.addEventListener('resize', handleResize); 
 
-    return () => window.removeEventListener('resize', handleResize); // Cleanup listener
+    return () => window.removeEventListener('resize', handleResize); 
   }, []);
   
   const machinelearningchat = () => {
@@ -70,7 +70,7 @@ const carouselRef = useRef<HTMLDivElement>(null);
 
   return (
     <div style={{ margin: 0 }} className="flex flex-wrap">
-      <div className="w-full md:w-1/2 sticky  p-0">
+      <div className="w-full md:w-1/2   p-0">
         <div className="w-full flex justify-center items-start font-semibold flex-col ml-2 md:ml-3">
           <div  className="text-xl sm:text-xl md:text-xl lg:text-2xl font-semibold text-[#737373]">Hello Raj!</div>
           <div className="text-sm sm:text-sm md:text-sm lg:text-xl text-[#A6A6A6]">Learns with your peers to maximise learning.</div>
@@ -118,7 +118,7 @@ const carouselRef = useRef<HTMLDivElement>(null);
            alt="Verceldcjncn Logo"
            fill
            style={{objectFit:"cover"}}
-           className="w-full h-full rounded-lg"
+           className="w-full h-fit rounded-lg"
        />
           </div>
           <div onClick={toggleComponent02}  className=' w-fit flex items-center justify-center text-xl font-semibold '>Machine Learning</div>
