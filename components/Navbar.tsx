@@ -2,11 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Navbar = () => {
-  function handlemenu() {}
 
   return (
     <>
-      <nav className="   p-3 flex bg-white justify-between items-center">
+      <nav className="p-3 flex bg-white justify-between items-center shadow">
         <div>
           <Link href="/" className="">
             <Image
@@ -20,30 +19,30 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <div className="flex "> 
-          <a href="/" className="flex border border-purple-700 p-2 rounded-full mr-2">
+        <div className="flex ">
+          <Link href="/" className="flex border border-purple-700 p-2 rounded-full mr-2">
+            Account
             <Image
               src="/group.svg"
               alt="Verceldcjncn Logo"
-              className="mr-2"
+              className="ml-2"
               width={25}
               height={20}
               priority
             />{" "}
-            Account
-          </a>
+          </Link>
 
-          <a href="#" className="flex border border-purple-700 p-2 rounded-full">
+          <Link href="/" className="flex border border-purple-700 p-2 rounded-full">
+            Menu
             <Image
               src="/menu header.png"
               alt="Verceldcjncn Logo"
-              className="mr-2"
+              className="ml-2"
               width={20}
               height={20}
               priority
             />
-            Menu
-          </a>
+          </Link>
         </div>
       </nav>
     </>
