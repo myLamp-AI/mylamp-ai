@@ -1,13 +1,12 @@
 "use client"
 
 import Sidebar from '@/components/Sidebar'
-import Practice from '@/components/Practice-1'
-import Explore from '@/components/Explore'
+import Practice from '@/components/Practice'
 import NewSidebar from '@/components/NewSidebar'
-import MainPractice from '@/components/MainPractice'
 import VideoPage from '@/components/VideoPage'
-import Carousel from '@/components/Carousel'
-
+import Explore from '@/components/Explore'
+import Dummy from '@/components/Dummy'
+import VideoPage1 from '@/components/VideoPage1'
 
 
 
@@ -16,7 +15,7 @@ const page = () => {
     <>
       <div>
         {/* Home Page */}
-        <VideoPage/>
+        <VideoPage1/>
       </div>
     </>
   )
