@@ -1,5 +1,3 @@
-"use client"
-
 import React, { useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
@@ -40,8 +38,8 @@ const Carousel: React.FC = () => {
     >
       <FontAwesomeIcon icon={faChevronLeft} />
     </button>
-    <div className="carousel flex space-x-4 overflow-x-auto  " ref={carouselRef}>
-      <div className=" w-64 h-64 flex-shrink-0 rounded-lg mb-6 md:mb-8 ">
+    <div className="carousel flex space-x-4 overflow-x-auto scrollbar-hide " ref={carouselRef}>
+      <div className=" w-64 h-64 flex-shrink-0 rounded-lg mb-3 md:mb-4 ">
        
       <div className='w-full h-3/4  relative rounded-lg'>
       <Image
@@ -53,12 +51,12 @@ const Carousel: React.FC = () => {
        />
        </div>
         <div className='w-full h-1/4 flex relative'>
-          <div  className=' absolute w-fit left-7 font-semibold md:left-10 top-6   text-xl md:text-xl'>WiZ AI</div>
+          <div  className=' absolute w-fit left-7 font-semibold md:left-10 top-6 text-xl md:text-[19px]'>WiZ AI</div>
           <div className='bg-[#8C52FF] w-11 h-11 md:w-12 top-2 md:h-12 lg:w-14 lg:h-14 absolute right-0 rounded-full'></div>
         </div>
       </div>
 
-      <div className=" w-64 h-64 flex-shrink-0 rounded-lg">
+      <div className="w-64 h-64 flex-shrink-0 rounded-lg">
       <div className='w-full h-3/4  relative rounded-lg'>
       <Image
        src="/image.svg"
@@ -69,7 +67,7 @@ const Carousel: React.FC = () => {
        />
        </div>
        <div className='w-full h-1/4 flex relative'>
-          <div  className=' absolute w-12 left-7 font-semibold md:left-10 top-6  text-xl md:text-xl'>Computer programming</div>
+          <div  className=' absolute w-12 left-7 font-semibold md:left-10 top-6  text-xl md:text-[19px]'>Computer programming</div>
           <div className='bg-[#8C52FF] w-11 h-11 md:w-12 top-2 md:h-12 lg:w-14 lg:h-14 absolute right-0 rounded-full'></div>
         </div>
       </div>
