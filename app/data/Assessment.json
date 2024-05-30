@@ -1,0 +1,5 @@
+[
+    {"id":1,"name":"Mechanical Engineering","svg":"mechanical.svg"},
+    {"id":2,"name":"Computer Programming","svg":"computer.svg"},
+    {"id":3,"name":"Financial Analysis","svg":"financial.svg"}
+]

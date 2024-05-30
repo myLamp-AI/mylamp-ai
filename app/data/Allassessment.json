@@ -1,0 +1,7 @@
+[
+    {"id":1,"name":"Quizes","svg":"quizimg.svg"},
+    {"id":2,"name":"Coding","svg":"codingimg.svg"},
+    {"id":3,"name":"Case Study","svg":"caseimg.svg"},
+    {"id":4,"name":"Product teardown","svg":"productimg.svg"}
+   
+]
