@@ -12,8 +12,8 @@ const Explore =  () => {
 
     return (
         <>
-            <div className="w-full h-full bg-[#e8e2f4] flex flex-col"> 
-                <div className="h-1/2 w-11/12 flex flex-row ml-6 md:ml-10 mt-5 gap-4">
+            <div className="w-full h-full bg-[#e8e2f4] flex flex-col gap-3"> 
+                <div className="h-fit w-11/12 flex flex-row ml-6 md:ml-10 mt-5 gap-4">
                     <div className="h-full w-full lg:w-8/12 bg-white border rounded-xl flex flex-row">
                         <div className="flex flex-col gap-1 p-2 sm:w-2/3"> 
                             <div className="text-2xl lg:text-3xl leading-6 font-medium font-sans mt-4 ml-4">Journey through GenAI and LLMS</div>
