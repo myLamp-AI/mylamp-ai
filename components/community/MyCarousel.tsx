@@ -61,7 +61,7 @@ const Carousel: React.FC = () => {
       <div className=" w-64 h-64 flex-shrink-0 rounded-lg">
       <div className='w-full h-3/4  relative rounded-lg'>
       <Image
-       src="/image copy.svg"
+       src="/image.svg"
        alt="Verceldcjncn Logo"
        fill
         style={{objectFit:"cover"}}
