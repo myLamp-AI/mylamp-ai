@@ -72,7 +72,7 @@ const carouselRef = useRef<HTMLDivElement>(null);
     <div style={{ margin: 0 }} className="flex flex-wrap">
       <div className="w-full md:w-1/2   p-0">
         <div className="w-full flex justify-center items-start font-semibold flex-col ml-2 md:ml-3">
-          <div  className="text-xl sm:text-xl md:text-xl lg:text-2xl font-semibold text-[#737373]">Hello Raj!</div>
+          <div  className="text-[21px] font-semibold text-[#737373]">Hello Raj!</div>
           <div className="text-sm sm:text-sm md:text-sm lg:text-xl text-[#A6A6A6]">Learns with your peers to maximise learning.</div>
         </div>
         <div className="w-full flex justify-start items-center font-semibold mt-2 sm:mt-4 md:mt-6 px-2">
@@ -90,21 +90,21 @@ const carouselRef = useRef<HTMLDivElement>(null);
             <input
               type="text"
               placeholder="Search community"
-              className="ml-2 md:ml-4 p-2 rounded bg-white focus:outline-none text-sm sm:text-sm md:text-base lg:text-lg xl:text-xl"
+              className="ml-2 md:ml-4 p-2 rounded bg-white focus:outline-none text-sm sm:text-sm md:text-base md:text-[19px]"
             />
           </div>
         </div>
-        <div className="relative container mx-auto mt-4 md:mt-6">
-          <div className="flex justify-between items-center mb-4 ml-2 md:ml-3 ">
-            <h1 className="text-xl md:text-xl lg:text-2xl font-bold">Exclusive communities</h1>
+        <div className="relative container  mt-4 md:mt-6">
+          <div className="flex justify-between items-center mb-4 ml-2   md:ml-3 ">
+            <h1 className="text-xl md:text-xl   font-bold">Exclusive communities</h1>
           </div>
           <MyCarousel />
         </div>
-<div className="carousel-container relative h-fit no-scrollbar pt-4 pr-4 pl-4 mt-2 w-full ">
+<div className="carousel-container relative h-fit no-scrollbar pt-4 pr-4 pl-4  w-full ">
        <div className='w-full flex h-fit justify-between mt-2 mb-4 '>
-      <div className='flex-grow text-left text-xl md:text-xl lg:text-2xl font-bold' >All Communities</div>
+      <div className='flex-grow text-left text-xl md:text-[21px] font-bold' >All Communities</div>
            
-      <div className='flex-grow text-right text-[17px] text-[#8C52FF]  md:text-xl lg:text-xl font-semibold '>See All</div>
+      <div className='flex-grow text-right text-[21px] text-[#8C52FF]  font-semibold '>See All</div>
     </div>
         
       <div className="carousel overflow-y-auto md:h-48 h-72" ref={carouselRef}>
@@ -202,11 +202,9 @@ const carouselRef = useRef<HTMLDivElement>(null);
       </div>
     </div>
       </div>
-      
-      <div className="w-full md:w-1/2 hidden md:block relative">
-        { machine &&<MachineLearning/> || webdevelpoment01 && <WebDevelpoment/>}
-
-      </div>
+      <div className="w-full md:w-1/2 hidden md:block relative bg-slate-500 h-100vh mt-7 bottom-7">
+      {machine && <MachineLearning />}
+    </div>
     </div>
   );
 }

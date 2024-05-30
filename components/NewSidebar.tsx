@@ -1,9 +1,9 @@
 import Image from "next/image";
 export default function NewSidebar(){
     return(
-        <div className="border-1 border-[#828282] w-60 h-full">
-            <div className="h-full w-56 flex flex-col ml-5 gap-5">
-                <div className="flex flex-row transition w-full h-7 ml-1 gap-6 text-xl font-medium text-[#737373] grayscale hover:grayscale-0 hover:text-[#8C52FF] hover:duration-300">
+        <div className="border-[0.5px] border-[rgb(130,130,130)] w-60 h-full fixed bg-[#fff]">
+            <div className="h-full w-full flex flex-col ml-5 gap-5">
+                <div className="flex flex-row transition w-full h-7 ml-1 mt-2 gap-6 text-xl font-medium text-[#737373] grayscale hover:grayscale-0 hover:text-[#8C52FF] hover:duration-300">
                     <div><Image src="/home.svg" alt="home" height={25} width={24} /></div>
                     <div><span>Home</span></div>
                 </div>
