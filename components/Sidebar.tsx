@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function NewSidebar() {
     return (
-        <div className="p-2 h-screen fixed bg-[#f5f5f5] top-0 left-0 shadow-md shadow-[#08080870]">
+        <div className="p-2 h-screen fixed bg-[#f5f5f5] top-0 left-0 shadow-md shadow-[#08080870] mt-16 overflow-y-auto">
             <div className="h-full w-full flex flex-col ml-5 gap-5">
                 <div className="flex flex-row transition w-full h-7 ml-1 mt-2 gap-6 text-xl font-medium text-[#737373] grayscale hover:grayscale-0 hover:text-[#8C52FF] hover:duration-300">
                     <div><Image src="/home.svg" alt="home" height={20} width={20} /></div>

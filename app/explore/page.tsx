@@ -16,7 +16,7 @@ export default function Explore() {
                 <Sidebar />
             </div>
             <div className="w-full">
-                <div className="w-full h-full flex flex-col gap-3">
+                <div className="w-full h-full flex flex-col gap-3 scrollbar-hide">
                     <div className="h-fit w-11/12 flex flex-row ml-6 md:ml-10 mt-5 gap-4">
                         <div className="h-full w-full lg:w-8/12 bg-white border rounded-xl flex flex-row">
                             <div className="flex flex-col gap-1 p-2 sm:w-2/3">
