@@ -35,7 +35,7 @@ const Navbar = () => {
 
           <a href="#" className="flex border border-purple-700 p-2 rounded-full">
             <Image
-              src="/menu header.png"
+              src="/menu bar.png"
               alt="Verceldcjncn Logo"
               className="mr-2"
               width={20}
