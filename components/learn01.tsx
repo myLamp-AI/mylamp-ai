@@ -8,10 +8,10 @@ import NewSidebar from "./Sidebar";
 const Sidebar02 = () => {
   return (
     <>
-      <div className="flex  bg-[#E8E2F4] justify-around ">
+      <div className="flex  bg-[#E8E2F4] w-full relative">
 
-      <div className="z-10"><NewSidebar /></div>
-        <div className=" bg-purple-100 container mr-6 relative flex flex-col justify-between w-full h-full  px-5  xl:px-0 mt-5">
+      <div className="z-10  "><NewSidebar /></div>
+        <div className=" bg-[#E8E2F4] absolute inset-y-0 right-0 flex flex-col w-full p-3 mt-5">
           <div className="w-full justify-between bg-[#E8E2F4]" >
             <div className="flex flex-col lg:h-96  w-full mb-5 sm:flex-row justify-center  lg:justify-between">
               <div className="w-full  lg:w-8/12 md:w-full mr-0 sm:mb-0 bg-white sm:w-1/2 rounded-lg">

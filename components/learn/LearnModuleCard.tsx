@@ -11,7 +11,7 @@ export default function LearnModuleCard() {
 
     return (
         <>
-            <div  className="bg-white my-3 rounded-lg mb-5">
+            <div  className="bg-white my-3 max-h-max  rounded-lg mb-5">
                 <div className=" lg:flex grid grid-flow-row  sm:w-30 shadow rounded-t-md p-2 rouned-b-none mb-3">
                     <div className="w-full lg:w-1/6  ">
                         <img
@@ -22,7 +22,7 @@ export default function LearnModuleCard() {
                             
                         />
                     </div>
-                    <div  className="lg:w-3/6 lg:grid lg:grid-flow-row ">
+                    <div onClick={() => setShowCollapse(!showCollapse)} className="lg:w-3/6 lg:grid lg:grid-flow-row ">
                         <h4   className="mb-2 lg:mt-2 underline text-purple-700 font-bold">
                             Module 1
                         </h4>
@@ -61,7 +61,7 @@ export default function LearnModuleCard() {
                             <div className="bg-blue-500  rounded-full h-2"></div>
                         </div>
                     </div>
-                    <div  className="lg:mt-10 mt-5 grid justify-center" onClick={() => setShowCollapse(!showCollapse)}>
+                    <div  className="lg:mt-10 mt-5 grid justify-center" >
                     <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"

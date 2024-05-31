@@ -7,15 +7,11 @@ import Lessonsdiv from "./Lessonsdiv";
 
 export default function LearnCollapseCard() {
 
-    const [showdiv, setdiv] = useState(false);
-    
-
-   
-    
+    const [showdiv, setdiv] = useState(false);  
     return (
         
         <>
-            <div className="p-4 text-white flex flex-row ">
+            <div className="p-4 text-white flex flex-row w-full ">
                 <div className="w-80 h-full ">
                     <LearnCollapseItem />
                     <LearnCollapseItem />
