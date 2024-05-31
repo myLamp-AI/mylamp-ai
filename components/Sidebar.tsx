@@ -24,7 +24,7 @@ export default function NewSidebar() {
                 </div>
                 <div className="flex flex-row transition items-center w-full h-10 gap-4 text-xl font-medium text-[#737373] grayscale hover:grayscale-0 hover:text-[#8C52FF] hover:duration-300">
                     <div><Image src="/practice.svg" alt="practice" height={20} width={20} /></div>
-                    <Link className="mt-2" href="/">Practice</Link>
+                    <Link className="mt-2" href="/practice">Practice</Link>
                 </div>
                 <div className="flex flex-row transition w-full h-9 gap-3 text-xl font-medium text-[#737373] grayscale hover:grayscale-0 hover:text-[#8C52FF] hover:duration-300">
                     <div><Image src="/projects.svg" alt="projects" height={20} width={20} /></div>

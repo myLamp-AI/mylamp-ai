@@ -65,31 +65,33 @@ export default function Explore() {
                         {
                             renderData.map((item, index) => {
                                 return (
-                                    <div key={index}>
-                                        <div className="h-32 group relative left-0 flex flex-row hover:h-40 transition duration-300 ease-in-out ">
-                                            <div className="w-1/12 flex flex-col items-center">
-                                                <div className="h-16 w-1 bg-[#000000] group-hover:h-20"></div>
-                                                <div className="h-5 w-5 rounded-full border-4 border-[#000000] group-hover:border-[#8C52FF]"></div>
-                                                <div className="h-14 w-1 bg-[#000000] group-hover:h-16"></div>
-                                            </div>
-                                            <div className=" w-10/12 bg-[#FFFFFF] rounded-lg mb-4 flex flex-col h-132 ">
-                                                <div className="flex flex-row mt-2.5 ml-2.5">
-                                                    <div><Image src="/mlimage.svg" height={75} width={75} alt="mlimage" /></div>
-                                                    <div className="ml-11 mt-3" >
-                                                        <div>
-                                                            <span className="text-base leading-5 font-semibold">{item[0].name}</span>
-                                                            <div className="flex gap-4">
-                                                                <span>{item[1].time}</span>
-                                                                <span>|</span>
-                                                                <span>{item[2].byte}</span>
+                                    <>
+                                        <div key={index}>
+                                            <div className="h-32 group relative left-0 flex flex-row hover:h-40 transition duration-300 ease-in-out ">
+                                                <div className="w-1/12 flex flex-col items-center">
+                                                    <div className="h-16 w-1 bg-[#000000] group-hover:h-20"></div>
+                                                    <div className="h-5 w-5 rounded-full border-4 border-[#000000] group-hover:border-[#8C52FF]"></div>
+                                                    <div className="h-14 w-1 bg-[#000000] group-hover:h-16"></div>
+                                                </div>
+                                                <div className=" w-10/12 bg-[#FFFFFF] rounded-lg mb-4 flex flex-col h-132 ">
+                                                    <div className="flex flex-row mt-2.5 ml-2.5">
+                                                        <div><Image src="/mlimage.svg" height={75} width={75} alt="mlimage" /></div>
+                                                        <div className="ml-11 mt-3" >
+                                                            <div>
+                                                                <span className="text-base leading-5 font-semibold">{item[0].name}</span>
+                                                                <div className="flex gap-4">
+                                                                    <span>{item[1].time}</span>
+                                                                    <span>|</span>
+                                                                    <span>{item[2].byte}</span>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
+                                                    <div className="ml-2 mr-3 child opacity-0 group-hover:opacity-100 transition-opacity duration-300 "><Link href="./VideoPage"><button className="bg-[#8C52FF] h-8 w-full ml-1 mt-2 rounded-xl">start exploring</button></Link></div>
                                                 </div>
-                                                <div className="ml-2 mr-3 child opacity-0 group-hover:opacity-100 transition-opacity duration-300 "><Link href="./VideoPage"><button className="bg-[#8C52FF] h-8 w-full ml-1 mt-2 rounded-xl">start exploring</button></Link></div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </>
                                 );
                             })
                         }

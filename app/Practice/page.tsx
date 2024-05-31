@@ -1,9 +1,11 @@
+"use client"
 import Image from "next/image";
 import React, { useState } from 'react';
 import { FaStar } from "react-icons/fa";
-import newdata from '../app/data/Allassessment.json'
-import newdata1 from '../app/data/Assessment.json'
-import NewSidebar from "./Sidebar";
+import newdata from "../data/Allassessment.json"
+import newdata1 from '../data/Assessment.json'
+import Sidebar from "@/components/Sidebar";
+
 export default function Explore() {
     const radius = 40;
     const circumference = 2 * Math.PI * radius;
@@ -15,12 +17,12 @@ export default function Explore() {
 
     return (
         <div className="flex flex-row w-full h-full">
-            <div className="w-1/5 hidden"><NewSidebar /></div>
+            <div className="w-1/5 "><Sidebar /></div>
             <div className="w-full">
                 <div className="bg-[#F1EAFF] w-full h-full flex flex-col lg:flex-row flex-wrap overflow-hidden" >
                     <div className="w-full lg:w-1/2 h-[720px] flex flex-col gap-3 pl-4 pt-3 overflow-y-auto">
                         <div className=" text-[#737373] font-medium flex flex-col gap-2.5">
-                            <div>Let's Rock!</div>
+                            <div>Let&apos;s Rock!</div>
                             <span className="text-[#A6A6A6]">Practice regularly to achieve perfection</span>
                             <div className="relative">
                                 <input type="text" className="pl-10 pr-4 py-2 w-11/12 border rounded-lg" placeholder="Search Problems" />
@@ -58,19 +60,27 @@ export default function Explore() {
                             <div>
                                 <div className="grid grid-cols-2 grid-rows-2 gap-4 ">
                                     {
-                                        asmnt.map((item,index)=>(
-                                            <div key={item.id} className="bg-[#ffffff] rounded-lg flex flex-row justify-between">
-                                                <div className="w-1/2 ml-4 flex flex-col gap-y-12 justify-center text-base font-semibold ">
-                                                    {item.name}
-                                                    <div className="w-20 bg-[#8c52ff] rounded-2xl flex flex-row justify-between items-center">
-                                                        <span className="ml-2 text-[#ffffff] font-medium">Start</span>
-                                                        <Image src="/conarrow.svg" alt="arrow" width={25} height={25}/>
+                                        asmnt.map((item, index) => (
+                                            <>
+                                                <div key={item.id} className="bg-[#ffffff] rounded-lg flex flex-row justify-between">
+                                                    <div className="w-1/2 ml-4 flex flex-col gap-y-12 justify-center text-base font-semibold ">
+                                                        {item.name}
+                                                        <div className="w-20 bg-[#8c52ff] rounded-2xl flex flex-row justify-between items-center">
+                                                            <span className="ml-2 text-[#ffffff] font-medium">Start</span>
+                                                            <Image src="/conarrow.svg" alt="arrow" width={25} height={25} />
                                                         </div>
+                                                    </div>
+                                                    <div>
+                                                        <Image src={`${item.svg}`} alt={`svg${index + 1}`} width={184.18} height={150.64} />
+                                                    </div>
                                                 </div>
-                                                <div>
-                                                    <Image src={`${item.svg}`} alt={`svg${index+1}`} width={184.18} height={150.64}/>
-                                                </div>
-                                            </div>
+                                                {
+                                                    index % 2 === 1 &&
+                                                    <div className="col-span-2">
+                                                        Hello
+                                                    </div>
+                                                }
+                                            </>
                                         ))
                                     }
                                 </div>
@@ -120,10 +130,10 @@ export default function Explore() {
                             <div className="grid grid-cols-3 place-items-center">
                                 {
                                     items.map((items, itemindex) => (
-                                        <div className="container grid grid-cols-5 gap-2 place-content-center w-24">
+                                        <div className="container grid grid-cols-5 gap-2 place-content-center w-24" key={itemindex}>
                                             {
                                                 sets.map((item, setindex) => (
-                                                    <div className="h-4 w-4 bg-[#ebedf1] rounded "></div>
+                                                    <div className="h-4 w-4 bg-[#ebedf1] rounded " key={setindex}></div>
                                                 ))
                                             }
                                         </div>
