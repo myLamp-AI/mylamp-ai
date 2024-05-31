@@ -1,12 +1,12 @@
 import Navbar from '@/components/Navbar'
-import Sidebar from '@/components/Sidebar'
+import Sidebar02 from '@/components/learn01'
 
 
 const page = () => {
   return (
     <>
 
-      <Sidebar />
+      <Sidebar02 />
 
     </>
   )
