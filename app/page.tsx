@@ -5,7 +5,6 @@ import Practice from '@/components/Practice'
 import NewSidebar from '@/components/NewSidebar'
 import VideoPage from '@/components/VideoPage'
 import Explore from '@/components/Explore'
-import Dummy from '@/components/Dummy'
 import VideoPage1 from '@/components/VideoPage1'
 
 
@@ -15,7 +14,7 @@ const page = () => {
     <>
       <div>
         {/* Home Page */}
-        <VideoPage1/>
+        <Practice/>
       </div>
     </>
   )

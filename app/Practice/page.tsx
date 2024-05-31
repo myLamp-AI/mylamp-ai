@@ -1,9 +1,9 @@
 import Image from "next/image";
 import React,{useState} from 'react';
 import { FaStar } from "react-icons/fa";
-import newdata from '../app/data/Allassessment.json'
-import newdata1 from '../app/data/Assessment.json'
-import NewSidebar from "./NewSidebar";
+import newdata from "../data/Allassessment.json"
+import newdata1 from '../data/Assessment.json'
+import Sidebar from "@/components/Sidebar";
 export default function Explore(){
     const radius = 40;
     const circumference = 2 * Math.PI * radius;
@@ -15,7 +15,7 @@ export default function Explore(){
 
     return (
         <div className="flex flex-row w-full h-full">
-            <div className="w-1/5 hidden"><NewSidebar/></div>
+            <div className="w-1/5 hidden"><Sidebar/></div>
             <div className="w-full">
             <div className="bg-[#F1EAFF] w-full h-full flex flex-col lg:flex-row flex-wrap overflow-hidden" >
                     <div className="w-full lg:w-1/2 h-[720px] flex flex-col gap-3 pl-4 pt-3 overflow-y-auto">
