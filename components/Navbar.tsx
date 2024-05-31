@@ -5,12 +5,12 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="p-3 flex bg-white justify-between items-center shadow">
+      <nav className="p-3 flex z-50 bg-[#f5f5f5] sticky top-0 justify-between items-center shadow">
         <div>
           <Link href="/" className="">
             <Image
               src="/logo.png"
-              alt="Verceldcjncn Logo"
+              alt="Logo"
               className="mr-2"
               width={100}
               height={40}
