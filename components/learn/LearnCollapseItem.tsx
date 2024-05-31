@@ -16,7 +16,7 @@ export default function LearnCollapseItem() {
                     <h5 className="text-gray-500 mt-1 text-sm "> Chapter 1</h5>
                     <h3> Getting started with python</h3>
                 </div>
-                <div onClick={() => setdiv(!showdiv)} className="float:right mt-3 text-black mr-3">
+                <div onClick={() => setdiv(!showdiv)} className="float:right bg-red-700 mt-3 text-black mr-3">
                     
                  
                  

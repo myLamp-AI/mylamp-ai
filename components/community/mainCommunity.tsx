@@ -77,7 +77,7 @@ const carouselRef = useRef<HTMLDivElement>(null);
         </div>
         <div className="w-full flex justify-start items-center font-semibold mt-2 sm:mt-4 md:mt-6 px-2">
           <div className="flex items-center">
-            <div className="bg-white p-2 md:p-3">
+            <div className="p-2 md:p-3">
               <Image
                 src="/search.svg"
                 alt="Search Icon"
@@ -90,7 +90,7 @@ const carouselRef = useRef<HTMLDivElement>(null);
             <input
               type="text"
               placeholder="Search community"
-              className="ml-2 md:ml-4 p-2 rounded bg-white focus:outline-none text-sm sm:text-sm md:text-base md:text-[19px]"
+              className="ml-2 md:ml-4 p-2 bg-[#E8E2F4] rounded focus:outline-none text-sm sm:text-sm md:text-base md:text-[19px]"
             />
           </div>
         </div>
