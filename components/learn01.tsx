@@ -10,7 +10,7 @@ const Sidebar02 = () => {
     <>
       <div className="flex  bg-[#E8E2F4] justify-around ">
 
-      <div className="w-1/5 hidden xl:block"><NewSidebar /></div>
+      <div className="z-10"><NewSidebar /></div>
         <div className=" bg-purple-100 container mr-6 relative flex flex-col justify-between w-full h-full  px-5  xl:px-0 mt-5">
           <div className="w-full justify-between bg-[#E8E2F4]" >
             <div className="flex flex-col lg:h-96  w-full mb-5 sm:flex-row justify-center  lg:justify-between">
