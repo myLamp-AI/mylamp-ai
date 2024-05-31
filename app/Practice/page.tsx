@@ -17,7 +17,7 @@ export default function Explore() {
 
     return (
         <div className="flex flex-row w-full h-full">
-            <div className="w-1/5 "><Sidebar /></div>
+            <div className="z-10"><Sidebar /></div>
             <div className="w-full">
                 <div className="bg-[#F1EAFF] w-full h-full flex flex-col lg:flex-row flex-wrap overflow-hidden" >
                     <div className="w-full lg:w-1/2 h-[720px] flex flex-col gap-3 pl-4 pt-3 overflow-y-auto scrollbar-hide">

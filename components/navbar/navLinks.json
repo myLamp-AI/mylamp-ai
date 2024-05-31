@@ -1,42 +1,52 @@
 [
     {
         "name": "Home",
-        "icon": "/home.svg"
+        "icon": "/home.svg",
+        "Link":"/"
     },
     {
         "name": "Explore",
-        "icon": "/explore.svg"
+        "icon": "/explore.svg",
+        "Link":"/explore"
     },
     {
         "name": "Learn",
-        "icon": "/learn.svg"
+        "icon": "/learn.svg",
+        "Link":"/learn"
     },
     {
         "name": "Achieve",
-        "icon": "/achieve.svg"
+        "icon": "/achieve.svg",
+        "Link":"/achieve"
     },
     {
         "name": "Practice",
-        "icon": "/practice.svg"
+        "icon": "/practice.svg",
+        "Link":"/practice"
     },
     {
         "name": "Projects",
-        "icon": "/projects.svg"
+        "icon": "/projects.svg",
+        "Link":"/projects"
     },
     {
         "name": "Career",
-        "icon": "/career.svg"
+        "icon": "/career.svg",
+        "Link":"/career"
     },
     {
         "name": "Mentorship",
-        "icon": "/mentorship.svg"
+        "icon": "/mentorship.svg",
+        "Link":"/mentorship.svg"
     },
     {
         "name": "Blogs",
-        "icon": "/blogs.svg"
+        "icon": "/blogs.svg",
+        "Link":"/blogs"
     },
     {
         "name": "Community",
-        "icon": "/community.svg"
+        "icon": "/community.svg",
+        "Link":"/community"
     }
 ]

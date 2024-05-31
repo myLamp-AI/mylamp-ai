@@ -12,10 +12,10 @@ export default function Explore() {
 
     return (
         <div className="flex flex-row min-w-full h-full">
-            <div className="w-60 ">
+            <div className="z-10">
                 <Sidebar />
             </div>
-            <div className="w-full">
+            <div className="w-full scrollbar-hide">
                 <div className="w-full h-full flex flex-col gap-3 scrollbar-hide">
                     <div className="h-fit w-11/12 flex flex-row ml-6 md:ml-10 mt-5 gap-4">
                         <div className="h-full w-full lg:w-8/12 bg-white border rounded-xl flex flex-row">
