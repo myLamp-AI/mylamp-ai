@@ -62,14 +62,14 @@ const carouselRef = useRef<HTMLDivElement>(null);
   
   const machinelearningchat = () => {
     if (isMobile) {
-      router.push('./mobilechats/machinelearningchats');
+      router.push('./mobilechats');
     } 
   };
     
 
 
   return (
-    <div style={{ margin: 0 }} className="flex flex-wrap">
+    <div style={{ margin: 0 }} className="flex flex-wrap h-screen">
       <div className="w-full md:w-1/2   p-0">
         <div className="w-full flex justify-center items-start font-semibold flex-col ml-2 md:ml-3">
           <div  className="text-[21px] font-semibold text-[#737373]">Hello Raj!</div>
@@ -100,58 +100,60 @@ const carouselRef = useRef<HTMLDivElement>(null);
           </div>
           <MyCarousel />
         </div>
-<div className="carousel-container relative h-fit no-scrollbar pt-4 pr-4 pl-4  w-full ">
+<div className="carousel-container relative h-fit  no-scrollbar pt-4 pr-4 pl-4  w-full ">
        <div className='w-full flex h-fit justify-between mt-2 mb-4 '>
       <div className='flex-grow text-left text-xl md:text-[21px] font-bold' >All Communities</div>
            
       <div className='flex-grow text-right text-[21px] text-[#8C52FF]  font-semibold '>See All</div>
     </div>
         
-      <div className="carousel overflow-y-auto md:h-48 h-72" ref={carouselRef}>
+      <div className="carousel overflow-y-auto md:h-72 h-72 scrollbar-hide" ref={carouselRef}>
         <div className="w-full flex flex-col space-y-4">
-          <div className="w-full sm:h-20 h-fit">
-          <div onClick={machinelearningchat}  className='w-full  h-full flex justify-between'> 
+        <div className="w-full sm:h-20 h-fit hover:border-purple-600 hover:border-solid hover:border-2 rounded-lg">
+  <div onClick={machinelearningchat} className='w-full h-full flex justify-between p-1'>
+    <div className='w-1/6 sm:w-24 lg:w-1/6 relative rounded-lg p-2'> 
+      <Image
+        src="/Group 19.svg"
+        alt="Verceldcjncn Logo"
+        fill
+        sizes='100vw'
+        style={{objectFit:"cover"}}
+        className="w-fit h-full rounded-lg" 
+      />
+    </div>
+    <div onClick={toggleComponent02} className='w-fit flex items-center justify-center  text-xl font-semibold'>Machine Learning</div>
+    <div className='bg-[#8C52FF] w-12 h-12 lg:w-14 lg:h-14 flex justify-center items-center  text-white lg:mt-3 mt-3 rounded-full mr-2'>3</div>
+  </div>
+</div>
+
+          <div className=" w-full sm:h-20 h-fit  hover:border-purple-600 hover:border-solid hover:border-2 rounded-lg ">
+          <div className='w-full h-full flex justify-between p-1'> 
   
-          <div className='w-1/6 sm:w-24 lg:w-1/6 relative rounded-lg'>      
-          <Image
-           src="/Group 19.svg"
-           alt="Verceldcjncn Logo"
-           fill
-           style={{objectFit:"cover"}}
-           className="w-full h-fit rounded-lg"
-       />
-          </div>
-          <div onClick={toggleComponent02}  className=' w-fit flex items-center justify-center text-xl font-semibold '>Machine Learning</div>
-          <div className='bg-[#8C52FF] w-12 h-12 lg:w-14 lg:h-14 flex justify-center items-center lg:mt-3 mt-3  rounded-full mr-2'>3</div>
-          </div>
-          </div>
-          <div className=" w-full sm:h-20 h-fit ">
-          <div className='w-full h-full flex justify-between'> 
-  
-           <div className='w-1/6 sm:w-24 lg:w-1/6 relative rounded-lg'>      
+           <div className='w-1/6 sm:w-24 lg:w-1/6 relative rounded-lg p-2'>      
            <Image
             src="/Group 21 (1).svg"
             alt="Verceldcjncn Logo"
             fill
             sizes="100vw"
             style={{objectFit:"cover"}}
-            className="w-full h-full rounded-lg"
+            className="w-fit h-full rounded-lg"
             />
               </div>
-          <div onClick={toggleComponent01} className=' w-fit flex items-center justify-center text-xl font-semibold '>Web Development</div>
+          <div  className=' w-fit flex items-center justify-center  text-xl font-semibold '>Web Development</div>
             
-          <div className='bg-[#8C52FF] w-12 h-12 lg:w-14 lg:h-14 flex justify-center items-center lg:mt-3 mt-3 rounded-full mr-2'>2</div>
+          <div className='bg-[#8C52FF] w-12 h-12 lg:w-14 lg:h-14 flex justify-center items-center lg:mt-3 mt-3 text-white font-semibold rounded-full mr-2'>2</div>
           </div>  
           </div>
         
-          <div className="w-full  sm:h-20 h-fit">
-          <div className='w-full h-full flex justify-between'> 
+          <div className="w-full  sm:h-20 h-fit  hover:border-purple-600 hover:border-solid hover:border-2 rounded-lg ">
+          <div className='w-full h-full flex justify-between p-1'> 
   
-          <div className='w-1/6 sm:w-24 lg:w-1/6 relative rounded-lg'>      
+          <div className='w-1/6 sm:w-24 lg:w-1/6 relative rounded-lg p-2' >      
           <Image
        src="/Group 23.svg"
        alt="Verceldcjncn Logo"
        fill
+       sizes="100vw"
         style={{objectFit:"cover"}}
        className="w-full h-full rounded-lg"
        />
@@ -159,7 +161,7 @@ const carouselRef = useRef<HTMLDivElement>(null);
         <div  className='w-fit flex items-center justify-center text-xl font-semibold '>Case Study
         </div>
      
-         <div className='bg-[#8C52FF] w-12 h-12 lg:w-14 lg:h-14 flex justify-center items-center lg:mt-3 mt-3 rounded-full mr-2'>2</div>
+         <div className='bg-[#8C52FF] w-12 h-12 lg:w-14 text-white font-semibold lg:h-14 flex justify-center items-center lg:mt-3 mt-3 rounded-full mr-2'>2</div>
           </div>  
           </div>
            
@@ -186,7 +188,7 @@ const carouselRef = useRef<HTMLDivElement>(null);
   
            <div className='w-1/6 sm:w-24 lg:w-1/6 relative rounded-lg'>      
            <Image
-       src="/image copy.svg"
+       src="/image.svg"
        alt="Verceldcjncn Logo"
        fill
         style={{objectFit:"cover"}}
@@ -194,7 +196,7 @@ const carouselRef = useRef<HTMLDivElement>(null);
        />
               </div>
           <div className=' w-fit flex items-center justify-center text-xl font-semibold '>Web Development</div>
-          <div className='bg-[#8C52FF] w-12 h-12 lg:w-14 lg:h-14 flex justify-center items-center lg:mt-3 mt-3 rounded-full mr-2'>3</div>
+          <div className='bg-[#8C52FF] w-12 h-12 lg:w-14 lg:h-14 flex justify-center  text-white items-center lg:mt-3 mt-3 rounded-full mr-2'>3</div>
           </div>  
           </div>
         
@@ -202,7 +204,7 @@ const carouselRef = useRef<HTMLDivElement>(null);
       </div>
     </div>
       </div>
-      <div className="w-full md:w-1/2 hidden md:block relative bg-slate-500 h-100vh mt-7 bottom-7">
+      <div className="w-full md:w-1/2 hidden md:block  relative h-screen ">
       {machine && <MachineLearning />}
     </div>
     </div>
