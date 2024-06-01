@@ -1,6 +1,7 @@
 "use client"
 import Image from "next/image";
-import React, { useState } from 'react';
+import { usePathname } from "next/navigation";
+import React, { useState,useEffect } from 'react';
 import navData from '@/components/navbar/navLinks.json'
 import smData from '@/app/data/navsocialicon.json'
 import NavLinks from '@/components/navbar/NavItems'
@@ -11,7 +12,7 @@ export default function NewSidebar() {
     const smRender = Array(socialLen).fill(null);
     const [isSidebarVisible, setIsSidebarVisible] = useState(false);
     const [isHovered, setIsHovered] = useState(false);
-
+    const pathname = usePathname();
     const handleArrowClick = () => {
         setIsSidebarVisible(true);
     };
@@ -30,11 +31,19 @@ export default function NewSidebar() {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}>
                 <div className="h-full w-full flex flex-col mr-6">
-                    <div className="w-fit h-[500px] flex flex-col ml-5 gap-5 overflow-x-clip overflow-y-auto scrollbar-hide"> 
+                    <div className="w-fit h-[500px] flex flex-col  gap-5 overflow-x-clip overflow-y-auto scrollbar-hide"> 
                         {
-                            navRender.map((item,navindex)=>(
-                                <NavLinks name={navData[navindex].name} icon={navData[navindex].icon} Link={navData[navindex].Link}/>
-                            ))
+                            navRender.map((item,navindex)=>{
+                                const isActive = pathname === navData[navindex].Link;
+                                return (
+                                    <div className={`flex flex-row gap-5`}>
+                                        <div className={`w-2 h-10 ${isActive? 'block' : 'hidden'}`}>
+                                            <Image src="/navbarslider.svg" alt="slider" width={10} height={10}/>
+                                            </div>
+                                        <NavLinks name={navData[navindex].name} icon={navData[navindex].icon} Link={navData[navindex].Link}/>
+                                    </div>
+                                );
+                            })
     
                         }
                     </div>
