@@ -11,71 +11,50 @@ const Sidebar02 = () => {
       <div className="flex  bg-[#E8E2F4] w-full relative">
 
       <div className="z-10  "><NewSidebar /></div>
-        <div className=" bg-[#E8E2F4] absolute inset-y-0 right-0 flex flex-col w-full p-3 mt-5">
-          <div className="w-full justify-between bg-[#E8E2F4]" >
-            <div className="flex flex-col lg:h-96  w-full mb-5 sm:flex-row justify-center  lg:justify-between">
-              <div className="w-full  lg:w-8/12 md:w-full mr-0 sm:mb-0 bg-white sm:w-1/2 rounded-lg">
+        <div className=" bg-[#E8E2F4] absolute inset-y-0  right-0 flex flex-col w-full p-3 mt-5">
+          <div className="w-full justify-between bg-[#E8E2F4] pr-3 pl-3" >
+            <div className="flex flex-col lg:h-96 md:h-64  w-full mb-5 sm:flex-row justify-center  lg:justify-between">
+              <div className="w-full  md:w-8/12  mr-0 sm:mb-0 bg-white sm:w-1/2 rounded-lg">
                 <div className="h-full w-full justify-between p-4   md:flex">
-                <div className="lg:h-full md:w-2/5 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" title="Woman holding a mug">
+                <div className="md:h-full  md:w-[30%]  flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" title="Woman holding a mug">
                 <Image
          src="/robot002.svg"
         alt="Verceldcjncn Logo"
-        className="object-cover w-full h-full rounded-lg"
+        className="md:object-cover w-full md:h-full h-40 rounded-lg"
         width={200}
         height={96}
     />
-</div>
+                   </div>
 
 
-                  <div className=" md:w-3/5  bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
-                    <div className="mb-8">
+                  <div className=" md:w-[70%] md:h-full bg-white rounded-b lg:rounded-b-none relative lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+                    <div className="mb-8 h-full">
                       <p className="text-sm text-gray-600 flex items-center"></p>
                       <div className="text-gray-900 font-bold text-xl mb-2 ">
                         Introduction to Machine Learning
                       </div>
-                      <div className="flex ">
-                        <p className="text-gray-700 text-sm bg-purple-100 mr-4 inline-block rounded-sm p-1">
-                          3 Weeks
-                        </p>
-                        <p className="text-gray-700 text-sm bg-purple-100 inline-block rounded-sm p-1">
-                          {" "}
-                          6 Months
-                        </p>
-                      </div>
-                      <div className="mt-2">
-                        <p className="mt-2 text-gray-700 text-sm">
-                          Module : Data Science
-                        </p>
-                        <p className="text-gray-700 text-sm">
-                          Chapter : supervise Learning
-                        </p>
-                      </div>
-                      <div className="flex">
-                       
-                        <Image
-                          src="/percentage bar.svg"
-                          alt="Verceldcjncn Logo"
-                          className="mt-6  mr-4"
-                          width={500}
-                          height={24}
-                          priority
-                        />
-                      </div>
+                      <div className="flex absolute md:bottom-20 sm:bottom-10 items-center justify-center bg-red-300">dvfvf
+                        </div>
+                     
+                      <div className="flex absolute md:bottom-14 items-center justify-center">
+                      <div className="flex items-center justify-center">
+                      <Image
+                      src="/percentage bar.svg"
+                       alt="Verceldcjncn Logo"
+                       className="mt-6" // Removed mx-auto, as the parent container is already centered
+                       width={500}
+                        height={1}
+                       priority
+                       />
+                          </div>
+                        </div>
+
                     </div>
-                    <div className="flex items-center md:w-full md:justify-around mr-4">
-                      <div className=" flex text-sm md:justify-around md:w-full ">
-                        <button className="mr-4 bg-purple-700 p-2 rounded-sm font-bold-md text-white">
-                          view insights
-                        </button>
-                        <Link  href ="/learn/chapters" className=" bg-purple-700 p-2 md:w-36 md:h-fit rounded-md font-bold-md text-white">
-                          <h2 className="ml-2">Resume learning</h2>
-                        </Link>
-                      </div>
-                    </div>
+                    
                   </div>
                 </div>
               </div>
-              <div className=" ml-6 bg-white full sm:w-1/3 hidden lg:block  md:w-4/12 md:h-96 rounded-lg"></div>
+              <div className=" ml-6   full sm:w-1/3 hidden md:block   md:w-4/12 lg:h-96 md:h-full bg-white  rounded-lg"></div>
             </div>
             {/* ---------------------------long-card-------------------------------------- */}
 

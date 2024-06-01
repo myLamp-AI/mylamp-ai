@@ -12,7 +12,7 @@ export default function LearnCollapseCard() {
         
         <>
             <div className="p-4 text-white flex flex-row w-full ">
-                <div className="w-80 h-full ">
+                <div className=" h-full w-2/5 ">
                     <LearnCollapseItem />
                     <LearnCollapseItem />
                     <LearnCollapseItem />
