@@ -17,9 +17,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth focus:scroll-auto">
       <body className={`${openSans.className} bg-[#e8e2f4]`}>
-        <Navbar />
+        {/* <Navbar /> */}
         {children}
       </body>
     </html>

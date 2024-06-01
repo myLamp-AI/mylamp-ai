@@ -33,7 +33,7 @@ export default function NewSidebar() {
                     <div className="w-fit h-[500px] flex flex-col ml-5 gap-5 overflow-x-clip overflow-y-auto scrollbar-hide"> 
                         {
                             navRender.map((item,navindex)=>(
-                                <NavLinks name={navData[navindex].name} icon={navData[navindex].icon} Link={navData[navindex].Link}/>
+                                <NavLinks key={navindex} name={navData[navindex].name} icon={navData[navindex].icon} Link={navData[navindex].Link}/>
                             ))
     
                         }
@@ -49,7 +49,7 @@ export default function NewSidebar() {
                         <div className="flex flex-row gap-1.5">
                             {
                                 smRender.map((item,smindex) =>(
-                                    <div>
+                                    <div key={index}>
                                         <div className="w-7 h-7"><img src={smData[smindex].icon} alt={smData[smindex].name} /></div>
                                     </div>
                                 ))

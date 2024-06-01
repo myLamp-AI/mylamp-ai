@@ -4,7 +4,7 @@ export default function HeroSection() {
     return (
         <>
             <div className="flex justify-evenly min-h-screen p-4 max-w-[1200px] w-full m-auto">
-                <div className="flex flex-col justify-between items-center bg-[#f5f5f5] h-[90vh] w-full max-w-[600px] mx-2 rounded-2xl py-2 px-5">
+                <div className="flex flex-col justify-between items-center bg-[#f5f5f5] h-[600px] w-full max-w-[600px] mx-2 rounded-2xl py-2 px-5">
                     <div className='flex justify-between w-full'>
                         <Image src={"/home/logo.svg"} width={100} height={100} alt="logo" className='w-[120px]' />
                         <div className='flex items-center justify-between px-2 gap-2 rounded-full text-base border-black border-2'>
@@ -27,7 +27,7 @@ export default function HeroSection() {
                     </div>
                 </div>
 
-                <div className="flex flex-col justify-between h-[90vh] w-full mx-2 relative">
+                <div className="flex flex-col justify-between h-[600px] w-full mx-2 relative">
                     <div className='flex justify-between items-start'>
                         <div className='bg-[#f5f5f580] p-4 rounded-2xl max-w-[300px]' >
                             <div className='flex justify-between'>
