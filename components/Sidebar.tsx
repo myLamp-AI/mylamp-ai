@@ -1,23 +1,21 @@
 "use client"
-import Image from "next/image";
+import { useState } from 'react';
 import { usePathname } from "next/navigation";
-import React, { useState, useEffect } from 'react';
+import Image from "next/image";
+import NavLinks from '@/components/navbar/NavItems'
 import navData from '@/components/navbar/navLinks.json'
 import smData from '@/app/data/navsocialicon.json'
-import NavLinks from '@/components/navbar/NavItems'
 
 export default function NewSidebar() {
+    const pathname = usePathname();
 
-
+    const [isSidebarVisible, setIsSidebarVisible] = useState(false);
+    const [isHovered, setIsHovered] = useState(false);
 
     const navLen = navData.length;
     const socialLen = smData.length;
     const navRender = Array(navLen).fill(null);
     const smRender = Array(socialLen).fill(null);
-    const [isSidebarVisible, setIsSidebarVisible] = useState(false);
-    const [isHovered, setIsHovered] = useState(false);
-    const pathname = usePathname();
-
 
     const handleArrowClick = () => {
         setIsSidebarVisible(true);
@@ -31,6 +29,7 @@ export default function NewSidebar() {
         setIsHovered(false);
         setIsSidebarVisible(false);
     };
+
     return (
         <div className="flex flex-row z-10">
             <div className={`p-2 h-screen fixed bg-[#f5f5f5] top-0 left-0 shadow-md shadow-[#08080870] mt-16 gap-4 transition-transform duration-300 ${isSidebarVisible || isHovered ? 'transform-none' : '-translate-x-full'} `}
@@ -65,7 +64,7 @@ export default function NewSidebar() {
                             {
                                 smRender.map((item, smindex) => (
                                     <div key={smindex}>
-                                        <div className="w-7 h-7"><img src={smData[smindex].icon} alt={smData[smindex].name} /></div>
+                                        <div className="w-7 h-7"><Image src={smData[smindex].icon} alt={smData[smindex].name} height={100} width={100} /></div>
                                     </div>
                                 ))
                             }

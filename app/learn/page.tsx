@@ -2,7 +2,7 @@ import Navbar from '@/components/Navbar'
 import Sidebar02 from '@/components/learn01'
 
 
-const page = () => {
+export default function Page() {
   return (
     <>
 
@@ -11,5 +11,3 @@ const page = () => {
     </>
   )
 }
-
-export default page

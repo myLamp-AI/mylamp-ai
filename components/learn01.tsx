@@ -1,15 +1,12 @@
 "use client"
-import Link from "next/link";
 import Image from "next/image";
-
 import LearnModuleCard from "./learn/LearnModuleCard";
 import NewSidebar from "./Sidebar";
 
-const Sidebar02 = () => {
+export default function Learn () {
   return (
     <>
       <div className="flex w-full max-w-[1300px] m-auto relative">
-
         <div className="z-10  "><NewSidebar /></div>
         <div className=" inset-y-0 flex flex-col w-full p-3 mt-5">
           <div className="w-full justify-between pr-3 pl-3" >
@@ -92,10 +89,9 @@ const Sidebar02 = () => {
               </div>
               <div className=" ml-6   full sm:w-1/3 hidden md:block   md:w-4/12 lg:h-96 md:h-full bg-white  rounded-lg"></div>
             </div>
-            {/* ---------------------------long-card-------------------------------------- */}
+            
 
             <LearnModuleCard />
-
             <LearnModuleCard />
             <LearnModuleCard />
             <LearnModuleCard />
@@ -106,5 +102,3 @@ const Sidebar02 = () => {
     </>
   );
 };
-
-export default Sidebar02;
