@@ -7,30 +7,33 @@ export default function LearnModuleCard() {
   const [showCollapse, setShowCollapse] = useState(false);
 
   return (
-    <>
-      <div className="bg-white my-3 max-h-max  rounded-lg mb-5 ">
+    <>                 
+      <div className= {`${showCollapse ? 'border-[0.5px] border-[rgb(130,130,130)]' : 'none'}  bg-white my-3 max-h-max  rounded-lg mb-5`}>
         <div
-          className=" lg:flex grid grid-flow-row  sm:w-30 shadow rounded-t-md p-2 rouned-b-none mb-3"
+          className={`${showCollapse ? 'border-[0.5px] border-[rgb(130,130,130)]' : 'none'} lg:flex grid grid-flow-row  sm:w-30 shadow rounded-t-md pl-2 pr-2 rounded-lg   lg:py-5 py-2 bg-white rouned-b-none mb-3`}
           onClick={() => setShowCollapse(!showCollapse)}
         >
-          <div className="w-full lg:w-1/6  ">
-            <img
-              src="/ai.svg"
-              alt="Verceldcjncn Logo"
-              className="border lg:ml-4 bg-purple-100 rounded-full p-2 lg:w-30 mt-6  mb-5 border-rad mr-4"
-            />
+          <div className="w-full lg:w-[16%] max-w-[160px] flex justify-center ">
+         <Image
+        src="/ai.svg"
+        alt="Verceldcjncn Logo"
+        width={50}
+        height={50}
+        priority
+        className="border lg:ml-4 bg-[#E8E2F4] rounded-full p-3 lg:w-[95px] w-[80px]  mt-6  mb-5 border-rad mr-4"
+      />
           </div>
           <div className="lg:w-3/6 lg:grid lg:grid-flow-row ">
-            <h4 className="mb-2 lg:mt-2 text-purple-700 font-bold">
-              Module 1gi
+            <h4 className="mb-2 lg:mt-2 text-purple-700 font-semibold text-xl  ">
+              Module 1
             </h4>
-            <h1 className=" sm:text-xs md:text-md mb-4  xl:text-4xl font-bold">
+            <h1 className=" sm:text-xs md:text-md mb-4  xl:text-4xl lg:text-3xl md:text-xl font-semibold">
               {" "}
               Tech 101: Starting in Tech
             </h1>
-            <p className="md:flex text-sm font-bold text-gray-500">
+            <p className="md:flex text-sm  text-gray-500">
               {" "}
-              7 Lessons 7 weeks 7 credits
+              7 Lessons    7 weeks     7 credits
             </p>
           </div>
           <div className=" lg:grid lg:justify-center lg:mt-3 lg:w-1/6 lg:mx-auto ">
@@ -51,14 +54,17 @@ export default function LearnModuleCard() {
             />
           </div>
 
-          <div className="mt-4 lg:w-2/6">
+          <div className="lg:mt-6 ml-8 lg:w-2/6">
             <div>
               <p className="text-gray-600 lg:mb-4 font-bold text-sm mt-2 mb-3">
-                Progress: 66%
+                Progress
               </p>
             </div>
-            <div className="bg-gray-200 rounded-full h-2">
-              <div className="bg-blue-500  rounded-full h-2"></div>
+            <div className="bg-gray-200 rounded-full h-2 flex items-center gap-2">
+            <div className="w-fit text-center align-middle font-semibold text-[#737373] text-[12px]">66%</div>
+                      <div className="w-full max-w-[200px] h-[6px] border-[1px] border-[#8C52FF] rounded-lg overflow-hidden">
+                      <div className="bg-[#8C52FF] h-full text-white text-center leading-8 " style={{ width: `${80}%` }}></div>
+                      </div>
             </div>
           </div>
           <div className="lg:mt-10 mt-5 grid justify-center">
