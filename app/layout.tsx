@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth focus:scroll-auto">
-      <body className={`${openSans.className} bg-[#e8e2f4]`}>
+      <body className={`${openSans.className} bg-[#F1EAFF]`}>
         {/* <Navbar /> */}
         {children}
       </body>

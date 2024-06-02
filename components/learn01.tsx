@@ -8,11 +8,11 @@ import NewSidebar from "./Sidebar";
 const Sidebar02 = () => {
   return (
     <>
-      <div className="flex  bg-[#E8E2F4] w-full relative">
+      <div className="flex w-full max-w-[1300px] m-auto relative">
 
         <div className="z-10  "><NewSidebar /></div>
-        <div className=" bg-[#E8E2F4] absolute inset-y-0  right-0 flex flex-col w-full p-3 mt-5">
-          <div className="w-full justify-between bg-[#E8E2F4] pr-3 pl-3" >
+        <div className=" inset-y-0 flex flex-col w-full p-3 mt-5">
+          <div className="w-full justify-between pr-3 pl-3" >
             <div className="flex flex-col lg:h-96 md:h-64  w-full mb-5 sm:flex-row justify-center  lg:justify-between">
               <div className="w-full  md:w-8/12  mr-0 sm:mb-0 bg-white sm:w-1/2 rounded-lg">
                 <div className="h-full w-full justify-between p-4   md:flex">
@@ -20,17 +20,17 @@ const Sidebar02 = () => {
                     <Image
                       src="/robot002.svg"
                       alt="Verceldcjncn Logo"
-                      className="md:object-cover w-full md:h-full h-40 rounded-lg"
+                      className="md:object-cover w-[300px] md:h-full h-40 rounded-lg"
                       width={200}
                       height={96}
                     />
                   </div>
 
 
-                  <div className=" md:w-[70%] h-full bg-white rounded-b lg:rounded-b-none  lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+                  <div className=" md:w-full max-w-[900px] h-full bg-white rounded-b lg:rounded-b-none  lg:rounded-r p-4 flex flex-col justify-between leading-normal">
                     <div className="mb-8 relative h-full">
                       <p className="text-sm text-gray-600 flex items-center"></p>
-                      <div className="text-gray-900 font-semibold xl:text-3xl mt-2 sm:text-[19px] lg:text-2xl ">
+                      <div className="text-gray-900 font-bold xl:text-2xl mt-2 sm:text-[19px] lg:text-2xl ">
                         Introduction to Machine Learning
                       </div>
                       <div className="flex absolute md:top-10 w-full lg:mt-3 md:mt-6  items-center text-[#0166C8] justify-start flex-row gap-4">

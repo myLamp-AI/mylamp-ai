@@ -19,8 +19,8 @@ export default function Explore() {
         <div className="flex flex-row w-full h-full">
             <div className="z-10"><Sidebar /></div>
             <div className="w-full">
-                <div className="bg-[#F1EAFF] w-full h-full flex flex-col lg:flex-row flex-wrap overflow-hidden" >
-                    <div className="w-full lg:w-1/2 h-[720px] flex flex-col gap-3 pl-4 pt-3 overflow-y-auto scrollbar-hide">
+                <div className="bg-[#F1EAFF] w-full h-full flex overflow-hidden" >
+                    <div className="w-full h-[720px] flex flex-col gap-3 pl-4 pt-3 overflow-y-auto scrollbar-hide">
                         <div className=" text-[#737373] font-medium flex flex-col gap-2.5">
                             <div>Let&apos;s Rock!</div>
                             <span className="text-[#A6A6A6]">Practice regularly to achieve perfection</span>
@@ -87,7 +87,7 @@ export default function Explore() {
                             </div>
                         </div>
                     </div>
-                    <div className="w-full lg:w-1/2 flex flex-col gap-2 p-3 mt-1 lg:mt-0">
+                    <div className="w-full max-w-[600px] flex flex-col gap-2 p-3 mt-1 lg:mt-0">
                         <div className="h-1/2 flex flex-col m-2 mt-3 bg-[#ffffff] rounded-xl">
                             <div className="flex flex-row justify-around h-1/2 m-2">
                                 <div className="w-40 h-40 relative">

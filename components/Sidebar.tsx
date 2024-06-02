@@ -7,6 +7,9 @@ import smData from '@/app/data/navsocialicon.json'
 import NavLinks from '@/components/navbar/NavItems'
 
 export default function NewSidebar() {
+
+
+
     const navLen = navData.length;
     const socialLen = smData.length;
     const navRender = Array(navLen).fill(null);
@@ -14,6 +17,8 @@ export default function NewSidebar() {
     const [isSidebarVisible, setIsSidebarVisible] = useState(false);
     const [isHovered, setIsHovered] = useState(false);
     const pathname = usePathname();
+
+
     const handleArrowClick = () => {
         setIsSidebarVisible(true);
     };
