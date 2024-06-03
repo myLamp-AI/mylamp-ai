@@ -14,11 +14,14 @@ export default function LearnModuleCard() {
       }, 900);
     }
   };
+  const duration = 1000;
 
 
   return (
     <>
-      <div className={`${showCollapse ? 'border-[0.5px] border-[rgb(130,130,130)]' : 'none'}   bg-white my-3 max-h-max  rounded-lg mb-5 `}>
+      <Transition in={showCollapse} timeout={duration}>
+      {state => (
+      <div className={`overflow-hidden transition-height duration-${duration} ${state === 'entered' ? 'border-[0.5px] border-[rgb(130,130,130)]' : 'none'} bg-white my-3 max-h-max rounded-lg mb-5`}>
         <div
           className={`${showCollapse ? 'border-[0.5px] border-[rgb(130,130,130)]' : 'none'} lg:flex grid grid-flow-row  sm:w-30 shadow rounded-t-md pl-2 pr-2 rounded-lg   lg:py-5 py-2 bg-white rouned-b-none mb-3`}
           onClick={() => setShowCollapse(!showCollapse)}
@@ -105,6 +108,8 @@ export default function LearnModuleCard() {
           )}
         </Transition>
       </div>
+        )}
+        </Transition>
     </>
   );
 }
