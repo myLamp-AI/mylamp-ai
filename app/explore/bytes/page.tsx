@@ -1,7 +1,6 @@
 "use client"
 import React,{useEffect, useState} from "react";
 import Image from 'next/image'
-import Slider from "react-slick";
 import bytedata from '@/app/data/bytesCarousel.json'
 export default function VideoPage(){
     const [page,setPage] = useState(1);
@@ -24,17 +23,10 @@ export default function VideoPage(){
             setPage(page+1)
         }
     };
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1
-      };
     return (
-        <div className=" w-full flex justify-center">
-            <div className=" w-full max-w-[1300px] max-h-[750px] bg-[#E8E2F4] shadow-lg shadow-[#737373] rounded-lg">
-                <div className="h-32  flex flex-row justify-center items-center ">
+        <div className=" w-full h-full max-h-[750px] flex justify-center">
+            <div className=" w-full max-w-[1200px] bg-[#E8E2F4] shadow-lg shadow-[#737373] rounded-lg">
+                <div className="h-32 hidden lg:flex flex-row justify-center items-center ">
                     <div className="hidden lg:flex justify-center items-center gap-9 ">
                         {
                             setDiv.map((items,index) =>(

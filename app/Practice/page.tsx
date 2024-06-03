@@ -19,7 +19,7 @@ export default function Explore() {
         
         
             <div className="w-full flex justify-center">
-                <div className="bg-[#F1EAFF] w-10/12 max-w-[1300px] max-h-[720px] flex flex-wrap lg:flex-nowrap shadow-xl" >
+                <div className="bg-[#F1EAFF] w-full max-w-[1200px] max-h-[720px] flex flex-wrap lg:flex-nowrap shadow-xl" >
                     <div className="w-full h-full flex flex-col gap-3 pl-4 pt-3 overflow-y-auto scrollbar-hide">
                         <div className=" text-[#737373] font-medium flex flex-col gap-2.5">
                             <div>Let&apos;s Rock!</div>

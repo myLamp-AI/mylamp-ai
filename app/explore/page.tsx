@@ -12,7 +12,7 @@ export default function Explore() {
 
     return (
             <div className="w-full scrollbar-hide flex flex-row justify-center">
-                <div className="w-full max-w-[1300px] h-full flex flex-col gap-3 scrollbar-hide shadow-xl ">
+                <div className="w-full max-w-[1200px] h-full flex flex-col gap-3 scrollbar-hide shadow-xl ">
                     <div className="w-full flex flex-row  mt-5 gap-4">
                         <div className="h-full w-full lg:w-8/12 bg-white border rounded-xl flex flex-row">
                             <div className="flex flex-col gap-1 p-2 sm:w-2/3">
