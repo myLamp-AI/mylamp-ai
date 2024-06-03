@@ -1,52 +1,52 @@
 [
     {
         "name": "Home",
-        "icon": "/home.svg",
+        "icon": "/sidebar/home.svg",
         "Link":"/"
     },
     {
         "name": "Explore",
-        "icon": "/explore.svg",
+        "icon": "/sidebar/explore.svg",
         "Link":"/explore"
     },
     {
         "name": "Learn",
-        "icon": "/learn.svg",
+        "icon": "/sidebar/learn.svg",
         "Link":"/learn"
     },
     {
         "name": "Achieve",
-        "icon": "/achieve.svg",
+        "icon": "/sidebar/achieve.svg",
         "Link":"/achieve"
     },
     {
         "name": "Practice",
-        "icon": "/practice.svg",
+        "icon": "/sidebar/practice.svg",
         "Link":"/practice"
     },
     {
         "name": "Projects",
-        "icon": "/projects.svg",
+        "icon": "/sidebar/projects.svg",
         "Link":"/projects"
     },
     {
         "name": "Career",
-        "icon": "/career.svg",
+        "icon": "/sidebar/career.svg",
         "Link":"/career"
     },
     {
         "name": "Mentorship",
-        "icon": "/mentorship.svg",
+        "icon": "/sidebar/mentorship.svg",
         "Link":"/mentorship.svg"
     },
     {
         "name": "Blogs",
-        "icon": "/blogs.svg",
+        "icon": "/sidebar/blogs.svg",
         "Link":"/blogs"
     },
     {
         "name": "Community",
-        "icon": "/community.svg",
+        "icon": "/sidebar/community.svg",
         "Link":"/community"
     }
 ]
