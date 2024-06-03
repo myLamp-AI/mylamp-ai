@@ -93,7 +93,7 @@ export default function Learn () {
             <LearnModuleCard />
 
           </div>
-          <div>001</div>
+         
         </div>
       </div>
       </div>
