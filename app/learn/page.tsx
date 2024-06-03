@@ -12,8 +12,8 @@ export default function Learn () {
           <div className="w-full justify-between pr-3 pl-3">
             <div className="flex flex-col md:h-96 h-1/3  w-full mb-5 sm:flex-row justify-center  md:justify-between">
               <div className="w-full  lg:w-8/12  mr-0 sm:mb-0 bg-white :w-12 rounded-lg">
-                <div className="h-full w-full justify-between p-4   md:flex">
-                  <div className="md:h-full  lg:w-[30%] md:w-[40%]  flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" title="Woman holding a mug">
+                <div className="md:h-full md:w-full  md:justify-between p-4   md:flex">
+                  <div className="md:h-full  lg:w-[30%] h-52 md:w-[40%]  flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" title="Woman holding a mug">
                     <Image
                       src="/robot002.svg"
                       alt="Verceldcjncn Logo"
@@ -24,8 +24,8 @@ export default function Learn () {
                   </div>
 
 
-                  <div className=" md:w-full max-w-[900px]  h-96 md:h-full bg-white rounded-b lg:rounded-b-none  lg:rounded-r p-4 flex flex-col justify-between leading-normal">
-                    <div className="mb-8 relative h-fit">
+                  <div className=" md:w-full max-w-[900px] h-96 ml-20 md:ml-0 md:h-full w-1/2   md:left-0  rounded-b lg:rounded-b-none  lg:rounded-r p-4 flex flex-col md:justify-between  leading-normal">
+                    <div className="mb-8 relative h-fit ">
                       <div className="text-gray-900 font-semibold xl:text-2xl relative w-full  sm:text-[21px] md:text-2xl flex ">
                         Introduction to Machine Learning
                       </div>
@@ -93,6 +93,7 @@ export default function Learn () {
             <LearnModuleCard />
 
           </div>
+          <div>001</div>
         </div>
       </div>
       </div>
