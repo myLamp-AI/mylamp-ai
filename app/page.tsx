@@ -14,7 +14,6 @@ export default function Page() {
     <>
 
       <div className='h-full bg-[#f5f5f5]'>
-
         <div className="flex flex-col bg-blue-300  ">
           <HeroSection />
         </div>
@@ -26,7 +25,6 @@ export default function Page() {
         <RecentAdvances />
         <CommunitySection />
         <Footer />
-        {/* <div className="min-h-screen"></div> */}
       </div>
     </>
   )

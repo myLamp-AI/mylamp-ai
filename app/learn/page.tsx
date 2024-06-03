@@ -1,13 +1,16 @@
 "use client"
 import Image from "next/image";
+import { useState, useRef } from "react";
 import LearnModuleCard from "@/components/learn/LearnModuleCard";
 import Sidebar from "@/components/Sidebar";
 
-export default function Learn () {
+
+export default function Learn() {
+  const [progress, setProgress] = useState(90);
+
   return (
     <div className="bg-[#E8E2F4]">
       <div className="flex w-full max-w-[1300px] m-auto relative bg-[#E8E2F4]">
-        <div className="z-10  "><Sidebar /></div>
         <div className=" inset-y-0 flex flex-col w-full p-3 mt-5 ">
           <div className="w-full justify-between pr-3 pl-3">
             <div className="flex flex-col md:h-96 h-1/3  w-full mb-5 sm:flex-row justify-center  md:justify-between">
@@ -64,18 +67,18 @@ export default function Learn () {
                       </div>
 
                       <div className="absolute top-60 w-full left-10 max-w-[350px] flex items-center gap-2">
-                      <div className="w-fit text-center align-middle mr-auto font-semibold text-[#737373]">66%</div>
-                      <div className="w-full max-w-[350px] h-[9px] border-[1px] border-[#8C52FF] rounded-lg overflow-hidden">
-                      <div className="bg-[#8C52FF] h-full text-white text-center leading-8" style={{ width: `${80}%` }}></div>
-                      </div>
+                        <div className="w-fit text-center align-middle mr-auto font-semibold text-[#737373]">{progress}%</div>
+                        <div className="w-full max-w-[350px] h-[9px] border-[1px] border-[#8C52FF] rounded-lg overflow-hidden">
+                          <div className="bg-[#8C52FF] h-full text-white text-center leading-8" style={{ width: `${progress}%` }}></div>
                         </div>
+                      </div>
 
 
-                     
+
 
                       <div className="flex absolute sm:top-72  w-full md:h-fit text-[15px] font-semibold gap-10 text-center text-[#8C52FF]">
-                        <div className="w-fit px-6 py-2 h-fit hover:bg-[#8C52FF] hover:text-white  border-2 border-[#8C52FF] rounded-md ">View Insights</div>
-                        <div className="w-fit p-2 px-6 h-fit border-2 border-[#8C52FF] hover:bg-[#8C52FF]  hover:text-white rounded-md">Resume Learning</div>
+                        <button className="w-fit px-6 py-2 h-fit hover:bg-[#8C52FF] hover:text-white  border-2 transition-all ease-in-out border-[#8C52FF] rounded-md ">View Insights</button>
+                        <button className="w-fit p-2 px-6 h-fit border-2 border-[#8C52FF] hover:bg-[#8C52FF]  transition-all ease-in-out hover:text-white rounded-md">Resume Learning</button>
                       </div>
 
                     </div>
@@ -85,7 +88,7 @@ export default function Learn () {
               </div>
               <div className=" ml-6   full sm:w-1/3 hidden lg:block   md:w-4/12 lg:h-96 md:h-full bg-white  rounded-lg"></div>
             </div>
-            
+
 
             <LearnModuleCard />
             <LearnModuleCard />
@@ -93,9 +96,9 @@ export default function Learn () {
             <LearnModuleCard />
 
           </div>
-         
+
         </div>
       </div>
-      </div>
+    </div>
   );
 };

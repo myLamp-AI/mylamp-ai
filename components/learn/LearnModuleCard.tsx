@@ -14,24 +14,24 @@ export default function LearnModuleCard() {
       }, 900);
     }
   };
-  
+
 
   return (
-    <>                 
-      <div className= {`${showCollapse ? 'border-[0.5px] border-[rgb(130,130,130)]' : 'none'}   bg-white my-3 max-h-max  rounded-lg mb-5 `}>
+    <>
+      <div className={`${showCollapse ? 'border-[0.5px] border-[rgb(130,130,130)]' : 'none'}   bg-white my-3 max-h-max  rounded-lg mb-5 `}>
         <div
           className={`${showCollapse ? 'border-[0.5px] border-[rgb(130,130,130)]' : 'none'} lg:flex grid grid-flow-row  sm:w-30 shadow rounded-t-md pl-2 pr-2 rounded-lg   lg:py-5 py-2 bg-white rouned-b-none mb-3`}
           onClick={() => setShowCollapse(!showCollapse)}
         >
           <div className="w-full lg:w-[16%] max-w-[160px] flex justify-center ">
-         <Image
-        src="/ai.svg"
-        alt="Verceldcjncn Logo"
-        width={50}
-        height={50}
-        priority
-        className="border lg:ml-4 bg-[#E8E2F4] rounded-full p-3 lg:w-[95px] w-[80px]  mt-6  mb-5 border-rad mr-4"
-      />
+            <Image
+              src="/ai.svg"
+              alt="Verceldcjncn Logo"
+              width={50}
+              height={50}
+              priority
+              className="border lg:ml-4 bg-[#E8E2F4] rounded-full p-3 lg:w-[95px] w-[80px]  mt-6  mb-5 border-rad mr-4"
+            />
           </div>
           <div className="lg:w-3/6 lg:grid lg:grid-flow-row ">
             <h4 className="mb-2 lg:mt-2 text-purple-700 font-semibold text-xl  ">
@@ -47,9 +47,9 @@ export default function LearnModuleCard() {
             </p>
           </div>
           <div className="flex flex-col justify-center h-fit lg:items-center lg:mr-7 text-gray-600 lg:mt-10 w-fit item-center">
-  <span className="font-semibold text-3xl sm:text-xs w-fit h-fit">Grade</span>
-  <span className="text-sm w-fit h-fit">67%</span>
-</div>
+            <span className="font-semibold text-3xl sm:text-xs w-fit h-fit">Grade</span>
+            <span className="text-sm w-fit h-fit">67%</span>
+          </div>
 
 
           <div onClick={toggleCollapse} className="lg:flex  hidden ">
@@ -70,10 +70,10 @@ export default function LearnModuleCard() {
               </p>
             </div>
             <div className=" rounded-full h-2 flex items-center gap-2">
-            <div className="w-fit text-center align-middle font-semibold text-[#737373] text-[12px]">66%</div>
-                      <div className="w-full max-w-[300px] h-[6px] border-[1px] border-[#8C52FF] rounded-lg overflow-hidden">
-                      <div className="bg-[#8C52FF] h-full text-white text-center leading-8 " style={{ width: `${80}%` }}></div>
-                      </div>
+              <div className="w-fit text-center align-middle font-semibold text-[#737373] text-[12px]">66%</div>
+              <div className="w-full max-w-[300px] h-[6px] border-[1px] border-[#8C52FF] rounded-lg overflow-hidden">
+                <div className="bg-[#8C52FF] h-full text-white text-center leading-8 " style={{ width: `${80}%` }}></div>
+              </div>
             </div>
           </div>
           <div className="lg:mt-10 mt-10 grid justify-center w-fit h-fit">
@@ -94,16 +94,16 @@ export default function LearnModuleCard() {
           </div>
         </div>
         <Transition in={showCollapse} timeout={300}>
-        {(state) => (
-          <div className={`transition-transform origin-top duration-300 transform ${state === 'entered' ? 'scale-y-100' : 'scale-y-0'}`}>
-            {showCollapse && (
-              <div>
-                <LearnCollapseCard />
-              </div>
-            )}
-          </div>
-        )}
-      </Transition>
+          {(state) => (
+            <div className={`transition-transform origin-top duration-300 transform ${state === 'entered' ? 'scale-y-100' : 'scale-y-0'}`}>
+              {showCollapse && (
+                <div>
+                  <LearnCollapseCard />
+                </div>
+              )}
+            </div>
+          )}
+        </Transition>
       </div>
     </>
   );

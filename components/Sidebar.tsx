@@ -25,8 +25,8 @@ export default function NewSidebar() {
     }
 
     return (
-        <div className="flex flex-row absolute">
-            <div className={`p-2 h-screen fixed bg-[#f5f5f5] top-0 left-0 shadow-md shadow-[#08080870] mt-16 gap-4 transition-transform duration-300  ${isSidebarVisible || isHovered ? 'transform-none' : '-translate-x-full'} z-10 `}
+        <div className="flex flex-row absolute top-0">
+            <div className={`p-2 h-screen fixed bg-[#f5f5f5] top-0 left-0 shadow-md shadow-[#08080870] pt-16 gap-4 transition-transform duration-300  ${isSidebarVisible || isHovered ? 'transform-none' : '-translate-x-full'} z-10 `}
                 onClick={handleDivClick}
                 >
                 <div className="h-full w-full flex flex-col mr-6">

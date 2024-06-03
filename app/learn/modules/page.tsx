@@ -1,5 +1,3 @@
-import React from 'react'
-
 import Sidebar02 from '@/components/sideBar02'
 
 
