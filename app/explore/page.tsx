@@ -70,15 +70,13 @@ export default function Explore() {
                                         <div className="w-full bg-[#FFFFFF] rounded-lg mb-5 flex flex-col">
                                             <div className="flex flex-row mt-4 ml-2.5">
                                                 <div className="ml-1"><Image src="/mlimage.svg" height={75} width={75} alt="mlimage" /></div>
-                                                <div className="ml-11 mt-3" >
-                                                    <div>
+                                                <div className="mx-6 mt-3" >
                                                         <span className="text-base leading-5 font-semibold">{item[0].name}</span>
                                                         <div className="flex gap-4">
                                                             <span>{item[1].time}</span>
                                                             <span>|</span>
                                                             <span>{item[2].byte}</span>
                                                         </div>
-                                                    </div>
                                                 </div>
                                             </div>
                                             <Link href="explore/bytes" className="mx-3 mt-1.5 child flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-[#8C52FF] h-9 rounded-lg text-[#fff] font-medium ">
