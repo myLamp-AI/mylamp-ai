@@ -4,7 +4,7 @@ import Image from "next/image";
 const Lessonsdiv = () => {
   return (
     <>
-      <div className="  ml-7 w-1/2">
+      <div className="  ml-7 w-3/5">
         
         <div className="bg-white border-2 border-gray-300 rounded-lg flex px-6 pt-4 pb-6 mb-4">
       

@@ -1,7 +1,7 @@
 [
-    {"id":1,"name":"Quizes","svg":"quizimg.svg"},
-    {"id":2,"name":"Coding","svg":"codingimg.svg"},
-    {"id":3,"name":"Case Study","svg":"caseimg.svg"},
-    {"id":4,"name":"Product teardown","svg":"productimg.svg"}
+    {"id":1,"name":"Quizes","svg":"/practice/quizimg.svg"},
+    {"id":2,"name":"Coding","svg":"/practice/codingimg.svg"},
+    {"id":3,"name":"Case Study","svg":"/practice/caseimg.svg"},
+    {"id":4,"name":"Product teardown","svg":"/practice/productimg.svg"}
    
 ]

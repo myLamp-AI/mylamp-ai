@@ -1,5 +1,5 @@
 [
-    {"id":1,"name":"Mechanical Engineering","svg":"mechanical.svg"},
-    {"id":2,"name":"Computer Programming","svg":"computer.svg"},
-    {"id":3,"name":"Financial Analysis","svg":"financial.svg"}
+    {"id":1,"name":"Mechanical Engineering","svg":"/practice/mechanical.svg"},
+    {"id":2,"name":"Computer Programming","svg":"/practice/computer.svg"},
+    {"id":3,"name":"Financial Analysis","svg":"/practice/financial.svg"}
 ]

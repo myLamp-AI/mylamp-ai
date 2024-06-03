@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { FaStar } from "react-icons/fa";
 import newdata from "../data/Allassessment.json"
 import newdata1 from '../data/Assessment.json'
-import Sidebar from "@/components/Sidebar";
+import codingdata from '@/app/data/codingassmnt.json'
 
 export default function Explore() {
     const radius = 40;
@@ -16,11 +16,11 @@ export default function Explore() {
     const [exasmt, setExasmt] = useState([...newdata1]);
 
     return (
-        <div className="flex flex-row w-full h-full">
-            <div className="z-10"><Sidebar /></div>
-            <div className="w-full">
-                <div className="bg-[#F1EAFF] w-full h-full flex overflow-hidden" >
-                    <div className="w-full h-[720px] flex flex-col gap-3 pl-4 pt-3 overflow-y-auto scrollbar-hide">
+        
+        
+            <div className="w-full flex justify-center">
+                <div className="bg-[#F1EAFF] w-full max-w-[1200px] max-h-[720px] flex flex-wrap lg:flex-nowrap shadow-xl" >
+                    <div className="w-full h-full flex flex-col gap-3 pl-4 pt-3 overflow-y-auto scrollbar-hide">
                         <div className=" text-[#737373] font-medium flex flex-col gap-2.5">
                             <div>Let&apos;s Rock!</div>
                             <span className="text-[#A6A6A6]">Practice regularly to achieve perfection</span>
@@ -58,16 +58,16 @@ export default function Explore() {
                                 <span className="text-sm font-semibold text-[#8c52ff]">See All</span>
                             </div>
                             <div>
-                                <div className="grid grid-cols-2 grid-rows-2 gap-4 ">
+                                <div className="grid grid-cols-2  gap-4 ">
                                     {
                                         asmnt.map((item, index) => (
                                             <>
-                                                <div key={item.id} className="bg-[#ffffff] rounded-lg flex flex-row justify-between">
-                                                    <div className="w-1/2 ml-4 flex flex-col gap-y-12 justify-center text-base font-semibold ">
+                                                <div key={item.id} className="bg-[#ffffff] rounded-lg flex flex-row justify-between h-32">
+                                                    <div className="w-1/2  ml-4 flex flex-col gap-y-6 justify-center text-base font-semibold ">
                                                         {item.name}
                                                         <div className="w-20 bg-[#8c52ff] rounded-2xl flex flex-row justify-between items-center">
                                                             <span className="ml-2 text-[#ffffff] font-medium">Start</span>
-                                                            <Image src="/conarrow.svg" alt="arrow" width={25} height={25} />
+                                                            <Image src="/practice/conarrow.svg" alt="arrow" width={25} height={25} />
                                                         </div>
                                                     </div>
                                                     <div>
@@ -76,8 +76,21 @@ export default function Explore() {
                                                 </div>
                                                 {
                                                     index % 2 === 1 &&
-                                                    <div className="col-span-2">
-                                                        Hello
+                                                    <div className="col-span-2 w-full bg-[#fff] flex justify-center rounded-lg">
+                                                        <div  className="w-10/12 flex flex-col gap-3 mt-6 mb-6 ">
+                                                            {
+                                                                codingdata.map((item,index)=>(
+                                                                    <div className="flex flex-row w-full h-10 gap-8">
+                                                                        <div className="flex flex-row w-9/12 h-full bg-[#F1EAFF] rounded-full gap-4 items-center"> 
+                                                                            <div><img src={codingdata[index].svg}/></div>
+                                                                            <div className="text-[#737373] text-md font-semibold">{codingdata[index].name}</div>
+                                                                        </div>
+                                                                        <div className="w-4/12 h-10 border-2 border-[#8C52FF] rounded-full text-[#2561A1] font-semibold flex justify-center items-center">Start Now</div>
+                                                                    </div>
+                                                                ))
+                                                            }
+
+                                                        </div>
                                                     </div>
                                                 }
                                             </>
@@ -87,7 +100,7 @@ export default function Explore() {
                             </div>
                         </div>
                     </div>
-                    <div className="w-full max-w-[600px] flex flex-col gap-2 p-3 mt-1 lg:mt-0">
+                    <div className="w-full max-w-[800px]  flex flex-col gap-2 p-3 mt-1 lg:mt-0">
                         <div className="h-1/2 flex flex-col m-2 mt-3 bg-[#ffffff] rounded-xl">
                             <div className="flex flex-row justify-around h-1/2 m-2">
                                 <div className="w-40 h-40 relative">
@@ -166,6 +179,5 @@ export default function Explore() {
                     </div>
                 </div>
             </div>
-        </div>
     );
 }

@@ -20,21 +20,15 @@ export default function NewSidebar() {
     const handleArrowClick = () => {
         setIsSidebarVisible(true);
     };
-
-    const handleMouseEnter = () => {
-        setIsHovered(true);
-    };
-
-    const handleMouseLeave = () => {
-        setIsHovered(false);
+    const handleDivClick = () =>{
         setIsSidebarVisible(false);
-    };
+    }
 
     return (
-        <div className="flex flex-row z-10">
-            <div className={`p-2 h-screen fixed bg-[#f5f5f5] top-0 left-0 shadow-md shadow-[#08080870] mt-16 gap-4 transition-transform duration-300 ${isSidebarVisible || isHovered ? 'transform-none' : '-translate-x-full'} `}
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}>
+        <div className="flex flex-row absolute">
+            <div className={`p-2 h-screen fixed bg-[#f5f5f5] top-0 left-0 shadow-md shadow-[#08080870] mt-16 gap-4 transition-transform duration-300  ${isSidebarVisible || isHovered ? 'transform-none' : '-translate-x-full'} z-10 `}
+                onClick={handleDivClick}
+                >
                 <div className="h-full w-full flex flex-col mr-6">
                     <div className="w-fit h-[500px] flex flex-col  gap-5 overflow-x-clip overflow-y-auto scrollbar-hide">
                         {
@@ -42,10 +36,10 @@ export default function NewSidebar() {
                                 const isActive = pathname === navData[navindex].Link;
                                 return (
                                     <div className={`flex flex-row gap-5`} key={navindex}>
-                                        <div className={`w-2 h-10 ${isActive ? 'block' : 'hidden'}`}>
-                                            <Image src="/navbarslider.svg" alt="slider" width={10} height={10} />
+                                        <div className={`w-2 h-6`}>
+                                            <Image src="/sidebar/navbarslider.svg" alt="slider" width={10} height={10} className={`${isActive ? 'block' : 'hidden'}`} />
                                         </div>
-                                        <NavLinks name={navData[navindex].name} icon={navData[navindex].icon} Link={navData[navindex].Link} />
+                                        <NavLinks name={navData[navindex].name} icon={navData[navindex].icon} Link={navData[navindex].Link} index={navindex}/>
                                     </div>
                                 );
                             })
@@ -72,7 +66,7 @@ export default function NewSidebar() {
                     </div>
                 </div>
             </div>
-            <div className="flex h-screen  items-center" onClick={handleArrowClick}><Image src="/rfarw.svg" alt="arw" height={10} width={10} /></div>
+            <div className="flex h-screen items-center fixed" onClick={handleArrowClick} onMouseMove={handleArrowClick}><Image src="/rfarw.svg" alt="arw" height={10} width={10}  /></div>
         </div>
     );
 }
