@@ -100,9 +100,6 @@ export default function WhyWize() {
                         </div>
                     </div>
                 </div>
-                <div className="text-4xl font-medium h-[150px] flex items-center">
-                    Backed by Best
-                </div>
             </div>
         </>
     )

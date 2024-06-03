@@ -13,3 +13,20 @@
 .body{
   background-color: #E8E2F4;
 }
+
+.square {
+  background-image: url('/home/PowerOfWize.svg');
+  background-size: 600px 600px;
+}
+.bg-pos-1 {
+  background-position: 0 0;
+}
+.bg-pos-2 {
+  background-position: 152px 0;
+}
+.bg-pos-3 {
+  background-position: 304px 0;
+}
+.bg-pos-4 {
+  background-position: 456px 0;
+}

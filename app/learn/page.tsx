@@ -63,9 +63,6 @@ export default function Learn () {
                         <div className="w-fit text-center text-sm lg:text-[18px]  ">Supervise learning and applications</div>
                       </div>
 
-                     
-                     
-
                       <div className="flex absolute top-72 w-full h-fit text-[15px] font-semibold gap-10 text-center">
                         <div className="w-fit px-6 py-2 h-fit hover:bg-[#8C52FF] hover:text-white  border-2 border-[#8C52FF] rounded-md ">View Insights</div>
                         <div className="w-fit p-2 px-6 h-fit border-2 border-[#8C52FF] hover:bg-[#8C52FF]  hover:text-white rounded-md">Resume Learning</div>
