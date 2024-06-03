@@ -55,7 +55,7 @@ export default function Explore() {
                         <div className="flex flex-col gap-3 overflow-x-clip">
                             <div className="flex flex-row justify-between">
                                 <span className="text-base font-semibold">All Assessments</span>
-                                <span className="text-sm font-semibold text-[#8c52ff]">See All</span>
+                                <button className="text-sm font-semibold text-[#8c52ff]">See All</button>
                             </div>
                             <div>
                                 <div className="grid grid-cols-2  gap-4 ">
@@ -65,10 +65,10 @@ export default function Explore() {
                                                 <div key={item.id} className="bg-[#ffffff] rounded-lg flex flex-row justify-between h-32">
                                                     <div className="w-1/2  ml-4 flex flex-col gap-y-6 justify-center text-base font-semibold ">
                                                         {item.name}
-                                                        <div className="w-20 bg-[#8c52ff] rounded-2xl flex flex-row justify-between items-center">
-                                                            <span className="ml-2 text-[#ffffff] font-medium">Start</span>
+                                                        <button className="w-20 bg-[#8c52ff] rounded-2xl flex flex-row justify-between items-center shadow shadow-[#737373]">
+                                                            <span className="ml-2 text-[#ffffff] font-medium ">Start</span>
                                                             <Image src="/practice/conarrow.svg" alt="arrow" width={25} height={25} />
-                                                        </div>
+                                                        </button>
                                                     </div>
                                                     <div>
                                                         <Image src={`${item.svg}`} alt={`svg${index + 1}`} width={184.18} height={150.64} />
@@ -85,7 +85,7 @@ export default function Explore() {
                                                                             <div><img src={codingdata[index].svg}/></div>
                                                                             <div className="text-[#737373] text-md font-semibold">{codingdata[index].name}</div>
                                                                         </div>
-                                                                        <div className="w-4/12 h-10 border-2 border-[#8C52FF] rounded-full text-[#2561A1] font-semibold flex justify-center items-center">Start Now</div>
+                                                                        <button className="w-4/12 h-10 border-2 border-[#8C52FF] rounded-full text-[#2561A1] font-semibold flex justify-center items-center shadow-lg">Start Now</button>
                                                                     </div>
                                                                 ))
                                                             }
