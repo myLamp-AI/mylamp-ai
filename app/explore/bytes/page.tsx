@@ -8,15 +8,18 @@ export default function VideoPage(){
     const setDiv = Array(4).fill(null);
     const renderSlideDiv = Array(4).fill(null);
     const renderQnDiv = Array(2).fill(null);
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const totalItems = bytedata.length;
+
  
     const prevSlide = () => {
-       
+        setCurrentIndex((prevIndex) => (prevIndex - 1 + totalItems) % totalItems);
         if (page > 1){
             setPage(page-1);
         }
     };
     const nextSlide = () => {
-    
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % totalItems);
         if (page < 24){
             setPage(page+1)
         }
@@ -57,7 +60,19 @@ export default function VideoPage(){
                 </div>
                 <div className="h-96 flex justify-between items-center">
                     <div className="hidden md:flex items-center ml-8"><Image src="/lfarw.svg" alt="arrow" height={20} width={20} onClick={prevSlide}/></div>
-                    
+                    <div className="overflow-hidden w-1/2">
+                        <div
+                            className="flex transition-transform duration-500"
+                            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+                            >
+                            {bytedata.map((item,index) => (
+                                <div key={index} className="min-w-full flex-shrink-0">
+                                    <img src={item.svg}  className="w-full h-60 object-cover" />
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
                     <div className="hidden md:flex items-center mr-8"><Image src="/rfarw.svg" alt="invarrow"  height={20} width={20} onClick={nextSlide}/></div>
                 </div>
                 <div className="h-52 flex justify-between items-center ml-8">

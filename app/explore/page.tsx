@@ -3,7 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from 'next/image'
 import data from "../data/data.json"
-import Sidebar from "@/components/Sidebar";
+
 
 export default function Explore() {
     const [value, setValue] = useState([...data])
