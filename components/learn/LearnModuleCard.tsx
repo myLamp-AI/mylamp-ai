@@ -2,13 +2,23 @@
 import Image from "next/image";
 import LearnCollapseCard from "./LearnCollapseCard";
 import { useState } from "react";
+import { Transition } from 'react-transition-group';
 
 export default function LearnModuleCard() {
   const [showCollapse, setShowCollapse] = useState(false);
+  const toggleCollapse = () => {
+    setShowCollapse((prev) => !prev); // Toggle the collapse state
+    if (!showCollapse) {
+      setTimeout(() => {
+        setShowCollapse(false); // Close the collapse after the transition duration
+      }, 900);
+    }
+  };
+  
 
   return (
     <>                 
-      <div className= {`${showCollapse ? 'border-[0.5px] border-[rgb(130,130,130)]' : 'none'}  bg-white my-3 max-h-max  rounded-lg mb-5`}>
+      <div className= {`${showCollapse ? 'border-[0.5px] border-[rgb(130,130,130)]' : 'none'}   bg-white my-3 max-h-max  rounded-lg mb-5 `}>
         <div
           className={`${showCollapse ? 'border-[0.5px] border-[rgb(130,130,130)]' : 'none'} lg:flex grid grid-flow-row  sm:w-30 shadow rounded-t-md pl-2 pr-2 rounded-lg   lg:py-5 py-2 bg-white rouned-b-none mb-3`}
           onClick={() => setShowCollapse(!showCollapse)}
@@ -36,14 +46,13 @@ export default function LearnModuleCard() {
               7 Lessons    7 weeks     7 credits
             </p>
           </div>
-          <div className=" lg:grid lg:justify-center lg:mt-3 lg:w-1/6 lg:mx-auto ">
-            <h1 className="  font-bold text-gray-600 xl:text-md sm:text-xs lg:mt-5">
-              Grade
-            </h1>
-            <span className="text-sm">66%</span>
-          </div>
+          <div className="flex flex-col justify-center h-fit lg:items-center lg:mr-7 text-gray-600 lg:mt-10 w-fit item-center">
+  <span className="font-semibold text-3xl sm:text-xs w-fit h-fit">Grade</span>
+  <span className="text-sm w-fit h-fit">67%</span>
+</div>
 
-          <div className="lg:flex  hidden ">
+
+          <div onClick={toggleCollapse} className="lg:flex  hidden ">
             <Image
               src="/Line 1.svg"
               alt="Verceldcjncn Logo"
@@ -54,20 +63,20 @@ export default function LearnModuleCard() {
             />
           </div>
 
-          <div className="lg:mt-6 ml-8 lg:w-2/6">
+          <div className="lg:mt-6 lg:ml-8 lg:w-2/6 ">
             <div>
-              <p className="text-gray-600 lg:mb-4 font-bold text-sm mt-2 mb-3">
+              <p className="text-[#737373] lg:mb-4 font-semibold text-md mt-2 mb-3">
                 Progress
               </p>
             </div>
-            <div className="bg-gray-200 rounded-full h-2 flex items-center gap-2">
+            <div className=" rounded-full h-2 flex items-center gap-2">
             <div className="w-fit text-center align-middle font-semibold text-[#737373] text-[12px]">66%</div>
-                      <div className="w-full max-w-[200px] h-[6px] border-[1px] border-[#8C52FF] rounded-lg overflow-hidden">
+                      <div className="w-full max-w-[300px] h-[6px] border-[1px] border-[#8C52FF] rounded-lg overflow-hidden">
                       <div className="bg-[#8C52FF] h-full text-white text-center leading-8 " style={{ width: `${80}%` }}></div>
                       </div>
             </div>
           </div>
-          <div className="lg:mt-10 mt-5 grid justify-center">
+          <div className="lg:mt-10 mt-10 grid justify-center w-fit h-fit">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -84,11 +93,17 @@ export default function LearnModuleCard() {
             </svg>
           </div>
         </div>
-        {showCollapse && (
-          <>
-            <LearnCollapseCard />
-          </>
+        <Transition in={showCollapse} timeout={300}>
+        {(state) => (
+          <div className={`transition-transform origin-top duration-300 transform ${state === 'entered' ? 'scale-y-100' : 'scale-y-0'}`}>
+            {showCollapse && (
+              <div>
+                <LearnCollapseCard />
+              </div>
+            )}
+          </div>
         )}
+      </Transition>
       </div>
     </>
   );
