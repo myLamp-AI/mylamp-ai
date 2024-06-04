@@ -14,16 +14,16 @@ export default function LearnModuleCard() {
       }, 900);
     }
   };
-  const duration = 1000;
+  const duration = 100;
 
 
   return (
     <>
       <Transition in={showCollapse} timeout={duration}>
       {state => (
-      <div className={`overflow-hidden transition-height duration-${duration} ${state === 'entered' ? 'border-[0.5px] border-[rgb(130,130,130)]' : 'none'} bg-white my-3 max-h-max rounded-lg mb-5`}>
+      <div className={`overflow-hidden transition-height duration-${duration} ${state === 'entered' ? 'shadow-lg' : 'none'} bg-white my-3 max-h-max rounded-lg mb-5`}>
         <div
-          className={`${showCollapse ? 'border-[0.5px] border-[rgb(130,130,130)]' : 'none'} lg:flex grid grid-flow-row  sm:w-30 shadow rounded-t-md pl-2 pr-2 rounded-lg   lg:py-5 py-2 bg-white rouned-b-none mb-3`}
+          className={`${showCollapse ? 'shadow-lg' : 'none'} lg:flex grid grid-flow-row  sm:w-30 shadow rounded-t-md pl-2 pr-2 rounded-lg   lg:py-5 py-2 bg-white rouned-b-none mb-3`}
           onClick={() => setShowCollapse(!showCollapse)}
         >
           <div className="w-full lg:w-[16%] max-w-[160px] flex justify-center ">
@@ -79,26 +79,20 @@ export default function LearnModuleCard() {
               </div>
             </div>
           </div>
-          <div className="lg:mt-10 mt-10 grid justify-center w-fit h-fit">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
-              className="w-6 h-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="m19.5 8.25-7.5 7.5-7.5-7.5"
-              />
-            </svg>
+          <div className="  lg:mr-4 lg:ml-0 ml-2 grid justify-center w-fit  h-full lg:my-14 mt-6  ">
+          <Image
+              src="/arrow.svg"
+              alt="Verceldcjncn Logo h-fit w-fit" 
+              className={`${showCollapse ? 'rotate-90' : '-rotate-90'}`}
+              width={10}
+              height={10}
+              priority
+            />
           </div>
         </div>
-        <Transition in={showCollapse} timeout={300}>
+        <Transition in={showCollapse} timeout={200}>
           {(state) => (
-            <div className={`transition-transform origin-top duration-300 transform ${state === 'entered' ? 'scale-y-100' : 'scale-y-0'}`}>
+            <div className={`transition-transform  origin-top duration-200 transform ${state === 'entered' ? 'scale-y-100' : 'scale-y-0'}`}>
               {showCollapse && (
                 <div>
                   <LearnCollapseCard />
