@@ -2,157 +2,47 @@ import React from "react";
 import Image from "next/image";
 
 const Lessonsdiv = () => {
+  // Define your lessons data
+  const lessonsData = [
+    { id: 1, name: "Language of ML", language: "python" ,image: "/learn/play button.svg" },
+    { id: 2, name: "Second Lesson", language: "javascript",image: "/learn/icon 1.svg" },
+    { id: 3, name: "Third Lesson", language: "java" ,image: "/learn/icon2.svg" },
+    { id: 4, name: "Fourth Lesson", language: "ruby" ,image: "/learn/icon 3.svg" },
+    { id: 5, name: "Fifth Lesson", language: "typescript" ,image: "/learn/icon 1.svg" }
+  ];
+
   return (
     <>
-      <div className="  ml-7 w-3/5">
-        
-        <div className="bg-white border-2 border-gray-300 rounded-lg flex px-6 pt-4 pb-6 mb-4">
-      
-          <div>
-            
-            <div className="w-80 h-9 flex mb-4 border-2 border-gray-400  bg-white rounded-3xl ">
-              <div className="w-1/6">
-                <Image
-                  src="/play button.svg"
-                  alt="Verceldcjncn Logo"
-                  className="mt-1 ml-2 border-rad "
-                  width={25}
-                  height={25}
-                  priority
-                />
+      <div className="mx-6 w-full md:w-[60%] flex justify-center pr-2 ">
+        <div className="bg-white border-[0.5px] border-[#737373]  rounded-lg flex md:flex-col w-full h-fit px-8 pb-8">
+          <div className=" w-fit w-max-[96px] text-black mx-2 my-4 font-[500]  text-xl">Lessons</div>
+          <div className="  h-fit w-full mx-5 ">
+            {lessonsData.map((lesson) => (
+              <div
+                key={lesson.id}
+                className="w-full md:w-full  h-9 flex mb-4 shadow-xl bg-white rounded-3xl mt-2"
+              >
+                <div className="w-fit h-fit flex  justify-center my-auto items-center mx-[3px]">
+                  <Image
+                    src={lesson.image}
+                    alt="Verceldcjncn Logo"
+                    className="border-rad"
+                    width={30}
+                    height={30}
+                    priority
+                  />
+                </div><div className="flex justify-center  items-center">
+                  <h4 className="text-black text-sm mx-2">
+                    <span className="font-[660]">{lesson.name}</span>: {lesson.language}
+                  </h4>
+                </div>
+
+
+
               </div>
-              <div>
-                <h4 className="text-black text-sm mt-1">
-                  {" "}
-                  <b> Language of ML</b> : python
-                </h4>
-              </div>
-            </div>
-            <div className="w-80 h-9 flex mb-4 border-2 border-gray-400  bg-white rounded-3xl ">
-              <div className="w-1/6">
-                <Image
-                  src="/play button.svg"
-                  alt="Verceldcjncn Logo"
-                  className=" ml-2 mt-1 border-rad "
-                  width={25}
-                  height={15}
-                  priority
-                />
-              </div>
-              <div>
-                <h4 className="text-black text-sm mt-1">
-                  {" "}
-                  <b> Language of ML</b> : python
-                </h4>
-              </div>
-            </div>
-            <div className="w-80 h-9 flex mb-4 border-2 border-gray-400  bg-white rounded-3xl ">
-              <div className="w-1/6">
-                <Image
-                  src="/play button.svg"
-                  alt="Verceldcjncn Logo"
-                  className="mt-1 ml-2 border-rad "
-                  width={25}
-                  height={15}
-                  priority
-                />
-              </div>
-              <div>
-                <h4 className="text-black text-sm mt-1">
-                  {" "}
-                  <b> Language of ML</b> : python
-                </h4>
-              </div>
-            </div>
-            <div className="w-80 h-9 flex mb-4 border-2 border-gray-400  bg-white rounded-3xl ">
-              <div className="w-1/6">
-                <Image
-                  src="/play button.svg"
-                  alt="Verceldcjncn Logo"
-                  className="mt-1 ml-2 border-rad "
-                  width={25}
-                  height={15}
-                  priority
-                />
-              </div>
-              <div>
-                <h4 className="text-black text-sm mt-1">
-                  {" "}
-                  <b> Language of ML</b> : python
-                </h4>
-              </div>
-            </div>
-            <div className="w-80 h-9 flex mb-4 border-2 border-gray-400  bg-white rounded-3xl">
-              <div className="w-1/6">
-                <Image
-                  src="/play button.svg"
-                  alt="Verceldcjncn Logo"
-                  className="mt-1 ml-2 border-rad "
-                  width={25}
-                  height={15}
-                  priority
-                />
-              </div>
-              <div>
-                <h4 className="text-black text-sm mt-1">
-                  {" "}
-                  <b> Language of ML</b> : python
-                </h4>
-              </div>
-            </div>
+            ))}
           </div>
-          <div className="w-1/2 ">
-           <div className="mb-5">
-           <Image
-                  src="/revise.svg"
-                  alt="Verceldcjncn Logo"
-                  className=" ml-2 border-rad "
-                  width={110}
-                  height={60}
-                  priority
-                />
-           </div>
-           <div className="mb-4"> 
-           <Image
-                  src="/completed.svg"
-                  alt="Verceldcjncn Logo"
-                  className="mt-1 ml-2 border-rad "
-                  width={110}
-                  height={60}
-                  priority
-                />
-           </div>
-           <div className="mb-6">
-           <Image
-                  src="/not started.svg"
-                  alt="Verceldcjncn Logo"
-                  className="mt-1 ml-2 border-rad "
-                  width={110}
-                  height={60}
-                  priority
-                />
-           </div>
-           <div className="mb-4">
-           <Image
-                  src="/try again.svg"
-                  alt="Verceldcjncn Logo"
-                  className="mt-1 ml-2 border-rad "
-                  width={110}
-                  height={60}
-                  priority
-                />
-           </div>
-           <div className="mt-4">
-           <Image
-                  src="/not started.svg"
-                  alt="Verceldcjncn Logo"
-                  className="mt-1 ml-2 border-rad "
-                  width={110}
-                  height={60}
-                  priority
-                />
-           </div>
-          </div>
+
         </div>
       </div>
     </>

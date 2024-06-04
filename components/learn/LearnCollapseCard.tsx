@@ -4,18 +4,20 @@ import LearnCollapseItem from "./LearnCollapseItem";
 import { useState } from "react";
 import Lessonsdiv from "./Lessonsdiv";
 import Image from "next/image";
-
+import useBooleanStore from './store';
 export default function LearnCollapseCard() {
 
-    const [showdiv01, setdiv01] = useState(true);
+    
+    const booleanValue = useBooleanStore((state) => state.booleanValue);
+
 
 
     return (
 
         <>
             <div className="p-4 text-white flex flex-col  ">
-                <div className="w-full h-full flex flex-row">
-                    <div className=" h-full  w-2/5">
+                <div className="w-full h-full flex flex-row  justify-between mx-6 ">
+                    <div className=" h-full  w-[40%]">
                         <LearnCollapseItem />
                         <LearnCollapseItem />
                         <LearnCollapseItem />
@@ -24,160 +26,7 @@ export default function LearnCollapseCard() {
 
                     </div>
                     {
-                        showdiv01 && (
-                            <div className="  ml-7 w-3/5">
-
-                                <div className="bg-white border-2 border-gray-300 rounded-lg flex px-6 pt-4 pb-6 mb-4">
-
-                                    <div>
-
-                                        <div className="w-80 h-9 flex mb-4 border-2 border-gray-400  bg-white rounded-3xl ">
-                                            <div className="w-1/6">
-                                                <Image
-                                                    src="/play button.svg"
-                                                    alt="Verceldcjncn Logo"
-                                                    className="mt-1 ml-2 border-rad "
-                                                    width={25}
-                                                    height={25}
-                                                    priority
-                                                />
-                                            </div>
-                                            <div>
-                                                <h4 className="text-black text-sm mt-1">
-                                                    {" "}
-                                                    <b> Language of ML</b> : python
-                                                </h4>
-                                            </div>
-                                        </div>
-                                        <div className="w-80 h-9 flex mb-4 border-2 border-gray-400  bg-white rounded-3xl ">
-                                            <div className="w-1/6">
-                                                <Image
-                                                    src="/play button.svg"
-                                                    alt="Verceldcjncn Logo"
-                                                    className=" ml-2 mt-1 border-rad "
-                                                    width={25}
-                                                    height={15}
-                                                    priority
-                                                />
-                                            </div>
-                                            <div>
-                                                <h4 className="text-black text-sm mt-1">
-                                                    {" "}
-                                                    <b> Language of ML</b> : python
-                                                </h4>
-                                            </div>
-                                        </div>
-                                        <div className="w-80 h-9 flex mb-4 border-2 border-gray-400  bg-white rounded-3xl ">
-                                            <div className="w-1/6">
-                                                <Image
-                                                    src="/play button.svg"
-                                                    alt="Verceldcjncn Logo"
-                                                    className="mt-1 ml-2 border-rad "
-                                                    width={25}
-                                                    height={15}
-                                                    priority
-                                                />
-                                            </div>
-                                            <div>
-                                                <h4 className="text-black text-sm mt-1">
-                                                    {" "}
-                                                    <b> Language of ML</b> : python
-                                                </h4>
-                                            </div>
-                                        </div>
-                                        <div className="w-80 h-9 flex mb-4 border-2 border-gray-400  bg-white rounded-3xl ">
-                                            <div className="w-1/6">
-                                                <Image
-                                                    src="/play button.svg"
-                                                    alt="Verceldcjncn Logo"
-                                                    className="mt-1 ml-2 border-rad "
-                                                    width={25}
-                                                    height={15}
-                                                    priority
-                                                />
-                                            </div>
-                                            <div>
-                                                <h4 className="text-black text-sm mt-1">
-                                                    {" "}
-                                                    <b> Language of ML</b> : python
-                                                </h4>
-                                            </div>
-                                        </div>
-                                        <div className="w-80 h-9 flex mb-4 border-2 border-gray-400  bg-white rounded-3xl">
-                                            <div className="w-1/6">
-                                                <Image
-                                                    src="/play button.svg"
-                                                    alt="Verceldcjncn Logo"
-                                                    className="mt-1 ml-2 border-rad "
-                                                    width={25}
-                                                    height={15}
-                                                    priority
-                                                />
-                                            </div>
-                                            <div>
-                                                <h4 className="text-black text-sm mt-1">
-                                                    {" "}
-                                                    <b> Language of ML</b> : python
-                                                </h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="w-1/2 ">
-                                        <div className="mb-5">
-                                            <Image
-                                                src="/revise.svg"
-                                                alt="Verceldcjncn Logo"
-                                                className=" ml-2 border-rad "
-                                                width={110}
-                                                height={60}
-                                                priority
-                                            />
-                                        </div>
-                                        <div className="mb-4">
-                                            <Image
-                                                src="/completed.svg"
-                                                alt="Verceldcjncn Logo"
-                                                className="mt-1 ml-2 border-rad "
-                                                width={110}
-                                                height={60}
-                                                priority
-                                            />
-                                        </div>
-                                        <div className="mb-6">
-                                            <Image
-                                                src="/not started.svg"
-                                                alt="Verceldcjncn Logo"
-                                                className="mt-1 ml-2 border-rad "
-                                                width={110}
-                                                height={60}
-                                                priority
-                                            />
-                                        </div>
-                                        <div className="mb-4">
-                                            <Image
-                                                src="/try again.svg"
-                                                alt="Verceldcjncn Logo"
-                                                className="mt-1 ml-2 border-rad "
-                                                width={110}
-                                                height={60}
-                                                priority
-                                            />
-                                        </div>
-                                        <div className="mt-4">
-                                            <Image
-                                                src="/not started.svg"
-                                                alt="Verceldcjncn Logo"
-                                                className="mt-1 ml-2 border-rad "
-                                                width={110}
-                                                height={60}
-                                                priority
-                                            />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        )
+                        booleanValue&& <Lessonsdiv/>
                     }
                 </div>
                 <div className=" w-full h-36 rounded-lg bg-[#E8E2F4] mb-5 max-w-[1300px] flex flex-row  ">
