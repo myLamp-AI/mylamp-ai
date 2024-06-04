@@ -14,6 +14,10 @@ export default function Explore() {
     const sets = Array(30).fill(null);
     const [asmnt, setAsmnt] = useState([...newdata]);
     const [exasmt, setExasmt] = useState([...newdata1]);
+    const [asmtVisible,setAsmtVisible] = useState(false);
+    function toggleAsmtVisible(){
+        setAsmtVisible(!asmtVisible);
+    }
 
     return (
         
@@ -21,8 +25,8 @@ export default function Explore() {
             <div className="w-full flex justify-center">
                 <div className="bg-[#F1EAFF] w-full max-w-[1200px] max-h-[720px] flex flex-wrap lg:flex-nowrap shadow-xl" >
                     <div className="w-full h-full flex flex-col gap-3 pl-4 pt-3 overflow-y-auto scrollbar-hide">
-                        <div className=" text-[#737373] font-medium flex flex-col gap-2.5">
-                            <div>Let&apos;s Rock!</div>
+                        <div className=" text-[#737373] font-semibold flex flex-col gap-2.5">
+                            <div className="font-bold">Let&apos;s Rock!</div>
                             <span className="text-[#A6A6A6]">Practice regularly to achieve perfection</span>
                             <div className="relative">
                                 <input type="text" className="pl-10 pr-4 py-2 w-11/12 border rounded-lg" placeholder="Search Problems" />
@@ -65,8 +69,8 @@ export default function Explore() {
                                                 <div key={item.id} className="bg-[#ffffff] rounded-lg flex flex-row justify-between h-32">
                                                     <div className="w-1/2  ml-4 flex flex-col gap-y-6 justify-center text-base font-semibold ">
                                                         {item.name}
-                                                        <button className="w-20 bg-[#8c52ff] rounded-2xl flex flex-row justify-between items-center shadow shadow-[#737373]">
-                                                            <span className="ml-2 text-[#ffffff] font-medium ">Start</span>
+                                                        <button className="w-20 bg-[#8c52ff] rounded-2xl flex flex-row justify-between items-center shadow shadow-[#737373]" onClick={toggleAsmtVisible}>
+                                                            <span className="ml-2 text-[#ffffff] font-medium" >Start</span>
                                                             <Image src="/practice/conarrow.svg" alt="arrow" width={25} height={25} />
                                                         </button>
                                                     </div>
@@ -76,7 +80,7 @@ export default function Explore() {
                                                 </div>
                                                 {
                                                     index % 2 === 1 &&
-                                                    <div className="col-span-2 w-full bg-[#fff] flex justify-center rounded-lg">
+                                                    <div className={`col-span-2 w-full bg-[#fff] flex justify-center rounded-lg ${asmtVisible?'flex' : 'hidden'}`}>
                                                         <div  className="w-10/12 flex flex-col gap-3 mt-6 mb-6 ">
                                                             {
                                                                 codingdata.map((item,index)=>(

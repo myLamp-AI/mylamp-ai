@@ -20,53 +20,52 @@ export default function NewSidebar() {
     const handleArrowClick = () => {
         setIsSidebarVisible(true);
     };
-    const handleDivClick = () =>{
+    const handleDivClick = () => {
         setIsSidebarVisible(false);
     }
 
     return (
         <div className="flex flex-row absolute top-0">
-            <div className={`p-2 h-screen fixed bg-[#f5f5f5] top-0 left-0 shadow-md shadow-[#08080870] pt-16 gap-4 transition-transform duration-300  ${isSidebarVisible || isHovered ? 'transform-none' : '-translate-x-full'} z-10 `}
+            <div className={`p-2 h-[100vh] fixed bg-[#f5f5f5] top-0 left-0 shadow-md shadow-[#08080870] pt-16 gap-1 transition-transform duration-300  ${isSidebarVisible || isHovered ? 'transform-none' : '-translate-x-full'} z-10 flex flex-col`}
                 onClick={handleDivClick}
-                >
-                <div className="h-full w-full flex flex-col mr-6">
-                    <div className="w-fit h-[500px] flex flex-col  gap-5 overflow-x-clip overflow-y-auto scrollbar-hide">
-                        {
-                            navRender.map((item, navindex) => {
-                                const isActive = pathname === navData[navindex].Link;
-                                return (
-                                    <div className={`flex flex-row gap-5`} key={navindex}>
-                                        <div className={`w-2 h-6`}>
-                                            <Image src="/sidebar/navbarslider.svg" alt="slider" width={10} height={10} className={`${isActive ? 'block' : 'hidden'}`} />
-                                        </div>
-                                        <NavLinks name={navData[navindex].name} icon={navData[navindex].icon} Link={navData[navindex].Link} index={navindex}/>
+            >
+                <div className="w-fit h-[500px] flex flex-col gap-7 overflow-x-clip overflow-y-auto scrollbar-hide mr-6">
+                    {
+                        navRender.map((item, navindex) => {
+                            const isActive = pathname === navData[navindex].Link;
+                            return (
+                                <div className={`flex flex-row`} key={navindex}>
+                                    <div className={`w-2 h-6 absolute left-0`}>
+                                        <Image src="/sidebar/navbarslider.svg" alt="slider" width={10} height={10} className={`${isActive ? 'block' : 'hidden'}`} />
                                     </div>
-                                );
-                            })
+                                    <NavLinks name={navData[navindex].name} icon={navData[navindex].icon} Link={navData[navindex].Link} index={navindex} />
+                                </div>
+                            );
+                        })
 
+                    }
+                </div>
+                <div className="w-full flex flex-col items-center">
+                    <div className="w-12 h-12 border-4 rounded-full border-[#f5f5f5] absolute z-10">
+                        <Image src="/avtar.svg" alt="pfp" height={50} width={50} />
+                    </div>
+                    <div className="w-11/12 h-24 border-2 bg-[#8c52ff] rounded-xl relative top-5"></div>
+                </div>
+                <div className="w-full h-20 bg-[#E8E2F4] text-lg font-medium flex flex-col justify-center items-center gap-2 mt-6 rounded-lg">
+                    <div className="flex flex-row gap-1.5 font-semibold">
+                        {
+                            smRender.map((item, smindex) => (
+                                <div key={smindex}>
+                                    <div className="w-7 h-7"><Image src={smData[smindex].icon} alt={smData[smindex].name} height={100} width={100} /></div>
+                                </div>
+                            ))
                         }
                     </div>
-                    <div className="w-full flex flex-col items-center">
-                        <div className="w-12 h-12 border-4 rounded-full border-[#f5f5f5] absolute z-10">
-                            <Image src="/avtar.svg" alt="pfp" height={50} width={50} />
-                        </div>
-                        <div className="w-11/12 h-24 border-2 bg-[#8c52ff] rounded-xl relative top-5"></div>
-                    </div>
-                    <div className="w-full h-20 bg-[#E8E2F4] rounded text-base font-medium flex flex-col justify-center items-center gap-2 mt-7">
-                        <div><span>Connect with us</span></div>
-                        <div className="flex flex-row gap-1.5">
-                            {
-                                smRender.map((item, smindex) => (
-                                    <div key={smindex}>
-                                        <div className="w-7 h-7"><Image src={smData[smindex].icon} alt={smData[smindex].name} height={100} width={100} /></div>
-                                    </div>
-                                ))
-                            }
-                        </div>
-                    </div>
+                    <span>Connect with us</span>
                 </div>
+
             </div>
-            <div className="flex h-screen items-center fixed" onClick={handleArrowClick} onMouseMove={handleArrowClick}><Image src="/rfarw.svg" alt="arw" height={10} width={10}  /></div>
+            <div className="flex h-[100vh] items-center fixed" onClick={handleArrowClick} onMouseMove={handleArrowClick}><Image src="/rfarw.svg" alt="arw" height={10} width={10} /></div>
         </div>
     );
 }
