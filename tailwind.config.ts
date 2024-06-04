@@ -16,7 +16,10 @@ const config: Config = {
       },
       width: {
         
-      }
+      },
+      borderColor: {
+        'gray-50': 'rgba(115, 115, 115, 0.25)', 
+      },
     },
   },
   plugins: [],

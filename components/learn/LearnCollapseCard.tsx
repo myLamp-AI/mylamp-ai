@@ -6,7 +6,7 @@ import Lessonsdiv from "./Lessonsdiv";
 import Image from "next/image";
 import useBooleanStore from './store';
 export default function LearnCollapseCard() {
-
+   
     
     const booleanValue = useBooleanStore((state) => state.booleanValue);
 
@@ -16,8 +16,8 @@ export default function LearnCollapseCard() {
 
         <>
             <div className="p-4 text-white flex flex-col  ">
-                <div className="w-full h-full flex flex-row  justify-between mx-6 ">
-                    <div className=" h-full  w-[40%]">
+                <div className="w-full h-full flex flex-row gap-2  justify-between mx-6 ">
+                    <div className=" h-full  w-[35%]">
                         <LearnCollapseItem />
                         <LearnCollapseItem />
                         <LearnCollapseItem />
