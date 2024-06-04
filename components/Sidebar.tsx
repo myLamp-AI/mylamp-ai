@@ -1,5 +1,5 @@
 "use client"
-import { useState } from 'react';
+import { useState,useRef,useEffect } from 'react';
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import NavLinks from '@/components/navbar/NavItems'
@@ -8,26 +8,38 @@ import smData from '@/app/data/navsocialicon.json'
 
 export default function NewSidebar() {
     const pathname = usePathname();
-
     const [isSidebarVisible, setIsSidebarVisible] = useState(false);
     const [isHovered, setIsHovered] = useState(false);
-
     const navLen = navData.length;
     const socialLen = smData.length;
     const navRender = Array(navLen).fill(null);
     const smRender = Array(socialLen).fill(null);
+    const sidebarRef = useRef(null);
+    const arrowRef = useRef(null);
+    const handleClickOutside = (event:any) => {
+        if (
+          sidebarRef.current &&
+          !sidebarRef.current.contains(event.target) &&
+          arrowRef.current &&
+          !arrowRef.current.contains(event.target)
+        ) {
+          setIsSidebarVisible(false);
+        }
+    };
 
     const handleArrowClick = () => {
         setIsSidebarVisible(true);
     };
-    const handleDivClick = () => {
-        setIsSidebarVisible(false);
-    }
+    useEffect(() => {
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+          document.removeEventListener('mousedown', handleClickOutside);
+        };
+      }, []);
 
     return (
-        <div className="flex flex-row absolute top-0">
+        <div  ref={sidebarRef} className="flex flex-row absolute top-0">
             <div className={`p-2 h-[100vh] fixed bg-[#f5f5f5] top-0 left-0 shadow-md shadow-[#08080870] pt-16 gap-1 transition-transform duration-300  ${isSidebarVisible || isHovered ? 'transform-none' : '-translate-x-full'} z-10 flex flex-col`}
-                onClick={handleDivClick}
             >
                 <div className="w-fit h-[500px] flex flex-col gap-7 overflow-x-clip overflow-y-auto scrollbar-hide mr-6">
                     {
@@ -35,7 +47,7 @@ export default function NewSidebar() {
                             const isActive = pathname === navData[navindex].Link;
                             return (
                                 <div className={`flex flex-row`} key={navindex}>
-                                    <div className={`w-2 h-6 absolute left-0`}>
+                                    <div className={`w-2 h-6 absolute left-0 `}>
                                         <Image src="/sidebar/navbarslider.svg" alt="slider" width={10} height={10} className={`${isActive ? 'block' : 'hidden'}`} />
                                     </div>
                                     <NavLinks name={navData[navindex].name} icon={navData[navindex].icon} Link={navData[navindex].Link} index={navindex} />
@@ -65,7 +77,7 @@ export default function NewSidebar() {
                 </div>
 
             </div>
-            <div className="flex h-[100vh] items-center fixed" onClick={handleArrowClick} onMouseMove={handleArrowClick}><Image src="/rfarw.svg" alt="arw" height={10} width={10} /></div>
+            <div ref={arrowRef} className="flex h-[100vh] items-center fixed animate-bounce" onClick={handleArrowClick} onMouseMove={handleArrowClick}><Image src="/rfarw.svg" alt="arw" height={10} width={10} className='w-6 h-6 rounded-full bg-[#bfbebe]' /></div>
         </div>
     );
 }
