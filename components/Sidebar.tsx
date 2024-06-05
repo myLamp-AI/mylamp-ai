@@ -77,7 +77,7 @@ export default function NewSidebar() {
                 </div>
 
             </div>
-            {/* <div ref={arrowRef} className="flex h-[100vh] items-center fixed animate-bounce" onClick={handleArrowClick} ><Image src="/rfarw.svg" alt="arw" height={10} width={10} className='w-8 h-8 rounded-full bg-[#766f6f66]' /></div> */}
+            <div ref={arrowRef} className="flex h-[100vh] items-center fixed animate-bounce" onClick={handleArrowClick} ><Image src="/rfarw.svg" alt="arw" height={10} width={10} className='w-8 h-8 rounded-full bg-[#766f6f66]' /></div>
         </div>
     );
 }
