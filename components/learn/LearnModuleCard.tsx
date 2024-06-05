@@ -51,7 +51,7 @@ export default function LearnModuleCard() {
               </div>
               <div className="flex flex-col justify-start h-full lg:items-center lg:mr-7 text-[#737373] lg:mt-8 w-fit item-left">
                 <span className="text-sm sm:text-xs md:text-base lg:text-md xl:text-md font-semibold">Grade</span>
-                <span className="text-sm lg:text-sm font-semibold">67%</span>
+                <span className="text-sm lg:text-sm font-semibold lg:mr-4">67%</span>
               </div>
 
 

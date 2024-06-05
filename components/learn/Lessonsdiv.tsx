@@ -24,16 +24,16 @@ const Lessonsdiv = () => {
         className="mx-6 w-full md:w-[60%] flex justify-center pr-3">
         <div className="bg-white border-[0.5px] border-[#737373]  rounded-xl flex md:flex-col w-full h-fit px-8 pb-8">
           <div className=" w-fit w-max-[96px] text-black mx-2 my-4 font-[500]  text-xl">Lessons</div>
-          <div className="  h-fit w-full mx-5 ">
+          <div className="  h-fit w-full mx-5  ">
             {lessonsData.map((lesson) => (
               <div
                 key={lesson.id}
 
-                className="w-full h-full overflow-hidden flex flex-row   "
+                className="w-full h-fit overflow-hidden flex flex-row   "
               >
-                <div key={lesson.id} className="w-full h-fit ">
-                  <div className="w-full  md:w-[470px] h-9 flex mb-4 border-[1px] border-gray-50 bg-white rounded-3xl mt-2 ">
-                    <div className="w-fit  flex justify-center my-auto items-center mx-[3px]">
+                <div key={lesson.id} className="w-full h-14 flex  ">
+                  <div className="w-full  md:w-[470px] h-10  flex border-[1px]  border-gray-50 bg-white rounded-3xl  ">
+                    <div className="w-fit  flex justify-center my-auto items-center mx-[3px] ">
                       <Image
                         src={lesson.image1}
                         alt="Verceldcjncn Logo"
@@ -51,13 +51,13 @@ const Lessonsdiv = () => {
                    
                     </div>
                   </div>
-                  <div className="ml-auto flex items-center">
+                  <div className="ml-auto items-center mr-5 my-4 -mt-2 lg:flex hidden ">
                       <Image
                         src={lesson.image2}
                         alt="Verceldcjncn Logo"
-                        className="border rounded"
-                        width={100}
-                        height={120}
+                        className="border-rad w-40 h-14  "
+                        width={50}
+                        height={50}
                         priority
                       />
                 </div>
