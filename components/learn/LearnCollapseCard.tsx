@@ -48,7 +48,7 @@ export default function LearnCollapseCard() {
                             <div className=" w-fit h-fit mt-3 ml-4 "><span className="text-centre text-black font-semibold text-[24px] ... ">Capstone Project</span></div>
                             <div className=" w-fit h-fit mt-5 mr-7 "><span className="text-centre text-[#8C52FF] font-semibold text-[15px] ... ">View Guidelines</span></div>
                         </div>
-                        <div className="w-full h-[55%] flex justify-between  ml-4">
+                        <div className="sm:w-full sm:h-[55%] flex justify-between  sm:ml-4">
                             <div className=" w-full max-w-[900px] h-fit rounded-lg">
                                 <p className="text-centre text-[#737373] italic text-[17px] underline  ...">Avengers and Silicon Valley</p>
                                 <p className="text-centre text-[#737373] text-[14px] mt-2 leading-4 " >
