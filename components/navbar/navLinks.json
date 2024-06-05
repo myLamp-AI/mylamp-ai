@@ -17,7 +17,7 @@
     {
         "name": "Achieve",
         "icon": "/sidebar/achieve.svg",
-        "Link":"/achieve"
+        "Link":"/"
     },
     {
         "name": "Practice",
@@ -27,22 +27,22 @@
     {
         "name": "Projects",
         "icon": "/sidebar/projects.svg",
-        "Link":"/projects"
+        "Link":"/"
     },
     {
         "name": "Career",
         "icon": "/sidebar/career.svg",
-        "Link":"/career"
+        "Link":"/"
     },
     {
         "name": "Mentorship",
         "icon": "/sidebar/mentorship.svg",
-        "Link":"/mentorship.svg"
+        "Link":"/"
     },
     {
         "name": "Blogs",
         "icon": "/sidebar/blogs.svg",
-        "Link":"/blogs"
+        "Link":"/"
     },
     {
         "name": "Community",
