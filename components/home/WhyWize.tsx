@@ -36,8 +36,6 @@ const whyWizeLinks = [
 export default function WhyWize() {
     const [active, setActive] = useState("allroundassistance");
 
-    console.log("hello from whyWize.tsx");
-
     return (
         <>
             <div className="flex flex-col items-center my-4">
