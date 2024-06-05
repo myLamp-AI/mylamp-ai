@@ -24,7 +24,7 @@ const Lessonsdiv = () => {
         className="mx-6 w-full md:w-[60%] flex justify-center pr-3">
         <div className="bg-white border-[0.5px] border-[#737373]  rounded-xl flex md:flex-col w-full h-fit px-8 pb-8">
           <div className=" w-fit w-max-[96px] text-black mx-2 my-4 font-[500]  text-xl">Lessons</div>
-          <div className="  h-fit w-full mx-5  ">
+          <div className="  h-fit w-full mx-5 mt-2  ">
             {lessonsData.map((lesson) => (
               <div
                 key={lesson.id}

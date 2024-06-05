@@ -26,7 +26,6 @@ export default function Learn() {
                     />
                   </div>
 
-
                   <div className=" md:w-full max-w-[900px] h-96 ml-20 md:ml-0 md:h-full w-1/2   md:left-0  rounded-b lg:rounded-b-none  lg:rounded-r p-4 flex flex-col md:justify-between  leading-normal">
                     <div className="mb-8 relative h-fit ">
                       <div className="text-gray-900 font-semibold xl:text-2xl relative w-full  sm:text-[21px] md:text-2xl flex ">
@@ -66,7 +65,7 @@ export default function Learn() {
                         <div className="w-fit text-left text-sm md:text-[18px]  ">Supervise learning and applications</div>
                       </div>
 
-                      <div className="absolute top-60 w-full left-10 max-w-[350px] flex items-center gap-2">
+                      <div className="absolute top-[230px] w-full mx-5 max-w-[350px] flex items-center gap-2">
                         <div className="w-fit text-center align-middle mr-auto font-semibold text-[#737373]">{progress}%</div>
                         <div className="w-full max-w-[350px] h-[9px] border-[1px] border-[#8C52FF] rounded-lg overflow-hidden">
                           <div className="bg-[#8C52FF] h-full text-white text-center leading-8" style={{ width: `${progress}%` }}></div>
@@ -86,7 +85,7 @@ export default function Learn() {
                   </div>
                 </div>
               </div>
-              <div className=" ml-6   full sm:w-1/3 hidden lg:block   md:w-4/12 lg:h-96 md:h-full bg-white  rounded-lg"></div>
+              <div className=" ml-6 full sm:w-1/3 hidden lg:block   md:w-4/12 lg:h-96 md:h-full bg-white  rounded-lg"></div>
             </div>
 
 
