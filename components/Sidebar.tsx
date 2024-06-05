@@ -1,5 +1,5 @@
 "use client"
-import { useState,useRef,useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import NavLinks from '@/components/navbar/NavItems'
@@ -16,14 +16,14 @@ export default function NewSidebar() {
     const smRender = Array(socialLen).fill(null);
     const sidebarRef = useRef(null);
     const arrowRef = useRef(null);
-    const handleClickOutside = (event:any) => {
+    const handleClickOutside = (event: any) => {
         if (
-          sidebarRef.current &&
-          !sidebarRef.current.contains(event.target) &&
-          arrowRef.current &&
-          !arrowRef.current.contains(event.target)
+            sidebarRef.current &&
+            !sidebarRef.current.contains(event.target) &&
+            arrowRef.current &&
+            !arrowRef.current.contains(event.target)
         ) {
-          setIsSidebarVisible(false);
+            setIsSidebarVisible(false);
         }
     };
 
@@ -33,12 +33,12 @@ export default function NewSidebar() {
     useEffect(() => {
         document.addEventListener('mousedown', handleClickOutside);
         return () => {
-          document.removeEventListener('mousedown', handleClickOutside);
+            document.removeEventListener('mousedown', handleClickOutside);
         };
-      }, []);
+    }, []);
 
     return (
-        <div  ref={sidebarRef} className="flex flex-row absolute top-0">
+        <div ref={sidebarRef} className="flex flex-row absolute top-0">
             <div className={`p-2 h-[100vh] fixed bg-[#f5f5f5] top-0 left-0 shadow-md shadow-[#08080870] pt-16 gap-1 transition-transform duration-300  ${isSidebarVisible || isHovered ? 'transform-none' : '-translate-x-full'} z-10 flex flex-col`}
             >
                 <div className="w-fit h-[500px] flex flex-col gap-7 overflow-x-clip overflow-y-auto scrollbar-hide mr-6">
@@ -77,7 +77,7 @@ export default function NewSidebar() {
                 </div>
 
             </div>
-            <div ref={arrowRef} className="flex h-[100vh] items-center fixed animate-bounce" onClick={handleArrowClick} onMouseMove={handleArrowClick}><Image src="/rfarw.svg" alt="arw" height={10} width={10} className='w-8 h-8 rounded-full bg-[#766f6f66]' /></div>
+            {/* <div ref={arrowRef} className="flex h-[100vh] items-center fixed animate-bounce" onClick={handleArrowClick} ><Image src="/rfarw.svg" alt="arw" height={10} width={10} className='w-8 h-8 rounded-full bg-[#766f6f66]' /></div> */}
         </div>
     );
 }

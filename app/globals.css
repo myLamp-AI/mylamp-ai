@@ -18,6 +18,10 @@
   }
 }
 
+.sidebar.collapsed {
+  width: 0px;
+}
+
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
