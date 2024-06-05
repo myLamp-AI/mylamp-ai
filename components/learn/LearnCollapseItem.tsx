@@ -7,7 +7,7 @@ import React from "react";
 
 
 export default function LearnCollapseItem() {
-    const setBooleanValue = useBooleanStore((state) => state.setBooleanValue);
+     const setBooleanValue = useBooleanStore((state) => state.setBooleanValue);
      const handleClick = () => {
      const currentValue = useBooleanStore.getState().booleanValue;  
      setBooleanValue(!currentValue);
@@ -18,10 +18,18 @@ export default function LearnCollapseItem() {
 
     return (
         <>
-            <div  onClick={handleClick} className="w-full h-14 md:w-full  lg:h-20 border-[0.5px] border-[rgb(130,130,130)] flex text-black hover:text-[#8C52FF] justify-between mb-7 rounded-md bg-[#E8E2F4] hover:bg-white ">
+            <div
+  onClick={handleClick}
+  className={`w-full h-14 md:w-full lg:h-20 border-[0.5px] flex justify-between mb-7 rounded-md ${
+    booleanValue
+    ?' border-[#8C52FF]   bg-white'
+    :' border-gray-400 bg-[#E8E2F4]' 
+     
+  }`}
+>
                 <div className="flex justify-between w-full  items-center text-black xl:text-md ml-5 sm:text-sm text-left h-full">
-                    <div className="">
-                        <h5 className="text-gray-500 text-sm lg:mb-[0.5px]">Chapter 1</h5>
+                    <div className={`${booleanValue?'text-[#8C52FF]':''}`}>
+                        <h5 className={` text-sm lg:mb-[0.5px] mb-1 ${booleanValue?'':'text-[#737373]'}`}>Chapter 1</h5>
                         <h3 className="font-[550]">Getting started with python</h3>
                     </div>
                     <div className="my-3 mx-3 text-black">
