@@ -3,7 +3,6 @@ import "./globals.css";
 import { Open_Sans } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Sidebar from '@/components/Sidebar'
-// const inter = Inter({ subsets: ["latin"] });
 const openSans = Open_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {

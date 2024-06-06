@@ -69,7 +69,7 @@ export default function Explore() {
                                         <div className="w-full bg-[#FFFFFF] rounded-lg mb-5 flex flex-col">
                                             <div className="flex flex-row mt-4 ml-2.5">
                                                 <div className="ml-1"><Image src="/mlimage.svg" height={75} width={75} alt="mlimage" /></div>
-                                                <div className="ml-11 mt-3" >
+                                                <div className="mx-6 mt-3" >
                                                     <div>
                                                         <span className="text-lg leading-5 font-semibold">{item[0].name}</span>
                                                         <div className="flex gap-1 text-[#737373] font-semibold">

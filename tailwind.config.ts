@@ -20,6 +20,9 @@ const config: Config = {
       borderColor: {
         'gray-50': 'rgba(115, 115, 115, 0.25)', 
       },
+      boxShadow: {
+        'br': '0 0 7px rgba(0, 0, 0, 0.3)',
+      }
     },
   },
   plugins: [],

@@ -52,8 +52,8 @@ export default function LearnModuleCard() {
               </div>
               
               <div className="md:flex hidden flex-col  justify-start h-full md:items-center md:mr-7 text-[#737373] md:mt-11 lg:mt-8 w-fit item-left">
-                <div className="text-sm sm:text-xs md:text-sm lg:text-lg   font-bold">Grade</div>
-                <div className="text-sm lg:text-sm font-bold md:text-xs  ">67%</div>
+                <div className="text-sm sm:text-xs md:text-sm lg:text-lg   font-semibold">Grade</div>
+                <div className="text-sm lg:text-sm font-semibold md:text-xs  ">67%</div>
               </div>
 
 
@@ -71,7 +71,7 @@ export default function LearnModuleCard() {
 
               <div className="lg:mt-6 lg:ml-8 md:w-2/6 md:block hidden  md:mt-8 ">
                 <div className="">
-                  <p className="text-[#737373] lg:mb-4 font-bold lg:text-lg md:text-sm  mt-2 mb-3 ">
+                  <p className="text-[#737373] lg:mb-4 font-semibold lg:text-lg md:text-sm  mt-2 mb-3 ">
                     Progress
                   </p>
                 </div>

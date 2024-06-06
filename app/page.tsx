@@ -12,11 +12,8 @@ import Footer from '@/components/home/Footer';
 export default function Page() {
   return (
     <>
-
       <div className='h-full bg-[#f5f5f5]'>
-        <div className="flex flex-col bg-blue-300  ">
-          <HeroSection />
-        </div>
+        <HeroSection />
         <AboutWize />
         <WizeCamp />
         <WhyWize />
