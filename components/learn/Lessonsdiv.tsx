@@ -29,10 +29,10 @@ const Lessonsdiv = () => {
               <div
                 key={lesson.id}
 
-                className="w-full h-fit overflow-hidden flex flex-row   "
+                className="w-full h-fit overflow-hidden flex flex-row    "
               >
-                <div key={lesson.id} className="w-full h-14 flex  ">
-                  <div className="w-full  md:w-[470px] h-10  flex border-[1px]  border-gray-50 bg-white rounded-3xl  ">
+                <div key={lesson.id} className="w-full h-14 flex   ">
+                  <div className="w-full  md:w-[470px] h-10  flex border-[1px]  border-gray-50 bg-white hover:bg-[#E8E2F4] hover:border-[#E8E2F4] rounded-3xl   ">
                     <div className="w-fit  flex justify-center my-auto items-center mx-[3px] ">
                       <Image
                         src={lesson.image1}

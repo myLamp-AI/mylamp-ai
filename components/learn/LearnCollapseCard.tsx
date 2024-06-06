@@ -6,8 +6,8 @@ import Lessonsdiv from "./Lessonsdiv";
 import Image from "next/image";
 import useBooleanStore from './store';
 export default function LearnCollapseCard() {
-   
-    
+
+
     const booleanValue = useBooleanStore((state) => state.booleanValue);
 
 
@@ -15,7 +15,7 @@ export default function LearnCollapseCard() {
     return (
 
         <>
-            <div className="p-4 text-white flex flex-col  ">
+            <div className="p-4  text-white flex flex-col  ">
                 <div className="w-full h-full flex flex-row gap-2  justify-between mx-6 ">
                     <div className=" h-full  w-[35%]">
                         <LearnCollapseItem />
@@ -26,10 +26,11 @@ export default function LearnCollapseCard() {
 
                     </div>
                     {
-                        booleanValue&& <Lessonsdiv/>
+                        booleanValue && <Lessonsdiv />
                     }
                 </div>
-                <div className=" w-full h-36 rounded-lg bg-[#E8E2F4] mb-5 max-w-[1300px] flex flex-row  ">
+                <div className="w-full h-fit pr-3 pl-6">                
+                    <div className=" w-full h-36 rounded-lg bg-[#E8E2F4] mb-5 max-w-[1300px] flex flex-row   ">
 
                     <div className="bg-[#8C52FF] w-40 max-w-44 h-full rounded-lg flex justify-center items-center">
                         <Image
@@ -43,7 +44,7 @@ export default function LearnCollapseCard() {
 
                     </div>
 
-                    <div className="bg-[#E8E2F4]  w-full justify-around flex-col rounded-lg">
+                    <div className="bg-[#E8E2F4]  w-full justify-around flex-col rounded-lg  ">
                         <div className=" w-full h-[46%] flex justify-between  border-b-[0.5px] border-[#737373]">
                             <div className=" w-fit h-fit mt-3 ml-4 "><span className="text-centre text-black font-semibold text-[24px] ... ">Capstone Project</span></div>
                             <div className=" w-fit h-fit mt-5 mr-7 "><span className="text-centre text-[#8C52FF] font-semibold text-[15px] ... ">View Guidelines</span></div>
@@ -65,8 +66,8 @@ export default function LearnCollapseCard() {
                                     width={15}
                                     height={15}
                                     priority
-                                
-                            
+
+
                                 />
                             </div>
                         </div>
@@ -77,6 +78,8 @@ export default function LearnCollapseCard() {
 
 
                 </div>
+                </div>
+
             </div>
         </>
     )
