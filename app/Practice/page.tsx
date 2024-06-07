@@ -6,7 +6,7 @@ import newdata from "../data/Allassessment.json"
 import newdata1 from '../data/Assessment.json'
 import codingdata from '@/app/data/codingassmnt.json'
 
-export default function Explore() {
+export default function Practice() {
     const radius = 40;
     const circumference = 2 * Math.PI * radius;
     const offset = circumference - (25 / 100) * circumference;
