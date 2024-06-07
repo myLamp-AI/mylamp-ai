@@ -12,14 +12,14 @@ export default function Learn() {
     <div className="bg-[#E8E2F4]  ">
       <div className="flex w-full max-w-[1300px] m-auto relative bg-[#E8E2F4]">
         <div className=" inset-y-0 flex flex-col w-full p-3 mt-5 ">
-          <div className="w-full justify-between pr-3 pl-3">
+          <div className="w-full justify-between pr-3 pl-3 ">
             <div className="flex  md:h-96  sm:h-1/3 h-1/3 mb-10 rounded-lg   md:w-full w-[80%] mx-auto md:mx-0 sm:mb-5 flex-row justify-center md:justify-between">
-              <div className="w-full  lg:w-8/12  mr-0 mt-0  sm:mb-0 bg-white  rounded-lg ">
+              <div className="w-full  lg:w-8/12 mr-0 mt-0   sm:mb-0 bg-white rounded-lg ">
 
                 <IntroCard />
 
                 <div className="md:h-full md:w-full  md:justify-between p-4 md:flex hidden ">
-                  <div className="md:h-full  lg:w-[30%] h-52 md:w-[40%] w-full rounded-lg   flex justify-center  md:flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" title="Woman holding a mug">
+                  <div className="md:h-full  lg:w-[30%] h-52 md:w-[40%] w-full rounded-lg flex justify-center  md:flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" title="Woman holding a mug">
                     <Image
                       src="/robot002.svg"
                       alt="Verceldcjncn Logo"
