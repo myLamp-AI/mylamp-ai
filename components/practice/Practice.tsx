@@ -2,28 +2,31 @@
 import Image from "next/image";
 import React, { useState } from 'react';
 import { FaStar } from "react-icons/fa";
-import newdata from "../app/data/Allassessment.json"
-import newdata1 from '../app/data/Assessment.json'
+import Exdata from "@/app/data/Assessment.json"
+import Alldata from "@/app/data/Allassessment.json"
 import codingdata from '@/app/data/codingassmnt.json'
 
-export default function practice() {
+export default function Practice() {
     const radius = 40;
     const circumference = 2 * Math.PI * radius;
     const offset = circumference - (25 / 100) * circumference;
     const items = Array(3).fill(null);
     const sets = Array(30).fill(null);
-    const [asmnt, setAsmnt] = useState([...newdata]);
-    const [exasmt, setExasmt] = useState([...newdata1]);
     const [asmtVisible, setAsmtVisible] = useState(false);
     function toggleAsmtVisible() {
         setAsmtVisible(!asmtVisible);
     }
-
+    const ExdataLen = Exdata.length;
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const handleNext = () => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % ExdataLen);
+    };
+    const handlePrev = () => {
+        setCurrentIndex((prevIndex) => (prevIndex - 1 + ExdataLen) % ExdataLen);
+    };
     return (
-
-
         <div className="w-full flex justify-center">
-            <div className="bg-[#F1EAFF] w-full  max-h-[720px] flex flex-wrap lg:flex-nowrap shadow-xl" >
+            <div className="bg-[#F1EAFF] w-full max-w-[1200px] max-h-[720px] flex flex-wrap lg:flex-nowrap shadow-xl" >
                 <div className="w-full h-full flex flex-col gap-3 pl-4 pt-3 overflow-y-auto scrollbar-hide">
                     <div className=" text-[#737373] font-semibold flex flex-col gap-2.5">
                         <div className="font-bold">Let&apos;s Rock!</div>
@@ -31,7 +34,7 @@ export default function practice() {
                         <div className="relative">
                             <input type="text" className="pl-10 pr-4 py-2 w-11/12 border rounded-lg" placeholder="Search Problems" />
                             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                                <Image src="/search-lens.svg" alt="search" width={25} height={25} />
+                                <Image src="/practice/search-lens.svg" alt="search" width={25} height={25} />
                             </div>
                         </div>
                     </div>
@@ -39,21 +42,21 @@ export default function practice() {
                         <div className="flex flex-row justify-between">
                             <span className="text-base font-semibold">Exclusive Assessments</span>
                             <div className="flex flex-row gap-4">
-                                <Image src="/lfarw.svg" alt="arr" width={7.89} height={13.99} />
-                                <Image src="/rfarw.svg" alt="arr" width={7.89} height={13.99} />
+                                <button onClick={handlePrev}><Image src="/practice/lfarw.svg" alt="arr" width={7.89} height={13.99} /></button>
+                                <button onClick={handleNext}><Image src="/practice/rfarw.svg" alt="arr" width={7.89} height={13.99} /></button>
                             </div>
                         </div>
-                        <div className="gap-3 flex flex-row justify-between overflow-hidden">
-                            {
-                                exasmt.map((item, index) => (
-                                    <div key={item.id} className=" bg-[#ffffff] flex flex-col gap-4 rounded-xl">
-                                        <div><Image src={`${item.svg}`} alt="img" height={100} width={230} /></div>
-                                        <div className="ml-4 text-base font-semibold h-16">
-                                            <span>{item.name}</span>
+                        <div className="flex transition-transform duration-300 ease-in-out" style={{ transform: `translateX(-${(currentIndex / ExdataLen) * 100}%)` }}>
+                            {Exdata.map((slide, index) => (
+                                <div key={index} className="min-w-[200px] px-3 h-56 ">
+                                    <div className="bg-[#fff] rounded-lg h-full">
+                                        <div><Image src={Exdata[index].svg} alt="img" height={100} width={230} className="w-full" /></div>
+                                        <div className="text-md font-bold h-16 flex flex-row justify-around pt-3">
+                                            <div className="w-3/5">{Exdata[index].name}</div>
                                         </div>
                                     </div>
-                                ))
-                            }
+                                </div>
+                            ))}
                         </div>
                     </div>
                     <div className="flex flex-col gap-3 overflow-x-clip">
@@ -64,7 +67,7 @@ export default function practice() {
                         <div>
                             <div className="grid grid-cols-2  gap-4 ">
                                 {
-                                    asmnt.map((item, index) => (
+                                    Alldata.map((item, index) => (
                                         <>
                                             <div key={item.id} className="bg-[#ffffff] rounded-lg flex flex-row justify-between h-32">
                                                 <div className="w-1/2  ml-4 flex flex-col gap-y-6 justify-center text-base font-semibold ">
