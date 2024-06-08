@@ -21,7 +21,7 @@ const Lessonsdiv = () => {
         initial={{ opacity: 0, scale: 0, x: xDot, y: yDot }} // Start from the dot point with zero opacity and scale
         animate={{ opacity: 1, scale: 1, x: 0, y: 0 }} // Animate to full opacity, scale, and original position
         transition={{ duration: 0.5, ease: 'easeInOut' }}
-        className="mx-6 w-full md:w-[60%] flex justify-center pr-3">
+        className="mx-6 w-full md:w-[60%] xl:flex justify-center pr-3 hidden ">
         <div className="bg-white border-[0.5px] border-[#737373]  rounded-xl flex md:flex-col w-full h-fit px-8 pb-8">
           <div className=" w-fit w-max-[96px] text-black mx-2 my-4 font-[500]  text-xl">Lessons</div>
           <div className="  h-fit w-full mx-5 mt-2  ">
