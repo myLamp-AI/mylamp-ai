@@ -21,18 +21,18 @@ const Lessonsdiv = () => {
         initial={{ opacity: 0, scale: 0, x: xDot, y: yDot }} // Start from the dot point with zero opacity and scale
         animate={{ opacity: 1, scale: 1, x: 0, y: 0 }} // Animate to full opacity, scale, and original position
         transition={{ duration: 0.5, ease: 'easeInOut' }}
-        className="mx-6 w-full md:w-[60%] flex justify-center pr-3">
+        className="mx-6  lg:w-[60%] w-[50%] md:flex justify-center pr-3 hidden ">
         <div className="bg-white border-[0.5px] border-[#737373]  rounded-xl flex md:flex-col w-full h-fit px-8 pb-8">
           <div className=" w-fit w-max-[96px] text-black mx-2 my-4 font-[500]  text-xl">Lessons</div>
-          <div className="  h-fit w-full mx-5 mt-2  ">
+          <div className="  h-fit w-full mx-5 mt-2  flex flex-col   ">
             {lessonsData.map((lesson) => (
               <div
                 key={lesson.id}
 
-                className="w-full h-fit overflow-hidden flex flex-row   "
+                className="w-full h-fit overflow-hidden flex flex-row "
               >
-                <div key={lesson.id} className="w-full h-14 flex  ">
-                  <div className="w-full  md:w-[470px] h-10  flex border-[1px]  border-gray-50 bg-white rounded-3xl  ">
+                <div key={lesson.id} className="w-full h-14 flex    ">
+                  <div className="w-full  md:w-[470px] h-10  flex border-[1px] mx-auto xl:mx-0  border-gray-50 bg-white hover:bg-[#E8E2F4] hover:border-[#E8E2F4] rounded-3xl   ">
                     <div className="w-fit  flex justify-center my-auto items-center mx-[3px] ">
                       <Image
                         src={lesson.image1}
@@ -51,7 +51,7 @@ const Lessonsdiv = () => {
                    
                     </div>
                   </div>
-                  <div className="ml-auto items-center mr-5 my-4 -mt-2 lg:flex hidden ">
+                  <div className="ml-auto items-center mr-5 my-4 -mt-2 xl:flex hidden ">
                       <Image
                         src={lesson.image2}
                         alt="Verceldcjncn Logo"

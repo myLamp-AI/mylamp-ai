@@ -14,33 +14,34 @@ export default function LearnModuleCard() {
       }, 900);
     }
   };
-  const duration = 100;
+  const duration = 0;
 
 
   return (
     <>
       <Transition in={showCollapse} timeout={duration}>
         {state => (
-          <div className={`overflow-hidden transition-height duration-${duration} ${state === 'entered' ? 'shadow-lg' : 'none'} bg-white my-3 max-h-max rounded-lg mb-5`}>
+          <div className={`overflow-hidden transition-height duration-${duration} ${state === 'entered' ? 'shadow-lg bg-white' : ''}  my-3  md:max-h-max  rounded-lg md:w-full w-[80%] md:mx-0 mx-auto  mb-2 bg-[#E8E2F4]  `}>
             <div
-              className={`${showCollapse ? 'shadow-lg' : 'none'} lg:flex grid grid-flow-row  sm:w-30 shadow rounded-t-md pl-2 pr-2 rounded-lg   lg:py-5 py-2 bg-white rouned-b-none mb-3`}
+              className={`${showCollapse ? 'shadow-lg' : ''
+                } md:flex flex items-center  justify-center grid grid-flow-row sm:w-30 pl-2 pr-2  lg:py-5 py-2 bg-white rounded-lg  mb-3 md:items-start md:justify-start`}
               onClick={() => setShowCollapse(!showCollapse)}
             >
-              <div className="w-full lg:w-[16%] max-w-[160px] flex justify-center ">
+              <div className="w-full  md:w-[16%] max-w-[160px] flex justify-center md:ml-0 -ml-9   ">
                 <Image
                   src="/ai.svg"
                   alt="Verceldcjncn Logo"
                   width={50}
                   height={50}
                   priority
-                  className="border lg:ml-4 bg-[#E8E2F4] rounded-full p-3 lg:w-[95px] w-[80px]  mt-6  mb-5 border-rad mr-4"
+                  className="border lg:ml-4 bg-[#E8E2F4] rounded-full p-3 lg:w-[95px] w-[80px]  md:mt-6 my-3  md:mb-5 border-rad mr-4"
                 />
               </div>
-              <div className="lg:w-3/6 lg:grid lg:grid-flow-row ">
+              <div className="md:w-3/6 md:grid md:grid-flow-row lg:mt-0 md:mt-3 ">
                 <h4 className="mb-2 lg:mt-2 text-purple-700 font-semibold text-xl  ">
                   Module 1
                 </h4>
-                <h1 className=" sm:text-xs md:text-md mb-4  xl:text-4xl lg:text-3xl md:text-xl font-semibold">
+                <h1 className=" sm:text-lg md:text-md mb-4  xl:text-4xl  md:text-2xl lg:text-3xl font-semibold">
                   {" "}
                   Tech 101: Starting in Tech
                 </h1>
@@ -49,38 +50,39 @@ export default function LearnModuleCard() {
                   7 Lessons    7 weeks     7 credits
                 </p>
               </div>
-              <div className="flex flex-col justify-start h-full lg:items-center lg:mr-7 text-[#737373] lg:mt-8 w-fit item-left">
-                <span className="text-sm sm:text-xs md:text-base lg:text-md xl:text-md font-semibold">Grade</span>
-                <span className="text-sm lg:text-sm font-semibold lg:mr-4">67%</span>
+              
+              <div className="md:flex hidden flex-col  justify-start h-full md:items-center md:mr-7 text-[#737373] md:mt-11 lg:mt-8 w-fit item-left">
+                <div className="text-sm sm:text-xs md:text-sm lg:text-lg   font-semibold">Grade</div>
+                <div className="text-sm lg:text-sm font-semibold md:text-xs  ">67%</div>
               </div>
 
 
 
-              <div onClick={toggleCollapse} className="lg:flex  hidden ">
+              <div onClick={toggleCollapse} className="md:flex hidden">
                 <Image
                   src="/Line 1.svg"
                   alt="Verceldcjncn Logo"
-                  className="mt-6 mb-5 border-rad mr-4"
+                  className="lg:mt-6 lg:mb-5 border-rad mr-4 md:mt-8  "
                   width={4}
                   height={8}
                   priority
                 />
               </div>
 
-              <div className="lg:mt-6 lg:ml-8 lg:w-2/6 ">
-                <div>
-                  <p className="text-[#737373] lg:mb-4 font-semibold text-md mt-2 mb-3">
+              <div className="lg:mt-6 lg:ml-8 md:w-2/6 md:block hidden  md:mt-8 ">
+                <div className="">
+                  <p className="text-[#737373] lg:mb-4 font-semibold lg:text-lg md:text-sm  mt-2 mb-3 ">
                     Progress
                   </p>
                 </div>
-                <div className=" rounded-full h-2 flex items-center gap-2">
-                  <div className="w-fit text-center align-middle font-semibold text-[#737373] text-[12px]">66%</div>
-                  <div className="w-full max-w-[300px] h-[6px] border-[1px] border-[#8C52FF] rounded-lg overflow-hidden">
+                <div className=" rounded-full h-2 flex items-center gap-2   ">
+                  <div className="w-fit text-center align-middle font-semibold text-[#737373] lg:text-[12px] md:text-[9px]">66%</div>
+                  <div className="lg:w-full md:w-36 max-w-[300px] h-[6px] border-[1px] border-[#8C52FF] rounded-lg overflow-hidden">
                     <div className="bg-[#8C52FF] h-full text-white text-center leading-8 " style={{ width: `${80}%` }}></div>
                   </div>
                 </div>
               </div>
-              <div className="  lg:mr-4 lg:ml-0 ml-2 grid justify-center w-fit  h-full lg:my-14 mt-6  ">
+              <div className="  md:mr-4 md:ml-0 ml-2 grid justify-center w-fit  h-full md:my-14 mt-6">
                 <Image
                   src="/arrow.svg"
                   alt="Verceldcjncn Logo h-fit w-fit"
