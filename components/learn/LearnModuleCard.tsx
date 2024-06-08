@@ -27,14 +27,14 @@ export default function LearnModuleCard() {
                 } md:flex flex items-center  justify-center grid grid-flow-row sm:w-30 pl-2 pr-2  lg:py-5 py-2 bg-white rounded-lg  mb-3 md:items-start md:justify-start`}
               onClick={() => setShowCollapse(!showCollapse)}
             >
-              <div className="w-full md:w-[16%] max-w-[160px] flex justify-center ">
+              <div className="w-full  md:w-[16%] max-w-[160px] flex justify-center md:ml-0 -ml-9   ">
                 <Image
                   src="/ai.svg"
                   alt="Verceldcjncn Logo"
                   width={50}
                   height={50}
                   priority
-                  className="border lg:ml-4 bg-[#E8E2F4] rounded-full p-3 lg:w-[95px] w-[80px]  mt-6  mb-5 border-rad mr-4"
+                  className="border lg:ml-4 bg-[#E8E2F4] rounded-full p-3 lg:w-[95px] w-[80px]  md:mt-6 my-3  md:mb-5 border-rad mr-4"
                 />
               </div>
               <div className="md:w-3/6 md:grid md:grid-flow-row lg:mt-0 md:mt-3 ">

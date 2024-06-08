@@ -22,7 +22,7 @@ const lessonsData: Lesson[] = [
 const Lessonsdiv01: React.FC = () => (
   <div className="mx-6 w-full md:w-[60%] flex justify-center pr-3 xl:hidden ">
     <div className="bg-white border-[0.5px] border-[#737373] rounded-xl flex md:flex-col w-full h-fit px-8 pb-8">
-      <div className="w-fit text-black mx-2 my-4 font-[500] text-xl">Lessons</div>
+      <div className="w-fit text-black mx-2 my-4 font-[500] text-xl">Lessons01</div>
       <div className="h-fit w-full mx-5 mt-2">
         {lessonsData.map((lesson) => (
           <div key={lesson.id} className="w-full h-fit overflow-hidden flex flex-row">

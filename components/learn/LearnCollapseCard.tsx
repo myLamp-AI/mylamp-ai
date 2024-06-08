@@ -1,6 +1,6 @@
 "use client"
 import LearnCollapseItem from "./LearnCollapseItem";
-import { useModalStore } from "./store02";
+
 import { useState } from "react";
 import Lessonsdiv from "./Lessonsdiv";
 import Image from "next/image";
@@ -8,7 +8,7 @@ import useBooleanStore from './store';
 import Lessonsdiv01 from "./lessondivdropdown";
 import { Modal, ModalContent, ModalBody } from "@nextui-org/react";
 export default function LearnCollapseCard() {
-    const { isOpen, closeModal } = useModalStore();
+    
 
     const booleanValue = useBooleanStore((state) => state.booleanValue);
 
@@ -18,8 +18,8 @@ export default function LearnCollapseCard() {
 
         <>
             <div className="p-4  text-white flex flex-col   ">
-                <div className="w-full h-full flex flex-row gap-2  justify-between mx-6 ">
-                    <div className=" h-full  w-[35%]">
+                <div className="w-full h-full flex flex-row gap-2  justify-between md:mx-6 ">
+                    <div className=" h-full  lg:w-[35%] md:w-[40%] w-full mx-auto md:mx-0">
                         <LearnCollapseItem />
                         <LearnCollapseItem />
                         <LearnCollapseItem />
@@ -31,10 +31,7 @@ export default function LearnCollapseCard() {
                         booleanValue && <Lessonsdiv />
 
                     }
-                    {
-                        booleanValue && <Lessonsdiv01 />
-
-                    }
+                  
                    
 
                 </div>
