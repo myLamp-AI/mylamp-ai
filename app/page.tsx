@@ -7,7 +7,7 @@ import PowerOfWize from '@/components/home/PowerOfWize';
 import RecentAdvances from '@/components/home/RecentAdvances';
 import CommunitySection from '@/components/home/Community';
 import Footer from '@/components/home/Footer';
-// import HomeSlider from '@/components/home/HomeSlider';
+import HomeSlider from '@/components/home/HomeSlider';
 
 export default function Page() {
   return (
@@ -16,7 +16,7 @@ export default function Page() {
         <HeroSection />
         <AboutWize />
         <WizeCamp />
-        {/* <HomeSlider /> */}
+        <HomeSlider />
         <WhyWize />
         <BackedByBest />
         <PowerOfWize />

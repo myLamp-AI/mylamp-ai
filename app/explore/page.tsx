@@ -6,6 +6,7 @@ import NavLinks from '@/components/navbar/NavItems'
 import navData from '@/components/navbar/navLinks.json'
 import smData from '@/app/data/navsocialicon.json'
 import Explore1 from '@/components/explore/Explore'
+
 export default function Explore() {
     // sidebar consts
     const pathname = usePathname();
@@ -13,18 +14,13 @@ export default function Explore() {
     const socialLen = smData.length;
     const navRender = Array(navLen).fill(null);
     const smRender = Array(socialLen).fill(null);
-    //practice consts
-    //Dummy consts
+    
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const mainContentRef = useRef(null);
+
     const toggleSidebar = () => {
         setIsSidebarOpen(!isSidebarOpen);
     };
-    useEffect(() => {
-        if (mainContentRef.current) {
-            mainContentRef.current.style.width = isSidebarOpen ? 'calc(100% - 200px)' : '100%';
-        }
-    }, [isSidebarOpen]);
 
     return (
         <div className="flex h-full">
@@ -73,7 +69,7 @@ export default function Explore() {
 
             </div>
             {/* Main Content */}
-            <div ref={mainContentRef} className="bg-gray-200 flex-1 transition-all duration-300">
+            <div ref={mainContentRef} className=" flex-1 transition-all duration-300">
                 <Explore1 />
             </div>
         </div>

@@ -1,17 +1,24 @@
 "use client"
-import { useState } from "react"
+import { act, useState } from "react"
 import LearnCollapseCard from "./LearnCollapseCard";
 import Lessonsdiv from "./Lessonsdiv";
 import useBooleanStore from "./store";
 import React from "react";
+import exp from "constants";
+
+interface LearnCollapseItemProps {
+    activeIndex: number;
+    index: number;
+    setActiveIndex: React.Dispatch<React.SetStateAction<number>>;
+}
 
 
-
-export default function LearnCollapseItem() {
+const LearnCollapseItem:React.FC<LearnCollapseItemProps> = ({activeIndex, setActiveIndex, index}) => {
     const setBooleanValue = useBooleanStore((state) => state.setBooleanValue);
     const handleClick = () => {
         const currentValue = useBooleanStore.getState().booleanValue;
         setBooleanValue(!currentValue);
+        setActiveIndex(activeIndex === index ? 0 : index);
     };
     const booleanValue = useBooleanStore((state) => state.booleanValue);
     
@@ -23,8 +30,8 @@ export default function LearnCollapseItem() {
                  onClick={() => {
                     handleClick();
                   }}
-                className={`w-full h-14 md:w-full lg:h-20 border-[0.5px] flex sm:justify-between mb-7 rounded-md ${booleanValue
-                        ? ' border-[#8C52FF]   bg-white'
+                className={`w-full h-14 md:w-full lg:h-20 border-[0.5px] flex sm:justify-between mb-7 rounded-md ${activeIndex === index
+                        ? ' border-[#8C52FF] bg-white'
                         : ' border-gray-400 bg-[#E8E2F4]'
 
                     }`}
@@ -56,3 +63,5 @@ export default function LearnCollapseItem() {
         </>
     )
 }
+
+export default LearnCollapseItem;

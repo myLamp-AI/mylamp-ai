@@ -1,18 +1,16 @@
 "use client"
 import Image from "next/image";
-import { useState, useRef } from "react";
+import { useState } from "react";
 import LearnModuleCard from "@/components/learn/LearnModuleCard";
-import Sidebar from "@/components/Sidebar";
 import IntroCard from "@/components/learn/introcard";
 
 export default function Learn() {
   const [progress, setProgress] = useState(90);
 
   return (
-    <div className="bg-[#E8E2F4]  ">
       <div className="flex w-full max-w-[1300px] m-auto relative bg-[#E8E2F4] rounded-lg">
         <div className=" inset-y-0 flex flex-col w-full p-3 mt-5 rounded-lg  ">
-          <div className="w-full justify-between pr-3 pl-3 rounded-lg  ">
+          <div className="w-full justify-between pr-3 pl-3 rounded-lg">
             <div className="flex  md:h-96   h-fit mb-10 rounded-lg   md:w-full w-[80%] mx-auto md:mx-0 sm:mb-5 flex-row justify-center md:justify-between">
               <div className="w-full  lg:w-8/12 mr-0 mt-0   sm:mb-0 bg-white rounded-lg ... ">
 
@@ -75,9 +73,6 @@ export default function Learn() {
                         </div>
                       </div>
 
-
-
-
                       <div className="flex absolute sm:top-72  w-full md:h-fit text-[15px] font-semibold gap-10 text-center text-[#8C52FF]">
                         <button className="w-fit px-6 py-2 h-fit hover:bg-[#8C52FF] hover:text-white  border-2 transition-all ease-in-out border-[#8C52FF] rounded-md ">View Insights</button>
                         <button className="w-fit p-2 px-6 h-fit border-2 border-[#8C52FF] hover:bg-[#8C52FF]  transition-all ease-in-out hover:text-white rounded-md">Resume Learning</button>
@@ -98,9 +93,7 @@ export default function Learn() {
             <LearnModuleCard />
 
           </div>
-
         </div>
-      </div>
     </div>
   );
 };

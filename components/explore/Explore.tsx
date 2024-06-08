@@ -12,11 +12,11 @@ export default function Explore() {
 
     return (
         <div className="w-full scrollbar-hide flex flex-row justify-center">
-            <div className="w-full max-w-[1200px] h-full flex flex-col gap-3 scrollbar-hide shadow-xl ">
+            <div className="w-full max-w-[1200px] h-full flex flex-col gap-3 scrollbar-hide ">
                 <div className="w-full flex flex-row  mt-5 gap-4">
-                    <div className="h-full w-full lg:w-8/12 bg-white border rounded-xl flex flex-row">
+                    <div className="h-full w-full lg:w-8/12 bg-white p-2 border rounded-xl flex flex-row">
                         <div className="w-full flex flex-col gap-1 p-2 xl:w-2/3">
-                            <div className="text-2xl font-medium font-sans mt-4 ml-4">Journey through GenAI and LLMS</div>
+                            <div className="text-2xl font-medium font-sans  ml-4">Journey through GenAI and LLMS</div>
                             <div className="mt-4 flex justify-center md:hidden"><Image src="/person.svg" alt="person" height={300} width={300} /></div>
                             <div className="h-7 w-full gap-x-4 flex flex-row mt-5 text-md font-medium">
                                 <div className="h-7 w-28 ml-2.5 border bg-[#e8e2f4] flex justify-center items-center text-[#0166C8] rounded-md ">3 Weeks</div>

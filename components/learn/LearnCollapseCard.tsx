@@ -5,13 +5,12 @@ import { useState } from "react";
 import Lessonsdiv from "./Lessonsdiv";
 import Image from "next/image";
 import useBooleanStore from './store';
-import Lessonsdiv01 from "./lessondivdropdown";
-import { Modal, ModalContent, ModalBody } from "@nextui-org/react";
+
 export default function LearnCollapseCard() {
     
 
     const booleanValue = useBooleanStore((state) => state.booleanValue);
-
+    const [activeIndex, setActiveIndex] = useState(0);
 
 
     return (
@@ -20,19 +19,15 @@ export default function LearnCollapseCard() {
             <div className="p-4  text-white flex flex-col   ">
                 <div className="w-full h-full flex flex-row gap-2  justify-between md:mx-6 ">
                     <div className=" h-full  lg:w-[35%] md:w-[40%] w-full mx-auto md:mx-0">
-                        <LearnCollapseItem />
-                        <LearnCollapseItem />
-                        <LearnCollapseItem />
-                        <LearnCollapseItem />
-                        <LearnCollapseItem />
-
+                        <LearnCollapseItem activeIndex={activeIndex} setActiveIndex={setActiveIndex} index={1}/>
+                        <LearnCollapseItem activeIndex={activeIndex} setActiveIndex={setActiveIndex} index={2}/>
+                        <LearnCollapseItem activeIndex={activeIndex} setActiveIndex={setActiveIndex} index={3}/>
+                        <LearnCollapseItem activeIndex={activeIndex} setActiveIndex={setActiveIndex} index={4}/>
+                        <LearnCollapseItem activeIndex={activeIndex} setActiveIndex={setActiveIndex} index={5}/>
                     </div>
                     {
-                        booleanValue && <Lessonsdiv />
-
-                    }
-                  
-                   
+                        (activeIndex !== 0) ? <Lessonsdiv /> : null
+                    }                   
 
                 </div>
                 <div className="w-full h-fit pr-3 pl-6 lg:block hidden">
