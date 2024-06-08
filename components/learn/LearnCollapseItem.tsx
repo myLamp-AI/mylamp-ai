@@ -12,17 +12,20 @@ interface LearnCollapseItemProps {
     setActiveIndex: React.Dispatch<React.SetStateAction<number>>;
 }
 
+import { useModalStore } from "./store02";
 
 const LearnCollapseItem:React.FC<LearnCollapseItemProps> = ({activeIndex, setActiveIndex, index}) => {
     const setBooleanValue = useBooleanStore((state) => state.setBooleanValue);
+    const booleanValue = useBooleanStore((state) => state.booleanValue);
+    const { openModal } = useModalStore();
+
     const handleClick = () => {
         const currentValue = useBooleanStore.getState().booleanValue;
         setBooleanValue(!currentValue);
         setActiveIndex(activeIndex === index ? 0 : index);
-    };
-    const booleanValue = useBooleanStore((state) => state.booleanValue);
-    
 
+    
+    };
 
     return (
         <>

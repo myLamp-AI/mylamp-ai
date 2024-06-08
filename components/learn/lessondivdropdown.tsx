@@ -20,16 +20,15 @@ const lessonsData: Lesson[] = [
 ];
 
 const Lessonsdiv01: React.FC = () => (
-  <div className="mx-6 w-full md:w-[60%] flex justify-center pr-3 xl:hidden ">
-    <div className="bg-white border-[0.5px] border-[#737373] rounded-xl flex md:flex-col w-full h-fit px-8 pb-8">
-      <div className="w-fit text-black mx-2 my-4 font-[500] text-xl">Lessons01</div>
-      <div className="h-fit w-full mx-5 mt-2">
-        {lessonsData.map((lesson) => (
-          <div key={lesson.id} className="w-full h-fit overflow-hidden flex flex-row">
-            <div className="w-fit h-14 flex">
-              <div className="w-fit md:w-[470px] h-10 flex border-[1px] border-gray-50 bg-white hover:bg-[#E8E2F4] hover:border-[#E8E2F4] rounded-3xl">
-                <div className="w-fit flex justify-center my-auto items-center mx-[3px]">
-                  <Image
+
+<div className="mx-6 w-full flex justify-center pr-3  ml-2  ">
+<div className=" border-[0.5px] border-[#737373] rounded-xl flex flex-col w-full h-fit py-4 px-8 bg-[#E8E2F4]">
+  <div className="text-black text-xl font-semibold mb-4">Lessons</div>
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 ">
+    {lessonsData.map((lesson) => (
+      <div key={lesson.id} className="w-full h-12  flex items-center border border-gray-50 rounded-xl overflow-hidden hover:bg-gray-50">
+        <div className="w-12 h-16 flex justify-center items-center mr-4">
+        <Image
                     src={lesson.image1}
                     alt="Lesson Icon"
                     className="border-rad"
@@ -37,20 +36,16 @@ const Lessonsdiv01: React.FC = () => (
                     height={30}
                     priority
                   />
-                </div>
-                <div className="flex justify-center items-center">
-                  <h4 className="text-black text-sm mx-2">
-                    <span className="font-[660]">{lesson.name}</span>: {lesson.language}
-                  </h4>
-                </div>
-              </div>
-            </div>
-            
-          </div>
-        ))}
+        </div>
+        <div className="flex-1 w-full ">
+          <h4 className="text-black text-xs font-semibold">{lesson.name}</h4>
+          <p className="text-gray-500 text-xs">{lesson.language}</p>
+        </div>
       </div>
-    </div>
+    ))}
   </div>
+</div>
+</div>
 );
 
 export default Lessonsdiv01;
