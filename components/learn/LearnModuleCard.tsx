@@ -16,7 +16,6 @@ export default function LearnModuleCard() {
   };
   const duration = 0;
 
-
   return (
     <>
       <Transition in={showCollapse} timeout={duration}>

@@ -7,6 +7,7 @@ const Lessonsdiv = () => {
   // Define your lessons data
   const xDot = -400;
   const yDot = -250;
+
   const lessonsData = [
     { id: 1, name: "Language of ML", language: "python", image1: "/learn/play button.svg", image2: "/learn/revise.svg" },
     { id: 2, name: "Supervised Learning: Classification", language: "javascript", image1: "/learn/icon 1.svg", image2: "/learn/completed.svg" },
@@ -18,8 +19,8 @@ const Lessonsdiv = () => {
   return (
     <>
       <motion.div
-        initial={{ opacity: 0, scale: 0, x: xDot, y: yDot }} // Start from the dot point with zero opacity and scale
-        animate={{ opacity: 1, scale: 1, x: 0, y: 0 }} // Animate to full opacity, scale, and original position
+        initial={{ opacity: 0, scale: 0, x: xDot, y: yDot }} 
+        animate={{ opacity: 1, scale: 1, x: 0, y: 0 }} 
         transition={{ duration: 0.5, ease: 'easeInOut' }}
         className="mx-6  lg:w-[60%] w-[50%] md:flex justify-center pr-3 hidden ">
         <div className="bg-white border-[0.5px] border-[#737373]  rounded-xl flex md:flex-col w-full h-fit px-8 pb-8">
