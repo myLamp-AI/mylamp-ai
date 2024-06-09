@@ -2,7 +2,6 @@
 import SliderCard from "./SliderCard";
 import sliderData from "@/data/home/SliderData.json";
 
-import { Card, CardContent } from "@/components/ui/card"
 import {
     Carousel,
     CarouselContent,
@@ -18,15 +17,6 @@ const HomeSlider: React.FC = () => {
         <>
             <div className=" py-[100px] flex items-center justify-center">
 
-                {/* <div>
-                    { 
-                        sliderData.map((item, index) => {
-                            return (
-                                <SliderCard imageUrl={item.imageUrl} key={index} />
-                            )
-                        })
-                    }
-                </div> */}
                 <Carousel plugins={[AutoPlay({ delay: 1000 })]} className="w-full max-w-[1200px]">
                     <CarouselContent>
                         {sliderData.map((item, index) => {
@@ -43,6 +33,7 @@ const HomeSlider: React.FC = () => {
                             )
                         })}
                     </CarouselContent>
+                    
                     <CarouselPrevious />
                     <CarouselNext />
                 </Carousel>

@@ -23,8 +23,6 @@ const LearnCollapseItem:React.FC<LearnCollapseItemProps> = ({activeIndex, setAct
         const currentValue = useBooleanStore.getState().booleanValue;
         setBooleanValue(!currentValue);
         setActiveIndex(activeIndex === index ? 0 : index);
-
-    
     };
 
     return (

@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Footer() {
     return (
         <>
-            <div className="flex gap-8 bg-gradient-to-tr shadow-br from-[#8C52FF] to-[#a2b4e1] p-[40px] mt-[100px]">
+            <div className="flex gap-8 bg-gradient-to-tr shadow-br from-[#8C52FF] to-[#b7cdfb] p-[40px] mt-[100px]">
                 <div className="bg-white w-full rounded-2xl py-4 px-8 shadow-br">
                     <div className="flex items-center justify-evenly text-2xl font-bold text-[#00000090] border-dashed border-b-[3px] pb-4">
                         <Image src="/home/logo.svg" height={100} width={130} alt="logo" /> by

@@ -4,7 +4,7 @@ export default function HeroSection() {
     return (
         <>
 
-            <div className="flex flex-col bg-gradient-to-b from-[#8C52FF] to-[#f5f5f5]   ">
+            <div className="flex flex-col bg-gradient-to-br from-[#8C52FF] to-[#f5f5f5]   ">
                 <div className="flex justify-evenly min-h-screen p-4 max-w-[1200px] w-full m-auto">
                     <div className="flex flex-col justify-between items-center bg-[#f5f5f5] h-[600px] w-full max-w-[600px] mx-2 rounded-2xl py-2 px-5">
                         <div className='flex justify-between w-full'>
@@ -71,7 +71,6 @@ export default function HeroSection() {
                             <div className='bg-[#f5f5f5] rounded-2xl p-3 h-16 w-full'>
                                 Realistic flower Modelling
                             </div>
-
                         </div>
                     </div>
                 </div>
