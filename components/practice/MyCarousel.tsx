@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import Image from "next/image";
 import { useState } from "react";
-import Exdata from '@/app/data/Excommunity.json'
+import Exdata from '@/app/data/Assessment.json'
 
 const Carousel: React.FC = () => {
   const carouselRef = useRef<HTMLDivElement>(null);

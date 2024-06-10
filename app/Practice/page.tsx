@@ -5,7 +5,7 @@ import { FaStar } from "react-icons/fa";
 import Exdata from "@/app/data/Assessment.json"
 import Alldata from "@/app/data/Allassessment.json"
 import codingdata from '@/app/data/codingassmnt.json'
-
+import Carousel from '@/components/practice/MyCarousel'
 export default function Practice() {
     const radius = 40;
     const circumference = 2 * Math.PI * radius;
@@ -18,12 +18,6 @@ export default function Practice() {
     }
     const ExdataLen = Exdata.length;
     const [currentIndex, setCurrentIndex] = useState(0);
-    const handleNext = () => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % ExdataLen);
-    };
-    const handlePrev = () => {
-        setCurrentIndex((prevIndex) => (prevIndex - 1 + ExdataLen) % ExdataLen);
-    };
     return (
         <div className="w-full flex justify-center">
             <div className="bg-[#F1EAFF] w-full max-w-[1200px] max-h-[720px] flex flex-wrap lg:flex-nowrap shadow-xl" >
@@ -38,7 +32,7 @@ export default function Practice() {
                             </div>
                         </div>
                     </div>
-                    <div className="flex flex-col gap-3">
+                    {/* <div className="flex flex-col gap-3">
                         <div className="flex flex-row justify-between">
                             <span className="text-base font-semibold">Exclusive Assessments</span>
                             <div className="flex flex-row gap-4">
@@ -58,7 +52,8 @@ export default function Practice() {
                                 </div>
                             ))}
                         </div>
-                    </div>
+                    </div> */}
+                    <Carousel/>
                     <div className="flex flex-col gap-3 overflow-x-clip">
                         <div className="flex flex-row justify-between">
                             <span className="text-base font-semibold">All Assessments</span>

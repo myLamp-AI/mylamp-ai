@@ -13,7 +13,7 @@ export default function Explore() {
     return (
         <div className="w-full scrollbar-hide flex flex-row justify-center">
             <div className="w-full max-w-[1200px] h-full flex flex-col gap-3 scrollbar-hide ">
-                <div className="w-full flex flex-row  mt-5 gap-4">
+                <div className="w-full flex flex-row mt-5 gap-4">
                     <div className="h-full w-full lg:w-8/12 bg-white p-2 border rounded-xl flex flex-row">
                         <div className="w-full flex flex-col gap-1 p-2 xl:w-2/3">
                             <div className="text-2xl font-medium font-sans  ml-4">Journey through GenAI and LLMS</div>
@@ -68,8 +68,8 @@ export default function Explore() {
                                         </div>
                                         <div className="w-full bg-[#FFFFFF] rounded-lg mb-5 flex flex-col">
                                             <div className="flex flex-row mt-4 ml-2.5">
-                                                <div className="ml-1"><Image src="/mlimage.svg" height={75} width={75} alt="mlimage" /></div>
-                                                <div className="mx-6 mt-3" >
+                                                <div className="pl-1"><Image src="/mlimage.svg" height={75} width={75} alt="mlimage" /></div>
+                                                <div className="px-6 mt-3" >
                                                     <div>
                                                         <span className="text-lg leading-5 font-semibold">{item[0].name}</span>
                                                         <div className="flex gap-1 text-[#737373] font-semibold">
@@ -80,7 +80,7 @@ export default function Explore() {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <Link href="explore/bytes" className="mx-3 mt-1.5 child flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-[#8C52FF] h-9 rounded-lg text-[#fff] font-medium shadow-lg">
+                                            <Link href="explore/bytes" className="mx-3 mt-1.5 child flex items-center justify-center h-0 group-hover:h-9 transition-all bg-[#8C52FF] rounded-lg text-[#fff] font-medium">
                                                 Start Exploring
                                             </Link>
                                         </div>

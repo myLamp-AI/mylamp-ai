@@ -3,6 +3,7 @@ import Image from "next/image";
 import React, { useState } from 'react';
 import Exdata from '@/app/data/Excommunity.json';
 import Alldata from '@/app/data/Allcommunity.json'
+import Carousel from '@/components/community/MyCarousel'
 export default function Community() {
     const ExdataLen = Exdata.length;
     const AlldataLen = Alldata.length;
@@ -21,7 +22,7 @@ export default function Community() {
     return (
         <div className="w-full flex justify-center">
             <div className="bg-[#F1EAFF] w-full h-100vh max-w-[1200px] flex flex-wrap lg:flex-nowrap gap-3" >
-                <div className="w-2/5 h-[90vh] flex flex-col gap-3 pl-4 pt-3 overflow-auto scrollbar-hide">
+                <div className="w-2/5 min-w-9 h-[90vh] flex flex-col gap-3 pl-4 pt-3 overflow-auto scrollbar-hide">
                     <div className=" text-[#737373] font-semibold flex flex-col gap-2.5">
                         <div className="font-bold">Hello Raj!</div>
                         <span className="text-[#A6A6A6]">Lear with your peers to maximise learing</span>
@@ -32,7 +33,7 @@ export default function Community() {
                             </div>
                         </div>
                     </div>
-                    <div className="flex flex-col gap-3">
+                    {/* <div className="flex flex-col gap-3">
                         <div className="flex flex-row justify-between">
                             <span className="text-base font-semibold">Exclusive Communities</span>
                             <div className="flex flex-row gap-4">
@@ -55,7 +56,8 @@ export default function Community() {
                             ))}
                         </div>
 
-                    </div>
+                    </div> */}
+                    <Carousel/>
                     <div className="flex flex-col gap-3 overflow-x-clip">
                         <div className="flex flex-row justify-between">
                             <span className="text-base font-semibold">All Communities</span>
@@ -76,7 +78,7 @@ export default function Community() {
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col w-3/5 bg-[#fff] rounded-lg m-3 mb-0">
+                <div className="flex flex-col h-[90vh] w-3/5 bg-[#fff] rounded-lg m-3 mb-0">
                     <div className="flex flex-row bg-[#8c52ff] w-full h-16 rounded-lg items-center justify-between">
                         <div className="flex flex-row gap-14 items-center pl-10">
                             <div className="w-12 h-12 bg-[#fff] rounded-full flex justify-center items-center"><Image src="/community/webdevchaticon.svg" alt="img" height={10} width={10} className="w-8 h-8" /></div>

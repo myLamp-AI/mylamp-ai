@@ -26,23 +26,19 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth focus:scroll-auto">
       <body className={`${openSans.className} bg-[#F1EAFF]`}>
         <Navbar />         
-        <div className="flex h-full">
+        <div className="flex h-full transition-all duration-300 ">
           {/* Sidebar */}
-          <div className={`${isSidebarOpen ? 'w-48' : 'w-0'} transition-all duration-300 flex flex-row `}>
-            <div className="fixed flex flex-row items-center transition-all duration-300">
+          <div className={`lg:${isSidebarOpen ? 'w-48 ' : 'w-0'} transition-all duration-300  flex flex-row `}>
+            <div className="fixed flex flex-row items-center">
               {
                 isSidebarOpen &&
-                <Sidebar
-                  togglesidebar={toggleSidebar}
-                  isSidebarOpen={isSidebarOpen}
-                  setIsSidebarOpen={setIsSidebarOpen}
-                />
-              }
+                <Sidebar/>
+              } 
               <div className='h-[100vh] rounded-lg w-6 flex items-center' onClick={toggleSidebar}><img src="/sidebar/pparw.svg" className={`w-6 h-6 ${isSidebarOpen ?'rotate-180':''}`}/></div>
             </div>
           </div>
           {/* Main Content */}
-          <div className=" flex-1 transition-all duration-300">
+          <div className=" flex-1 lg:transition-all lg:duration-300">
             {children}
           </div>
         </div>
