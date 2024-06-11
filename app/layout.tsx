@@ -2,7 +2,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Open_Sans } from "next/font/google";
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/oldmodules/Navbar";
 import Sidebar from '@/components/Sidebar'
 const openSans = Open_Sans({ subsets: ["latin"] });
 import React, { useState, useRef, useEffect } from 'react';
