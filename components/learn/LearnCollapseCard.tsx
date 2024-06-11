@@ -10,7 +10,7 @@ import Lessonsdiv01 from "./lessondivdropdown";
 
 export default function LearnCollapseCard() {
     const booleanValue = useBooleanStore((state) => state.booleanValue);
-    
+
     const [activeIndex, setActiveIndex] = useState(0);
 
 
@@ -20,16 +20,16 @@ export default function LearnCollapseCard() {
             <div className="p-4  text-white flex flex-col   ">
                 <div className="w-full h-full flex flex-row gap-2  justify-between md:mx-6 ">
                     <div className=" h-full  lg:w-[35%] md:w-[40%] w-full mx-auto md:mx-0">
-                        <LearnCollapseItem activeIndex={activeIndex} setActiveIndex={setActiveIndex} index={1}/>
-                        <LearnCollapseItem activeIndex={activeIndex} setActiveIndex={setActiveIndex} index={2}/>
-                        <LearnCollapseItem activeIndex={activeIndex} setActiveIndex={setActiveIndex} index={3}/>
-                        <LearnCollapseItem activeIndex={activeIndex} setActiveIndex={setActiveIndex} index={4}/>
-                        <LearnCollapseItem activeIndex={activeIndex} setActiveIndex={setActiveIndex} index={5}/>
+                        <LearnCollapseItem activeIndex={activeIndex} setActiveIndex={setActiveIndex} index={1} />
+                        <LearnCollapseItem activeIndex={activeIndex} setActiveIndex={setActiveIndex} index={2} />
+                        <LearnCollapseItem activeIndex={activeIndex} setActiveIndex={setActiveIndex} index={3} />
+                        <LearnCollapseItem activeIndex={activeIndex} setActiveIndex={setActiveIndex} index={4} />
+                        <LearnCollapseItem activeIndex={activeIndex} setActiveIndex={setActiveIndex} index={5} />
                     </div>
                     {
                         (activeIndex !== 0) ? <Lessonsdiv /> : null
                     }
-                 
+
 
 
                 </div>
@@ -74,14 +74,8 @@ export default function LearnCollapseCard() {
                                 </div>
                             </div>
                         </div>
-
-
-
-
-
                     </div>
                 </div>
-
             </div>
         </>
     )

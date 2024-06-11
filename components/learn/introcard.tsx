@@ -6,7 +6,7 @@ export default function IntroCard() {
   const [progress, setProgress] = useState(90);
   return (
     <>
-      <div className="bg-white w-full h-fit block md:hidden w-full p-4 rounded-lg">
+      <div className="bg-white w-full h-fit block md:hidden  p-4 rounded-lg">
         {/* Image at the top */}
         <div className="flex justify-center mb-4">
           <Image

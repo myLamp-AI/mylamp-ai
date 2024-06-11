@@ -20,7 +20,7 @@ export default function LearnModuleCard() {
     <>
       <Transition in={showCollapse} timeout={duration}>
         {state => (
-          <div className={`overflow-hidden transition-height duration-${duration} ${state === 'entered' ? 'shadow-lg bg-white' : ''}  my-3  md:max-h-max  rounded-lg w-full   md:mx-0 mx-auto  mb-2 bg-[#E8E2F4]  `}>
+          <div className={`overflow-hidden transition-height duration-${duration} ${state === 'entered' ? 'shadow-lg bg-white' : ''}  my-3  md:max-h-max  rounded-lg md:w-full sm:w-[80%] w-full   md:mx-0 mx-auto  mb-2 bg-[#E8E2F4]  `}>
             <div
               className={`${showCollapse ? 'shadow-lg' : ''
                 } flex items-center justify-between  sm:justify-center  grid-flow-row sm:w-30 pl-2 pr-2  lg:py-5 py-2 bg-white rounded-lg  mb-3 md:items-start md:justify-start`}
@@ -81,7 +81,7 @@ export default function LearnModuleCard() {
                   </div>
                 </div>
               </div>
-              <div className="  md:mr-4 md:ml-0 sm:ml-2 ml-1  grid justify-center w-fit  h-full md:my-14 sm:mt-6 sm:my-0 my-auto">
+              <div className="  md:mr-4 md:ml-0 sm:ml-4 ml-1  grid justify-center w-fit  h-full md:my-14 sm:mt-3 sm:my-0 my-auto">
                 <Image
                   src="/arrow.svg"
                   alt="Verceldcjncn Logo"

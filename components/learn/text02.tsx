@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { FaChevronDown, FaTimes } from 'react-icons/fa';
 import Lessonsdiv01 from "./lessondivdropdown";
+import Lessonsdiv from "./Lessonsdiv";
 
 type CustomEvent = MouseEvent | TouchEvent;
 

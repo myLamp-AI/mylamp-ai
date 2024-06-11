@@ -8,16 +8,16 @@ export default function Learn() {
   const [progress, setProgress] = useState(90);
 
   return (
-      <div className="flex w-full max-w-[1300px] m-auto relative bg-[#E8E2F4] rounded-lg">
-        <div className=" inset-y-0 flex flex-col w-full p-3 mt-5 rounded-lg  ">
-          <div className="w-full justify-between pr-3 pl-3 rounded-lg">
-            <div className="flex  md:h-96   h-fit mb-10 rounded-lg w-full  mx-auto md:mx-0 sm:mb-5 flex-row justify-center md:justify-between">
-              <div className="w-full  lg:w-8/12 mr-0 mt-0   sm:mb-0 bg-white  rounded-lg ... ">
+      <div className="flex w-full max-w-[1300px] m-auto relative  bg-[#E8E2F4] rounded-lg">
+
+          <div className="w-full justify-between rounded-lg  mt-4  p-6">
+            <div className="flex  md:h-96   h-fit mb-10  rounded-lg md:w-full w-full sm:w-[80%]  mx-auto md:mx-0 sm:mb-5 flex-row justify-center md:justify-between">
+              <div className="w-full  lg:w-8/12 mr-0 mt-0  sm:mb-0 bg-white  rounded-lg ... ">
 
                 <IntroCard />
 
                 <div className="md:h-full  w-full  md:justify-between p-4 md:flex hidden ">
-                  <div className="md:h-full  lg:w-[30%] h-52 md:w-[40%] w-full rounded-lg flex justify-center  md:flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" title="Woman holding a mug">
+                  <div className="md:h-full  lg:w-[30%] h-52 md:w-[42%] w-full rounded-lg flex justify-center  md:flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" title="Woman holding a mug">
                     <Image
                       src="/robot002.svg"
                       alt="Verceldcjncn Logo"
@@ -29,7 +29,7 @@ export default function Learn() {
 
                   <div className=" md:w-full max-w-[900px] h-96 md:mx-0 mx-[180px]  hidden   md:h-full w-1/2   md:left-0  rounded-b lg:rounded-b-none  lg:rounded-r p-4 md:flex flex-col md:justify-between  leading-normal">
                     <div className="mb-8 relative h-fit ">
-                      <div className="text-gray-900 font-semibold xl:text-2xl relative w-full  sm:text-[21px] md:text-2xl flex ">
+                      <div className="text-gray-900 font-semibold xl:text-2xl relative w-full  sm:text-[21px] md:text-[22px] lg:text-2xl flex ">
                         Introduction to Machine Learning
                       </div>
                       <div className="flex absolute sm:top-8 w-full md:mt-3  items-center text-[#0166C8] justify-start flex-row lg:gap-4 font-semibold ">
@@ -48,8 +48,8 @@ export default function Learn() {
                             className="w-6 h-6 md:w-6  md:h-6 "
                           />
                         </div>
-                        <div className="w-fit  text-center rounded-sm text-sm md:text-[18px]">Module:</div>
-                        <div className="w-fit  text-center text-sm md:text-[18px]">Data science</div>
+                        <div className="w-fit  text-center rounded-sm text-sm lg:text-[18px] md:text-[16px]">Module:</div>
+                        <div className="w-fit  text-center text-sm lg:text-[18px] md:text-[16px]">Data science</div>
                       </div>
                       <div className="flex absolute sm:top-44   w-full items-center justify-start flex-row gap-[14px] text-[#737373] font-semibold  ">
                         <div className="w-fit">
@@ -62,8 +62,8 @@ export default function Learn() {
                             className="w-6 h-6 md:w-6 md:h-6"
                           />
                         </div>
-                        <div className="w-fit  text-center rounded-sm text-sm md:text-[18px]">Chapter:</div>
-                        <div className="w-fit text-left text-sm md:text-[18px] ">Supervise learning and applications</div>
+                        <div className="w-fit  text-center rounded-sm text-sm lg:text-[18px] md:text-[16px]">Chapter:</div>
+                        <div className="w-fit text-left text-sm lg:text-[18px] md:text-[16px] ">Supervise learning and applications</div>
                       </div>
 
                       <div className="absolute top-[230px] w-full mx-5 max-w-[350px] flex items-center gap-2">
@@ -94,6 +94,6 @@ export default function Learn() {
 
           </div>
         </div>
-    </div>
+
   );
 };

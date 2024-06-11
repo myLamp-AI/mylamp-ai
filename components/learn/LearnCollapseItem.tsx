@@ -14,7 +14,7 @@ interface LearnCollapseItemProps {
 
 import { useModalStore } from "./store02";
 
-const LearnCollapseItem:React.FC<LearnCollapseItemProps> = ({activeIndex, setActiveIndex, index}) => {
+const LearnCollapseItem: React.FC<LearnCollapseItemProps> = ({ activeIndex, setActiveIndex, index }) => {
     const setBooleanValue = useBooleanStore((state) => state.setBooleanValue);
     const booleanValue = useBooleanStore((state) => state.booleanValue);
     const { openModal } = useModalStore();
@@ -25,15 +25,21 @@ const LearnCollapseItem:React.FC<LearnCollapseItemProps> = ({activeIndex, setAct
         setActiveIndex(activeIndex === index ? 0 : index);
     };
 
+    
+
+
+
+
+  
     return (
         <>
             <div
-                 onClick={() => {
+                onClick={() => {
                     handleClick();
-                  }}
+                }}
                 className={`w-full h-14 md:w-full lg:h-20 border-[0.5px] flex sm:justify-between mb-7 rounded-md ${activeIndex === index
-                        ? ' border-[#8C52FF] bg-white'
-                        : ' border-gray-400 bg-[#E8E2F4]'
+                    ? ' border-[#8C52FF] bg-white'
+                    : ' border-gray-400 bg-[#E8E2F4]'
 
                     }`}
             >
@@ -61,6 +67,25 @@ const LearnCollapseItem:React.FC<LearnCollapseItemProps> = ({activeIndex, setAct
                 </div>
 
             </div>
+
+
+
+
+
+           
+
+
+
+
+
+
+
+
+
+
+
+
+
         </>
     )
 }
