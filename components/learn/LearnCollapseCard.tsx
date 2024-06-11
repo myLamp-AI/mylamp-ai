@@ -5,12 +5,12 @@ import LearnCollapseItem from "./LearnCollapseItem";
 import Lessonsdiv from "./Lessonsdiv";
 import useBooleanStore from './store';
 import Lessonsdiv01 from "./lessondivdropdown";
-import { useModalStore } from "./store02";
-import { Modal, ModalContent, ModalBody } from "@nextui-org/react";
+
+
 
 export default function LearnCollapseCard() {
     const booleanValue = useBooleanStore((state) => state.booleanValue);
-    const { isOpen, closeModal } = useModalStore();    
+    
     const [activeIndex, setActiveIndex] = useState(0);
 
 
@@ -30,14 +30,6 @@ export default function LearnCollapseCard() {
                         (activeIndex !== 0) ? <Lessonsdiv /> : null
                     }
                  
-                    <Modal isOpen={isOpen} onClose={closeModal} placement="center" className="md:hidden flex w-fit  ">
-                        <ModalContent>
-                            <ModalBody>
-                                <Lessonsdiv01 />
-                            </ModalBody>
-                        </ModalContent>
-                    </Modal>
-              
 
 
                 </div>
@@ -78,8 +70,6 @@ export default function LearnCollapseCard() {
                                         width={15}
                                         height={15}
                                         priority
-
-
                                     />
                                 </div>
                             </div>
