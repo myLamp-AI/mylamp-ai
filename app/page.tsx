@@ -8,11 +8,13 @@ import RecentAdvances from '@/components/home/RecentAdvances';
 import CommunitySection from '@/components/home/Community';
 import Footer from '@/components/home/Footer';
 import HomeSlider from '@/components/home/HomeSlider';
+import HomeNavbar from "@/components/home/HomeNavbar";
 
 export default function Page() {
   return (
     <>
       <main className='h-full bg-[#f5f5f5]'>
+        <HomeNavbar />
         <HeroSection />
         <AboutWize />
         <WizeCamp />
