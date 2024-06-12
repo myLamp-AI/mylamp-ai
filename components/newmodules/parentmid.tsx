@@ -1,18 +1,21 @@
 "use client"
 import React, { useState } from 'react';
-import LeftSide from './leftside';
+import LeftSide from './left/leftside';
 import RightSide from './rightside';
 import Middle from './middlecomponents/middlecomponents';
+import useStore from './left/zustandleft/storeleft';
 
-export default function ParentMid (){
-
-
+export default function ParentMid() {
+  const { isOpen } = useStore();
   return (
-    <div className="flex w-full h-screen">
-    <LeftSide />
-    <Middle />
-   <RightSide/>
-  </div>
+    <div className="flex h-screen">
+      {
+       isOpen && <LeftSide />
+      }
+      <Middle />
+     
+
+    </div>
   )
 };
 

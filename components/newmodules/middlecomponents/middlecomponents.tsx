@@ -1,11 +1,18 @@
 "use client"
 import React from 'react';
 import Image from 'next/image';
+import useStore from '../left/zustandleft/storeleft';
 
 
 const Middle: React.FC = () => {
+  const { isOpen, toggleOpen } = useStore();
+
+  const handleToggle = () => {
+    toggleOpen();
+  };
+
   return (
-    <div className="relative w-full flex bg-green-300 ">
+    <div className="relative w-full flex  h-screen  ">
       <div className=" absolute top-1 flex border-[0.5px] border-b-[#828282] h-14 w-full ">
 
         <div className="absolute top-0 right-12 pt-4 pr-3 pb-0 pl-4">
@@ -19,36 +26,37 @@ const Middle: React.FC = () => {
           />
         </div>
 
-        <div className="relative grid gap-4 grid-cols-4">
-          <div className="pt-4 pr-0 pb-0 pl-14">
+        <div className="relative grid gap-2 grid-cols-4 -mt-1  ">
+          <div className=" my-auto mx-6 w-fit h-fit " >
             <Image
-              src="/menu bar-2.png"
+              src="/modules/Group 22.svg"
               alt="Verceldcjncn Logo"
-              className=""
+              className=" w-10 h-12"
               width={23}
-              height={20}
+              height={28}
               priority
             />
           </div>
-          <div className="pt-3">Course</div>
-          <div className="pt-4 text-center w-4">
+          <div onClick={handleToggle} className=" font-semibold w-fit text-lg my-4 -mx-6 cursor-pointer">Course</div>
+          <div className="text-center w-4 my-5 -mx-6">
             <Image
               src="/Vector (1).svg"
               alt="Verceldcjncn Logo"
               className=""
               width={10}
-              height={15}
+              height={10}
               priority
             />
           </div>
-          <div className="pt-3 text-left sm:absolute sm:left-56">Tech 01</div>
+          <div className="text-left sm:absolute sm:left-56 font-semibold my-4 text-lg ">Tech 01</div>
         </div>
 
       </div>
       <div className=" absolute bottom-1 flex border-[0.5px] border-t-[#828282] h-14 w-full justify-between ">
         <div className="mx-7 h-7 my-auto  ">
           <Image
-            src="/modules/next.svg"
+
+            src="/modules/previous.svg"
             alt="Verceldcjncn Logo"
             className="w-full h-full my-auto "
             width={30}
@@ -57,8 +65,8 @@ const Middle: React.FC = () => {
           />
         </div>
         <div className=" mx-7 h-7 my-auto ">
-        <Image
-            src="/modules/previous.svg"
+          <Image
+            src="/modules/next.svg"
             alt="Verceldcjncn Logo"
             className="w-full h-full my-auto   "
             width={30}
