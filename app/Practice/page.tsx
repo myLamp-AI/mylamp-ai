@@ -32,27 +32,6 @@ export default function Practice() {
                             </div>
                         </div>
                     </div>
-                    {/* <div className="flex flex-col gap-3">
-                        <div className="flex flex-row justify-between">
-                            <span className="text-base font-semibold">Exclusive Assessments</span>
-                            <div className="flex flex-row gap-4">
-                                <button onClick={handlePrev}><Image src="/practice/lfarw.svg" alt="arr" width={7.89} height={13.99} /></button>
-                                <button onClick={handleNext}><Image src="/practice/rfarw.svg" alt="arr" width={7.89} height={13.99} /></button>
-                            </div>
-                        </div>
-                        <div className="flex transition-transform duration-300 ease-in-out" style={{ transform: `translateX(-${(currentIndex / ExdataLen) * 100}%)` }}>
-                            {Exdata.map((slide, index) => (
-                                <div key={index} className="min-w-[200px] px-3 h-56 ">
-                                    <div className="bg-[#fff] rounded-lg h-full">
-                                        <div><Image src={Exdata[index].svg} alt="img" height={100} width={230} className="w-full" /></div>
-                                        <div className="text-md font-bold h-16 flex flex-row justify-around pt-3">
-                                            <div className="w-3/5">{Exdata[index].name}</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div> */}
                     <Carousel/>
                     <div className="flex flex-col gap-3 overflow-x-clip">
                         <div className="flex flex-row justify-between">
