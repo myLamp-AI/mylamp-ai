@@ -2,17 +2,17 @@
 import React, { useState } from 'react';
 import LeftSide from './leftside';
 import RightSide from './rightside';
-import Middle from './middlecomponents';
+import Middle from './middlecomponents/middlecomponents';
 
 export default function ParentMid (){
 
 
   return (
-    <div className="flex h-screen  ">
-         <LeftSide/>
-         <Middle />
-       
-    </div>
+    <div className="flex w-full h-screen">
+    <LeftSide />
+    <Middle />
+   <RightSide/>
+  </div>
   )
 };
 
