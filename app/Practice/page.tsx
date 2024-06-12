@@ -20,7 +20,7 @@ export default function Practice() {
     const [currentIndex, setCurrentIndex] = useState(0);
     return (
         <div className="w-full flex justify-center">
-            <div className="bg-[#F1EAFF] w-full max-w-[1200px] max-h-[720px] flex flex-wrap lg:flex-nowrap shadow-xl" >
+            <div className="bg-[#F1EAFF] w-full max-w-[1200px] max-h-[720px] flex flex-wrap lg:flex-nowrap" >
                 <div className="w-full h-full flex flex-col gap-3 pl-4 pt-3 overflow-y-auto scrollbar-hide">
                     <div className=" text-[#737373] font-semibold flex flex-col gap-2.5">
                         <div className="font-bold">Let&apos;s Rock!</div>
