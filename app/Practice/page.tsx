@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image";
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { FaStar } from "react-icons/fa";
 import Exdata from "@/app/data/Assessment.json"
 import Alldata from "@/app/data/Allassessment.json"
@@ -18,6 +18,26 @@ export default function Practice() {
     }
     const ExdataLen = Exdata.length;
     const [currentIndex, setCurrentIndex] = useState(0);
+    const carouselRef = useRef<HTMLDivElement>(null);
+
+
+    const handlePrevClick = () => {
+        if (carouselRef.current) {
+            carouselRef.current.scrollBy({
+                left: -200, // Adjust the scroll distance as needed
+                behavior: 'smooth'
+            });
+        }
+    };
+
+    const handleNextClick = () => {
+        if (carouselRef.current) {
+            carouselRef.current.scrollBy({
+                left: 200, // Adjust the scroll distance as needed
+                behavior: 'smooth'
+            });
+        }
+    };
     return (
         <div className="w-full flex justify-center">
             <div className="bg-[#F1EAFF] w-full max-w-[1200px] max-h-[720px] flex flex-wrap lg:flex-nowrap" >

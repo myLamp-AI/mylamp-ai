@@ -28,7 +28,7 @@ export default function RootLayout({
         <Navbar />         
         <div className="flex h-full transition-all duration-300 ">
           {/* Sidebar */}
-          <div className={`lg:${isSidebarOpen ? 'w-48 ' : 'w-0'} transition-all duration-300  flex flex-row `}>
+          <div className={`${isSidebarOpen ? 'w-48 ' : 'w-0'} transition-all duration-300 flex flex-row `}>
             <div className="fixed flex flex-row items-center">
               {
                 isSidebarOpen &&
