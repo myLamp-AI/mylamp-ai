@@ -1,13 +1,12 @@
 import Image from 'next/image';
+import Typing from './Typing';
 
 export default function HeroSection() {
     return (
         <>
-
-            
             <div className="flex flex-col bg-[#E9DEFF] ">
-                <div className="flex justify-evenly items-center min-h-screen p-4 max-w-[1350px] gap-8 w-full m-auto">
-                    <div className="flex flex-col justify-end gap-8 h-[600px] w-full relative">
+                <div className="flex justify-evenly items-center min-h-[calc(100vh-65px)] py-4 px-8 gap-8 w-full m-auto">
+                    <div className="flex flex-col justify-end h-[600px] w-full relative">
                         {/* <div className='flex justify-between items-start'>
                             <div className='bg-[#f5f5f580] p-4 rounded-2xl max-w-[300px]' >
                                 <div className='flex justify-between'>
@@ -37,13 +36,16 @@ export default function HeroSection() {
                                 </div>
                             </div>
                         </div> */}
-                        <div className='text-5xl font-semibold'>
-                            <span className='text-[#8C52FF]'>Explore</span> <br /> your Dream Career
+                        <div className='text-6xl font-bold ml-14 mb-6'>
+                            <Typing /> <br /> <span className='font-semibold'>Your Dream Career</span>
                         </div>
-                        <div className='text-xl font-medium'>
-                            Get AI- Powered personalised career guidance based on your interests, aptitude, and goals
+                        <div className='text-2xl font-medium ml-16 mb-9 '>
+                            Get AI- Powered personalised career guidance <br /> based on your interests, aptitude, and goals
                         </div>
-                        <button className='bg-[#8C52FF] rounded-full text-white font-medium py-2 px-4 w-[200px] mb-10'>Let&apos;s Get Started</button>
+                        <button className='flex items-center justify-between bg-[#8C52FF] rounded-full text-white text-2xl font-semibold py-3 pl-8 px-3 w-[300px] mb-12 ml-14'>
+                            Let&apos;s Get Started 
+                            <Image src={"/home/heroSectionArrow.svg"} height={45} width={45} alt=''></Image>
+                            </button>
                         <div className='flex gap-4'>
                             <div className='flex flex-wrap gap-2 w-full bg-[#f5f5f580] rounded-2xl p-[1.5rem] text-sm font-medium'>
                                 <div className='flex w-full gap-x-2'>
@@ -81,7 +83,7 @@ export default function HeroSection() {
                     </div>
 
                     <div className='p-6 w-full max-w-[600px] bg-[#ffffff50] rounded-2xl'    >
-                        <div className="flex flex-col justify-center items-center bg-[#f5f5f5] max-h-[600px] rounded-2xl py-2 px-5">
+                        <div className="flex flex-col justify-center items-center bg-[#f5f5f5] min-h-[552px] rounded-2xl py-2 px-5">
                             {/* <div className='flex justify-between w-full'>
                                 <Image src={"/home/logo.svg"} width={100} height={100} alt="logo" className='w-[120px]' />
                                 <div className='flex items-center justify-between px-2 gap-2 rounded-full text-base border-black border-2'>

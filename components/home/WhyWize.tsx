@@ -41,7 +41,7 @@ export default function WhyWize() {
           Why Choose&nbsp;<span className="text-[#8C52FF]">wiZ</span>e
         </div>
         <div className="flex w-full max-w-[1350px] relative">
-          <div className="flex flex-col w-full max-w-[300px] pt-[2rem] sticky top-0 h-screen text-[#000000BB] px-8 text-lg font-semibold tracking-wide gap-3 ">
+          <div className="flex flex-col w-full max-w-[300px] pt-[100px] sticky top-0 h-screen text-[#000000BB] px-8 text-lg font-semibold tracking-wide gap-3 ">
             {whyWizeLinks.map((item: Data, index) => {
               return (
                 <WizeCampLink
@@ -54,13 +54,14 @@ export default function WhyWize() {
               );
             })}
           </div>
-          <div className="border-l-4 border-[#baa1eb]">
+          <div className="border-l-4 border-[#baa1eb] relative">
             <div
               id="allroundassistance"
               className="pb-[100px] px-[100px] focus:text-[#8C52FF] min-h-screen"
             >
               <h4 className="pt-4 font-semibold text-[#8C52FF]">
                 ALL ROUND ASSISTANCE
+                <div className="bg-[#8C52FF] w-6 h-6 blur-sm rounded-full absolute left-0 top-0 translate-x-[-14px] translate-y-[-50%]" ></div>
               </h4>
               <div className="text-3xl font-medium mt-8 mb-4">
                 To make it happen for you
@@ -73,7 +74,10 @@ export default function WhyWize() {
               <div className="bg-white min-h-[400px] w-full my-8 rounded-2xl"></div>
             </div>
             <div id="practice" className="pb-[100px] px-[100px] min-h-screen">
-              <h4 className="pt-4 font-semibold text-[#8C52FF]">PRACTICE</h4>
+              <h4 className="pt-4 font-semibold text-[#8C52FF]">
+                PRACTICE
+                <div className="bg-[#8C52FF] w-6 h-6 blur-sm rounded-full absolute left-0 translate-x-[-14px] translate-y-[-100%] " ></div>
+              </h4>
               <div className="text-3xl font-medium mt-8 mb-4">
                 Practice Coding & Ace Hiring Assessments
               </div>
@@ -86,6 +90,7 @@ export default function WhyWize() {
             <div id="smartestplatform" className="pb-[100px] px-[100px] min-h-screen">
               <h4 className="pt-4 font-semibold text-[#8C52FF]">
                 SMARTEST PLATFORM
+                <div className="bg-[#8C52FF] w-6 h-6 blur-sm rounded-full absolute left-0 translate-x-[-14px] translate-y-[-100%] " ></div>
               </h4>
               <div className="text-3xl font-medium mt-8 mb-4">
                 100% online for your comfort
@@ -100,6 +105,7 @@ export default function WhyWize() {
             <div id="experiencedcounsellors" className="pb-[100px] px-[100px] min-h-screen">
               <h4 className="pt-4 font-semibold text-[#8C52FF]">
                 EXPERIENCED COUNSELLORS
+                <div className="bg-[#8C52FF] w-6 h-6 blur-sm rounded-full absolute left-0 translate-x-[-14px] translate-y-[-100%] " ></div>
               </h4>
               <div className="text-3xl font-medium mt-8 mb-4">
                 15+ years of expertise, within your reach
@@ -114,6 +120,8 @@ export default function WhyWize() {
             <div id="ourwinningrecord" className=" px-[100px] min-h-screen">
               <h4 className="pt-4 font-semibold text-[#8C52FF]">
                 OUR WINNING RECORD
+                <div className="bg-[#8C52FF] w-6 h-6 blur-sm rounded-full absolute left-0 translate-x-[-14px] translate-y-[-100%] " ></div>
+
               </h4>
               <div className="text-3xl font-medium mt-8 mb-4">
                 Because you deserve only the Best!
