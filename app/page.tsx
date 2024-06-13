@@ -8,6 +8,7 @@ import RecentAdvances from '@/components/home/RecentAdvances';
 import CommunitySection from '@/components/home/Community';
 import Footer from '@/components/home/Footer';
 import HomeSlider from '@/components/home/HomeSlider';
+import Carousel from '@/components/practice/MyCarousel'
 import HomeNavbar from "@/components/home/HomeNavbar";
 
 export default function Page() {
