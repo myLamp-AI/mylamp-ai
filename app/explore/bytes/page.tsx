@@ -1,82 +1,81 @@
 "use client"
-import React, { useState, useRef, useEffect } from 'react';
-import { usePathname } from "next/navigation";
-import Image from "next/image";
-import NavLinks from '@/components/navbar/NavItems'
-import navData from '@/components/navbar/navLinks.json'
-import smData from '@/app/data/navsocialicon.json'
-import VideoPage from '@/components/explore/VideoPage';
-export default function Bytes() {
-    // sidebar consts
-    const pathname = usePathname();
-    const navLen = navData.length;
-    const socialLen = smData.length;
-    const navRender = Array(navLen).fill(null);
-    const smRender = Array(socialLen).fill(null);
-    //practice consts
-    //Dummy consts
-    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-    const mainContentRef = useRef(null);
-    const toggleSidebar = () => {
-        setIsSidebarOpen(!isSidebarOpen);
-    };
-    useEffect(() => {
-        if (mainContentRef.current) {
-            mainContentRef.current.style.width = isSidebarOpen ? 'calc(100% - 200px)' : '100%';
+import React, { useEffect, useState } from "react";
+import Image from 'next/image'
+import bytedata from '@/app/data/bytesCarousel.json'
+export default function VideoPage() {
+    const [page, setPage] = useState(1);
+    const setDiv = Array(4).fill(null);
+    const renderSlideDiv = Array(4).fill(null);
+    const renderQnDiv = Array(2).fill(null);
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const totalItems = bytedata.length;
+
+
+    const prevSlide = () => {
+        setCurrentIndex((prevIndex) => (prevIndex - 1 + totalItems) % totalItems);
+        if (page > 1) {
+            setPage(page - 1);
         }
-    }, [isSidebarOpen]);
-
+    };
+    const nextSlide = () => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % totalItems);
+        if (page < 24) {
+            setPage(page + 1)
+        }
+    };
     return (
-        <div className="flex h-full">
-            {/* Sidebar */}
-            <div className={`${isSidebarOpen ? 'w-56' : 'w-8'} transition-all duration-300 flex flex-row `}>
-                <div className={`${isSidebarOpen ? 'w-48' : 'w-0'} transition-all duration-500`}>
-                    {
-                        isSidebarOpen &&
-                        <div className={`gap-1 flex flex-col bg-[#fff] fixed`}>
-                            <div className="w-fit h-[500px] flex flex-col gap-7 overflow-x-clip overflow-y-auto scrollbar-hide mr-6">
+        <div className="h-[90vh] overflow-y-clip w-full bg-[#E8E2F4] flex flex-col relative">
+            <div className="h-16 w-full hidden lg:flex justify-center items-center gap-9 ">
+                {
+                    setDiv.map((items, index) => (
+                        <div className="flex gap-9" key={index}>
+                            <div className="flex flex-row gap-3">
                                 {
-                                    navRender.map((item, navindex) => {
-                                        const isActive = pathname === navData[navindex].Link;
-                                        return (
-                                            <div key={navindex}>
-                                                <NavLinks name={navData[navindex].name} icon={navData[navindex].icon} Link={navData[navindex].Link} index={navindex} />
-                                            </div>
-                                        );
-                                    })
-
+                                    renderSlideDiv.map((slideitem, slideindex) => (
+                                        <div key={slideindex} className={`w-6 h-1 rounded-md ${index * 6 + slideindex + 1 <= page ? 'bg-[#000]' : 'bg-[#fff]'}`}></div>
+                                    ))
                                 }
                             </div>
-                            <div className="w-full flex flex-col items-center">
-                                <div className="w-12 h-12 border-4 rounded-full border-[#f5f5f5] absolute z-10">
-                                    <Image src="/avtar.svg" alt="pfp" height={50} width={50} />
-                                </div>
-                                <div className="w-11/12 h-24 border-2 bg-[#8c52ff] rounded-xl relative top-5"></div>
+                            <div className="flex flex-row gap-3">
+                                {
+                                    renderQnDiv.map((qnitems, qnindex) => (
+                                        <div key={qnindex} className="w-6 h-1 bg-[#8C52FF] rounded-md"></div>
+                                    ))
+                                }
                             </div>
-                            <div className="w-full h-20 bg-[#E8E2F4] text-lg font-medium flex flex-col justify-center items-center gap-2 mt-6 rounded-lg">
-                                <div className="flex flex-row gap-1.5 font-semibold">
-                                    {
-                                        smRender.map((item, smindex) => (
-                                            <div key={smindex}>
-                                                <div className="w-7 h-7"><Image src={smData[smindex].icon} alt={smData[smindex].name} height={100} width={100} /></div>
-                                            </div>
-                                        ))
-                                    }
-                                </div>
-                                <span>Connect with us</span>
-                            </div>
-
                         </div>
-                    }
+                    ))
+                }
+            </div>
+            <div className="flex flex-grow justify-between items-center ">
+                <div className="flex items-center pl-10"><Image src="/lfarw.svg" alt="arrow" height={20} width={20} onClick={prevSlide} /></div>
+                <div className="overflow-hidden w-1/2">
+                    <div
+                        className="flex transition-transform duration-500"
+                        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+                    >
+                        {bytedata.map((item, index) => (
+                            <div key={index} className="min-w-full flex-shrink-0">
+                                <img src={item.svg} className="w-full h-60 object-cover" />
+                            </div>
+                        ))}
+                    </div>
                 </div>
-                <div className='h-[90vh] rounded-lg flex items-center justify-center w-8 relative left-0'><Image src="/sidebar/whiterfarw.svg" height={10} width={10} alt='img' className={`w-8 h-8 bg-[#8c52ff] rounded-full ${isSidebarOpen ? 'rotate-180 delay-300' : ''}`} onClick={toggleSidebar} /></div>
 
+                <div className="flex items-center pr-10"><Image src="/rfarw.svg" alt="invarrow" height={20} width={20} onClick={nextSlide} /></div>
             </div>
-            {/* Main Content */}
-            <div ref={mainContentRef} className="bg-gray-200 flex-1 transition-all duration-300">
-                <VideoPage />
+            <div className="h-52 flex justify-between items-center ml-8">
+                <div className="flex flex-row gap-6">
+                    <div><Image src="/play.svg" alt="play" height={70} width={70} /></div>
+                    <div className="flex flex-col justify-center">
+                        <span className="text-md md:text-xl font-medium">Data Analytics</span>
+                        <span className="text-md md:text-md font-medium text-[#737373]">BYTE {page}/24</span>
+                    </div>
+                </div>
+                <div className="w-20 h-20 bg-[#ffffff] rounded-full mr-8 flex justify-center items-center"><Image src="/robot icon.svg" alt="bot" height={40} width={40} /></div>
             </div>
+
         </div>
-    );
-};
 
+    );
+}

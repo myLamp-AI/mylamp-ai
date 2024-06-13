@@ -4,7 +4,7 @@
 import { useState } from 'react';
 import React from 'react';
 import Image from "next/image";
-import ImageComponent from './Image/ImageLearn';
+import ImageComponent from '../Image/ImageLearn';
 
 const ComponentB: React.FC = () => {
   const [isCorrect, setIsCorrect] = useState(false);

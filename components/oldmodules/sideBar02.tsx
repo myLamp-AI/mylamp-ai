@@ -5,7 +5,7 @@ import { useState } from "react";
 import ComponentB from "./Assessment";
 import CircleProgress from "./Progress";
 import Page1 from "./Video/Chapter1";
-import ImageComponent from "./Image/ImageLearn";
+import ImageComponent from "../Image/ImageLearn";
 let Iscourse: boolean = true;
 import ProgressBar from "./ProgressControl";
 

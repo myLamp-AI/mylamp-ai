@@ -6,20 +6,16 @@ import NavLinks from '@/components/navbar/NavItems'
 import navData from '@/components/navbar/navLinks.json'
 import smData from '@/app/data/navsocialicon.json'
 
-export default function NewSidebar() {
+export default function Sidebar(props:any) {
+
     const pathname = usePathname();
     const navLen = navData.length;
     const socialLen = smData.length;
     const navRender = Array(navLen).fill(null);
     const smRender = Array(socialLen).fill(null);
-    const [isSidebarVisible,setIsSidebarVisible] = useState(false);
-    const SidebarVisible = () =>{
-        setIsSidebarVisible(!isSidebarVisible);
-    }
-
     return (
-        <div className={`flex flex-row absolute top-0 z-10 w-56 ${isSidebarVisible ? "translate-x-0" : "-translate-x-48"}  transition-transform duration-300`}>
-            <div className={`h-[100vh] pt-16 gap-1 flex flex-col bg-[#fff]`}>
+        <div className={`flex flex-row w-48 sticky `}>
+            <div className={`h-[100vh] gap-1 flex flex-col bg-[#fff] transition-all duration-300`}>
                 <div className="w-fit h-[500px] flex flex-col gap-7 overflow-x-clip overflow-y-auto scrollbar-hide mr-6">
                     {
                         navRender.map((item, navindex) => {
@@ -30,7 +26,6 @@ export default function NewSidebar() {
                                 </div>
                             );
                         })
-
                     }
                 </div>
                 <div className="w-full flex flex-col items-center">
@@ -52,8 +47,7 @@ export default function NewSidebar() {
                     <span>Connect with us</span>
                 </div>
 
-            </div>
-            <div className='h-[100vh] bg-[#fff] rounded-lg w-6 flex items-center'><Image src="/sidebar/rfarw.svg" height={10} width={10} alt='img' className={`w-8 h-8 rounded-full ${isSidebarVisible ? "rotate-180" : ""} `} onClick={SidebarVisible}/></div>
+            </div>   
         </div>
     );
 }

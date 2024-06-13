@@ -5,12 +5,12 @@ import LearnCollapseItem from "./LearnCollapseItem";
 import Lessonsdiv from "./Lessonsdiv";
 import useBooleanStore from './store';
 import Lessonsdiv01 from "./lessondivdropdown";
-import { useModalStore } from "./store02";
-import { Modal, ModalContent, ModalBody } from "@nextui-org/react";
+
+
 
 export default function LearnCollapseCard() {
     const booleanValue = useBooleanStore((state) => state.booleanValue);
-    const { isOpen, closeModal } = useModalStore();    
+
     const [activeIndex, setActiveIndex] = useState(0);
 
 
@@ -20,24 +20,16 @@ export default function LearnCollapseCard() {
             <div className="p-4  text-white flex flex-col   ">
                 <div className="w-full h-full flex flex-row gap-2  justify-between md:mx-6 ">
                     <div className=" h-full  lg:w-[35%] md:w-[40%] w-full mx-auto md:mx-0">
-                        <LearnCollapseItem activeIndex={activeIndex} setActiveIndex={setActiveIndex} index={1}/>
-                        <LearnCollapseItem activeIndex={activeIndex} setActiveIndex={setActiveIndex} index={2}/>
-                        <LearnCollapseItem activeIndex={activeIndex} setActiveIndex={setActiveIndex} index={3}/>
-                        <LearnCollapseItem activeIndex={activeIndex} setActiveIndex={setActiveIndex} index={4}/>
-                        <LearnCollapseItem activeIndex={activeIndex} setActiveIndex={setActiveIndex} index={5}/>
+                        <LearnCollapseItem activeIndex={activeIndex} setActiveIndex={setActiveIndex} index={1} />
+                        <LearnCollapseItem activeIndex={activeIndex} setActiveIndex={setActiveIndex} index={2} />
+                        <LearnCollapseItem activeIndex={activeIndex} setActiveIndex={setActiveIndex} index={3} />
+                        <LearnCollapseItem activeIndex={activeIndex} setActiveIndex={setActiveIndex} index={4} />
+                        <LearnCollapseItem activeIndex={activeIndex} setActiveIndex={setActiveIndex} index={5} />
                     </div>
                     {
                         (activeIndex !== 0) ? <Lessonsdiv /> : null
                     }
-                 
-                    <Modal isOpen={isOpen} onClose={closeModal} placement="center" className="md:hidden flex w-fit  ">
-                        <ModalContent>
-                            <ModalBody>
-                                <Lessonsdiv01 />
-                            </ModalBody>
-                        </ModalContent>
-                    </Modal>
-              
+
 
 
                 </div>
@@ -78,20 +70,12 @@ export default function LearnCollapseCard() {
                                         width={15}
                                         height={15}
                                         priority
-
-
                                     />
                                 </div>
                             </div>
                         </div>
-
-
-
-
-
                     </div>
                 </div>
-
             </div>
         </>
     )
