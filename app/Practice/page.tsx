@@ -81,7 +81,7 @@ export default function Practice() {
                                                     <div className="w-10/12 flex flex-col gap-3 mt-6 mb-6 ">
                                                         {
                                                             codingdata.map((item, index) => (
-                                                                <div className="flex flex-row w-full h-10 gap-8" key={index}>
+                                                                <div key={index} className="flex flex-row w-full h-10 gap-8" >
                                                                     <div className="flex flex-row w-9/12 h-full bg-[#F1EAFF] rounded-full gap-4 items-center">
                                                                         <div><img src={codingdata[index].svg} /></div>
                                                                         <div className="text-[#737373] text-md font-semibold">{codingdata[index].name}</div>
@@ -144,7 +144,7 @@ export default function Practice() {
                         <div className="grid grid-cols-3 place-items-center">
                             {
                                 items.map((items, itemindex) => (
-                                    <div className="container grid grid-cols-5 gap-2 place-content-center w-24" key={itemindex}>
+                                    <div key={itemindex} className="container grid grid-cols-5 gap-2 place-content-center w-24">
                                         {
                                             sets.map((item, setindex) => (
                                                 <div className="h-4 w-4 bg-[#ebedf1] rounded " key={setindex}></div>

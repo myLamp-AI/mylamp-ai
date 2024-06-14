@@ -65,7 +65,7 @@ export default function Community() {
             <div className="w-full gap-3 flex flex-col justify-center">
                 {
                 Alldata.map((item, index) => (
-                    <div className="w-full h-20 bg-[#fff] flex flex-row text-md font-bold justify-between items-center rounded-lg" onClick={()=>toggleHeading(Alldata[index].name)}>
+                    <div key={index} className="w-full h-20 bg-[#fff] flex flex-row text-md font-bold justify-between items-center rounded-lg" onClick={()=>toggleHeading(Alldata[index].name)}>
                     <div className="flex flex-row items-center">
                         <div className="w-[80px] p-1"><Image src={Alldata[index].svg} alt="img" height={10} width={10} className="w-full" /></div>
                         <span className="pl-5">{Alldata[index].name}</span>
