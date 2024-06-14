@@ -36,9 +36,11 @@ export default function WhyWize() {
 
   return (
     <>
-      <div className="flex flex-col items-center my-4">
-        <div className="text-4xl font-medium h-[150px] flex items-center">
-          Why Choose&nbsp;<span className="text-[#8C52FF]">wiZ</span>e
+      <div className="flex flex-col items-center mb-4">
+        <div className="text-4xl font-medium max-w-[1300px] h-[100px] flex justify-center items-center w-full gap-4 mb-8">
+          <div className="h-1 bg-black w-full bg-gradient-to-r from-white to-primary"></div>
+          <div className="w-full text-center">Why Choose&nbsp;<span className="text-[#8C52FF]">wiZ</span>e </div>
+          <div className="h-1 bg-black w-full bg-gradient-to-r from-primary to-white"></div>
         </div>
         <div className="flex w-full max-w-[1350px] relative">
           <div className="flex flex-col w-full max-w-[300px] pt-[100px] sticky top-0 h-screen text-[#000000BB] px-8 text-lg font-semibold tracking-wide gap-3 ">

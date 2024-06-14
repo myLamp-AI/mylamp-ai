@@ -17,7 +17,7 @@ const HomeSlider: React.FC = () => {
         <>
             <div className=" py-[60px] flex items-center justify-center ">
 
-                <Carousel plugins={[AutoPlay({ delay: 1000 })]} className="w-full max-w-[1220px]">
+                <Carousel plugins={[AutoPlay({ delay: 2000 })]} className="w-full max-w-[1220px]">
                     <CarouselContent>
                         {sliderData.map((item, index) => {
                             return (
@@ -34,8 +34,8 @@ const HomeSlider: React.FC = () => {
                         })}
                     </CarouselContent>
                     
-                    <CarouselPrevious className="relative translate-y-1/2 left-0 mx-4 " />
-                    <CarouselNext className="relative translate-y-1/2 right-0 mx-4 " />
+                    <CarouselPrevious className="relative translate-y-1/2 left-0 mx-4 bg-[#e7e7e7d0] " />
+                    <CarouselNext className="relative translate-y-1/2 right-0 mx-4 bg-[#e7e7e7d0] " />
                 </Carousel>
             </div>
         </>
