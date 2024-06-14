@@ -13,7 +13,6 @@ export default function ParentMid() {
        isOpen && <LeftSide />
       }
       <Middle />
-      {/* <RightSide/> */}
      
 
     </div>
