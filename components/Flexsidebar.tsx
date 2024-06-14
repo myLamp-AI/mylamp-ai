@@ -1,6 +1,7 @@
 "use client"
 import { useState } from "react";
 import Sidebar from '@/components/Sidebar'
+import Image from 'next/image'
 export default function Flexsidebar() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const toggleSidebar = () => {
@@ -13,7 +14,7 @@ export default function Flexsidebar() {
                     isSidebarOpen &&
                     <Sidebar />
                 }
-                <div className='h-[100vh] rounded-lg w-6 flex items-center' onClick={toggleSidebar}><img src="/sidebar/pparw.svg" className={`w-6 h-6 ${isSidebarOpen ? 'rotate-180' : ''}`} /></div>
+                <div className='h-[100vh] rounded-lg w-6 flex items-center' onClick={toggleSidebar}><Image src="/sidebar/pparw.svg" className={`w-6 h-6 ${isSidebarOpen ? 'rotate-180' : ''}`} alt="img" height={10} width={10} /></div>
             </div>
         </div>
     );
