@@ -17,7 +17,7 @@ const Box02: React.FC = () => {
             <h1 className="  font-semibold text-lg ">Grade 47%</h1>
             <h2 className="  font-semibold text-lg">Credits 4/12</h2>
             </div>
-            <div className=" mr-2 rounded-full bg-white  h-16 w-16 flex items-center justify-center">
+            <div className=" mr-2 rounded-full bg-white  h-16 w-16 flex items-center justify-center ">
               <Image
               src="/modules/calendar.svg"
               alt="Verceldcjncn Logo"
