@@ -1,11 +1,12 @@
-"use client"
+"use client";
 import Image from "next/image";
 import React, { useState, useRef } from 'react';
 import { FaStar } from "react-icons/fa";
-import Exdata from "@/app/data/Assessment.json"
-import Alldata from "@/app/data/Allassessment.json"
-import codingdata from '@/app/data/codingassmnt.json'
-import Carousel from '@/components/practice/MyCarousel'
+import Exdata from "@/app/data/Assessment.json";
+import Alldata from "@/app/data/Allassessment.json";
+import codingdata from "@/app/data/codingassmnt.json";
+import Carousel from "@/components/practice/MyCarousel";
+
 export default function Practice() {
     const radius = 40;
     const circumference = 2 * Math.PI * radius;
