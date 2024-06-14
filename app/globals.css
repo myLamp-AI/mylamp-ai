@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+::selection {
+  background-color: #8c52ff;
+  color: #fff;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -74,4 +79,8 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.typed-cursor {
+  color: #8c52ff;
 }

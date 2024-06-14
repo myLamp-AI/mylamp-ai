@@ -1,4 +1,5 @@
 "use client"
+import { color } from "framer-motion";
 // filename: Typing.js
 // React version: "^16.12.0"
 import React from "react";

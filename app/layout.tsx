@@ -6,6 +6,7 @@ import Navbar from "@/components/oldmodules/Navbar";
 import Sidebar from '@/components/Sidebar'
 const openSans = Open_Sans({ subsets: ["latin"] });
 import React, { useState, useRef, useEffect } from 'react';
+import Image from "next/image";
 
 
 // export const metadata: Metadata = {
@@ -28,13 +29,15 @@ export default function RootLayout({
         {/* <Navbar />          */}
         <div className="flex h-full transition-all duration-300 ">
           {/* Sidebar */}
-          <div className={`${isSidebarOpen ? 'w-48 ' : 'w-0'} transition-all duration-300 flex flex-row `}>
+          <div className={`${isSidebarOpen ? 'lg:w-48 ' : 'w-0'} md:wd-0 transition-all duration-300 flex flex-row `}>
             <div className="fixed flex flex-row items-center">
               {
                 isSidebarOpen &&
-                <Sidebar/>
-              } 
-              <div className='h-[100vh] rounded-lg w-6 flex items-center' onClick={toggleSidebar}><img src="/sidebar/pparw.svg" className={`w-6 h-6 ${isSidebarOpen ?'rotate-180':''}`}/></div>
+                <Sidebar />
+              }
+              <div className='h-[100vh] rounded-lg w-6 flex items-center z-50' onClick={toggleSidebar}>
+                <Image src="/sidebar/pparw.svg" className={`w-6 h-6 ${isSidebarOpen ? 'rotate-180' : ''}`} alt="arrow" width={100} height={100} />
+              </div>
             </div>
           </div>
           {/* Main Content */}
