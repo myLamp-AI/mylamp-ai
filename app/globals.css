@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* selecttion color */
 ::selection {
   background-color: #8c52ff;
   color: #fff;
@@ -18,8 +19,8 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 260, 100%, 66%;
+    --primary-foreground: 260, 100%, 96%;
 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
@@ -81,6 +82,8 @@
   }
 }
 
+
+/* typed js library cursor color */
 .typed-cursor {
   color: #8c52ff;
 }

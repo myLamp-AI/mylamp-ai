@@ -14,7 +14,7 @@ import HomeNavbar from "@/components/home/HomeNavbar";
 export default function Page() {
   return (
     <>
-      <main className='h-full bg-[#f5f5f5]'>
+      <main className='h-full bg-[#fff]'>
         <HomeNavbar />
         <HeroSection />
         <AboutWize />
