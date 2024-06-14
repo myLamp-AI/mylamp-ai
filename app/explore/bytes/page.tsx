@@ -23,8 +23,11 @@ export default function VideoPage() {
             setPage(page + 1)
         }
     };
+    const canGoNext = page < totalItems;
+    const canGoPrev = page > 1;
+
     return (
-        <div className="h-[90vh] overflow-y-clip w-full bg-[#E8E2F4] flex flex-col relative">
+        <div className="h-[91vh] overflow-y-clip w-full bg-[#E8E2F4] flex flex-col relative">
             <div className="h-16 w-full hidden lg:flex justify-center items-center gap-9 ">
                 {
                     setDiv.map((items, index) => (
@@ -48,7 +51,7 @@ export default function VideoPage() {
                 }
             </div>
             <div className="flex flex-grow justify-between items-center ">
-                <div className="flex items-center pl-10"><Image src="/lfarw.svg" alt="arrow" height={20} width={20} onClick={prevSlide} /></div>
+                <button onClick={prevSlide} className={`w-1/4 ${!canGoPrev?"opacity-40 cursor-not-allowed":""}`}><Image src="/bytes/lfarw.svg" alt="arrow" height={20} width={20}/></button>
                 <div className="overflow-hidden w-1/2">
                     <div
                         className="flex transition-transform duration-500"
@@ -56,13 +59,13 @@ export default function VideoPage() {
                     >
                         {bytedata.map((item, index) => (
                             <div key={index} className="min-w-full flex-shrink-0">
-                                <img src={item.svg} className="w-full h-60 object-cover" />
+                                <Image src={item.svg} className="w-64 h-full object-cover" alt="img" height={100} width={100}/>
                             </div>
                         ))}
                     </div>
                 </div>
 
-                <div className="flex items-center pr-10"><Image src="/rfarw.svg" alt="invarrow" height={20} width={20} onClick={nextSlide} /></div>
+                <button onClick={nextSlide} className={`w-1/4 ${!canGoNext?"opacity-40 cursor-not-allowed":""}`}><Image src="/bytes/rfarw.svg" alt="invarrow" height={20} width={20}  /></button>
             </div>
             <div className="h-52 flex justify-between items-center ml-8">
                 <div className="flex flex-row gap-6">

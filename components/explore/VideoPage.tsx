@@ -10,7 +10,6 @@ export default function VideoPage() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const totalItems = bytedata.length;
 
-
     const prevSlide = () => {
         setCurrentIndex((prevIndex) => (prevIndex - 1 + totalItems) % totalItems);
         if (page > 1) {
@@ -56,7 +55,7 @@ export default function VideoPage() {
                         >
                             {bytedata.map((item, index) => (
                                 <div key={index} className="min-w-full flex-shrink-0">
-                                    <img src={item.svg} className="w-full h-60 object-cover" />
+                                    <Image src={item.svg} className="w-full h-60 object-cover" alt="img" height={100} width={100}/>
                                 </div>
                             ))}
                         </div>
