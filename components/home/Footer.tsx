@@ -12,7 +12,7 @@ export default function Footer() {
                         <Image src="/home/myLampAI.svg" height={100} width={250} alt="myLampAI" />
                     </div>
                     <div className="flex w-full gap-4 items-start justify-between ">
-                        <div className="w-full flex flex-col items-start justify-between p-4 gap-4">
+                        <div className="w-full flex flex-col items-start justify-between p-4 gap-6">
                             <h3 className="text-[#8C52FF] font-semibold text-xl">Stay Connected</h3>
                             <div className="flex gap-4 items-center text-[#00000090] text-[0.9rem] ">
                                 <Image className="max-w-[25px]" src={"/home/mail.svg"} height={30} width={30} alt="mail" />
@@ -36,21 +36,21 @@ export default function Footer() {
                         <div className="w-full flex flex-col items-start justify-between py-4 gap-4  text-[0.9rem] text-[#00000090]">
                             <h3 className="text-[#8C52FF] font-semibold text-xl">Stay Updated</h3>
                             <div className="flex items-center justify-start w-full overflow-hidden rounded-lg ">
-                                <input placeholder="Sign Up for our Newsletter" type="email" className="bg-[#E8E2F4] w-full h-[35px] outline-none border-none py-2 px-4 font-semibold " />
+                                <input placeholder="Sign Up for our Newsletter" type="email" className="bg-primary-foreground w-full h-[35px] outline-none border-none py-2 px-4 font-semibold " />
                                 <button>
                                     <Image className="bg-[#8C52FF] h-[35px] w-[40px] p-2" src={"/home/arrowInput.svg"} height={30} width={30} alt="arrowInput" />
                                 </button>
                             </div>
-                            <div className="w-full flex flex-col items-center gap-4 bg-[#E8E2F4] rounded-lg p-4">
+                            <div className="w-full flex flex-col items-center gap-4 bg-primary-foreground rounded-lg p-4">
                                 <div>
                                     Know everything about Wize in just one call
                                 </div>
                                 <div className="flex gap-4 w-full">
-                                    <div className="flex gap-2 bg-white rounded-lg p-2 ">
+                                    <div className="flex gap-2 bg-white rounded-lg p-2 text-center ">
                                         <Image src={"/home/desktop.svg"} height={50} width={50} alt="desktop" />
                                         Connect Now
                                     </div>
-                                    <div className="flex gap-2 bg-white rounded-lg p-2 ">
+                                    <div className="flex gap-2 bg-white rounded-lg p-2 text-center ">
                                         <Image src={"/home/schedule.svg"} height={50} width={50} alt="schedule" />
                                         Connect Later
                                     </div>
@@ -58,7 +58,7 @@ export default function Footer() {
                             </div>
                         </div>
                     </div>
-                    <div className="flex items-center justify-center gap-4 pt-4 border-dashed border-t-[3px]">
+                    <div className="flex items-center justify-center gap-6 pt-4 border-dashed border-t-[3px]">
                         <Image src={"/home/whatsapp.svg"} width={30} height={30} alt="whatsapp" />
                         <Image src={"/home/instagram.svg"} width={30} height={30} alt="instagram" />
                         <Image src={"/home/linkedin.svg"} width={30} height={30} alt="linkedin" />
@@ -70,7 +70,7 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="w-full flex flex-col justify-start items-start text-white font-medium">
-                    <div className="w-full mb-4">
+                    <div className="w-full mb-6">
                         <h3 className="text-2xl">Quick Links</h3>
                         <div className="px-4 mt-4">
                             <p>wiZe Camp: June | July | August</p>
@@ -81,7 +81,7 @@ export default function Footer() {
                             <p>Community: Machine Learning | Product Management | SDE</p>
                         </div>
                     </div>
-                    <div className="w-full my-4">
+                    <div className="w-full my-6">
                         <h3 className="text-2xl">Company</h3>
                         <div className="flex gap-4 px-4 mt-4">
                             <p>About Us</p>
@@ -91,7 +91,7 @@ export default function Footer() {
                             <p>Privacy Policy</p>
                         </div>
                     </div>
-                    <div className="my-4 text-lg">
+                    <div className="mt-6 text-lg">
                         Copyright &copy; 2023 myLamp AI - All rights reserved
                     </div>
                 </div>

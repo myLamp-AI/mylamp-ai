@@ -31,7 +31,9 @@ const HomeNavbar = () => {
                     <Link href={"/"} className='hover:bg-primary hover:text-white transition-all py-2 px-4 rounded-full'>Community</Link>
                     <Link href={"/"} className='hover:bg-primary hover:text-white transition-all py-2 px-4 rounded-full'>Resources</Link>
                     <Link href={"/"} className='hover:bg-primary hover:text-white transition-all py-2 px-4 rounded-full'>Company</Link>
-                    <button className='bg-[#8C52FF] text-white px-4 py-2 rounded-full'>Sign In</button>
+                    <button className='flex items-center bg-[#8C52FF] text-white pl-4 pr-2 py-2 gap-2 rounded-full'>Sign In
+                        <Image src={"/home/userNavbar.svg"} alt='' height={25} width={25}></Image>
+                    </button>
                 </div>
             </div>
         </>

@@ -30,7 +30,7 @@ export default function PowerOfWize() {
                     <Image width={100} height={100} src="/home/PowerOfWize.svg" alt="Background Image" className="w-full h-full block" />
                 </div>
             </div>
-            <div className='flex items-center justify-between rounded-2xl shadow-md my-[100px] bg-[#E8E2F4] m-auto py-8 px-12 min-h-[100px] max-w-[1300px]'>
+            <div className='flex items-center justify-between rounded-2xl shadow-md my-[100px] bg-primary-foreground m-auto py-8 px-12 min-h-[100px] max-w-[1300px]'>
                 <p className='text-lg font-semibold text-[#020202]'>So, what are you waiting for? <br />Start exploring career options now!</p>
                 <button className='bg-primary transition-all border-2 border-primary text-white hover:bg-white hover:text-primary font-semibold text-lg rounded-lg py-2 px-8 shadow-md '>Let&apos;s get Started</button>
             </div>
