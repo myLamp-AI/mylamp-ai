@@ -8,7 +8,7 @@ import Box05 from './smallercomponents/box05';
 import Box06 from './smallercomponents/box06';
 const LeftSide: React.FC= () => {
   return (
-    <div className=" w-[40%] h-screen bg-[#E8E2F4] border-[0.2px] border-r-[#828282] max-w-[380px] py-3 px-1 relative ">
+    <div className=" w-[45%] h-screen bg-[#E8E2F4] border-[0.2px] border-r-[#828282] max-w-[380px] py-3 px-1 relative ">
     <Box01/>
     <Box02/>
     <Box03/>
