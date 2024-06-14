@@ -1,4 +1,4 @@
-import MachineLearning from "@/components/community/machinelearning";
+// import MachineLearning from "@/components/community/machinelearning";
 
 
 
@@ -7,7 +7,7 @@ const page = () => {
     <>
       <div>
         {/* Home Page */}
-        <MachineLearning/>
+        {/* <MachineLearning/> */}
       </div>
     </>
   )
