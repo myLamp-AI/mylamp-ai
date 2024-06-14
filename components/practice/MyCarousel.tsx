@@ -10,7 +10,7 @@ const Carousel = () => {
   const updateItemsToShow = () => {
     if (carouselRef.current) {
       const width = carouselRef.current.offsetWidth;
-      const newItemsToShow = Math.floor(width / 150); // Assuming each item is approximately 200px wide
+      const newItemsToShow = Math.floor(width / 170); // Assuming each item is approximately 200px wide
       setItemsToShow(newItemsToShow);
     }
   };
@@ -47,7 +47,7 @@ const Carousel = () => {
             <button onClick={handleNext} disabled={!canGoNext} className={`${!canGoNext?"opacity-40 cursor-not-allowed":""}`}><Image src="/practice/rfarw.svg" alt="img" height={10} width={10} /></button>
           </div>
         </div>
-        <div ref={carouselRef} className="flex overflow-hidden scrollbar-hide gap-3">
+        <div ref={carouselRef} className="flex overflow-hidden scrollbar-hide gap-3 transition-all">
           {Exdata.map((slide, index) => (
             <div key={index} className={`h-56 ${index >= currentIndex && index < currentIndex + itemsToShow
               ? "block"
