@@ -51,21 +51,18 @@ export default function VideoPage() {
                 }
             </div>
             <div className="flex flex-grow justify-between items-center ">
-                <button onClick={prevSlide} className={`w-1/4 ${!canGoPrev?"opacity-40 cursor-not-allowed":""}`}><Image src="/bytes/lfarw.svg" alt="arrow" height={20} width={20}/></button>
-                <div className="overflow-hidden w-1/2">
-                    <div
-                        className="flex transition-transform duration-500"
-                        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-                    >
+                <button onClick={prevSlide} className={`w-1/3 flex justify-center ${!canGoPrev?"opacity-40 cursor-not-allowed":""}`}><Image src="/bytes/lfarw.svg" alt="arrow" height={20} width={20}/></button>
+                <div className="overflow-hidden w-10/12 h-full">
+                    <div className="flex transition-transform duration-500 h-full" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
                         {bytedata.map((item, index) => (
-                            <div key={index} className="min-w-full flex-shrink-0">
-                                <Image src={item.svg} className="w-64 h-full object-cover" alt="img" height={100} width={100}/>
+                            <div key={index} className="w-full h-full flex-shrink-0">
+                                <Image src={item.svg} className="w-64 h-1/2 object-cover" alt="img" height={100} width={100}/>
                             </div>
                         ))}
                     </div>
                 </div>
 
-                <button onClick={nextSlide} className={`w-1/4 ${!canGoNext?"opacity-40 cursor-not-allowed":""}`}><Image src="/bytes/rfarw.svg" alt="invarrow" height={20} width={20}  /></button>
+                <button onClick={nextSlide} className={`w-1/3 flex justify-center ${!canGoNext?"opacity-40 cursor-not-allowed":""}`}><Image src="/bytes/rfarw.svg" alt="invarrow" height={20} width={20}  /></button>
             </div>
             <div className="h-52 flex justify-between items-center ml-8">
                 <div className="flex flex-row gap-6">

@@ -1,10 +1,11 @@
-"use client"
+"use client";
 import Image from "next/image";
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { FaStar } from "react-icons/fa";
-import Exdata from "@/app/data/Assessment.json"
-import Alldata from "@/app/data/Allassessment.json"
-import codingdata from '@/app/data/codingassmnt.json'
+import Exdata from "@/app/data/Assessment.json";
+import Alldata from "@/app/data/Allassessment.json";
+import codingdata from "@/app/data/codingassmnt.json";
+import Carousel from "@/components/practice/MyCarousel";
 
 export default function Practice() {
     const radius = 40;
@@ -18,15 +19,29 @@ export default function Practice() {
     }
     const ExdataLen = Exdata.length;
     const [currentIndex, setCurrentIndex] = useState(0);
-    const handleNext = () => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % ExdataLen);
+    const carouselRef = useRef<HTMLDivElement>(null);
+
+
+    const handlePrevClick = () => {
+        if (carouselRef.current) {
+            carouselRef.current.scrollBy({
+                left: -200, // Adjust the scroll distance as needed
+                behavior: 'smooth'
+            });
+        }
     };
-    const handlePrev = () => {
-        setCurrentIndex((prevIndex) => (prevIndex - 1 + ExdataLen) % ExdataLen);
+
+    const handleNextClick = () => {
+        if (carouselRef.current) {
+            carouselRef.current.scrollBy({
+                left: 200, // Adjust the scroll distance as needed
+                behavior: 'smooth'
+            });
+        }
     };
     return (
         <div className="w-full flex justify-center">
-            <div className="bg-[#F1EAFF] w-full max-w-[1200px] max-h-[720px] flex flex-wrap lg:flex-nowrap shadow-xl" >
+            <div className="bg-[#F1EAFF] w-full max-w-[1200px] max-h-[720px] flex flex-wrap lg:flex-nowrap" >
                 <div className="w-full h-full flex flex-col gap-3 pl-4 pt-3 overflow-y-auto scrollbar-hide">
                     <div className=" text-[#737373] font-semibold flex flex-col gap-2.5">
                         <div className="font-bold">Let&apos;s Rock!</div>
@@ -38,27 +53,7 @@ export default function Practice() {
                             </div>
                         </div>
                     </div>
-                    <div className="flex flex-col gap-3">
-                        <div className="flex flex-row justify-between">
-                            <span className="text-base font-semibold">Exclusive Assessments</span>
-                            <div className="flex flex-row gap-4">
-                                <button onClick={handlePrev}><Image src="/practice/lfarw.svg" alt="arr" width={7.89} height={13.99} /></button>
-                                <button onClick={handleNext}><Image src="/practice/rfarw.svg" alt="arr" width={7.89} height={13.99} /></button>
-                            </div>
-                        </div>
-                        <div className="flex transition-transform duration-300 ease-in-out" style={{ transform: `translateX(-${(currentIndex / ExdataLen) * 100}%)` }}>
-                            {Exdata.map((slide, index) => (
-                                <div key={index} className="min-w-[200px] px-3 h-56 ">
-                                    <div className="bg-[#fff] rounded-lg h-full">
-                                        <div><Image src={Exdata[index].svg} alt="img" height={100} width={230} className="w-full" /></div>
-                                        <div className="text-md font-bold h-16 flex flex-row justify-around pt-3">
-                                            <div className="w-3/5">{Exdata[index].name}</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
+                    <Carousel/>
                     <div className="flex flex-col gap-3 overflow-x-clip">
                         <div className="flex flex-row justify-between">
                             <span className="text-base font-semibold">All Assessments</span>
@@ -87,9 +82,9 @@ export default function Practice() {
                                                     <div className="w-10/12 flex flex-col gap-3 mt-6 mb-6 ">
                                                         {
                                                             codingdata.map((item, index) => (
-                                                                <div className="flex flex-row w-full h-10 gap-8">
+                                                                <div key={index} className="flex flex-row w-full h-10 gap-8" >
                                                                     <div className="flex flex-row w-9/12 h-full bg-[#F1EAFF] rounded-full gap-4 items-center">
-                                                                        <div><img src={codingdata[index].svg} /></div>
+                                                                        <div><Image src={codingdata[index].svg} alt="img" height={10} width={10} className="h-10 w-10"/></div>
                                                                         <div className="text-[#737373] text-md font-semibold">{codingdata[index].name}</div>
                                                                     </div>
                                                                     <button className="w-4/12 h-10 border-2 border-[#8C52FF] rounded-full text-[#2561A1] font-semibold flex justify-center items-center shadow-lg">Start Now</button>
@@ -107,7 +102,7 @@ export default function Practice() {
                         </div>
                     </div>
                 </div>
-                <div className="w-full max-w-[800px]  flex flex-col gap-2 p-3 mt-1 lg:mt-0">
+                <div className="w-full max-w-[550px] flex flex-col gap-2 p-3 mt-1 lg:mt-0">
                     <div className="h-1/2 flex flex-col m-2 mt-3 bg-[#ffffff] rounded-xl">
                         <div className="flex flex-row justify-around h-1/2 m-2">
                             <div className="w-40 h-40 relative">
@@ -143,14 +138,14 @@ export default function Practice() {
                         <div className="flex flex-row justify-around h-1/5">
                             <span className="text-lg font-semibold mt-3">Apr 2024-June 2024</span>
                             <div className="flex flex-row mt-3">
-                                <div className="w-9 h-9 rounded-full border-[#F1EAFF] border-2 flex items-center justify-center"><Image src="/lfarw.svg" alt="lft" width={7.89} height={14.99} /></div>
-                                <div className="w-9 h-9 rounded-full border-[#F1EAFF] border-2 flex items-center justify-center"><Image src="/rfarw.svg" alt="rft" width={7.89} height={14.99} /></div>
+                                <div className="w-9 h-9 rounded-full border-[#F1EAFF] border-2 flex items-center justify-center"><Image src="/practice/lfarw.svg" alt="lft" width={7.89} height={14.99} /></div>
+                                <div className="w-9 h-9 rounded-full border-[#F1EAFF] border-2 flex items-center justify-center"><Image src="/practice/rfarw.svg" alt="rft" width={7.89} height={14.99} /></div>
                             </div>
                         </div>
                         <div className="grid grid-cols-3 place-items-center">
                             {
                                 items.map((items, itemindex) => (
-                                    <div className="container grid grid-cols-5 gap-2 place-content-center w-24" key={itemindex}>
+                                    <div key={itemindex} className="container grid grid-cols-5 gap-2 place-content-center">
                                         {
                                             sets.map((item, setindex) => (
                                                 <div className="h-4 w-4 bg-[#ebedf1] rounded " key={setindex}></div>
