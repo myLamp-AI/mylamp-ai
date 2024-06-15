@@ -84,7 +84,7 @@ export default function Practice() {
                                                             codingdata.map((item, index) => (
                                                                 <div key={index} className="flex flex-row w-full h-10 gap-8" >
                                                                     <div className="flex flex-row w-9/12 h-full bg-[#F1EAFF] rounded-full gap-4 items-center">
-                                                                        <div><Image src={codingdata[index].svg} alt="img" height={10} width={10} className="h-10 w-10"/></div>
+                                                                        <div><Image src={codingdata[index].svg} alt="coding" height={10} width={10} className="h-10 w-10"/></div>
                                                                         <div className="text-[#737373] text-md font-semibold">{codingdata[index].name}</div>
                                                                     </div>
                                                                     <button className="w-4/12 h-10 border-2 border-[#8C52FF] rounded-full text-[#2561A1] font-semibold flex justify-center items-center shadow-lg">Start Now</button>
