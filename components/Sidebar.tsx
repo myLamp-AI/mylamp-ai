@@ -35,7 +35,7 @@ export default function Sidebar(props:any) {
                     </div>
                     <div className="w-11/12 h-24 border-2 bg-[#8c52ff] rounded-xl relative top-5"></div>
                 </div>
-                <div className="w-full h-20 bg-[#E8E2F4] text-lg font-medium flex flex-col justify-center items-center gap-2 mt-6 rounded-lg">
+                <div className="w-full9 h-20 bg-[#E8E2F4] text-lg font-medium flex flex-col justify-center items-center gap-2 mt-6 rounded-lg">
                     <div className="flex flex-row gap-1.5 font-semibold">
                         {
                             smRender.map((item, smindex) => (
