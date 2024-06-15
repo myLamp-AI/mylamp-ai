@@ -15,7 +15,22 @@ const LessonsModule: React.FC = () => (
        
         <div className="float absolute  bg-white h-fit  w-full  rounded-md shadow-sm z-10 p-4 ">
 
-                <div className="bg-[#E8E2F4] w-full cursor-pointer max-w-[330px] h-[39px]  border-solid border-[1.5px] border-[#8C52FF] rounded-full ..."></div>
+                <div className="bg-[#E8E2F4] w-full cursor-pointer max-w-[330px] flex items-center h-[39px]  border-solid border-[1.5px] border-[#8C52FF] rounded-full ...">
+                <div className="w-fit h-fit flex justify-center  items-center   ">
+              <Image
+                src="/learn/play button.svg"
+                alt="Lesson Icon"
+                className="  mx-1 my-[5px]"
+                width={25}
+                height={25}
+                priority
+              />
+             </div>
+             <div className="flex-1 w-full">
+              <h4 className="text-black text-sm font-semibold">Language of ML</h4>
+              <p className="text-gray-500 text-xs">: Python</p>
+            </div>
+                </div>
                 <div className="bg-[#E8E2F4] w-full cursor-pointer max-w-[330px] h-[39px] mt-3  border-solid border-[1.5px] border-[#8C52FF] rounded-full ..."></div>
                 <div className="bg-[#E8E2F4] w-full cursor-pointer max-w-[330px] h-[39px] mt-3  border-solid border-[1.5px] border-[#8C52FF] rounded-full ..."></div>
                 <div className="bg-[#E8E2F4] w-full cursor-pointer max-w-[330px] h-[39px] mt-3  border-solid border-[1.5px] border-[#8C52FF] rounded-full ..."></div>
