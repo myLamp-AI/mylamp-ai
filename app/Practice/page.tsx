@@ -17,28 +17,7 @@ export default function Practice() {
     function toggleAsmtVisible() {
         setAsmtVisible(!asmtVisible);
     }
-    const ExdataLen = Exdata.length;
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const carouselRef = useRef<HTMLDivElement>(null);
 
-
-    const handlePrevClick = () => {
-        if (carouselRef.current) {
-            carouselRef.current.scrollBy({
-                left: -200, // Adjust the scroll distance as needed
-                behavior: 'smooth'
-            });
-        }
-    };
-
-    const handleNextClick = () => {
-        if (carouselRef.current) {
-            carouselRef.current.scrollBy({
-                left: 200, // Adjust the scroll distance as needed
-                behavior: 'smooth'
-            });
-        }
-    };
     return (
         <div className="w-full flex justify-center">
             <div className="bg-[#F1EAFF] w-full max-w-[1200px] max-h-[720px] flex flex-wrap lg:flex-nowrap" >
@@ -67,9 +46,9 @@ export default function Practice() {
                                             <div key={item.id} className="bg-[#ffffff] rounded-lg flex flex-row justify-between h-32">
                                                 <div className="w-1/2  ml-4 flex flex-col gap-y-6 justify-center text-base font-semibold ">
                                                     {item.name}
-                                                    <button className="w-20 bg-[#8c52ff] rounded-2xl flex flex-row justify-between items-center shadow shadow-[#737373]" onClick={toggleAsmtVisible}>
-                                                        <span className="ml-2 text-[#ffffff] font-medium" >Start</span>
-                                                        <Image src="/practice/conarrow.svg" alt="arrow" width={25} height={25} />
+                                                    <button className={`w-20 bg-[#8c52ff] rounded-2xl flex flex-row justify-between items-center shadow shadow-[#737373] transition-all duration-300`} onClick={toggleAsmtVisible}>
+                                                        <span className={`ml-2 text-[#ffffff] font-medium ${asmtVisible ? "hidden " : ""}`} >Start</span>
+                                                        <Image src="/practice/conarrow.svg" alt="arrow" width={25} height={25} className={`${asmtVisible ? "rotate-180 " : ""}`} />
                                                     </button>
                                                 </div>
                                                 <div>
@@ -136,7 +115,7 @@ export default function Practice() {
                     </div>
                     <div className="bg-[#ffffff] h-1/2 m-3  flex flex-col gap-y-3 rounded-xl pb-4">
                         <div className="flex flex-row justify-around h-1/5">
-                            <span className="text-lg font-semibold mt-3">Apr 2024-June 2024</span>
+                            <span className="text-lg font-semibold mt-3">Apr 2024 - June 2024</span>
                             <div className="flex flex-row mt-3">
                                 <div className="w-9 h-9 rounded-full border-[#F1EAFF] border-2 flex items-center justify-center"><Image src="/practice/lfarw.svg" alt="lft" width={7.89} height={14.99} /></div>
                                 <div className="w-9 h-9 rounded-full border-[#F1EAFF] border-2 flex items-center justify-center"><Image src="/practice/rfarw.svg" alt="rft" width={7.89} height={14.99} /></div>
