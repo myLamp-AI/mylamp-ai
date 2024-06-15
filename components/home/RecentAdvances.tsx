@@ -32,7 +32,7 @@ function RecentAdvancesCard({
 }) {
     return (
         <>
-            <div className="flex flex-col justify-between max-w-[300px] p-4 rounded-2xl min-h-[350px] shadow-md ">
+            <div className="flex flex-col justify-between max-w-[300px] p-4 rounded-2xl min-h-[350px] shadow-md hover:scale-105 transition-all">
                 <Image src={imageUrl} height={100} width={100} alt="blog image" className="w-full"/>
                 <h3 className="font-semibold text-lg">{title}</h3>
                 <p className="text-sm text-[#00000090]">{description}</p>

@@ -7,9 +7,9 @@ export default function Footer() {
         <>
             <div className="flex gap-8 bg-gradient-to-tr shadow-br from-[#8C52FF] to-[#b7cdfb] p-[40px] mt-[100px]">
                 <div className="bg-white w-full rounded-2xl py-4 px-8 shadow-br">
-                    <div className="flex items-center justify-evenly text-2xl font-bold text-[#00000090] border-dashed border-b-[3px] pb-4">
-                        <Image src="/home/logo.svg" height={100} width={130} alt="logo" /> by
-                        <Image src="/home/myLampAI.svg" height={100} width={250} alt="myLampAI" />
+                    <div className="flex items-center justify-between px-4 text-2xl font-bold text-[#00000090] border-dashed border-b-[3px] pb-4">
+                        <Image src="/home/logo.svg" height={100} width={180} alt="logo" /> by
+                        <Image src="/home/myLampAI.svg" height={100} width={300} alt="myLampAI" />
                     </div>
                     <div className="flex w-full gap-4 items-start justify-between ">
                         <div className="w-full flex flex-col items-start justify-between p-4 gap-6">
@@ -42,7 +42,7 @@ export default function Footer() {
                                 </button>
                             </div>
                             <div className="w-full flex flex-col items-center gap-4 bg-primary-foreground rounded-lg p-4">
-                                <div>
+                                <div className="font-semibold text-left w-full text-[#00000070]">
                                     Know everything about Wize in just one call
                                 </div>
                                 <div className="flex gap-4 w-full">
@@ -69,8 +69,8 @@ export default function Footer() {
                         <Image src={"/home/twitter.svg"} width={30} height={30} alt="twitter" />
                     </div>
                 </div>
-                <div className="w-full flex flex-col justify-start items-start text-white font-medium">
-                    <div className="w-full mb-6">
+                <div className="w-full flex flex-col justify-center items-start text-white font-medium">
+                    <div className="w-full mb-4">
                         <h3 className="text-2xl">Quick Links</h3>
                         <div className="px-4 mt-4">
                             <p>wiZe Camp: June | July | August</p>
@@ -81,18 +81,19 @@ export default function Footer() {
                             <p>Community: Machine Learning | Product Management | SDE</p>
                         </div>
                     </div>
-                    <div className="w-full my-6">
+                    <div className="w-full my-4">
                         <h3 className="text-2xl">Company</h3>
-                        <div className="flex gap-4 px-4 mt-4">
-                            <p>About Us</p>
-                            <p>Careers</p>
-                            <p>Contact Us</p>
-                            <p>Terms & Conditions</p>
-                            <p>Privacy Policy</p>
+                        <div className="flex gap-4 px-4 mt-4 ">
+                            <p className="">About Us</p>
+                            <p className="">Careers</p>
+                            <p className="">Contact Us</p>
+                            <p className="">Terms & Conditions</p>
+                            <p className="">Privacy Policy</p>
                         </div>
                     </div>
-                    <div className="mt-6 text-lg">
+                    <div className="mt-4 text-2xl text-center mx-auto translate-y-3">
                         Copyright &copy; 2023 myLamp AI - All rights reserved
+                        <div className="h-[1px] w-full bg-white"></div>
                     </div>
                 </div>
             </div>

@@ -4,7 +4,7 @@ import Typing from "./Typing";
 export default function HeroSection() {
     return (
         <>
-            <div className="flex flex-col bg-[#E9DEFF] ">
+            <div className="flex flex-col bg-primary-foreground ">
                 <div className="flex justify-evenly items-center min-h-[calc(100vh-65px)] py-4 px-8 gap-8 w-full m-auto">
                     <div className="flex flex-col justify-end h-[600px] w-full relative">
                         {/* <div className='flex justify-between items-start'>
@@ -67,7 +67,7 @@ export default function HeroSection() {
                                             />{" "}
                                             Mentorship
                                         </h1>
-                                        <div className="text-[#00000090] text-xs">
+                                        <div className="text-[#00000090] text-xs ml-2">
                                             Get assistance from experts from IITs and IIMs and get
                                             ahead in your career.
                                         </div>
@@ -83,7 +83,7 @@ export default function HeroSection() {
                                             />{" "}
                                             Resources
                                         </h1>
-                                        <div className="text-[#00000090] text-xs">
+                                        <div className="text-[#00000090] text-xs ml-2">
                                             Get free access to resources helpful for your college and
                                             career journey
                                         </div>
@@ -108,7 +108,7 @@ export default function HeroSection() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="flex flex-col bg-[#f5f5f580] p-4 rounded-2xl max-w-[300px]">
+                            <div className="flex flex-col bg-[#f5f5f580] p-4 rounded-2xl max-w-[260px]">
                                 <div className="flex justify-between">
                                     <div className="flex gap-2">
                                         <Image
@@ -116,21 +116,21 @@ export default function HeroSection() {
                                             width={100}
                                             height={100}
                                             alt="box"
-                                            className="w-[1.5rem]"
+                                            className="w-8"
                                         />
                                         <Image
                                             src="/home/circle.svg"
                                             width={100}
                                             height={100}
                                             alt="box"
-                                            className="w-[1.5rem]"
+                                            className="w-8"
                                         />
                                         <Image
                                             src="/home/circle.svg"
                                             width={100}
                                             height={100}
                                             alt="box"
-                                            className="w-[1.5rem]"
+                                            className="w-8"
                                         />
                                     </div>
                                     <Image
@@ -138,17 +138,16 @@ export default function HeroSection() {
                                         width={100}
                                         height={100}
                                         alt="box"
-                                        className="w-[1.5rem] mx-2"
+                                        className="w-8 mx-2"
                                     />
                                 </div>
-                                <div className="w-full h-[2px] bg-white my-3"></div>
+                                <div className="w-full h-[2px] bg-white my-4"></div>
                                 <div>
                                     <div className="my-2 text-xl font-medium">
                                         Join to our Community
                                     </div>
-                                    <div className="text-xs">
-                                        Collaborate with artists and stay driven with moana cutting
-                                        edge ai tools
+                                    <div className="text-xs text-[#00000090] mt-4">
+                                        Join a community of serious and passionate tech folks, students, mentors and coaches to accelerate your career.
                                     </div>
                                 </div>
                             </div>

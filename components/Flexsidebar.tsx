@@ -1,5 +1,5 @@
 "use client"
-import { useState } from "react";
+import { useState,useRef,useEffect } from "react";
 import Sidebar from '@/components/Sidebar'
 import Image from 'next/image'
 export default function Flexsidebar() {
@@ -7,8 +7,22 @@ export default function Flexsidebar() {
     const toggleSidebar = () => {
         setIsSidebarOpen(!isSidebarOpen);
     };
+    const sidebarRef = useRef<HTMLDivElement | null>(null);
+
+  const handleClickOutside = (event:any) => {
+    if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+        setIsSidebarOpen(false);
+      }
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
     return (
-        <div className={`${isSidebarOpen ? 'lg:w-48 ' : 'lg:w-0'} transition-all duration-300 flex flex-row `}>
+        <div ref={sidebarRef} className={`${isSidebarOpen ? 'lg:w-48 ' : 'lg:w-0'} transition-all duration-300 flex flex-row `}>
             <div className="fixed flex flex-row items-center">
                 {
                     isSidebarOpen &&

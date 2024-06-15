@@ -10,7 +10,7 @@ const Carousel = () => {
   const updateItemsToShow = () => {
     if (carouselRef.current) {
       const width = carouselRef.current.offsetWidth;
-      const newItemsToShow = Math.floor(width / 150); // Assuming each item is approximately 200px wide
+      const newItemsToShow = Math.floor(width / 170); // Assuming each item is approximately 200px wide
       setItemsToShow(newItemsToShow);
     }
   };
@@ -43,11 +43,11 @@ const Carousel = () => {
         <div className="flex flex-row justify-between">
           <span className="text-base font-semibold">Exclusive Assessments</span>
           <div className="flex flex-row gap-4">
-            <button onClick={handlePrev} disabled={!canGoPrev} className={`${!canGoPrev?"opacity-40":""}`}><Image src="/practice/lfarw.svg" alt="img" height={10} width={10}  /></button>
-            <button onClick={handleNext} disabled={!canGoNext} className={`${!canGoNext?"opacity-40":""}`}><Image src="/practice/rfarw.svg" alt="img" height={10} width={10} /></button>
+            <button onClick={handlePrev} disabled={!canGoPrev} className={`${!canGoPrev?"opacity-40 cursor-not-allowed":""}`}><Image src="/practice/lfarw.svg" alt="img" height={10} width={10}  /></button>
+            <button onClick={handleNext} disabled={!canGoNext} className={`${!canGoNext?"opacity-40 cursor-not-allowed":""}`}><Image src="/practice/rfarw.svg" alt="img" height={10} width={10} /></button>
           </div>
         </div>
-        <div ref={carouselRef} className="flex overflow-hidden scrollbar-hide gap-3">
+        <div ref={carouselRef} className="flex overflow-hidden scrollbar-hide gap-3 transition-all">
           {Exdata.map((slide, index) => (
             <div key={index} className={`h-56 ${index >= currentIndex && index < currentIndex + itemsToShow
               ? "block"
