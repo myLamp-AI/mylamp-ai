@@ -17,7 +17,15 @@ export default function Practice() {
     function toggleAsmtVisible() {
         setAsmtVisible(!asmtVisible);
     }
+    const [clickedindex,setClickedIndex] = useState(-1);
 
+    const handleButtonClick = (index:any) => {
+        if (index%2 == 0){
+            index++;
+        }
+        console.log(index);
+        setClickedIndex(index === clickedindex ? null : index); // Toggle visibility
+      };
     return (
         <div className="w-full flex justify-center">
             <div className="bg-[#F1EAFF] w-full max-w-[1200px] max-h-[720px] flex flex-wrap lg:flex-nowrap" >
@@ -41,30 +49,31 @@ export default function Practice() {
                         <div>
                             <div className="grid grid-cols-2  gap-4 ">
                                 {
-                                    Alldata.map((item, index) => (
+                                    Alldata.map((item, allindex) => (
                                         <>
                                             <div key={item.id} className="bg-[#ffffff] rounded-lg flex flex-row justify-between h-32">
                                                 <div className="w-1/2  ml-4 flex flex-col gap-y-6 justify-center text-base font-semibold ">
                                                     {item.name}
-                                                    <button className={`w-20 bg-[#8c52ff] rounded-2xl flex flex-row justify-between items-center shadow shadow-[#737373] transition-all duration-300`} onClick={toggleAsmtVisible}>
+                                                    <button className={`w-20 bg-[#8c52ff] rounded-2xl flex flex-row justify-between items-center shadow shadow-[#737373] transition-all duration-300`} onClick={()=>{toggleAsmtVisible();handleButtonClick(allindex);}}>
                                                         <span className={`ml-2 text-[#ffffff] font-medium ${asmtVisible ? "hidden " : ""}`} >Start</span>
                                                         <Image src="/practice/conarrow.svg" alt="arrow" width={25} height={25} className={`${asmtVisible ? "rotate-180 " : ""}`} />
                                                     </button>
                                                 </div>
                                                 <div>
-                                                    <Image src={`${item.svg}`} alt={`svg${index + 1}`} width={184.18} height={150.64} />
+                                                    <Image src={`${item.svg}`} alt={`svg${allindex + 1}`} width={184.18} height={150.64} />
                                                 </div>
                                             </div>
                                             {
-                                                index % 2 === 1 &&
+                                                
+                                                allindex == clickedindex && 
                                                 <div className={`col-span-2 w-full bg-[#fff] flex justify-center rounded-lg ${asmtVisible ? 'flex' : 'hidden'}`}>
-                                                    <div className="w-10/12 flex flex-col gap-3 mt-6 mb-6 ">
+                                                    <div className="w-10/12 flex flex-col gap-3 my-6">
                                                         {
-                                                            codingdata.map((item, index) => (
+                                                            codingdata.map((_, index) => (   
                                                                 <div key={index} className="flex flex-row w-full h-10 gap-8" >
                                                                     <div className="flex flex-row w-9/12 h-full bg-[#F1EAFF] rounded-full gap-4 items-center">
-                                                                        <div><Image src={codingdata[index].svg} alt="img" height={10} width={10} className="h-10 w-10"/></div>
-                                                                        <div className="text-[#737373] text-md font-semibold">{codingdata[index].name}</div>
+                                                                        <div><Image src={codingdata[allindex][index].svg} alt="img" height={10} width={10} className="h-10 w-10"/></div>
+                                                                        <div className="text-[#737373] text-md font-semibold">{codingdata[allindex][index].name}</div>
                                                                     </div>
                                                                     <button className="w-4/12 h-10 border-2 border-[#8C52FF] rounded-full text-[#2561A1] font-semibold flex justify-center items-center shadow-lg">Start Now</button>
                                                                 </div>
