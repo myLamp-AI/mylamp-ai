@@ -58,7 +58,7 @@ const Lessonsdiv = () => {
                         alt="Verceldcjncn Logo"
                         className="border-rad w-40 h-14  "
                         width={50}
-
+                        height={50}
                         priority
                       />
                 </div>
