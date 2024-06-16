@@ -3,25 +3,20 @@ import React from 'react';
 import Image from 'next/image';
 const Box02: React.FC = () => {
     return (
-        <div className=" absolute mb-2 flex  bottom-0 h-[100px] w-full  max-w-[350px] bg-white mx-2  rounded-lg  ">
-            <div className=' bg-[#8C52FF] w-[30%] max-w-32 rounded-lg'>
-                <Image
-                    src="/project.svg"
-                    alt="Verceldcjncn Logo"
-                    width={70}
-                    height={70}
-                    className='mx-auto  my-4'
-                />
-                </div>
-
-            <div className=' w-[70%]  h-1/2  border-[0.2px] border-b-[#828282]  '>
-            <h1 className="mx-10 my-3 text-lg  text-black font-semibold ">Capstone Project</h1>
-            </div>
-            
-
-
-
+        <div className="absolute mb-2 flex bottom-0 h-[100px] w-[95%] max-w-[352px] left-3 bg-white rounded-lg">
+        <div className='bg-[#8C52FF] w-36 max-w-36 rounded-lg flex items-center justify-center p-4 '>
+          <Image
+            src="/project.svg"
+            alt="Project Logo"
+            width={40}
+            height={40}
+            className='rounded-lg w-16 h-fit'
+          />
         </div>
+        <div className='w-full p-4 flex items-center  h-1/2 border-[0.5px] border-b-[#828282]  '>
+          <h1 className="text-lg text-black font-semibold">Capstone Project</h1>
+        </div>
+      </div>
     );
 };
 
