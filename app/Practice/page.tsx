@@ -6,7 +6,7 @@ import Exdata from "@/app/data/Assessment.json";
 import Alldata from "@/app/data/Allassessment.json";
 import codingdata from "@/app/data/codingassmnt.json";
 import Carousel from "@/components/practice/MyCarousel";
-
+import daypermonth from '@/app/data/daybymonth.json'
 export default function Practice() {
     const radius = 40;
     const circumference = 2 * Math.PI * radius;
@@ -87,7 +87,7 @@ export default function Practice() {
                         </div>
                     </div>
                 </div>
-                <div className="w-full max-w-[550px] flex flex-col gap-2 p-3 mt-1 lg:mt-0">
+                <div className="w-full max-w-[550px] flex flex-col gap-1 p-3 mt-1 lg:mt-0">
                     <div className="h-1/2 flex flex-col m-2 mt-3 bg-[#ffffff] rounded-xl">
                         <div className="flex flex-row justify-around h-1/2 m-2">
                             <div className="w-40 h-40 relative">
@@ -119,7 +119,7 @@ export default function Practice() {
                             <div className="h-32 border-2 rounded-md border-[#ebedf1] w-full text-lg font-semibold"><span className="ml-2 mt-2">Focused Area</span></div>
                         </div>
                     </div>
-                    <div className="bg-[#ffffff] h-1/2 m-3  flex flex-col gap-y-3 rounded-xl pb-4">
+                    <div className="bg-[#ffffff] h-1/2 m-3 flex flex-col gap-y-3 rounded-xl pb-4">
                         <div className="flex flex-row justify-around h-1/5">
                             <span className="text-lg font-semibold mt-3">Apr 2024 - June 2024</span>
                             <div className="flex flex-row mt-3">
@@ -127,12 +127,12 @@ export default function Practice() {
                                 <div className="w-9 h-9 rounded-full border-[#F1EAFF] border-2 flex items-center justify-center"><Image src="/practice/rfarw.svg" alt="rft" width={7.89} height={14.99} /></div>
                             </div>
                         </div>
-                        <div className="grid grid-cols-3 place-items-center">
+                        <div className="grid grid-cols-3 place-items-start">
                             {
                                 items.map((items, itemindex) => (
                                     <div key={itemindex} className="container grid grid-cols-5 gap-2 place-content-center">
                                         {
-                                            sets.map((item, setindex) => (
+                                            Array(daypermonth[itemindex+3].days).fill(null).map((item, setindex) => (
                                                 <div className="h-4 w-4 bg-[#ebedf1] rounded " key={setindex}></div>
                                             ))
                                         }
