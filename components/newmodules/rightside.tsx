@@ -15,8 +15,27 @@ const RightSide: React.FC = () => {
             height={280}
             priority
           /></div>
-        <div className='p-2 font-semibold my-2 w-full'>Which  machine learning technique is used
-          in the given figure?</div>
+        <div className='p-2 font-semibold my-2 w-full'>Which  machine learning technique is used in the given figure?</div>
+
+        <div className="float text-[15px]  bg-white h-fit  w-full  rounded-md shadow-sm  p-4 ">
+
+          <div className="bg-[#E8E2F4] w-full cursor-pointer max-w-[330px] flex items-center h-[39px]  border-solid border-[1.49px] border-[#8C52FF] rounded-full ...">
+           <h2 className=''>K-Means Clustering</h2>
+          </div>
+          <div className="bg-[#E8E2F4] w-full cursor-pointer max-w-[330px] h-[39px] mt-3 flex items-center border-solid border-[1.49px] border-[#8C52FF] rounded-full ...">
+          
+          Supervised Learning
+          </div>
+          <div className="bg-[#E8E2F4] w-full cursor-pointer max-w-[330px] h-[39px] mt-3 flex items-center border-solid border-[1.49px] border-[#8C52FF] rounded-full ...">
+          Unsupervised Learning
+          </div>
+          <div className="bg-[#E8E2F4] w-full cursor-pointer max-w-[330px] h-[39px] mt-3 flex items-center border-solid border-[1.49px] border-[#8C52FF] rounded-full ...">
+          None of the above            
+          </div>
+
+
+
+        </div>
       </div>
     </div>
   );
