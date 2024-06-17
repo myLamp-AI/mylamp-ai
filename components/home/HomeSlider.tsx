@@ -16,7 +16,7 @@ const HomeSlider: React.FC = () => {
         <>
             <div className=" py-[60px] flex items-center justify-center ">
                 <Carousel
-                    plugins={[AutoPlay({ delay: 2000, loop: true })]}
+                    plugins={[AutoPlay({ delay: 3000, loop: true })]}
                     className="w-full max-w-[1220px]"
                 >
                     <CarouselContent>

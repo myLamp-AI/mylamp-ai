@@ -21,8 +21,11 @@ export default function PowerOfWize() {
                         Trusted by leading professionals and visionary partners ----
                     </p>
                 </div>
-                <div className="relative w-full max-w-[600px]">
-                    <Image width={100} height={100} src="/home/PowerOfWize.svg" alt="Background Image" className="w-full h-full block" />
+                <div className="grid gap-4 grid-cols-2 relative w-full max-w-[600px]">
+                    <Image width={100} height={100} src="/home/PowerOfWize.svg" alt="Background Image" className="w-[298px] rounded-tr-[5rem] rounded-bl-[5rem] h-full" />
+                    <Image width={100} height={100} src="/home/PowerOfWize.svg" alt="Background Image" className="w-[298px] rounded-br-[5rem] rounded-tl-[5rem]  h-full" />
+                    <Image width={100} height={100} src="/home/PowerOfWize.svg" alt="Background Image" className="w-[298px] rounded-tl-[5rem] rounded-br-[5rem]  h-full" />
+                    <Image width={100} height={100} src="/home/PowerOfWize.svg" alt="Background Image" className="w-[298px] rounded-bl-[5rem] rounded-tr-[5rem]  h-full" />
                 </div>
                 {/* <ImageGrid /> */}
             </div>
