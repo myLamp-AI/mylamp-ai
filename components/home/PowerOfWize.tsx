@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import ImageGrid from './ImageGrid';
 
 export default function PowerOfWize() {
     return (
@@ -21,14 +22,9 @@ export default function PowerOfWize() {
                     </p>
                 </div>
                 <div className="relative w-full max-w-[600px]">
-                    {/* <div className="absolute inset-x-0 top-[-148px] flex justify-between">
-                        <div className="square w-[148px] h-[148px] bg-pos-1"></div>
-                        <div className="square w-[148px] h-[148px] bg-pos-2"></div>
-                        <div className="square w-[148px] h-[148px] bg-pos-3"></div>
-                        <div className="square w-[148px] h-[148px] bg-pos-4"></div>
-                    </div> */}
                     <Image width={100} height={100} src="/home/PowerOfWize.svg" alt="Background Image" className="w-full h-full block" />
                 </div>
+                {/* <ImageGrid /> */}
             </div>
             <div className='flex items-center justify-between rounded-2xl shadow-md my-[100px] bg-primary-foreground m-auto py-8 px-12 min-h-[100px] max-w-[1300px]'>
                 <p className='text-lg font-semibold text-[#1c1c1c]'>So, what are you waiting for? <br />Start exploring career options now!</p>

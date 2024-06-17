@@ -1,60 +1,99 @@
 "use client";
 import { useState, useEffect } from "react";
+import "./PracticeCoding.css";
 
 interface ExpandingCardProps {
+    id: string;
     title: string;
     description: string;
     image: string;
     bgColor: string;
+    moreClass?: string;
 }
 
-const ExpandingCard: React.FC<ExpandingCardProps> = ({ title, description, image, bgColor }) => {
-    const [isHovered, setIsHovered] = useState(false);
+const ExpandingCard: React.FC<ExpandingCardProps> = ({
+    id,
+    title,
+    description,
+    image,
+    bgColor,
+    moreClass
 
-    const handleHover = () => {
-        setIsHovered(!isHovered);
-    }
+}) => {
+    const [isHovered, setIsHovered] = useState(true);
+    const [selectedId, setSelectedId] = useState(id);
 
     useEffect(() => {
+        // don't remove this otherwise practise section won't change width
         setIsHovered(false);
-    }, [isHovered])
+    }, [isHovered]);
 
     return (
-        <div className={`w-[200px] min-h-[400px] flex p-4 gap-4 items-center bg-white overflow-hidden border-y-2 border-x-1 transition-all hover:w-[400px] ${isHovered? "w-[400px]" : ""}`}>
-            <div className="bg-[#2E66D3] w-6 h-6 rounded-full backdrop-blur-sm"></div>
-            <div>
-                <div className="text-xl font-semibold">{title}</div>
-                <div className="text-[#000000BB] font-medium text-sm">{description}</div>
-            </div>
-        </div>
-    )
-}
+        <>
+            <input type="radio" name="slide" id={id} className="hidden" checked={selectedId === id}  />
+            <label
+                htmlFor={id}
+                className={`home-expanding-card w-[200px] cursor-pointer  min-h-[350px] flex p-4 gap-4 flex-col items-start justify-between overflow-hidden transition-all bg-white` + " " + moreClass}
+                
+            >
+                <h2 className="text-xl font-semibold">
+                    <span className="div text-base">&lt;/&gt;</span> <br /><br />
+                    {title}
+                </h2>
+                <p className="max-w-[180px]">{description}</p>
+                <div className="text-xs">400+ Questions</div>
+                <button className="bg-blue-700 text-sm text-white rounded-full px-4 py-2">
+                    Start Now{" "}
+                </button> 
+            </label>
+        </>
+    );
+};
 
 const PracticeCoding = () => {
     return (
         <div id="practice" className="pb-[100px] px-[100px] min-h-screen">
             <h4 className="pt-4 font-semibold text-[#8C52FF]">
                 PRACTICE
-                <div className="bg-[#8C52FF] w-6 h-6 blur-sm rounded-full absolute left-0 translate-x-[-14px] translate-y-[-100%] " ></div>
+                <div className="bg-[#8C52FF] w-6 h-6 blur-sm rounded-full absolute left-0 translate-x-[-14px] translate-y-[-100%] "></div>
             </h4>
             <div className="text-3xl font-medium mt-8 mb-4">
                 Practice Coding & Ace Hiring Assessments
             </div>
             <p className="text-[#000000BB] font-medium my-4">
-                Level up your coding skills by practicing the hiring assessments
-                of your dream companies & ace your placement game!
+                Level up your coding skills by practicing the hiring assessments of your
+                dream companies & ace your placement game!
             </p>
-            <div className="bg-white min-h-[400px] w-full my-8 rounded-2xl">
-
-                <div className="flex justify-start items-center rounded-xl overflow-hidden">
-                    <ExpandingCard title="Coding Practice" bgColor="#F3C1E7" description="Practice coding problems from top companies" image="/home/practiceCoding.svg" />
-                    <ExpandingCard title="Ace Assessments" bgColor="#CBDEF4" description="Practice & ace the hiring assessments of top companies" image="/home/aceAssessments.svg" />
-                    <ExpandingCard title="Interview Prep" bgColor="#C8BBFF" description="Prepare for interviews with mock interviews & feedback" image="/home/interviewPrep.svg" />
+            <div className="bg-white w-full my-8 ">
+                <div className="home-exp-card-container flex justify-start items-center rounded-2xl border-2 border-black overflow-hidden flex-row-reverse bg-red-50" >
+                    <ExpandingCard
+                        id="expandingcard1"
+                        title="Coding Practice"
+                        bgColor="#F3C1E7"
+                        description="Practice coding problems from top companies"
+                        image="/home/practiceCoding.svg"
+                        moreClass=""
+                    />
+                    <ExpandingCard
+                        id="expandingcard2"
+                        title="Ace Assessments"
+                        bgColor="#000"
+                        description="Practice & ace the hiring assessments of top companies"
+                        image="/home/aceAssessments.svg"
+                        moreClass=" border-x-2 border-black"
+                    />
+                    <ExpandingCard
+                        id="expandingcard3"
+                        title="Interview Prep"
+                        bgColor="#C8BBFF"
+                        description="Prepare for interviews with mock interviews & feedback"
+                        image="/home/interviewPrep.svg"
+                        moreClass=""
+                    />
                 </div>
             </div>
         </div>
-
     );
-}
+};
 
 export default PracticeCoding;

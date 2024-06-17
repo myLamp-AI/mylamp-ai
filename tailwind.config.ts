@@ -1,4 +1,4 @@
-import {nextui} from '@nextui-org/theme';
+import { nextui } from '@nextui-org/theme';
 import type { Config } from "tailwindcss";
 
 const config = {
@@ -18,6 +18,11 @@ const config = {
       },
     },
     extend: {
+      wordSpacing: {
+        'wide': '10px', // Customize as needed
+        'wider': '20px',
+        'widest': '30px',
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -74,7 +79,15 @@ const config = {
       },
     },
   },
-  plugins: [nextui(), require("tailwindcss-animate")],
+  plugins: [nextui(), require("tailwindcss-animate"),
+  function ({ addUtilities, theme, e } : { addUtilities: Function, theme: Function, e: Function }) {
+    const wordSpacing = theme('wordSpacing');
+    const utilities = Object.keys(wordSpacing).map(key => ({
+      [`.${e(`word-spacing-${key}`)}`]: { wordSpacing: wordSpacing[key] },
+    }));
+    addUtilities(utilities, ['responsive']);
+  }
+  ],
 } satisfies Config
 
 export default config

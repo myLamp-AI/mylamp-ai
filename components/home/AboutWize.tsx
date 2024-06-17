@@ -10,7 +10,7 @@ export default function AboutWize() {
           <span className="text-[#5FE8F1]">driving force</span> that{" "}
           <span className="text-[#B7B7B7]">empowers</span> professionals and
           enthusiasts alike to embrace the{" "}
-          <span className="text-[#8C52FF]">future of design.</span>
+          <span className="text-[#8C52FF]">future of design .</span>
         </p>
         <p className="w-full text-right text-sm font-bold">
           ----- ENJOY THE EASE EXPERIENCE WITH US
