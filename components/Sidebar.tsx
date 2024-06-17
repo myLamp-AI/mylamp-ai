@@ -16,7 +16,7 @@ export default function Sidebar(props:any) {
 
     return (
         <div className={`flex flex-row sticky z-50 `}>
-            <div className={`h-[100vh] gap-1 flex flex-col bg-[#fff] transition-all duration-300`}>
+            <div className={`h-[100vh] gap-2 flex flex-col bg-[#fff] transition-all duration-300`}>
                 <div className="w-full h-[500px] flex flex-col gap-7 overflow-x-clip overflow-y-auto scrollbar-hide mr-6">
                     {
                         navRender.map((item, navindex) => {

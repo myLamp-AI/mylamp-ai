@@ -40,7 +40,7 @@ export default function Explore() {
                             </div>
                         </div>
                         <div className="w-full xl:w-1/3 hidden md:flex justify-end items-center">
-                            <Image src="/person.svg" alt="person" width={300} height={300} />
+                            <Image src="/person.svg" alt="person" width={300} height={300}/>
                         </div>
                     </div>
                     <div className="border rounded-xl hidden lg:flex flex-grow justify-center items-center bg-[#ffffff]">

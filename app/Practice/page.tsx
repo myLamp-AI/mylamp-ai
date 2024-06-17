@@ -52,8 +52,8 @@ export default function Practice() {
                                                 <div className="w-1/2  ml-4 flex flex-col gap-y-6 justify-center text-base font-semibold ">
                                                     {item.name}
                                                     <button className={`w-20 bg-[#8c52ff] rounded-2xl flex flex-row justify-between items-center shadow shadow-[#737373] transition-all duration-300`} onClick={()=>toggleAsmtVisible(allindex)}>
-                                                        <span className={`ml-2 text-[#ffffff] font-medium ${asmtVisible ? "hidden " : ""}`} >Start</span>
-                                                        <Image src="/practice/conarrow.svg" alt="arrow" width={25} height={25} className={`${asmtVisible ? "rotate-180 " : ""}`} />
+                                                        <span className={`ml-2 text-[#ffffff] font-medium ${asmtVisible && clickedindex == allindex ? "hidden" : "flex"}`} >Start</span>
+                                                        <Image src="/practice/conarrow.svg" alt="arrow" width={25} height={25} className={`${asmtVisible && clickedindex == allindex ? "rotate-180 " : ""}`} />
                                                     </button>
                                                 </div>
                                                 <div>
