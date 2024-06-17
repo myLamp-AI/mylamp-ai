@@ -13,7 +13,7 @@ const Middle: React.FC = () => {
 
   return (
     <div className="relative w-full flex  h-screen  ">
-      <div className=" absolute top-1 flex border-[0.5px] border-b-[#828282] h-14 w-full ">
+      <div className=" absolute  flex border-[0.5px] border-b-[#828282] h-14 w-full  ">
 
         <div className="absolute top-0 right-12 pt-4 pr-3 pb-0 pl-4">
           <Image

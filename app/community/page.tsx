@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image";
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import Exdata from '@/app/data/Excommunity.json';
 import Alldata from '@/app/data/Allcommunity.json'
 import Carousel from '@/components/community/MyCarousel'
@@ -11,10 +11,26 @@ export default function Community() {
     const toggleHeading = (text: string) => {
         setMessageHeading(text);
     }
+    const [smScreen, setSmScreen] = useState(false);
+    const handleSmScreen = () => {
+        setSmScreen(!smScreen)
+    }
+    const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+    const checkScreenSize = () => {
+        setIsSmallScreen(window.innerWidth < 640); // Tailwind's sm breakpoint is 640px
+    };
+
+    useEffect(() => {
+        checkScreenSize();
+        window.addEventListener('resize', checkScreenSize);
+
+        return () => window.removeEventListener('resize', checkScreenSize);
+    }, []);
 
     return (
         <div className="w-full flex justify-center">
-            <div className="bg-[#F1EAFF] w-full h-[88vh] max-w-[1200px] flex flex-wrap md:flex-nowrap gap-3" >
+            <div className="bg-[#F1EAFF] w-full h-[90vh] max-w-[1200px] flex flex-wrap md:flex-nowrap gap-3" >
                 <div className=" w-full md:w-2/5 h-full flex flex-col gap-3 pl-4 pt-3 overflow-auto scrollbar-hide">
                     <div className=" text-[#737373] font-semibold flex flex-col gap-2.5">
                         <div className="font-bold">Hello Raj!</div>
@@ -26,7 +42,7 @@ export default function Community() {
                             </div>
                         </div>
                     </div>
-                    <Carousel/>
+                    <Carousel />
                     <div className="flex flex-col gap-3 overflow-x-clip">
                         <div className="flex flex-row justify-between">
                             <span className="text-base font-semibold">All Communities</span>
@@ -35,7 +51,7 @@ export default function Community() {
                         <div className="w-full gap-3 flex flex-col justify-center">
                             {
                                 Alldata.map((item, index) => (
-                                    <div key={index} className="w-full h-20 bg-[#fff] flex flex-row text-md font-bold justify-between items-center rounded-lg" onClick={() => toggleHeading(Alldata[index].name)}>
+                                    <div key={index} className="w-full h-20 bg-[#fff] flex flex-row text-md font-bold justify-between items-center rounded-lg" onClick={() => { toggleHeading(Alldata[index].name); handleSmScreen() }}>
                                         <div className="flex flex-row items-center">
                                             <div className="w-[80px] p-1"><Image src={Alldata[index].svg} alt="img" height={10} width={10} className="w-full" /></div>
                                             <span className="pl-5">{Alldata[index].name}</span>
@@ -47,8 +63,9 @@ export default function Community() {
                         </div>
                     </div>
                 </div>
-                <div className="hidden md:flex flex-col h-full w-3/5 bg-[#fff] rounded-lg m-3 mb-0">
+                <div className={`${isSmallScreen ? "absolute top-15 h-[91%] w-full ml-0" : ""} ${smScreen?"flex":"hidden"} md:flex flex-col md:h-full w-3/5 bg-[#fff] rounded-lg m-3 mb-0`}>
                     <div className="flex flex-row bg-[#8c52ff] w-full h-16 rounded-lg items-center justify-between">
+                        <div className={` rounded-full flex justify-center items-center md:hidden`} onClick={handleSmScreen}><Image src="/community/backarrow-white.png" alt="img" height={10} width={10} className="w-8 h-8" /></div>
                         <div className="flex flex-row gap-14 items-center pl-10">
                             <div className="w-12 h-12 bg-[#fff] rounded-full flex justify-center items-center"><Image src="/community/webdevchaticon.svg" alt="img" height={10} width={10} className="w-8 h-8" /></div>
                             <span className="text-xl font-semibold text-[#fff]">{messageHeading}</span>
@@ -60,7 +77,7 @@ export default function Community() {
                     </div>
                     <div className="flex flex-grow"></div>
                     <div className="flex justify-center p-3">
-                        <div className="relative w-[65vw] ">
+                        <div className={`relative w-full  md:w-[65vw] `}>
                             <input type="text" className="pl-10 pr-4 py-2 w-full border rounded-lg bg-[#D9D9D9]" placeholder="text" />
                             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none justify-between w-full">
                                 <Image src="/community/textplussign.svg" alt="search" width={25} height={25} />

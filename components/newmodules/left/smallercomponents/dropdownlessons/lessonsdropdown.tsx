@@ -12,19 +12,94 @@ const lessonsData = [
 ];
 
 const LessonsModule: React.FC = () => (
-       
-        <div className="float absolute  bg-white h-fit  w-full  rounded-md shadow-sm z-10 p-4 ">
 
-                <div className="bg-[#E8E2F4] w-full cursor-pointer max-w-[330px] h-[39px]  border-solid border-[1.5px] border-[#8C52FF] rounded-full ..."></div>
-                <div className="bg-[#E8E2F4] w-full cursor-pointer max-w-[330px] h-[39px] mt-3  border-solid border-[1.5px] border-[#8C52FF] rounded-full ..."></div>
-                <div className="bg-[#E8E2F4] w-full cursor-pointer max-w-[330px] h-[39px] mt-3  border-solid border-[1.5px] border-[#8C52FF] rounded-full ..."></div>
-                <div className="bg-[#E8E2F4] w-full cursor-pointer max-w-[330px] h-[39px] mt-3  border-solid border-[1.5px] border-[#8C52FF] rounded-full ..."></div>
-                <div className="bg-[#E8E2F4] w-full cursor-pointer max-w-[330px] h-[39px] mt-3  border-solid border-[1.5px] border-[#8C52FF] rounded-full ..."></div>
-                
+  <div className="float absolute  bg-white h-fit  w-full  rounded-md shadow-sm z-10 p-4 ">
 
-              </div>
-       
-        
+    <div className="bg-[#E8E2F4] w-full cursor-pointer max-w-[330px] flex items-center h-[39px]  border-solid border-[1.49px] border-[#8C52FF] rounded-full ...">
+      <div className="w-fit h-fit flex justify-center  items-center   ">
+        <Image
+          src="/learn/play button.svg"
+          alt="Lesson Icon"
+          className="  mx-2 my-[5px]"
+          width={29}
+          height={29}
+          priority
+        />
+      </div>
+      <div className="flex w-full flex-row mx-1 ">
+        <h4 className="text-black text-sm font-semibold ">Language of ML</h4>
+        <p className="text-gray-500 text-sm my-auto">: Python</p>
+      </div>
+    </div>
+    <div className="bg-[#E8E2F4] w-full cursor-pointer max-w-[330px] h-[39px] mt-3 flex items-center border-solid border-[1.49px] border-[#8C52FF] rounded-full ...">
+      <div className="w-fit h-fit flex justify-center  items-center   ">
+        <Image
+          src="/learn/icon 1.svg"
+          alt="Lesson Icon"
+          className="  mx-2 my-[5px]"
+          width={29}
+          height={29}
+          priority
+        />
+      </div>
+      <div className="flex w-full flex-row mx-1 ">
+        <h4 className="text-black text-sm font-semibold ">Supervised Learning </h4>
+        <p className="text-gray-500 text-sm my-auto">: Classification</p>
+      </div>
+    </div>
+    <div className="bg-[#E8E2F4] w-full cursor-pointer max-w-[330px] h-[39px] mt-3 flex items-center border-solid border-[1.49px] border-[#8C52FF] rounded-full ...">
+      <div className="w-fit h-fit flex justify-center  items-center   ">
+        <Image
+          src="/learn/icon2.svg"
+          alt="Lesson Icon"
+          className="  mx-2 my-[5px]"
+          width={29}
+          height={29}
+          priority
+        />
+      </div>
+      <div className="flex w-full flex-row mx-1 ">
+        <h4 className="text-black text-sm font-semibold ">AssessmentL</h4>
+        <p className="text-gray-500 text-sm my-auto">: Python</p>
+      </div>
+    </div>
+    <div className="bg-[#E8E2F4] w-full cursor-pointer max-w-[330px] h-[39px] mt-3 flex items-center border-solid border-[1.49px] border-[#8C52FF] rounded-full ...">
+      <div className="w-fit h-fit flex justify-center  items-center   ">
+        <Image
+          src="/learn/icon 3.svg"
+          alt="Lesson Icon"
+          className="  mx-2 my-[5px]"
+          width={29}
+          height={29}
+          priority
+        />
+      </div>
+      <div className="flex w-full flex-row mx-1 ">
+        <h4 className="text-black text-sm font-semibold ">Hands on</h4>
+        <p className="text-gray-500 text-sm my-auto">: ML</p>
+      </div>
+    </div>
+    <div className="bg-[#E8E2F4] w-full cursor-pointer max-w-[330px] h-[39px] mt-3 flex items-center border-solid border-[1.49px] border-[#8C52FF] rounded-full ...">
+      <div className="w-fit h-fit flex justify-center  items-center   ">
+        <Image
+          src="/learn/icon 4 copy.svg"
+          alt="Lesson Icon"
+          className="  mx-2 my-[5px]"
+          width={29}
+          height={29}
+          priority
+        />
+      </div>
+      <div className="flex w-full flex-row mx-1 ">
+        <h4 className="text-black text-sm font-semibold "> ML</h4>
+        <p className="text-gray-500 text-sm my-auto">: Interact with data</p>
+      </div>
+    </div>
+
+
+  </div>
+
+
 );
 
 export default LessonsModule;

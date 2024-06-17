@@ -6,7 +6,7 @@ import Exdata from "@/app/data/Assessment.json";
 import Alldata from "@/app/data/Allassessment.json";
 import codingdata from "@/app/data/codingassmnt.json";
 import Carousel from "@/components/practice/MyCarousel";
-
+import daypermonth from '@/app/data/daybymonth.json'
 export default function Practice() {
     const radius = 40;
     const circumference = 2 * Math.PI * radius;
@@ -14,10 +14,15 @@ export default function Practice() {
     const items = Array(3).fill(null);
     const sets = Array(30).fill(null);
     const [asmtVisible, setAsmtVisible] = useState(false);
-    function toggleAsmtVisible() {
+    const [clickedindex,setClickedIndex] = useState(-1);
+    function toggleAsmtVisible(index:any) {
+        if (setAsmtVisible){
+            setAsmtVisible(!asmtVisible);
+        }
         setAsmtVisible(!asmtVisible);
+        setClickedIndex(index);
+        
     }
-
     return (
         <div className="w-full flex justify-center">
             <div className="bg-[#F1EAFF] w-full max-w-[1200px] max-h-[720px] flex flex-wrap lg:flex-nowrap" >
@@ -41,30 +46,31 @@ export default function Practice() {
                         <div>
                             <div className="grid grid-cols-2  gap-4 ">
                                 {
-                                    Alldata.map((item, index) => (
+                                    Alldata.map((item, allindex) => (
                                         <>
                                             <div key={item.id} className="bg-[#ffffff] rounded-lg flex flex-row justify-between h-32">
                                                 <div className="w-1/2  ml-4 flex flex-col gap-y-6 justify-center text-base font-semibold ">
                                                     {item.name}
-                                                    <button className={`w-20 bg-[#8c52ff] rounded-2xl flex flex-row justify-between items-center shadow shadow-[#737373] transition-all duration-300`} onClick={toggleAsmtVisible}>
-                                                        <span className={`ml-2 text-[#ffffff] font-medium ${asmtVisible ? "hidden " : ""}`} >Start</span>
-                                                        <Image src="/practice/conarrow.svg" alt="arrow" width={25} height={25} className={`${asmtVisible ? "rotate-180 " : ""}`} />
+                                                    <button className={`w-20 bg-[#8c52ff] rounded-2xl flex flex-row justify-between items-center shadow shadow-[#737373] transition-all duration-300`} onClick={()=>toggleAsmtVisible(allindex)}>
+                                                        <span className={`ml-2 text-[#ffffff] font-medium ${asmtVisible && clickedindex == allindex ? "hidden" : "flex"}`} >Start</span>
+                                                        <Image src="/practice/conarrow.svg" alt="arrow" width={25} height={25} className={`${asmtVisible && clickedindex == allindex ? "rotate-180 " : ""}`} />
                                                     </button>
                                                 </div>
                                                 <div>
-                                                    <Image src={`${item.svg}`} alt={`svg${index + 1}`} width={184.18} height={150.64} />
+                                                    <Image src={`${item.svg}`} alt={`svg${allindex + 1}`} width={184.18} height={150.64} />
                                                 </div>
                                             </div>
                                             {
-                                                index % 2 === 1 &&
+                                                
+                                                (clickedindex % 2 == 0 ? clickedindex+1 :clickedindex ) == allindex && 
                                                 <div className={`col-span-2 w-full bg-[#fff] flex justify-center rounded-lg ${asmtVisible ? 'flex' : 'hidden'}`}>
-                                                    <div className="w-10/12 flex flex-col gap-3 mt-6 mb-6 ">
+                                                    <div className="w-10/12 flex flex-col gap-3 my-6">
                                                         {
-                                                            codingdata.map((item, index) => (
+                                                            codingdata.map((_, index) => (   
                                                                 <div key={index} className="flex flex-row w-full h-10 gap-8" >
                                                                     <div className="flex flex-row w-9/12 h-full bg-[#F1EAFF] rounded-full gap-4 items-center">
-                                                                        <div><Image src={codingdata[index].svg} alt="img" height={10} width={10} className="h-10 w-10"/></div>
-                                                                        <div className="text-[#737373] text-md font-semibold">{codingdata[index].name}</div>
+                                                                        <div><Image src={codingdata[clickedindex][index].svg} alt="img" height={10} width={10} className="h-10 w-10"/></div>
+                                                                        <div className="text-[#737373] text-md font-semibold">{codingdata[clickedindex][index].name}</div>
                                                                     </div>
                                                                     <button className="w-4/12 h-10 border-2 border-[#8C52FF] rounded-full text-[#2561A1] font-semibold flex justify-center items-center shadow-lg">Start Now</button>
                                                                 </div>
@@ -81,7 +87,7 @@ export default function Practice() {
                         </div>
                     </div>
                 </div>
-                <div className="w-full max-w-[550px] flex flex-col gap-2 p-3 mt-1 lg:mt-0">
+                <div className="w-full max-w-[550px] flex flex-col gap-1 p-3 mt-1 lg:mt-0">
                     <div className="h-1/2 flex flex-col m-2 mt-3 bg-[#ffffff] rounded-xl">
                         <div className="flex flex-row justify-around h-1/2 m-2">
                             <div className="w-40 h-40 relative">
@@ -113,7 +119,7 @@ export default function Practice() {
                             <div className="h-32 border-2 rounded-md border-[#ebedf1] w-full text-lg font-semibold"><span className="ml-2 mt-2">Focused Area</span></div>
                         </div>
                     </div>
-                    <div className="bg-[#ffffff] h-1/2 m-3  flex flex-col gap-y-3 rounded-xl pb-4">
+                    <div className="bg-[#ffffff] h-1/2 m-3 flex flex-col gap-y-3 rounded-xl pb-4">
                         <div className="flex flex-row justify-around h-1/5">
                             <span className="text-lg font-semibold mt-3">Apr 2024 - June 2024</span>
                             <div className="flex flex-row mt-3">
@@ -121,12 +127,12 @@ export default function Practice() {
                                 <div className="w-9 h-9 rounded-full border-[#F1EAFF] border-2 flex items-center justify-center"><Image src="/practice/rfarw.svg" alt="rft" width={7.89} height={14.99} /></div>
                             </div>
                         </div>
-                        <div className="grid grid-cols-3 place-items-center">
+                        <div className="grid grid-cols-3 place-items-start">
                             {
                                 items.map((items, itemindex) => (
                                     <div key={itemindex} className="container grid grid-cols-5 gap-2 place-content-center">
                                         {
-                                            sets.map((item, setindex) => (
+                                            Array(daypermonth[itemindex+3].days).fill(null).map((item, setindex) => (
                                                 <div className="h-4 w-4 bg-[#ebedf1] rounded " key={setindex}></div>
                                             ))
                                         }

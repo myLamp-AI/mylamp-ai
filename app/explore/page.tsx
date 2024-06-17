@@ -13,7 +13,7 @@ export default function Explore() {
     return (
         <div className="w-full scrollbar-hide flex flex-row justify-center">
             <div className="w-full max-w-[1200px] h-full flex flex-col gap-3 scrollbar-hide ">
-                <div className="w-full  flex flex-row mt-5 gap-4">
+                <div className="w-full flex flex-row mt-5 gap-4">
                     <div className="h-full w-full lg:w-8/12 bg-white p-2 border rounded-xl flex flex-row">
                         <div className="w-full h-full flex flex-col gap-1 p-2 xl:w-2/3">
                             <div className="text-2xl font-medium font-sans  ml-4">Journey through GenAI and LLMS</div>
@@ -40,10 +40,10 @@ export default function Explore() {
                             </div>
                         </div>
                         <div className="w-full xl:w-1/3 hidden md:flex justify-end items-center">
-                            <Image src="/person.svg" alt="person" width={300} height={300} />
+                            <Image src="/person.svg" alt="person" width={300} height={300}/>
                         </div>
                     </div>
-                    <div className=" border rounded-xl hidden lg:flex flex-grow justify-center items-center bg-[#ffffff]">
+                    <div className="border rounded-xl hidden lg:flex flex-grow justify-center items-center bg-[#ffffff]">
                         <Image src="/compass.svg" alt="compass" width={300} height={300} className="flex" />
                     </div>
                 </div>

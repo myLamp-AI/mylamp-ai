@@ -22,8 +22,20 @@ export default function Flexsidebar() {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  const checkScreenSize = () => {
+    setIsSmallScreen(window.innerWidth < 640); // Tailwind's sm breakpoint is 640px
+  };
+
+  useEffect(() => {
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
+
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []);
   return (
-    <div ref={sidebarRef} className={`${isSidebarOpen ? 'lg:w-48 ' : 'lg:w-0'} transition-all duration-300 flex flex-row `}>
+    <div ref={sidebarRef} className={`${isSidebarOpen ? 'lg:w-48 z-10' : 'lg:w-0'}  transition-all duration-300 flex flex-row `}>
       <div className="fixed flex flex-row items-center">
         {
           isSidebarOpen &&
