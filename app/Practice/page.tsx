@@ -14,18 +14,15 @@ export default function Practice() {
     const items = Array(3).fill(null);
     const sets = Array(30).fill(null);
     const [asmtVisible, setAsmtVisible] = useState(false);
-    function toggleAsmtVisible() {
-        setAsmtVisible(!asmtVisible);
-    }
     const [clickedindex,setClickedIndex] = useState(-1);
-
-    const handleButtonClick = (index:any) => {
-        if (index%2 == 0){
-            index++;
+    function toggleAsmtVisible(index:any) {
+        if (setAsmtVisible){
+            setAsmtVisible(!asmtVisible);
         }
-        console.log(index);
-        setClickedIndex(index === clickedindex ? null : index); // Toggle visibility
-      };
+        setAsmtVisible(!asmtVisible);
+        setClickedIndex(index);
+        
+    }
     return (
         <div className="w-full flex justify-center">
             <div className="bg-[#F1EAFF] w-full max-w-[1200px] max-h-[720px] flex flex-wrap lg:flex-nowrap" >
@@ -54,7 +51,7 @@ export default function Practice() {
                                             <div key={item.id} className="bg-[#ffffff] rounded-lg flex flex-row justify-between h-32">
                                                 <div className="w-1/2  ml-4 flex flex-col gap-y-6 justify-center text-base font-semibold ">
                                                     {item.name}
-                                                    <button className={`w-20 bg-[#8c52ff] rounded-2xl flex flex-row justify-between items-center shadow shadow-[#737373] transition-all duration-300`} onClick={()=>{toggleAsmtVisible();handleButtonClick(allindex);}}>
+                                                    <button className={`w-20 bg-[#8c52ff] rounded-2xl flex flex-row justify-between items-center shadow shadow-[#737373] transition-all duration-300`} onClick={()=>toggleAsmtVisible(allindex)}>
                                                         <span className={`ml-2 text-[#ffffff] font-medium ${asmtVisible ? "hidden " : ""}`} >Start</span>
                                                         <Image src="/practice/conarrow.svg" alt="arrow" width={25} height={25} className={`${asmtVisible ? "rotate-180 " : ""}`} />
                                                     </button>
@@ -65,15 +62,15 @@ export default function Practice() {
                                             </div>
                                             {
                                                 
-                                                allindex == clickedindex && 
+                                                (clickedindex % 2 == 0 ? clickedindex+1 :clickedindex ) == allindex && 
                                                 <div className={`col-span-2 w-full bg-[#fff] flex justify-center rounded-lg ${asmtVisible ? 'flex' : 'hidden'}`}>
                                                     <div className="w-10/12 flex flex-col gap-3 my-6">
                                                         {
                                                             codingdata.map((_, index) => (   
                                                                 <div key={index} className="flex flex-row w-full h-10 gap-8" >
                                                                     <div className="flex flex-row w-9/12 h-full bg-[#F1EAFF] rounded-full gap-4 items-center">
-                                                                        <div><Image src={codingdata[allindex][index].svg} alt="img" height={10} width={10} className="h-10 w-10"/></div>
-                                                                        <div className="text-[#737373] text-md font-semibold">{codingdata[allindex][index].name}</div>
+                                                                        <div><Image src={codingdata[clickedindex][index].svg} alt="img" height={10} width={10} className="h-10 w-10"/></div>
+                                                                        <div className="text-[#737373] text-md font-semibold">{codingdata[clickedindex][index].name}</div>
                                                                     </div>
                                                                     <button className="w-4/12 h-10 border-2 border-[#8C52FF] rounded-full text-[#2561A1] font-semibold flex justify-center items-center shadow-lg">Start Now</button>
                                                                 </div>
