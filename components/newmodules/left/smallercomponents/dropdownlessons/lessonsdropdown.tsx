@@ -43,7 +43,7 @@ const LessonsModule: React.FC = () => (
         />
       </div>
       <div className="flex w-full flex-row mx-1 ">
-        <h4 className="text-black text-sm font-semibold ">LSupervised Learning </h4>
+        <h4 className="text-black text-sm font-semibold ">Supervised Learning </h4>
         <p className="text-gray-500 text-sm my-auto">: Classification</p>
       </div>
     </div>

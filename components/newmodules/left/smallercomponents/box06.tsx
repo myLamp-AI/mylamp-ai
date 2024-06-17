@@ -3,7 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 const Box02: React.FC = () => {
     return (
-        <div className="absolute mb-2 flex bottom-0 h-[100px] w-[95%] max-w-[352px] left-3 bg-white rounded-lg">
+        <div className="absolute mb-2 flex bottom-0 h-[100px] w-[95%] max-w-[352px] left-3 bg-white rounded-lg ">
         <div className='bg-[#8C52FF] w-36 max-w-36 rounded-lg flex items-center justify-center p-4 '>
           <Image
             src="/project.svg"
