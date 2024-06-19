@@ -2,6 +2,7 @@
 import { useState, useRef, useEffect } from "react";
 import Sidebar from '@/components/Sidebar'
 import Image from 'next/image'
+
 export default function Flexsidebar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const toggleSidebar = () => {

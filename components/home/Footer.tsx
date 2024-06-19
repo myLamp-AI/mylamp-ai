@@ -69,10 +69,10 @@ export default function Footer() {
                         <Image src={"/home/twitter.svg"} width={30} height={30} alt="twitter" />
                     </div>
                 </div>
-                <div className="w-full flex flex-col justify-center items-start text-white font-medium">
+                <div className="w-full max-w-[642px] flex flex-col justify-center items-start text-white font-medium">
                     <div className="w-full mb-4">
                         <h3 className="text-2xl">Quick Links</h3>
-                        <div className="px-4 mt-4">
+                        <div className="px-4 mt-4 word-spacing-wide">
                             <p>wiZe Camp: June | July | August</p>
                             <p>Featured: Era of GenAI | Product Teardown Amazon</p>
                             <p>Blogs: Exploring data science | Cold Mailing</p>

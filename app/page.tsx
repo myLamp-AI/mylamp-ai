@@ -1,3 +1,5 @@
+"use client";
+import { useEffect } from "react";
 import HeroSection from "@/components/home/HeroSection";
 import AboutWize from "@/components/home/AboutWize";
 import WizeCamp from "@/components/home/WizeCamp";
@@ -11,6 +13,11 @@ import HomeSlider from "@/components/home/HomeSlider";
 import HomeNavbar from "@/components/home/HomeNavbar";
 
 export default function Page() {
+  useEffect(() => {
+    document.title = "MyLampAi - Home";
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <main className="h-full bg-[#fff]">

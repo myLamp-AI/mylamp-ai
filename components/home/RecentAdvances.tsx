@@ -2,22 +2,22 @@ import Image from "next/image";
 
 const data = [
     {
-        imageUrl: "/home/blogImage.svg",
+        imageUrl: "/home/profile.jpg",
         title: "Exploring new developements in genAI",
         description: "GenAI is a platform that uses AI to provide insights and recommendations to users."
     },
     {
-        imageUrl: "/home/blogImage.svg",
+        imageUrl: "/home/profile.jpg",
         title: "Exploring new developements in genAI",
         description: "GenAI is a platform that uses AI to provide insights and recommendations to users."
     },
     {
-        imageUrl: "/home/blogImage.svg",
+        imageUrl: "/home/profile.jpg",
         title: "Exploring new developements in genAI",
         description: "GenAI is a platform that uses AI to provide insights and recommendations to users."
     },
     {
-        imageUrl: "/home/blogImage.svg",
+        imageUrl: "/home/profile.jpg",
         title: "Exploring new developements in genAI",
         description: "GenAI is a platform that uses AI to provide insights and recommendations to users."
     }
@@ -32,10 +32,11 @@ function RecentAdvancesCard({
 }) {
     return (
         <>
-            <div className="flex flex-col justify-between max-w-[300px] p-4 rounded-2xl min-h-[350px] shadow-md hover:scale-105 transition-all">
+            <div className="relative flex flex-col justify-between max-w-[300px] pb-4 rounded-2xl overflow-hidden min-h-[350px] shadow-md hover:scale-105 transition-all">
                 <Image src={imageUrl} height={100} width={100} alt="blog image" className="w-full"/>
-                <h3 className="font-semibold text-lg">{title}</h3>
-                <p className="text-sm text-[#00000090]">{description}</p>
+                <h3 className="font-semibold text-lg  px-4 pt-4">{title}</h3>
+                <p className="text-sm text-[#00000090] px-4 pb-4">{description}</p>
+                <Image src={"/home/arrowdown.svg"} width={200} height={200} alt="arrow" className=" absolute w-8 bottom-2 right-2 shadow-lg rounded-full"></Image>
             </div>
         </>
     );

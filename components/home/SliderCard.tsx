@@ -7,7 +7,9 @@ interface SliderProp {
 const SliderCard: React.FC<SliderProp> = ({ imageUrl }) => {
     return (
         <>
-            <Image src={imageUrl} alt="slider" height={100} width={100} />
+            <div className={`bg-url(${imageUrl}) `}>
+
+            </div>
         </>
     )
 }
