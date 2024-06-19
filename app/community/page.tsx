@@ -3,13 +3,17 @@ import Image from "next/image";
 import React, { useState,useEffect } from 'react';
 import Exdata from '@/app/data/Excommunity.json';
 import Alldata from '@/app/data/Allcommunity.json'
-import Carousel from '@/components/community/MyCarousel'
+import Carousel from '@/components/community/NewCarousel'
 export default function Community() {
     const ExdataLen = Exdata.length;
     const AlldataLen = Alldata.length;
     const [messageHeading, setMessageHeading] = useState('');
+    const [icon, setIcon] = useState('');
     const toggleHeading = (text: string) => {
         setMessageHeading(text);
+    }
+    const toggleIcon = (text:any) => {
+        setIcon(text);
     }
     const [smScreen, setSmScreen] = useState(false);
     const handleSmScreen = () => {
@@ -43,7 +47,7 @@ export default function Community() {
                         </div>
                     </div>
                     <Carousel />
-                    <div className="flex flex-col gap-3 overflow-x-clip">
+                    <div className="flex flex-col gap-3 overflow-x-clip mt-[250px]">
                         <div className="flex flex-row justify-between">
                             <span className="text-base font-semibold">All Communities</span>
                             <button className="text-sm font-semibold text-[#8c52ff]">See All</button>
@@ -51,7 +55,7 @@ export default function Community() {
                         <div className="w-full gap-3 flex flex-col justify-center">
                             {
                                 Alldata.map((item, index) => (
-                                    <div key={index} className="w-full h-20 bg-[#fff] flex flex-row text-md font-bold justify-between items-center rounded-lg" onClick={() => { toggleHeading(Alldata[index].name); handleSmScreen() }}>
+                                    <div key={index} className="w-full h-20 bg-[#fff] flex flex-row text-md font-bold justify-between items-center rounded-lg" onClick={() => { toggleHeading(Alldata[index].name); toggleIcon(Alldata[index].svg);handleSmScreen()}}>
                                         <div className="flex flex-row items-center">
                                             <div className="w-[80px] p-1"><Image src={Alldata[index].svg} alt="img" height={10} width={10} className="w-full" /></div>
                                             <span className="pl-5">{Alldata[index].name}</span>
@@ -63,11 +67,11 @@ export default function Community() {
                         </div>
                     </div>
                 </div>
-                <div className={`${isSmallScreen ? "absolute top-15 h-[91%] w-full ml-0" : ""} ${smScreen?"flex":"hidden"} md:flex flex-col md:h-full w-3/5 bg-[#fff] rounded-lg m-3 mb-0`}>
+                <div className={`${isSmallScreen ? "absolute top-14 h-[90%] w-full ml-0" : ""} ${smScreen?"flex":"hidden"} md:flex flex-col md:h-full w-3/5 bg-[#fff] rounded-lg m-3 mb-0`}>
                     <div className="flex flex-row bg-[#8c52ff] w-full h-16 rounded-lg items-center justify-between">
                         <div className={` rounded-full flex justify-center items-center md:hidden`} onClick={handleSmScreen}><Image src="/community/backarrow-white.png" alt="img" height={10} width={10} className="w-8 h-8" /></div>
                         <div className="flex flex-row gap-14 items-center pl-10">
-                            <div className="w-12 h-12 bg-[#fff] rounded-full flex justify-center items-center"><Image src="/community/webdevchaticon.svg" alt="img" height={10} width={10} className="w-8 h-8" /></div>
+                            <div className="w-12 h-12 bg-[#fff] rounded-full flex justify-center items-center"><Image src={icon} alt="img" height={10} width={10} className="w-8 h-8" /></div>
                             <span className="text-xl font-semibold text-[#fff]">{messageHeading}</span>
                         </div>
                         <div className="flex flex-row items-center gap-8 pr-6">

@@ -38,7 +38,7 @@ export default function Practice() {
                         </div>
                     </div>
                     <Carousel/>
-                    <div className="flex flex-col gap-3 overflow-x-clip">
+                    <div className="flex flex-col gap-3 overflow-x-clip mt-[250px]">
                         <div className="flex flex-row justify-between">
                             <span className="text-base font-semibold">All Assessments</span>
                             <button className="text-sm font-semibold text-[#8c52ff]">See All</button>
