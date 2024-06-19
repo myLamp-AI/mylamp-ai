@@ -1,16 +1,31 @@
 "use client"
 import React, { useEffect, useState } from "react";
 import Image from 'next/image'
+import Carousel from '@/components/explore/ByteCarousel'
+import { EmblaOptionsType } from 'embla-carousel'
+import {
+    usePrevNextButtons
+} from '@/components/explore/Arrow'
+import useEmblaCarousel from 'embla-carousel-react'
 import bytedata from '@/app/data/bytesCarousel.json'
+type PropType = {
+    slides: number[]
+    options?: EmblaOptionsType
+}
+
 export default function VideoPage() {
     const [page, setPage] = useState(1);
     const setDiv = Array(4).fill(null);
     const renderSlideDiv = Array(4).fill(null);
     const renderQnDiv = Array(2).fill(null);
-    const [currentIndex, setCurrentIndex] = useState(0);
+    const [currentIndex, setCurrentIndex] = useState<number>(0);
     const totalItems = bytedata.length;
-
-
+    const OPTIONS: EmblaOptionsType = { containScroll: false }
+    const [emblaRef, emblaApi] = useEmblaCarousel(OPTIONS)
+    const {
+        onPrevButtonClick,
+        onNextButtonClick
+    } = usePrevNextButtons(emblaApi)
     const prevSlide = () => {
         setCurrentIndex((prevIndex) => (prevIndex - 1 + totalItems) % totalItems);
         if (page > 1) {
@@ -23,9 +38,6 @@ export default function VideoPage() {
             setPage(page + 1)
         }
     };
-    const canGoNext = page < totalItems;
-    const canGoPrev = page > 1;
-
     return (
         <div className="h-[91vh] overflow-y-clip w-full bg-[#E8E2F4] flex flex-col relative">
             <div className="h-16 w-full hidden lg:flex justify-center items-center gap-9 ">
@@ -50,20 +62,22 @@ export default function VideoPage() {
                     ))
                 }
             </div>
-            <div className="flex flex-grow justify-between items-center ">
-                <button onClick={prevSlide} className={`w-1/3 flex justify-center ${!canGoPrev?"opacity-40 cursor-not-allowed":""}`}><Image src="/bytes/lfarw.svg" alt="arrow" height={20} width={20}/></button>
-                <div className="overflow-hidden w-10/12 h-full">
-                    <div className="flex transition-transform duration-500 h-full" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
-                        {bytedata.map((item, index) => (
-                            <div key={index} className="w-full h-full flex-shrink-0">
-                                <Image src={item.svg} className="w-64 h-1/2 object-cover" alt="img" height={100} width={100}/>
+            <section className="embla max-w-[90vw] mx-auto relative flex-grow">
+                <div className="overflow-hidden h-full" ref={emblaRef}>
+                    <div className="embla__container flex h-full">
+                        {bytedata.map((_, index) => (
+                            <div className="embla__slide min-w-0" key={index}>
+                                <div className="embla__slide__number flex items-center justify-center h-full"><Image src={bytedata[index].svg} alt="img" height={100} width={100} className="h-96 w-36"/></div>
                             </div>
                         ))}
                     </div>
                 </div>
+                <div className="flex justify-between items-center align-center w-full absolute top-[50%] ">
+                    <button className={`${page == 1 ?"cursor-not-allowed opacity-25":""}`}><Image src="/bytes/lfarw.svg" alt="arrow" height={20} width={20} onClick={() =>{onPrevButtonClick();prevSlide();}} /></button>
+                    <button className={`${page == 24 ?"cursor-not-allowed opacity-25":""}`}><Image src="/bytes/rfarw.svg" alt="invarrow" height={20} width={20} onClick={()=>{onNextButtonClick();nextSlide();}} /></button>
+                </div>
 
-                <button onClick={nextSlide} className={`w-1/3 flex justify-center ${!canGoNext?"opacity-40 cursor-not-allowed":""}`}><Image src="/bytes/rfarw.svg" alt="invarrow" height={20} width={20}  /></button>
-            </div>
+            </section>
             <div className="h-52 flex justify-between items-center ml-8">
                 <div className="flex flex-row gap-6">
                     <div><Image src="/play.svg" alt="play" height={70} width={70} /></div>

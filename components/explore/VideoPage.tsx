@@ -22,6 +22,7 @@ export default function VideoPage() {
             setPage(page + 1)
         }
     };
+    
     return (
             <div className="h-[90vh] overflow-y-clip w-full bg-[#E8E2F4] flex flex-col relative">
                 <div className="h-16 w-full hidden lg:flex justify-center items-center gap-9 ">
