@@ -34,7 +34,7 @@ export default function Community() {
 
     return (
         <div className="w-full flex justify-center">
-            <div className="bg-[#F1EAFF] w-full h-[90vh] max-w-[1200px] flex flex-wrap md:flex-nowrap gap-3" >
+            <div className="bg-[#F1EAFF] w-full h-[90vh] lg:h-[88vh] xl:h-[90vh] flex flex-wrap md:flex-nowrap gap-3" >
                 <div className=" w-full md:w-2/5 h-full flex flex-col gap-3 pl-4 pt-3 overflow-auto scrollbar-hide">
                     <div className=" text-[#737373] font-semibold flex flex-col gap-2.5">
                         <div className="font-bold">Hello Raj!</div>
