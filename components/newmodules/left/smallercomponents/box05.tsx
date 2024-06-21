@@ -11,8 +11,8 @@ const Box05: React.FC = () => {
                     <Image src="/modules/security.svg" alt="Verceldcjncn Logo" className="" width={70} height={70} />
                 </div>
                 <div className='w-full my-2'>
-                    <h1 className="text-left   text-decoration-line: underline 2xl:text-[1.5rem]  font-size: 0.75rem ...">chapter 3</h1>
-                    <h2 className=" text-left 2xl:text-[1.3rem] font-semibold -mt-1">Cyber Security</h2>
+                    <h1 className="text-left text-sm font-[500] ">chapter 3</h1>
+                    <h2 className=" text-left  text-md font-semibold -mt-1">Cyber Security</h2>
                     <div className=" w-full max-w-[265px] my-2   h-[7px] border-[1px] border-[#8C52FF] rounded-lg overflow-hidden">
                         <div className="bg-[#8C52FF] h-full text-white text-center leading-8" style={{ width: `${progress}%` }}></div>
                     </div>
