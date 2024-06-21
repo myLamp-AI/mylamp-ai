@@ -10,7 +10,7 @@ export default function ParentMid() {
   const { isOpen } = useStore();
   const { isOpenright } = useStoreright();
   return (
-    <div className="flex h-screen">
+    <div className="flex h-[91vh] ">
       {
        isOpen && <LeftSide />
       }
