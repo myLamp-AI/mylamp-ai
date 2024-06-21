@@ -25,7 +25,7 @@ const LessonsModule: React.FC = () => {
       {lessons.map((lesson) => (
         <div
           key={lesson.id}
-          className="bg-[#E8E2F4] w-full cursor-pointer max-w-[330px] h-[39px] mt-3 flex items-center border-solid border-[1.49px] border-[#8C52FF] rounded-full"
+          className="bg-[#E8E2F4] w-full cursor-pointer max-w-[330px] h-[39px] mt-2 flex items-center border-solid border-[1.49px] border-[#8C52FF] rounded-full"
           onClick={lesson.name.includes("Assessment") ? handleToggle : undefined}
         >
           <div className="w-fit h-fit flex justify-center items-center">
