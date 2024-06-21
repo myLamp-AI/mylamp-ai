@@ -38,7 +38,7 @@ const RightSide: React.FC = () => {
             <p className='mx-4'>None of the above      </p>
           </div>
 
-          { isCorrect && (<div className='w-full  my-16 h-24 rounded-full border-[0.2px] border-[#828282] flex flex-row gap-1 justify-between'>
+          { isCorrect && (<div className='w-full  my-10 h-fit rounded-full border-[0.2px] border-[#828282] flex flex-row gap-1 justify-between'>
             <div className=' w-fit h-full'>
               <Image
                 src="/modules/smiling face (1).svg"
