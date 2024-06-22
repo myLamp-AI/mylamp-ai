@@ -2,6 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 import useStore from '../left/zustandleft/storeleft';
+import { motion } from 'framer-motion';
 
 const Middle: React.FC = () => {
   const { isOpen, toggleOpen } = useStore();

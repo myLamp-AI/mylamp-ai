@@ -4,8 +4,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import LessonsModule from './dropdownlessons/lessonsdropdown';
 import dropdownLesson04 from './zustanddropdown04';
-
-
+import { FaArrowAltCircleRight } from 'react-icons/fa';
 
 const Box04: React.FC = () => {
     const [progress, setProgress] = useState(90);
@@ -33,7 +32,7 @@ const Box04: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <div className=" absolute right-3 bottom-[5.5px]  bg-white rounded-full h-4 w-4 "><Image  src="/modules/arrow.svg" alt="Verceldcjncn Logo" className=""width={15} height={15}/></div>
+            <div className=" absolute right-3 bottom-[5.5px]  rounded-full h-4 w-4 "> <FaArrowAltCircleRight size={17} color="white" /></div>
             {
                 isOpen04 && <LessonsModule />
             }
