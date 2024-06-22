@@ -7,7 +7,8 @@ import dropdownLesson04 from './zustanddropdown04';
 import { FaArrowAltCircleRight } from 'react-icons/fa';
 interface Box04Props {
     onClick?: () => void;
-  }
+}
+
   const Box04: React.FC<Box04Props> = ({ onClick }) => {
     const [progress, setProgress] = useState(90);
     const {isOpen04, toggleOpen04 } = dropdownLesson04();
@@ -26,9 +27,9 @@ interface Box04Props {
                 <div className='w-full my-2'>
                     <h1 className="text-left text-sm font-[500] ">chapter 2</h1>
                     <h2 className=" text-left  text-md font-semibold -mt-1">Development Frameworks</h2>
-                    <div className='  w-full h-full flex flex-row'>
+                    <div className='  w-full h-full flex flex-row '>
                         <div className=" w-full max-w-[265px] my-2   h-[7px] border-[1px] border-[#8C52FF] rounded-lg overflow-hidden ">
-                            <div className="bg-[#8C52FF] h-full text-white text-center leading-8" style={{ width: `${progress}%` }}></div>
+                            <div className="bg-[#8C52FF] h-full text-white text-center leading-8 " style={{ width: `${progress}%` }}></div>
                         </div>
                         <div className={` ${isOpen04?'':'hidden'} w-5 h-5 mx-3`}> <Image  src="/modules/module arrow.svg" alt="Verceldcjncn Logo" className=""width={30} height={30}/></div>
                     </div>
