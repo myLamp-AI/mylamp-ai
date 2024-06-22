@@ -31,7 +31,7 @@ const ExclusiveAssessements = (props : {exclusiveAssements : ExclusiveAssementsT
 	return (
 		<div>
 			<div className="flex justify-between">
-				<div className="font-bold text-lg">Exclusive Assessements</div>
+				<div className="font-bold text-lg">Exclusive Assessments</div>
 				<div className="flex gap-4">
 					<button>
 						<FaChevronLeft />

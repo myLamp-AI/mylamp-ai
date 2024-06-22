@@ -35,8 +35,8 @@ export default function Explore() {
                                 <div className="flex items-center">7 days to go</div>
                             </div>
                             <div className="h-11 gap-x-4 flex flex-row mt-5 ml-6 text-base font-semibold">
-                                <button className="h-11 w-40 border-2 border-purple-700 rounded-xl bg-white shadow-inner hover:shadow-lg">Past Workshops</button>
-                                <button className="h-11 w-40 rounded-xl bg-purple-700 text-white shadow-inner hover:shadow-lg">Join Workshop</button>
+                                <button className="h-11 w-40 border-2 border-primary rounded-xl bg-white shadow-inner hover:shadow-lg">Past Workshops</button>
+                                <button className="h-11 w-40 rounded-xl bg-primary text-white shadow-inner hover:shadow-lg">Join Workshop</button>
                             </div>
                         </div>
                         <div className="w-full xl:w-1/3 hidden md:flex justify-end items-center">

@@ -1,14 +1,16 @@
 "use client"
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import LearnModuleCard from "@/components/learn/LearnModuleCard";
 import IntroCard from "@/components/learn/introcard";
 
 export default function Learn() {
   const [progress, setProgress] = useState(90);
+  const [cardOpen, setCardOpen] = useState(-1);
 
   return (
-      <div className="flex w-full max-w-[1300px] m-auto relative  bg-[#E8E2F4] rounded-lg">
+      <div className="flex min-h-screen w-full max-w-[1300px] m-auto relative rounded-lg">
 
           <div className="w-full justify-between rounded-lg  mt-4  p-6">
             <div className="flex  md:h-96   h-fit mb-10  rounded-lg md:w-full w-full sm:w-[80%]  mx-auto md:mx-0 sm:mb-5 flex-row justify-center md:justify-between">
@@ -74,8 +76,8 @@ export default function Learn() {
                       </div>
 
                       <div className="flex absolute sm:top-72  w-full md:h-fit text-[15px] font-semibold gap-10 text-center text-[#8C52FF]">
-                        <button className="w-fit px-6 py-2 h-fit hover:bg-[#8C52FF] hover:text-white  border-2 transition-all ease-in-out border-[#8C52FF] rounded-md ">View Insights</button>
-                        <button className="w-fit p-2 px-6 h-fit border-2 border-[#8C52FF] hover:bg-[#8C52FF]  transition-all ease-in-out hover:text-white rounded-md">Resume Learning</button>
+                        <Link href={"/learn"} className="w-fit px-6 py-2 h-fit hover:bg-[#8C52FF] hover:text-white  border-2 transition-all ease-in-out border-[#8C52FF] rounded-md ">View Insights</Link>
+                        <Link href={"/learn/modules"} className="w-fit p-2 px-6 h-fit border-2 border-[#8C52FF] hover:bg-[#8C52FF]  transition-all ease-in-out hover:text-white rounded-md">Resume Learning</Link>
                       </div>
 
                     </div>

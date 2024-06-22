@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Open_Sans } from "next/font/google";
-import Navbar from "@/components/oldmodules/Navbar";
+import Navbar from "@/components/navbar/Navbar";
 import Flexsidebar from '@/components/Flexsidebar'
 const openSans = Open_Sans({ subsets: ["latin"] });
 export const metadata: Metadata = {
@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth focus:scroll-auto">
-      <body className={`${openSans.className} bg-[#F1EAFF]`}>
+      <body className={`${openSans.className} bg-primary-foreground`}>
         <Navbar />         
         <div className="flex h-full transition-all duration-300 ">
           {/* Sidebar */}
