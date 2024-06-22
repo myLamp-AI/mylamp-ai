@@ -23,7 +23,7 @@ const LeftSide: React.FC = () => {
   const handleBoxClick03 = () => {
     if (scrollContainerRef.current) {
       scrollContainerRef.current.scrollTo({
-        top: 10,
+        top: 8,
         behavior: 'smooth',
       });
     }
