@@ -6,9 +6,12 @@ import { useState } from 'react';
 import LessonsModule from './dropdownlessons/lessonsdropdown';
 import dropdownLesson from './zustanddropdown02';
 import { FaArrowAltCircleRight } from "react-icons/fa";
+interface Box03Props {
+    onClick?: () => void;
+}
 
 
-const Box03: React.FC = () => {
+const Box03: React.FC<Box03Props> = ({ onClick }) => {
 
     const [progress, setProgress] = useState(90);
     const { isOpen, toggleOpen } = dropdownLesson();
@@ -19,7 +22,7 @@ const Box03: React.FC = () => {
 
     return (
        
-        <div className={` ${isOpen ? 'bg-white' : 'bg-[#8C52FF]'} mt-4 h-[105px] relative w-full  max-w-[350px]   mx-auto  rounded-lg cursor-pointer `}>
+        <div onClick={onClick} className={` ${isOpen ? 'bg-white' : 'bg-[#8C52FF]'} mt-4 h-[105px] relative w-full  max-w-[350px]   mx-auto  rounded-lg cursor-pointer `}>
             <div onClick={handleToggle} className={` h-[80px] w-full ${isOpen ? 'border-[0.5px] border-[#828282]' : ''}  max-w-[350px] bg-white mx-auto flex flex-row justify-between items-center  rounded-lg `}>
                 <div className="  mx-4  rounded-full bg-white  h-14 w-14  flex items-center justify-center">
                     <Image src="/modules/ml.svg" alt="Verceldcjncn Logo" className="" width={70} height={70} />
