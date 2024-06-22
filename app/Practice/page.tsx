@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from 'react';
+import React  from 'react';
 import { BiSearchAlt } from "react-icons/bi";
 import AllAssessments from "./AllAssessments";
 import ExclusiveAssessements from "./ExclusiveAssessements";
@@ -8,11 +8,11 @@ import allAssessements from "./data/allAssessments";
 import ProgressSection from "./ProgressSection";
 import StreakSection from "./StreakSection";
 
-export default function Practice() {
+const Practice = () => {
     return (
-        <div className="bg-[#F1EAFF] p-5 flex flex-col lg:flex-row justify-between z-0">
+        <div className="bg-[#F1EAFF] p-5 min-h-screen flex flex-col lg:flex-row justify-between z-0">
             <div className="w-full lg:w-[60%] mb-5 lg:mb-0 ">
-                <div>
+                <div className="mb-5">
                     <p className="text-[#737373] font-bold text-xl">Let's Rock!</p>
                     <p className="text-[#A6A6A6] text-sm">Practice regularly to achieve perfection</p>
                 </div>
@@ -37,7 +37,7 @@ export default function Practice() {
             </div>
             <div className="w-full lg:w-[37%]">
                 <div className="lg:sticky lg:top-[4.25rem]">
-                    <div>
+                    <div className="mb-5">
                         <ProgressSection />
                     </div>
                     <div>
@@ -48,3 +48,5 @@ export default function Practice() {
         </div>
     );
 }
+
+export default Practice;
