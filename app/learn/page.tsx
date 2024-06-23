@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useState } from "react";
 import LearnModuleCard from "@/components/learn/LearnModuleCard";
 import IntroCard from "@/components/learn/introcard";
+import Link from 'next/link';
 
 export default function Learn() {
   const [progress, setProgress] = useState(90);
@@ -75,7 +76,7 @@ export default function Learn() {
 
                       <div className="flex absolute sm:top-72  w-full md:h-fit text-[15px] font-semibold gap-10 text-center text-[#8C52FF]">
                         <button className="w-fit px-6 py-2 h-fit hover:bg-[#8C52FF] hover:text-white  border-2 transition-all ease-in-out border-[#8C52FF] rounded-md ">View Insights</button>
-                        <button className="w-fit p-2 px-6 h-fit border-2 border-[#8C52FF] hover:bg-[#8C52FF]  transition-all ease-in-out hover:text-white rounded-md">Resume Learning</button>
+                        <Link href="learn/modules"><button className="w-fit p-2 px-6 h-fit border-2 border-[#8C52FF] hover:bg-[#8C52FF]  transition-all ease-in-out hover:text-white rounded-md">Resume Learning</button>  </Link>
                       </div>
 
                     </div>

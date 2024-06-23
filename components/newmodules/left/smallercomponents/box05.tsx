@@ -2,6 +2,7 @@
 import React from 'react';
 import { useState } from 'react';
 import Image from 'next/image';
+import { FaArrowAltCircleRight } from 'react-icons/fa';
 const Box05: React.FC = () => {
     const [progress, setProgress] = useState(90);
     return (
@@ -18,7 +19,7 @@ const Box05: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <div className=" absolute right-3 bottom-[5.5px]  bg-white rounded-full h-4 w-4 "><Image  src="/modules/arrow.svg" alt="Verceldcjncn Logo" className=""width={15} height={15}/></div>
+            <div className=" absolute right-3 bottom-[5.5px]   rounded-full h-4 w-4 "><FaArrowAltCircleRight size={17} color="white" /></div>
         </div>
     );
 };

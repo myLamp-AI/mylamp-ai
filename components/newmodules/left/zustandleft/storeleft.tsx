@@ -8,7 +8,7 @@ interface Store {
 }
 
 const useStore = create<Store>((set) => ({
-  isOpen: false,
+  isOpen: true,
   toggleOpen: () => set((state) => ({ isOpen: !state.isOpen })),
   close: () => set({ isOpen: false }),
 }));
