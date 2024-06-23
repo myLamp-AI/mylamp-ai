@@ -14,8 +14,15 @@ const ExclusiveAssessements = (props: { exclusiveAssements: ExclusiveAssementsTy
 
 	const scrollLeft = () => {
 		if (scrollContainerRef.current) {
+			const containerWidth = scrollContainerRef.current.clientWidth;
+        	let cardWidth;
+			if (window.innerWidth >= 1024) { // For lg and xl screens
+				cardWidth = containerWidth / 3;
+			} else { // For smaller screens
+				cardWidth = containerWidth / 2;
+			}
 			scrollContainerRef.current.scrollBy({
-				left: -scrollContainerRef.current.clientWidth,
+				left: -cardWidth,
 				behavior: 'smooth',
 			});
 		}
@@ -23,8 +30,16 @@ const ExclusiveAssessements = (props: { exclusiveAssements: ExclusiveAssementsTy
 
 	const scrollRight = () => {
 		if (scrollContainerRef.current) {
+			const containerWidth = scrollContainerRef.current.clientWidth;
+			let cardWidth;
+
+			if (window.innerWidth >= 1024) { // For lg and xl screens
+				cardWidth = containerWidth / 3;
+			} else { // For smaller screens
+				cardWidth = containerWidth / 2;
+			}
 			scrollContainerRef.current.scrollBy({
-				left: scrollContainerRef.current.clientWidth,
+				left: cardWidth,
 				behavior: 'smooth',
 			});
 		}
