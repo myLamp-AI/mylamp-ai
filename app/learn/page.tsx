@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import LearnModuleCard from "@/components/learn/LearnModuleCard";
 import IntroCard from "@/components/learn/introcard";
+import Link from 'next/link';
 
 export default function Learn() {
   const [progress, setProgress] = useState(90);

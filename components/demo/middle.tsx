@@ -1,17 +1,22 @@
 "use client"
 import React from 'react';
 import Image from 'next/image';
-import useStore from '../left/zustandleft/storeleft';
-import { motion } from 'framer-motion';
+
 
 const Middle: React.FC = () => {
-  const { toggleOpen } = useStore();
+ 
 
   return (
     <div className="relative w-full flex h-full">
       <div className="absolute flex  h-14 w-full shadow-md ">
         <div className="absolute top-0 right-12 pt-4 pr-3 pb-0 pl-4">
-          <Image src="/Group.png" alt="Logo" width={15} height={15} priority />
+          <Image
+            src="/Group.png"
+            alt="Logo"
+            width={15}
+            height={15}
+            priority
+          />
         </div>
         <div className="relative grid gap-2 grid-cols-4 -mt-1">
           <div className="my-auto mx-6 w-fit h-fit">
@@ -24,10 +29,7 @@ const Middle: React.FC = () => {
               priority
             />
           </div>
-          <div
-            onClick={toggleOpen}
-            className="font-semibold w-fit text-lg my-4 -mx-6 cursor-pointer"
-          >
+          <div className="font-semibold w-fit text-lg my-4 -mx-6 cursor-pointer">
             Course
           </div>
           <div className="text-center w-4 my-5 -mx-6">
@@ -45,7 +47,7 @@ const Middle: React.FC = () => {
         </div>
       </div>
 
-      <div className="flex-grow flex justify-center items-center h-[70%] my-auto mx-9">
+      {/* <div className="flex-grow flex justify-center items-center h-[70%] my-auto mx-9">
         <div className="w-full max-w-screen-xl h-full mx-auto ">
           <div className="aspect-w-16 h-full">
             <iframe
@@ -57,7 +59,8 @@ const Middle: React.FC = () => {
             ></iframe>
           </div>
         </div>
-      </div>
+      </div> */}
+
 
       <div className="absolute bottom-1 flex border-[0.5px] border-t-[#828282] h-14 w-full justify-between ">
         <div className="mx-7 h-7 my-auto">

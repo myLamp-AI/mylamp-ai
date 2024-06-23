@@ -2,7 +2,24 @@ const allAssessements = [
 	{
 		text: "Quizzes",
 		imgURL: "/quizzes.svg",
-		description: [],
+		description: [
+			{
+				text: "Coding Problems",
+				imgURL: "/codingProblems.JPG",
+			},
+			{
+				text: "100 Days DSA Sprint",
+				imgURL: "/100DaysDSASprint.jpg",
+			},
+			{
+				text: "Coding Assessments",
+				imgURL: "/codingAssessments.jpg",
+			},
+			{
+				text: "Coding Trivia",
+				imgURL: "/codingTrivia.jpg",
+			},
+		],
 	},
 	{
 		text: "Coding",
@@ -10,7 +27,7 @@ const allAssessements = [
 		description: [
 			{
 				text: "Coding Problems",
-				imgURL: "/codingProblems.jpg",
+				imgURL: "/codingProblems.JPG",
 			},
 			{
 				text: "100 Days DSA Sprint",
@@ -29,12 +46,46 @@ const allAssessements = [
 	{
 		text: "Case Study",
 		imgURL: "/caseStudy.svg",
-		description: [],
+		description: [
+			{
+				text: "Coding Problems",
+				imgURL: "/codingProblems.JPG",
+			},
+			{
+				text: "100 Days DSA Sprint",
+				imgURL: "/100DaysDSASprint.jpg",
+			},
+			{
+				text: "Coding Assessments",
+				imgURL: "/codingAssessments.jpg",
+			},
+			{
+				text: "Coding Trivia",
+				imgURL: "/codingTrivia.jpg",
+			},
+		],
 	},
 	{
 		text: "Product Teardown",
 		imgURL: "/productTeardown.svg",
-		description: [],
+		description: [
+			{
+				text: "Coding Problems",
+				imgURL: "/codingProblems.JPG",
+			},
+			{
+				text: "100 Days DSA Sprint",
+				imgURL: "/100DaysDSASprint.jpg",
+			},
+			{
+				text: "Coding Assessments",
+				imgURL: "/codingAssessments.jpg",
+			},
+			{
+				text: "Coding Trivia",
+				imgURL: "/codingTrivia.jpg",
+			},
+		],
 	},
 ];
 

@@ -7,7 +7,9 @@ const progressSection = () => {
 				<div className="w-[30%]">
 					<CircularProgressbarWithChildren
 						value={27}
-						styles={{ path: { stroke: "#8C52FF" } }}>
+						styles={{ path: { stroke: "#8C52FF",
+						strokeLinecap:"round"
+						 } }}>
 						<p className="font-bold text-sm">6</p>
 						<p className="font-bold text-sm">Assessment</p>
 						<p className="font-bold text-sm">Taken</p>
@@ -16,7 +18,9 @@ const progressSection = () => {
 				<div className="w-[30%]">
 					<CircularProgressbarWithChildren
 						value={27}
-						styles={{ path: { stroke: "#8C52FF" } }}>
+						styles={{ path: { stroke: "#8C52FF",
+						strokeLinecap:"round"
+						} }}>
 						<p className="font-bold text-sm">27</p>
 						<p className="font-bold text-sm">Questions</p>
 						<p className="font-bold text-sm">Solved</p>
