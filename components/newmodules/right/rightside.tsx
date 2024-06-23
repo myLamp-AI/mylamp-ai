@@ -8,7 +8,7 @@ const RightSide: React.FC = () => {
     setIsCorrect(!isCorrect);
   };
   return (
-    <div className=" w-[48%] h-screen bg-[#E8E2F4] border-[0.2px] border-l-[#828282] max-w-[380px] py-3 px-3 relative  ">
+    <div className=" w-[48%] h-full bg-[#E8E2F4] border-[0.2px] border-l-[#828282] max-w-[380px] py-3 px-3 relative  ">
       <div className='w-full h-full   bg-white rounded-lg'>
         <div className="  h-24 w-full max-w-[600px] bg-[#8C52FF] relative   rounded-lg flex justify-center items-center text-white font-semibold text-xl "><h1>Test Your Concepts</h1></div>
         <div className=' mt-3 p-4'>
@@ -38,7 +38,7 @@ const RightSide: React.FC = () => {
             <p className='mx-4'>None of the above      </p>
           </div>
 
-          { isCorrect && (<div className='w-full  my-16 h-24 rounded-full border-[0.2px] border-[#828282] flex flex-row gap-1 justify-between'>
+          { isCorrect && (<div className='w-full  my-10 h-fit rounded-full border-[0.2px] border-[#828282] flex flex-row gap-1 justify-between'>
             <div className=' w-fit h-full'>
               <Image
                 src="/modules/smiling face (1).svg"

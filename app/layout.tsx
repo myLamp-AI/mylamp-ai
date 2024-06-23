@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth focus:scroll-auto">
-      <body className={`${openSans.className} bg-[#F1EAFF]`}>
+      <body className={`${openSans.className} `}>
         <Navbar />         
         <div className="flex h-full transition-all duration-300 ">
           {/* Sidebar */}

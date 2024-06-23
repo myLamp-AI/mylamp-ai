@@ -17,20 +17,12 @@ import { useModalStore } from "./store02";
 const LearnCollapseItem: React.FC<LearnCollapseItemProps> = ({ activeIndex, setActiveIndex, index }) => {
     const setBooleanValue = useBooleanStore((state) => state.setBooleanValue);
     const booleanValue = useBooleanStore((state) => state.booleanValue);
-    const { openModal } = useModalStore();
-
-    const handleClick = () => {
-        const currentValue = useBooleanStore.getState().booleanValue;
-        setBooleanValue(!currentValue);
-        setActiveIndex(activeIndex === index ? 0 : index);
-    };
-
-    
-
-
-
-
   
+    const handleClick = () => {
+      const currentValue = useBooleanStore.getState().booleanValue;
+      setBooleanValue(!currentValue);
+      setActiveIndex((prevIndex) => (prevIndex === index ? 0 : index));
+    };
     return (
         <>
             <div
@@ -44,7 +36,7 @@ const LearnCollapseItem: React.FC<LearnCollapseItemProps> = ({ activeIndex, setA
                     }`}
             >
                 <div className="flex justify-between w-full  mx-5  items-center text-black xl:text-md sm:ml-5 sm:text-sm text-left h-full">
-                    <div className={`${booleanValue ? 'text-[#8C52FF]' : ''}`}>
+                    <div className={`${activeIndex === index? 'text-[#8C52FF]' : ''}`}>
                         <div className={`text-xs sm:text-sm lg:mb-[0.5px] mb-1 ${booleanValue ? '' : 'text-[#737373]'}`}>Chapter 1</div>
                         <div className="sm:text-sm text-xs  ">Getting started with python</div>
                     </div>
@@ -55,7 +47,7 @@ const LearnCollapseItem: React.FC<LearnCollapseItemProps> = ({ activeIndex, setA
                             viewBox="0 0 24 24"
                             strokeWidth="1.5"
                             stroke="currentColor"
-                            className={`${booleanValue ? 'rotate-180' : 'rotate-0'} w-5 h-6 cursor-pointer`}
+                            className={`${activeIndex === index ? 'rotate-180' : 'rotate-0'} w-5 h-6 cursor-pointer`}
                         >
                             <path
                                 strokeLinecap="round"
@@ -67,25 +59,6 @@ const LearnCollapseItem: React.FC<LearnCollapseItemProps> = ({ activeIndex, setA
                 </div>
 
             </div>
-
-
-
-
-
-           
-
-
-
-
-
-
-
-
-
-
-
-
-
         </>
     )
 }

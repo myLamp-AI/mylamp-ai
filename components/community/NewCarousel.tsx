@@ -40,7 +40,7 @@ const Carousel: React.FC = () => {
           </div>
         </div>
         <div className="carousel-container absolute top-7">
-          <div className="carousel flex space-x-4 overflow-x-auto scrollbar-hide w-[400px]" ref={carouselRef}>
+          <div className="carousel flex space-x-4 overflow-x-auto scrollbar-hide w-[90vw] md:w-[38vw] h-[250px]" ref={carouselRef}>
               {Exdata.map((slide, index) => (
                 <div key={index} >
                   <div className="bg-[#fff] rounded-lg h-full w-60">

@@ -1,15 +1,10 @@
 "use client"
 import React from 'react';
 import Image from 'next/image';
-import useStore from '../left/zustandleft/storeleft';
-import { motion } from 'framer-motion';
+
 
 const Middle: React.FC = () => {
-  const { isOpen, toggleOpen } = useStore();
-
-  const handleToggle = () => {
-    toggleOpen();
-  };
+ 
 
   return (
     <div className="relative w-full flex h-full">
@@ -34,7 +29,7 @@ const Middle: React.FC = () => {
               priority
             />
           </div>
-          <div onClick={handleToggle} className="font-semibold w-fit text-lg my-4 -mx-6 cursor-pointer">
+          <div className="font-semibold w-fit text-lg my-4 -mx-6 cursor-pointer">
             Course
           </div>
           <div className="text-center w-4 my-5 -mx-6">
@@ -52,7 +47,7 @@ const Middle: React.FC = () => {
         </div>
       </div>
 
-      <div className="flex-grow flex justify-center items-center h-[70%] my-auto mx-9">
+      {/* <div className="flex-grow flex justify-center items-center h-[70%] my-auto mx-9">
         <div className="w-full max-w-screen-xl h-full mx-auto ">
           <div className="aspect-w-16 h-full">
             <iframe
@@ -64,7 +59,7 @@ const Middle: React.FC = () => {
             ></iframe>
           </div>
         </div>
-      </div>
+      </div> */}
 
 
       <div className="absolute bottom-1 flex border-[0.5px] border-t-[#828282] h-14 w-full justify-between ">
