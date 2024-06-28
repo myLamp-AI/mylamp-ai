@@ -20,9 +20,9 @@ const RightSide: React.FC = () => {
             height={280}
             priority
           /></div>
-        <div className='p-2 font-semibold -my-2 w-full'>Which  machine learning technique is used in the given figure?</div>
+        <div className='p-3 font-semibold text-md -my-2 w-full'>Which  machine learning technique is used in the given figure?</div>
 
-        <div className="float text-[15px]  bg-white h-fit  w-full  rounded-md shadow-sm font-[200]  p-4 ">
+        <div className="float text-sm  bg-white h-fit  w-full  rounded-md shadow-sm font-[200]  p-4 ">
 
           <div className="bg-[#E8E2F4] w-full cursor-pointer max-w-[330px] flex items-center h-[39px] text-md  border-solid border-[1.49px] border-[#8C52FF] rounded-full ...">
             <h2 className='mx-4'>K-Means Clustering</h2>

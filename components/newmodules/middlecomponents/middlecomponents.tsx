@@ -3,18 +3,29 @@ import React from 'react';
 import Image from 'next/image';
 import useStore from '../left/zustandleft/storeleft';
 import { motion } from 'framer-motion';
-
+import useStoreright from '../right/zustandright/storeright';
 const Middle: React.FC = () => {
   const { toggleOpen } = useStore();
+  const { isOpenright, toggleOpenright } = useStoreright();
+  const handleToggle = () => {
+   if(isOpenright==true){
+   
+    toggleOpenright();
+  };
+   }
 
+  
   return (
-    <div className="relative w-full flex h-full">
+    <div className="relative w-full flex h-full justify-center">
       <div className="absolute flex  h-14 w-full shadow-md ">
         <div className="absolute top-0 right-12 pt-4 pr-3 pb-0 pl-4">
           <Image src="/Group.png" alt="Logo" width={15} height={15} priority />
         </div>
-        <div className="relative grid gap-2 grid-cols-4 -mt-1">
-          <div className="my-auto mx-6 w-fit h-fit">
+        <div className="relative grid gap-2 grid-cols-4 -mt-1  cursor-pointer">
+          <div onClick={()=>{
+            handleToggle();
+            toggleOpen();
+          }} className="my-auto mx-6 w-fit h-fit  ">
             <Image
               src="/modules/Group 22.svg"
               alt="Logo"
@@ -25,7 +36,7 @@ const Middle: React.FC = () => {
             />
           </div>
           <div
-            onClick={toggleOpen}
+           onClick={handleToggle}
             className="font-semibold w-fit text-lg my-4 -mx-6 cursor-pointer"
           >
             Course
@@ -45,18 +56,18 @@ const Middle: React.FC = () => {
         </div>
       </div>
 
-      <div className="flex-grow flex justify-center items-center h-[70%] my-auto mx-9">
-        <div className="w-full max-w-screen-xl h-full mx-auto ">
-          <div className="aspect-w-16 h-full">
+      <div className="flex-grow flex max-w-4xl  justify-center items-center  h-[70%] my-auto  mx-9">
+        
+          
             <iframe
-              className="w-full h-full"
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              className="w-full h-full m-auto rounded-md"
+              src="https://www.youtube.com/embed/1MTyCvS05V4?si=E9-w5fizcHwuPGaV"
               title="YouTube video"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
-          </div>
-        </div>
+        
+
       </div>
 
       <div className="absolute bottom-1 flex border-[0.5px] border-t-[#828282] h-14 w-full justify-between ">
