@@ -36,7 +36,7 @@ const LeftSide: React.FC = () => {
         <Box02 />
         <Box022 />
       </div>
-      <div ref={scrollContainerRef} className="flex-grow overflow-y-auto scrollbar-hide px-2 mt-3 -mb-2  ">
+      <div ref={scrollContainerRef} className="flex-grow overflow-y-auto scrollbar-hide px-2 mt-3 -mb-1  ">
         <Box03 onClick={handleBoxClick03}  />
         <Box04 onClick={handleBoxClick04} />
         <Box05/>

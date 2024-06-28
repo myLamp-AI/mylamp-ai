@@ -19,7 +19,7 @@ const Box02: React.FC = () => {
         <div className="text-base sm:text-lg text-black font-semibold border-[0.5px] border-b-[#828282] w-full h-1/2 flex justify-center items-center">
           Capstone Project
         </div>
-        <div className="   justify-between italic text-[#A99E9E]  flex-row font-light underline w-full h-1/2 flex items-center">
+        <div className="    justify-between italic text-[#A99E9E]  flex-row font-light underline w-full h-1/2 flex items-center">
           <div className='text-sm mx-auto '>Avengers & Silicon Valley</div>
           <div className='  items-end mr-2  h-fit w-fit'><Image  src="/modules/module arrow.svg" alt="Verceldcjncn Logo" className=" rotate-180"width={25} height={25}/></div>
         </div>

@@ -13,7 +13,7 @@ export default function LearnCollapseCard() {
     <>
       <div className="p-4 text-white flex flex-col">
         <div className="w-full h-full flex flex-row gap-2 justify-between md:mx-6">
-          <div className="h-full lg:w-[35%] md:w-[40%] w-full mx-auto md:mx-0">
+          <div className="h-full lg:w-[35%] md:w-[40%] w-full mx-auto md:mx-0 cursor-pointer">
             <LearnCollapseItem activeIndex={activeIndex} setActiveIndex={setActiveIndex} index={1} />
             <LearnCollapseItem activeIndex={activeIndex} setActiveIndex={setActiveIndex} index={2} />
             <LearnCollapseItem activeIndex={activeIndex} setActiveIndex={setActiveIndex} index={3} />
