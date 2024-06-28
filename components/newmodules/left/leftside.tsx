@@ -30,13 +30,13 @@ const LeftSide: React.FC = () => {
   };
 
   return (
-    <div className="w-[53%] h-full bg-[#E8E2F4] shadow-lg max-w-[380px] py-3 relative flex flex-col">
+    <div className="w-[53%] h-full bg-[#E8E2F4] shadow-lg max-w-[380px] py-3 relative flex flex-col z-auto ">
       <div className="px-2">
         <Box01 />
         <Box02 />
         <Box022 />
       </div>
-      <div ref={scrollContainerRef} className="flex-grow overflow-y-auto scrollbar-hide px-2  ">
+      <div ref={scrollContainerRef} className="flex-grow overflow-y-auto scrollbar-hide px-2 mt-3  ">
         <Box03 onClick={handleBoxClick03}  />
         <Box04 onClick={handleBoxClick04} />
         <Box05/>

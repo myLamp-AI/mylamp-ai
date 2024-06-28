@@ -26,6 +26,7 @@ export default function ParentMid() {
     <div className="flex h-[91vh] ">
       
       {
+       
        isOpen && <LeftSide />
       }
       <Middle />

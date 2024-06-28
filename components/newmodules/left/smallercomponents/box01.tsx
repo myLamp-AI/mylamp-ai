@@ -21,7 +21,7 @@ const Box01: React.FC = () => {
                 <div className=''><h1 className=" text-left text-white text-md font-bold">Tech 101: Starting in Tech</h1></div>
                 <div className=''><span className="text-left font-medium text-white text-xs"> 7 lesson 7 lesson 7 lesson </span></div>
             </div>
-            <div className="rounded-full h-3 w-3 top-10 lg:mt-4 lg:mb-4 mr-5 bg-slate-400 lg:mr-0">
+            <div className="rounded-full h-3 w-3 top-10 lg:mt-4 lg:mb-4 mr-5 lg:mr-0">
                 <FaArrowAltCircleRight size={20} color="white" />
             </div>
 
