@@ -70,7 +70,7 @@ const Middle: React.FC = () => {
               priority
             />
           </div>
-          <div className="text-left sm:absolute sm:left-56 font-semibold my-4 text-lg">
+          <div className="text-left sm:absolute sm:left-56 left-48 absolute font-semibold my-4 text-lg">
             Tech 01
           </div>
         </div>

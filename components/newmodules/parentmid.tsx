@@ -44,7 +44,7 @@ export default function ParentMid() {
       )}
       <Middle />
       {isSmallScreenRight ? (
-        <div className={`bg-red-500 h-full right-0 absolute xl:hidden transition-width duration-800 ${isOpenright ? 'w-fit' : 'w-0'}`}>
+        <div className={`bg-red-500 h-full hidden md:block right-0 absolute xl:hidden transition-width duration-800 ${isOpenright ? 'w-fit' : 'w-0'}`}>
           {isOpenright && <RightSide />}
         </div>
       ) : (
