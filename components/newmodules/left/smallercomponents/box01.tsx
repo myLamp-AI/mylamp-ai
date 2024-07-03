@@ -19,9 +19,9 @@ const Box01: React.FC = () => {
             <div className='w-fit h-fit flex flex-col lg:mt-4  lg:mb-4'>
                 <div className=''><h1 className="text-left text-white font-bold text-md">Module 03</h1></div>
                 <div className=''><h1 className=" text-left text-white text-md font-bold">Tech 101: Starting in Tech</h1></div>
-                <div className=''><span className="text-left font-medium text-white text-xs"> 7 lesson 7 lesson 7 lesson </span></div>
+                <div className=''><span className="text-middle font-medium text-white text-xs "> 7 lesson 7 lesson 7 lesson </span></div>
             </div>
-            <div className="rounded-full h-3 w-3 top-10 lg:mt-4 lg:mb-4 mr-5 lg:mr-0">
+            <div className="rounded-full h-3 w-3 top-10 lg:mt-3 lg:mb-4  lg:mr-3  mr-3 ">
                 <FaArrowAltCircleRight size={20} color="white" />
             </div>
 

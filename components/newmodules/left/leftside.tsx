@@ -30,7 +30,7 @@ const LeftSide: React.FC = () => {
   };
 
   return (
-    <div className="w-[53%] h-full bg-[#E8E2F4] shadow-lg max-w-[380px] py-3 relative flex flex-col z-auto ">
+    <div className="lg:w-[53%] w-fit h-full bg-[#E8E2F4] shadow-lg max-w-[380px] py-3 relative flex flex-col z-auto ">
       <div className="px-2">
         <Box01 />
         <Box02 />

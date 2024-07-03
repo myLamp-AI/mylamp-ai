@@ -8,7 +8,7 @@ const RightSide: React.FC = () => {
     setIsCorrect(!isCorrect);
   };
   return (
-    <div className=" xl:w-[48%] w-full h-full bg-[#E8E2F4]  border-[0.2px] border-l-[#828282] max-w-[380px] py-3 px-3 relative   ">
+    <div className=" xl:w-[48%] w-fit h-full bg-[#E8E2F4]  border-[0.2px] border-l-[#828282] max-w-[380px] py-3 px-3 relative   ">
       <div className='w-full h-full   bg-white rounded-lg '>
         <div className="  h-24 w-full max-w-[600px] bg-[#8C52FF] relative   rounded-lg flex justify-center items-center text-white font-semibold text-xl "><h1>Test Your Concepts</h1></div>
         <div className=' mt-3 p-4'>
