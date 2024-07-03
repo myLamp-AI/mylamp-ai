@@ -10,7 +10,7 @@ export default function ParentMid() {
   const { isOpenright } = useStoreright();
   const [isSmallScreenRight, setIsSmallScreenRight] = useState(false);
   const [isSmallScreenLeft, setIsSmallScreenLeft] = useState(false);
-
+  
   // Function to check screen size for right side
   const checkScreenSizeRight = () => {
     setIsSmallScreenRight(window.innerWidth < 1279); // Adjust the breakpoint (1279 is for xl)
@@ -34,7 +34,7 @@ export default function ParentMid() {
   }, []);
 
   return (
-    <div className="flex h-[91vh] relative">
+    <div  className="flex h-[91vh] relative">
       {isSmallScreenLeft ? (
         <div className={`bg-blue-500 h-full left-0 absolute z-10 lg:hidden transition-width duration-800 ${isOpen ? 'w-fit' : 'w-0'}`}>
           {isOpen && <LeftSide />}

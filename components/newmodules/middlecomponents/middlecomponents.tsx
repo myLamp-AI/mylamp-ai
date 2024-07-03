@@ -2,21 +2,41 @@
 import React from 'react';
 import Image from 'next/image';
 import useStore from '../left/zustandleft/storeleft';
+import { useEffect } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import useStoreright from '../right/zustandright/storeright';
 const Middle: React.FC = () => {
-  const { toggleOpen } = useStore();
+  const {isOpen, toggleOpen } = useStore();
   const { isOpenright, toggleOpenright } = useStoreright();
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  const checkScreenSize = () => {
+    setIsSmallScreen(window.innerWidth < 1020);
+  };
+  useEffect(() => {
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
+    return () => {
+      window.removeEventListener('resize', checkScreenSize);
+    };
+  }, []);
+
   const handleToggle = () => {
    if(isOpenright==true){
-   
     toggleOpenright();
   };
    }
+   const toggleButton = () => {
+    if (isSmallScreen && isOpen) {
+      toggleOpen();
+    }
+  };
+  
 
   
   return (
-    <div className="relative w-full flex h-full justify-center">
+    <div onClick={toggleButton} className="relative w-full flex h-full justify-center">
       <div className="absolute flex  h-14 w-full shadow-md ">
         <div className="absolute top-0 right-12 pt-4 pr-3 pb-0 pl-4">
           <Image src="/Group.png" alt="Logo" width={15} height={15} priority />
