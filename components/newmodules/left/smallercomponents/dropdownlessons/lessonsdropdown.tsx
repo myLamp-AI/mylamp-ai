@@ -1,8 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import Image from "next/image";
 import useStoreright from "@/components/newmodules/right/zustandright/storeright";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+
 
 const lessonsData = [
   { id: 1, name: "Language of ML", language: "python", image1: "/learn/play button.svg", image2: "/learn/revise.svg" },
@@ -15,19 +18,38 @@ const lessonsData = [
 const LessonsModule: React.FC = () => {
   const [lessons, setLessons] = useState(lessonsData);
   const { isOpenright, toggleOpenright } = useStoreright();
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const router = useRouter();
+  const checkScreenSize = () => {
+    setIsSmallScreen(window.innerWidth < 640); // 'sm' breakpoint is 640px in Tailwind CSS
+  };
+  useEffect(() => {
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
+    return () => {
+      window.removeEventListener('resize', checkScreenSize);
+    };
+  }, []);
 
   const handleToggle = () => {
     toggleOpenright();
+  };
+  const handleAssignmentClick = () => {
+    if (isSmallScreen) {
+      router.push("/learn/modules/test");
+    } else {
+      handleToggle();
+    }
   };
 
   return (
     <div className="absolute bg-white h-fit w-full rounded-md shadow-sm z-10 p-4">
       {lessons.map((lesson) => (
-        <div
-          key={lesson.id}
-          className="bg-[#E8E2F4] w-full cursor-pointer max-w-[330px] h-[39px] mt-2 flex items-center border-solid border-[1.49px] border-[#8C52FF] rounded-full"
-          onClick={lesson.name.includes("Assessment") ? handleToggle : undefined}
-        >
+         <div
+         key={lesson.id}
+         className="bg-[#E8E2F4] w-full cursor-pointer max-w-[330px] h-[39px] mt-2 flex items-center border-solid border-[1.49px] border-[#8C52FF] rounded-full"
+         onClick={lesson.name.includes("Assessment") ? handleAssignmentClick : undefined}
+       >
           <div className="w-fit h-fit flex justify-center items-center">
             <Image
               src={lesson.image1}

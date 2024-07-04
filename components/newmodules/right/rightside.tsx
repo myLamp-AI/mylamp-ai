@@ -1,20 +1,38 @@
 import React from 'react';
 import Image from 'next/image';
+import { IoBackspace } from "react-icons/io5";
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 import { useState } from 'react';
+import { handleClientScriptLoad } from 'next/script';
 const RightSide: React.FC = () => {
   const [isCorrect, setIsCorrect] = useState(false);
   const Answer = () => {
     setIsCorrect(!isCorrect);
   };
+  const router = useRouter();
+  const [isBack, setIsBack] = useState(true);
+
+  const closeclick=()=>{
+    setIsBack(!isBack);
+    if(isBack){
+      router.push("/learn/modules");
+    }
+  }
+console.log(isBack);
+
+
   return (
     <div className=" xl:w-[48%] w-fit h-full bg-[#E8E2F4] shadow-lg max-w-[380px] py-3 px-3 relative   ">
       <div className='w-full h-full   bg-white rounded-lg '>
-        <div className="  h-24 w-full max-w-[600px] bg-[#8C52FF] relative   rounded-lg flex justify-center items-center text-white font-semibold text-xl "><h1>Test Your Concepts</h1></div>
+        
+        <div className="  h-24 w-full max-w-[600px] bg-[#8C52FF] relative   rounded-lg flex justify-center items-center text-white font-semibold text-xl ">  <IoBackspace onClick={closeclick} className=' absolute top-3 left-3 sm:hidden block' /><h1>Test Your Concepts</h1></div>
+      
         <div className=' mt-3 p-4'>
           <Image
             src="/Group 21.svg"
-            alt="Verceldcjncn Logo"
+            alt="group-21 Logo"
             className=""
             width={280}
             height={280}
