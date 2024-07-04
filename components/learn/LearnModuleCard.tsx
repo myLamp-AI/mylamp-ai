@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import LearnCollapseCard from "./LearnCollapseCard";
-import { useState } from "react";
+import { useState, ChangeEvent } from "react";
 import { Transition } from 'react-transition-group';
 
 export default function LearnModuleCard() {
@@ -15,6 +15,12 @@ export default function LearnModuleCard() {
     }
   };
   const duration = 0;
+  const [progress, setProgress] = useState<number>(66);
+
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const value = Math.max(0, Math.min(100, Number(e.target.value)));
+    setProgress(value);
+  };
 
   return (
     <>
@@ -53,7 +59,9 @@ export default function LearnModuleCard() {
 
                 <div className="md:flex hidden flex-col  justify-start h-full md:items-center md:mr-7 text-[#737373] md:mt-11 lg:mt-8 w-fit item-left">
                   <div className="text-sm sm:text-xs md:text-sm lg:text-lg   font-semibold">Grade</div>
-                  <div className="text-sm lg:text-sm font-semibold md:text-xs  ">67%</div>
+                  <div className="text-sm lg:text-sm font-semibold md:text-xs  ">
+                  {progress}%
+                  </div>
                 </div>
 
 
@@ -74,11 +82,23 @@ export default function LearnModuleCard() {
                     <p className="text-[#737373] lg:mb-4 font-semibold lg:text-lg md:text-sm  mt-2 mb-3 ">
                       Progress
                     </p>
+    
                   </div>
                   <div className=" rounded-full h-2 flex items-center gap-2   ">
-                    <div className="w-fit text-center align-middle font-semibold text-[#737373] lg:text-[12px] md:text-[9px]">66%</div>
+                    <div className="w-fit text-center align-middle  font-semibold text-[#737373] lg:text-[12px] md:text-[9px]">
+                    <input
+          type="number"
+          value={progress}
+          onChange={handleInputChange}
+          className="w-10 bg-transparent text-center border-none outline-none appearance-none"
+          min="0"
+          max="100"
+          style={{ WebkitAppearance: 'none', MozAppearance: 'textfield' }}
+        />
+        <span>%</span>
+                    </div>
                     <div className="lg:w-full md:w-36 max-w-[300px] h-[6px] border-[1px] border-[#8C52FF] rounded-lg overflow-hidden">
-                      <div className="bg-[#8C52FF] h-full text-white text-center leading-8 " style={{ width: `${80}%` }}></div>
+                      <div className="bg-[#8C52FF] h-full text-white text-center leading-8 " style={{ width: `${progress}%` }}></div>
                     </div>
                   </div>
                 </div>
@@ -93,17 +113,17 @@ export default function LearnModuleCard() {
                   />
                 </div>
               </div>
-            <Transition in={showCollapse} timeout={200}>
-              {(state) => (
-                <div className={`transition-transform  origin-top duration-200 transform ${state === 'entered' ? 'scale-y-100' : 'scale-y-0'}`}>
-                  {showCollapse && (
-                    <div>
-                      <LearnCollapseCard />
-                    </div>
-                  )}
-                </div>
-              )}
-            </Transition>
+              <Transition in={showCollapse} timeout={200}>
+                {(state) => (
+                  <div className={`transition-transform  origin-top duration-200 transform ${state === 'entered' ? 'scale-y-100' : 'scale-y-0'}`}>
+                    {showCollapse && (
+                      <div>
+                        <LearnCollapseCard />
+                      </div>
+                    )}
+                  </div>
+                )}
+              </Transition>
             </div>
           </>
         )}

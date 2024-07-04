@@ -94,3 +94,17 @@
   flex: 0 0 70%;
 }
 
+@layer components {
+  .no-spinner {
+    @apply appearance-none;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      @apply appearance-none m-0;
+    }
+
+    & {
+      @apply appearance-none;
+    }
+  }
+}
