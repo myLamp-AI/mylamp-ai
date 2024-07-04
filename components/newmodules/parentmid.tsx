@@ -4,12 +4,16 @@ import Middle from './middlecomponents/middlecomponents';
 import useStoreright from './right/zustandright/storeright';
 import useStore from './left/zustandleft/storeleft';
 import LeftSide from './left/leftside';
+import Link from 'next/link';
+import { IoBackspace } from "react-icons/io5";
+
 
 export default function ParentMid() {
   const { isOpen } = useStore();
   const { isOpenright } = useStoreright();
   const [isSmallScreenRight, setIsSmallScreenRight] = useState(false);
   const [isSmallScreenLeft, setIsSmallScreenLeft] = useState(false);
+
   
   // Function to check screen size for right side
   const checkScreenSizeRight = () => {
@@ -35,6 +39,12 @@ export default function ParentMid() {
 
   return (
     <div  className="flex h-[91vh] relative">
+       <Link href={"/learn"}>
+        <IoBackspace
+          size={20}
+          className="absolute top-3 left-4 z-10 w-fit h-fit invert rounded-full cursor-pointer transition-transform duration-300 hover:scale-110"
+        />
+      </Link>
       {isSmallScreenLeft ? (
         <div className={`bg-blue-500 h-full left-0 absolute z-10 lg:hidden transition-width duration-800 ${isOpen ? 'w-fit' : 'w-0'}`}>
           {isOpen && <LeftSide />}
