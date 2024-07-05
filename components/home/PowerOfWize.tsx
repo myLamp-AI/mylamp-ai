@@ -3,13 +3,13 @@ import ImageGrid from './ImageGrid';
 
 export default function PowerOfWize() {
     return (
-        <>
-            <div className='flex justify-between w-full max-w-[1300px] m-auto gap-4 '>
-                <div className='w-full flex flex-col items-start justify-evenly pl-2'>
+        <> 
+            <div className='flex sm:justify-between w-full max-w-[1300px] sm:m-auto gap-4 flex-col sm:flex-row   '>
+                <div className='w-full flex flex-col items-start justify-evenly pl-2 h-96 sm:h-fit '>
                     <p className="w-full text-sm font-bold">
                         ----- The Power of wiZe
                     </p>
-                    <div className='flex flex-col items-start max-w-[500px] gap-8 pr-8'>
+                    <div className='flex flex-col items-start max-w-[500px] gap-8 pr-8 '>
                         <p className="text-4xl font-medium">
                             Your Gateway To Limitless Creativity - <span className='text-[#5FE8F1]'>One</span> platform, <span className='text-[#8C52FF]'>Millions</span> of possibilities
                         </p>
@@ -21,7 +21,7 @@ export default function PowerOfWize() {
                         Trusted by leading professionals and visionary partners ----
                     </p>
                 </div>
-                <div className="grid gap-4 grid-cols-2 relative w-full max-w-[600px]">
+                <div className="grid gap-4 grid-cols-2 relative w-full max-w-[600px] bg-red-500  ">
                     <Image width={100} height={100} src="/home/PowerOfWize.svg" alt="Background Image" className="w-[298px] rounded-tr-[5rem] rounded-bl-[5rem] h-full" />
                     <Image width={100} height={100} src="/home/PowerOfWize.svg" alt="Background Image" className="w-[298px] rounded-br-[5rem] rounded-tl-[5rem]  h-full" />
                     <Image width={100} height={100} src="/home/PowerOfWize.svg" alt="Background Image" className="w-[298px] rounded-tl-[5rem] rounded-br-[5rem]  h-full" />
