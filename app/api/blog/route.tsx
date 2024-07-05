@@ -1,42 +1,46 @@
-import prisma from "@/prisma";
-import { NextRequest, NextResponse } from "next/server";
-import multer from 'multer';
-import cloudinary from '@/config/cloudinary'
-const storage = multer.memoryStorage();
-const upload = multer({ storage });
+import {NextResponse,NextRequest} from 'next/server';
+import nc from 'next-connect';
+import prisma from '@/prisma';
+import cloudinary from '@/lib/cloudinary';
+import upload from '@/lib/multer';
 
 
-export const GET = async (request: NextRequest, response: NextResponse) => {
+type CloudinaryResponse = {
+  secure_url: string;
+  
+};
+
+// GET all posts
+export const GET = (upload.single('image'),async (req:NextRequest, ) => {
   try {
     const posts = await prisma.blog.findMany();
     return NextResponse.json({ message: "Success", posts }, { status: 200 });
-  } catch (err) {
-    return NextResponse.json({ message: "Error", err }, { status: 500 });
+  } catch (error) {
+    console.error('Error fetching posts:', error);
+    return NextResponse.json({ message: "Error", error }, { status: 500 });
   }
-};
+});
 
-export const POST = async (request: NextRequest, response: NextResponse) => {
-
-  const uploadMiddleware = upload.single('file');
-
-
+// POST a new post
+export const POST = (async (req:any, res:any) => {
   try {
-    const { title, description, authorName, position, sections, } = await request.json();
+    const { title, description, authorName, position, sections } = req.body;
 
-    if (!request.file) {
+    if (!req.file) {
       throw new Error('File is required');
     }
 
-    const { buffer } = request.file;
+    const { buffer } = req.file;
 
-    const uploadResponse = await cloudinary.uploader.upload_stream({ resource_type: 'image' }, (error: any, result: any) => {
-      if (error) {
-        throw new Error('Cloudinary upload failed');
-      }
-      return result;
+    const uploadResponse:CloudinaryResponse = await new Promise((resolve, reject) => {
+      const stream = cloudinary.uploader.upload_stream(
+        { resource_type: 'image' }
+      );
+
+      stream.end(buffer);
     });
 
-    const imageUrl = uploadResponse.secure_url;
+    const image = uploadResponse.secure_url;
 
     const post = await prisma.blog.create({
       data: {
@@ -45,12 +49,14 @@ export const POST = async (request: NextRequest, response: NextResponse) => {
         authorName,
         position,
         sections: JSON.parse(sections),
-        imageUrl,
+        image,
       },
     });
 
-    return NextResponse.json({ message: "Success", post }, { status: 200 });
+    return res.json({ message: "Success", post }, { status: 200 });
   } catch (error) {
-    return NextResponse.json({ message: "Error", error }, { status: 500 });
+    console.error('Error creating post:', error);
+    return res.json({ message: "Error", error }, { status: 500 });
   }
-};
+});
+
