@@ -5,7 +5,7 @@ import "./HeroSection.css"
 export default function HeroSection() {
     return (
         <>
-            <div className="flex flex-col bg-primary-foreground ">
+            <div className="flex flex-col bg-primary-foreground  ">
                 <div className="flex sm:flex-row flex-col  justify-evenly items-center min-h-[calc(100vh-65px)] py-4 px-8 gap-8 w-full  m-auto">
                     <div className="flex flex-col justify-end h-[600px] w-full relative ">
                         <div className="text-6xl font-bold ml-14 mb-6">
@@ -25,7 +25,7 @@ export default function HeroSection() {
                                 alt=""
                             ></Image>
                         </button>
-                        <div className="flex gap-4 ">
+                        <div className="flex gap-4  sm:mx-auto mx-14 ">
                             <div className="flex flex-wrap gap-2 w-full bg-[#f5f5f580] rounded-2xl p-4 ">
                                 <div className="flex w-full gap-x-2">
                                     <div className="bg-[#f5f5f5] rounded-2xl p-3 min-h-16 w-full">

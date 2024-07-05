@@ -3,8 +3,8 @@ import Image from "next/image"
 export default function WizeCamp() {
     return (
         <>
-            <div className="max-w-[1220px] m-auto bg-primary-foreground flex justify-around items-center rounded-2xl p-8 gap-4 my-4">
-                <div className="bg-[#8C52FF] w-full h-full max-w-[600px] min-h-[500px] flex flex-col items-center justify-evenly rounded-2xl p-4">
+            <div className="max-w-[1220px]  m-auto bg-primary-foreground flex sm:flex-row flex-col justify-around items-center rounded-2xl p-8 gap-4 sm:my-4 ">
+                <div className="bg-[#8C52FF] w-full h-full mt-9 sm:mt-0 max-w-[600px] min-h-[500px] flex flex-col items-center justify-evenly rounded-2xl p-4">
                     <Image src="/home/logoCombined.svg" alt="logo" width={100} height={100} className="w-[150px] mt-6 mb-2"></Image>
                     <p className="text-sm font-bold">PRESENTS</p>
                     <Image src="/home/wizeCamp.svg" alt="wizeCamp" width={200} height={500} className="max-w-[400px] w-full"></Image>
@@ -28,7 +28,7 @@ export default function WizeCamp() {
                         <button className="border-2 rounded-lg py-2 px-4 font-semibold">Register Now</button>
                     </div>
                 </div>
-                <div className="w-full flex flex-wrap items-center justify-center gap-4 min-h-[500px] max-w-[516px] ">
+                <div className="w-full flex flex-wrap items-center justify-center gap-4 min-h-[500px] sm:max-w-[516px] my-auto ">
                     <div className="w-full max-w-[250px] min-h-[242px] rounded-lg bg-white"></div>
                     <div className="w-full max-w-[250px] min-h-[242px] rounded-lg bg-white"></div>
                     <div className="w-full max-w-[250px] min-h-[242px] rounded-lg bg-white"></div>
