@@ -3,8 +3,8 @@ export default function AboutWize() {
     <>
       <div className="min-h-[250px] max-w-[1100px] m-auto flex flex-col justify-center items-center gap-8 p-4 my-[2rem]">
         <p className="w-full text-sm font-bold">ABOUT WISE -----</p>
-        <p className="text-4xl font-medium">
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <p className="text-3xl sm:text-4xl font-medium">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <span className="text-[#8C52FF]">wiZ</span>e{" "}
           <span className="text-[#B7B7B7]">aspires</span> to be the{" "}
           <span className="text-[#5FE8F1]">driving force</span> that{" "}

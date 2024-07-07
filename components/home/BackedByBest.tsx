@@ -10,23 +10,23 @@ export default function BackedByBest() {
                     <div className="h-1 bg-black w-full bg-gradient-to-r from-primary to-white"></div>
                 </div>
                 <div className='flex flex-wrap w-full items-center justify-evenly'>
-                    <div className='w-1/3 min-h-[280px] flex flex-col justify-between drop-shadow-md font-bold text-xl items-center '>
-                        <div className='w-[250px] flex items-center h-[200px]'>
+                    <div className='w-full max-w-[200px] md:max-w-[300px] mb-[30px] min-h-[100px] md:min-h-[280px] flex flex-col justify-between drop-shadow-md font-bold text-xl items-center '>
+                        <div className=' md:max-w-[250px] flex items-center h-[200px]'>
                             <Image src="/home/IIMBanglore.svg" alt="IIT Kharagpur" className='w-full ' width={200} height={200} />
                         </div>
-                        <div className='text-[1.4rem]'>IIM Bangalore</div>
+                        <div className='text-xl md:text-[1.4rem]'>IIM Bangalore</div>
                     </div>
-                    <div className='w-1/3 min-h-[280px] flex flex-col justify-between font-bold text-xl items-center '>
-                        <div className='w-[440px] flex items-center h-[200px]'>
+                    <div className='w-full max-w-[200px] md:max-w-[450px] mb-[30px] min-h-[100px] md:min-h-[280px] flex flex-col justify-between font-bold text-xl items-center '>
+                        <div className=' md:max-w-[440px] flex items-center h-[200px]'>
                             <Image src="/home/microsoft1.svg" alt="IIT Kharagpur" className='w-full' width={200} height={200} />
                         </div>
-                        <div className='drop-shadow-md text-[1.4rem]'>Microsoft</div>
+                        <div className='drop-shadow-md text-xl md:text-[1.4rem]'>Microsoft</div>
                     </div>
-                    <div className='w-1/3 min-h-[280px] flex flex-col justify-between drop-shadow-md font-bold text-xl items-center '>
-                        <div className='w-[150px] flex items-center h-[200px]'>
+                    <div className='w-full max-w-[200px] md:max-w-[300px] min-h-[150px] md:min-h-[280px] flex flex-col justify-between drop-shadow-md font-bold text-xl items-center '>
+                        <div className=' md:max-w-[150px] flex items-center h-[200px]'>
                             <Image src="/home/IITKGP.svg" alt="IIT Kharagpur" className='w-full ' width={200} height={200} />
                         </div>
-                        <div className='text-[1.4rem]'>IIT Kharagpur</div>
+                        <div className='text-xl md:text-[1.4rem]'>IIT Kharagpur</div>
                     </div>
                 </div>
             </div>

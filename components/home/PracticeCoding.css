@@ -1,7 +1,4 @@
-.home-exp-card-container input:checked+label {
-    width: 450px;
-    background-color: #F3C1E7;
-}
+
 
 .home-exp-card-container input:checked+label .div {
     background-color: #fff;
@@ -14,4 +11,12 @@
     background-color: #F3C1E7;
     padding: 0.5rem;
     border-radius: 5rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .home-exp-card-container input:checked+label {
+        width: 450px;
+        background-color: #F3C1E7;
+    }
+    
 }

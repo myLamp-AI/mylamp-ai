@@ -28,10 +28,10 @@ export default function Page() {
         <HomeSlider />
         <WhyWize />
         <BackedByBest />
-        <PowerOfWize />
+        {/* <PowerOfWize />
         <RecentAdvances />
-        <CommunitySection />
-        <Footer />
+        <CommunitySection /> */}
+        {/* <Footer /> */}
       </main>
     </>
   );

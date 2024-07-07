@@ -85,7 +85,18 @@ const config = {
     const utilities = Object.keys(wordSpacing).map(key => ({
       [`.${e(`word-spacing-${key}`)}`]: { wordSpacing: wordSpacing[key] },
     }));
-    addUtilities(utilities, ['responsive']);
+    addUtilities(utilities, ['responsive']),
+    function({ addUtilities } : { addUtilities: Function }) {
+      addUtilities({
+        '.line-clamp-2': {
+          display: '-webkit-box',
+          '-webkit-box-orient': 'vertical',
+          '-webkit-line-clamp': '2',
+          overflow: 'hidden',
+          'text-overflow': 'ellipsis',
+        },
+      });
+    }
   }
   ],
 } satisfies Config

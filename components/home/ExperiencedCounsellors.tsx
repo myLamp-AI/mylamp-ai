@@ -45,7 +45,7 @@ const BulletCard: React.FC<BulletCardProps> = ({ title, description }) => {
 const ExperiencedCounsellors = () => {
     return (
         <>
-            <div id="experiencedcounsellors" className="pb-[100px] px-[100px] min-h-screen">
+            <div id="experiencedcounsellors" className="pb-[100px] min-h-screen">
                 <h4 className="pt-4 font-semibold text-primary">
                     EXPERIENCED COUNSELLORS
                     <div className="bg-primary w-6 h-6 blur-sm rounded-full absolute left-0 translate-x-[-14px] translate-y-[-100%] " ></div>
