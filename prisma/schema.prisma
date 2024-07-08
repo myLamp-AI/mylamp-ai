@@ -20,7 +20,6 @@ model Blog {
   position    String
   sections    Section[]
   image       String
-  createdAt   DateTime   @default(now())
 }
 
 model Section {
