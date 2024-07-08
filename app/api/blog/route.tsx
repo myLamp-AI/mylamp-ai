@@ -23,7 +23,14 @@ export const POST = async (req: NextRequest) => {
     formData.forEach((value, key) => (formDataObj[key] = value));
     console.log(formDataObj);
     const {title,description,authorName,position,sections,image} = formDataObj;
-    const post = await prisma.blog.create(formDataObj);
+    const sectionsData = JSON.parse(sections).map((section:any) => ({
+      subheading: section.subheading,
+      content: section.content,
+    }));
+    const post = await prisma.blog.create({data:{title,description,authorName,position,sections:{
+      create: sectionsData,
+    },image}});
+
     return NextResponse.json({ message: "Success" }, { status: 201 });
   } catch (err) {
     return NextResponse.json({ message: "Error", err }, { status: 500 });

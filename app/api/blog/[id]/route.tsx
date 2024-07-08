@@ -16,9 +16,14 @@ export const GET = async (request: NextRequest) => {
 export const PUT = async (request: NextRequest) => {
     try {
         const id = request.url.split("/blog/")[1];
-        const { title, description, authorName, position, sections, image } = await request.json();
+        const formData = await request.formData();
+        const formDataObj:any = {};
+        formData.forEach((value, key) => (formDataObj[key] = value));
+        console.log(formDataObj);
+        const {title,description,authorName,position,sections,image} = formDataObj;
+        console.log(id)
         const post = await prisma.blog.update({
-            where: { id: String(id) },
+            where: { id },
             data: {
                 title,
                 description,
@@ -26,7 +31,7 @@ export const PUT = async (request: NextRequest) => {
                 position,
                 image,
                 sections: {
-                    create: sections.map(section => ({
+                    create: JSON.parse(sections).map((section:any) => ({
                         subheading: section.subheading,
                         content: section.content,
                     })),
@@ -36,7 +41,7 @@ export const PUT = async (request: NextRequest) => {
                 sections: true,
             },
         });
-        return NextResponse.json({ message: "Success", post }, { status: 200 });
+        return NextResponse.json({ message: "Success" }, { status: 200 });
     } catch (error) {
         return NextResponse.json({ message: "Error", error }, { status: 500 });
     }
