@@ -1,5 +1,6 @@
-import React,{useState,useEffect,useRef}from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { IoIosArrowRoundForward } from "react-icons/io";
+import Image from "next/image";
 
 interface AssessmentType {
   text: string;
@@ -11,25 +12,36 @@ interface AssessmentType {
 }
 
 const AllAssessments = (props: { allAssessements: AssessmentType[] }) => {
-  const allAssessements = Array.isArray(props.allAssessements) ? props.allAssessements : [];
+  const allAssessements = Array.isArray(props.allAssessements)
+    ? props.allAssessements
+    : [];
 
   const [activeIndex, setActiveIndex] = useState(-1);
   const activeDescRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if(activeIndex!==-1 && activeDescRef.current){
-      activeDescRef.current.scrollIntoView({behavior: "smooth",block:'center'});
+    if (activeIndex !== -1 && activeDescRef.current) {
+      activeDescRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
     }
-  },[activeIndex]);
+  }, [activeIndex]);
 
-  const CardComponent = ({ data, index }: { data: AssessmentType; index: number }) => {
+  const CardComponent = ({
+    data,
+    index,
+  }: {
+    data: AssessmentType;
+    index: number;
+  }) => {
     const { text, imgURL, description } = data;
 
     const handlePracticeClick = () => {
       if (index === activeIndex) {
-        setActiveIndex(-1); 
+        setActiveIndex(-1);
       } else {
-        setActiveIndex(index); 
+        setActiveIndex(index);
       }
     };
     return (
@@ -41,14 +53,14 @@ const AllAssessments = (props: { allAssessements: AssessmentType[] }) => {
           }}
           className="h-[200px] rounded-lg shadow-lg bg-right-bottom bg-cover cursor-pointer border-2 hover:border-[#8C52FF] transition duration-500 relative"
         >
-          <img src={imgURL} className="absolute h-[60%] right-5 bottom-5" />
+          <Image width={10} height={10} src={imgURL} className="absolute h-2/3 w-1/2 right-0 bottom-1/2 translate-y-1/2" alt="" />
           <div className="my-5 ml-5 h-[70%] flex flex-col items-start justify-between">
             <div className="font-bold text-2xl">{text}</div>
             <button
               className="bg-[#B175FF] rounded-3xl text-white py-1 pl-3 pr-1 flex items-center justify-center gap-2"
               onClick={handlePracticeClick}
             >
-              <span>{index !== activeIndex ? "Practice" : ""}</span>
+              <span>{index !== activeIndex ? "Practice4" : "3"}</span>
               <span className="bg-white rounded-full">
                 {index !== activeIndex ? (
                   <IoIosArrowRoundForward className="text-black text-3xl rotate-45" />
@@ -73,26 +85,27 @@ const AllAssessments = (props: { allAssessements: AssessmentType[] }) => {
           <CardComponent key={index} data={value} index={index} />
         ))}
       </div>
-      {activeIndex !== -1 && allAssessements[activeIndex].description.length > 0 && (
-        <div
-          ref={activeDescRef}
-          className="w-full bg-white mt-5 rounded-lg p-5 flex flex-col gap-4"
-        >
-          {allAssessements[activeIndex].description.map((d, descIndex) => (
-            <div className="flex justify-around" key={descIndex}>
-              <div className="bg-[#F1EAFF] rounded-full px-3 py-3 w-[65%] font-semibold text-gray-500 flex gap-5 items-center">
-                <div className="bg-[#8C52FF] rounded-full">
-                  <img src={d.imgURL} className="rounded-full w-10 h-10" />
+      {activeIndex !== -1 &&
+        allAssessements[activeIndex].description.length > 0 && (
+          <div
+            ref={activeDescRef}
+            className="w-full bg-white mt-5 rounded-lg p-5 flex flex-col gap-4"
+          >
+            {allAssessements[activeIndex].description.map((d, descIndex) => (
+              <div className="flex justify-around" key={descIndex}>
+                <div className="bg-[#F1EAFF] rounded-full px-3 py-3 w-[65%] font-semibold text-gray-500 flex gap-5 items-center">
+                  <div className="bg-[#8C52FF] rounded-full">
+                    <Image alt="" width={10} height={10} src={d.imgURL} className="rounded-full w-10 h-10" />
+                  </div>
+                  <div>{d.text}</div>
                 </div>
-                <div>{d.text}</div>
+                <button className="text-[#2561A1] border-2 border-[#8C52FF] rounded-full px-10 font-semibold hover:bg-[#8C52FF] hover:text-white transition-all duration-500">
+                  Start Now
+                </button>
               </div>
-              <button className="text-[#2561A1] border-2 border-[#8C52FF] rounded-full px-10 font-semibold hover:bg-[#8C52FF] hover:text-white transition-all duration-500">
-                Start Now
-              </button>
-            </div>
-          ))}
-        </div>
-      )}
+            ))}
+          </div>
+        )}
     </div>
   );
 };

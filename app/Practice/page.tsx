@@ -1,12 +1,12 @@
 "use client";
 import React  from 'react';
 import { BiSearchAlt } from "react-icons/bi";
-import AllAssessments from "./AllAssessments";
-import ExclusiveAssessements from "./ExclusiveAssessements";
-import exclusiveAssements from "./data/exclusiveAssessments";
-import allAssessements from "./data/allAssessments";
-import ProgressSection from "./ProgressSection";
-import StreakSection from "./StreakSection";
+import AllAssessments from "@/components/practice/AllAssessments";
+import ExclusiveAssessements from "../../components/practice/ExclusiveAssessements";
+import exclusiveAssements from "@/data/practise/exclusiveAssessments";
+import allAssessements from "@/data/practise/allAssessments";
+import ProgressSection from "@/components/practice/ProgressSection";
+import StreakSection from "@/components/practice/StreakSection";
 
 const Practice = () => {
     return (

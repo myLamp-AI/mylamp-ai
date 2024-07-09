@@ -30,7 +30,7 @@ const ExpandingCard: React.FC<ExpandingCardProps> = ({
 
     return (
         <>
-            <input type="radio" name="slide" id={id} className="hidden" checked={selectedId === id}  />
+            <input type="radio" name="slide" id={id} className="hidden" defaultChecked={selectedId === id}  />
             <label
                 htmlFor={id}
                 className={`home-expanding-card w-full border-y-2 sm:border-y-0 sm:w-[200px] cursor-pointer min-h-[350px] flex p-4 gap-4 flex-col items-start justify-between overflow-hidden transition-all bg-white hover:bg-[#f7f7f7]` + " " + moreClass}
