@@ -5,7 +5,7 @@ import InfiniteLogoSlide from "./InfiniteLogoSlide";
 export default function HeroSection() {
   return (
     <>
-      <div className="flex flex-col bg-primary-foreground rounded-b-3xl">
+      <div className="flex flex-col max-w-screen overflow-hidden bg-primary-foreground rounded-b-3xl">
         <div className="flex justify-evenly items-center min-h-[555px] md:min-h-[700px] py-4 px-8 gap-8 w-full m-auto">
           <div className="flex flex-col justify-center lg:justify-end min-h-[600px] w-full">
             <div className="text-4xl md:text-5xl xl:text-6xl font-bold lg:ml-14 mb-6">
@@ -138,7 +138,7 @@ export default function HeroSection() {
             ></Image>
           </div>
         </div>
-        {/* <InfiniteLogoSlide /> */}
+        <InfiniteLogoSlide />
         {/* <div className="text-center text-2xl text-[#1C4980] font-semibold pt-1 pb-3">
                     Data from Top Institutes
                 </div> */}
