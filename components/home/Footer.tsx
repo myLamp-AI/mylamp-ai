@@ -5,11 +5,11 @@ import Image from "next/image";
 export default function Footer() {
     return (
         <>
-            <div className="flex gap-8 bg-gradient-to-tr shadow-br from-[#8C52FF] to-[#b7cdfb] p-[40px] mt-[100px]">
+            <div className="flex flex-col lg:flex-row gap-8 bg-gradient-to-tr shadow-br from-[#8C52FF] to-[#b7cdfb] p-[40px] mt-[100px]">
                 <div className="bg-white w-full rounded-2xl py-4 px-8 shadow-br">
-                    <div className="flex items-center justify-between px-4 text-2xl font-bold text-[#00000090] border-dashed border-b-[3px] pb-4">
-                        <Image src="/home/logo.svg" height={100} width={180} alt="logo" /> by
-                        <Image src="/home/myLampAI.svg" height={100} width={300} alt="myLampAI" />
+                    <div className="flex items-center justify-between sm:px-4 text-2xl font-bold text-[#00000090] border-dashed border-b-[3px] pb-4">
+                        <Image className="w-[100px] sm:w-[180px]" src="/home/logo.svg" height={100} width={180} alt="logo" /> by
+                        <Image className="w-[100px] sm:w-[300px]" src="/home/myLampAI.svg" height={100} width={300} alt="myLampAI" />
                     </div>
                     <div className="flex w-full gap-4 items-start justify-between ">
                         <div className="w-full flex flex-col items-start justify-between p-4 gap-6">
@@ -33,7 +33,7 @@ export default function Footer() {
                                 </div>
                             </div>
                         </div>
-                        <div className="w-full flex flex-col items-start justify-between py-4 gap-4  text-[0.9rem] text-[#00000090]">
+                        <div className="w-full hidden sm:flex flex-col items-start justify-between py-4 gap-4 text-[0.9rem] text-[#00000090]">
                             <h3 className="text-[#8C52FF] font-semibold text-xl">Stay Updated</h3>
                             <div className="flex items-center justify-start w-full overflow-hidden rounded-lg ">
                                 <input placeholder="Sign Up for our Newsletter" type="email" className="bg-primary-foreground w-full h-[35px] outline-none border-none py-2 px-4 font-semibold " />
@@ -58,7 +58,7 @@ export default function Footer() {
                             </div>
                         </div>
                     </div>
-                    <div className="flex items-center justify-center gap-6 pt-4 border-dashed border-t-[3px]">
+                    <div className="flex items-center justify-center gap-2 sm:gap-6 pt-4 border-dashed border-t-[3px]">
                         <Image src={"/home/whatsapp.svg"} width={30} height={30} alt="whatsapp" />
                         <Image src={"/home/instagram.svg"} width={30} height={30} alt="instagram" />
                         <Image src={"/home/linkedin.svg"} width={30} height={30} alt="linkedin" />
@@ -83,7 +83,7 @@ export default function Footer() {
                     </div>
                     <div className="w-full my-4">
                         <h3 className="text-2xl">Company</h3>
-                        <div className="flex gap-4 px-4 mt-4 ">
+                        <div className="flex gap-4 px-4 mt-4 flex-wrap ">
                             <p className="">About Us</p>
                             <p className="">Careers</p>
                             <p className="">Contact Us</p>

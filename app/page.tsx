@@ -30,8 +30,8 @@ export default function Page() {
         <BackedByBest />
         <PowerOfWize />
         <RecentAdvances />
-        {/* <CommunitySection />
-        <Footer /> */}
+        <CommunitySection />
+        <Footer />
       </main>
     </>
   );
