@@ -1,6 +1,7 @@
-import React from "react";
+"use client";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { useRef } from 'react';
+import Image from 'next/image';
 
 interface ExclusiveAssementsType {
 	text: string;
@@ -53,7 +54,10 @@ const ExclusiveAssessements = (props: { exclusiveAssements: ExclusiveAssementsTy
 				<div
 					style={{ backgroundColor: bgColor }}
 					className="rounded-lg h-[60%] relative">
-					<img
+					<Image
+						alt="exclusive assessment"
+						width={100}
+						height={100}
 						src={imgURL}
 						className="h-[70%] max-w-[70%] absolute right-5 bottom-0"
 					/>

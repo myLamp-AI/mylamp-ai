@@ -1,4 +1,5 @@
-import React, { useCallback, useState } from "react";
+"use client"
+import { useState } from "react";
 import { IoIosArrowRoundDown, IoIosArrowRoundForward } from "react-icons/io";
 import { MdDescription } from "react-icons/md";
 

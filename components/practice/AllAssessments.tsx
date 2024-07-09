@@ -1,3 +1,4 @@
+"use client"
 import React, { useState, useEffect, useRef } from "react";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import Image from "next/image";
@@ -53,7 +54,7 @@ const AllAssessments = (props: { allAssessements: AssessmentType[] }) => {
           }}
           className="h-[200px] rounded-lg shadow-lg bg-right-bottom bg-cover cursor-pointer border-2 hover:border-[#8C52FF] transition duration-500 relative"
         >
-          <Image width={10} height={10} src={imgURL} className="absolute h-2/3 w-1/2 right-0 bottom-1/2 translate-y-1/2" alt="" />
+          <Image width={10} height={10} src={imgURL} className="absolute h-2/3 w-1/2 right-0 bottom-1/2 translate-y-1/2" alt="Card" />
           <div className="my-5 ml-5 h-[70%] flex flex-col items-start justify-between">
             <div className="font-bold text-2xl">{text}</div>
             <button
@@ -95,7 +96,7 @@ const AllAssessments = (props: { allAssessements: AssessmentType[] }) => {
               <div className="flex justify-around" key={descIndex}>
                 <div className="bg-[#F1EAFF] rounded-full px-3 py-3 w-[65%] font-semibold text-gray-500 flex gap-5 items-center">
                   <div className="bg-[#8C52FF] rounded-full">
-                    <Image alt="" width={10} height={10} src={d.imgURL} className="rounded-full w-10 h-10" />
+                    <Image alt="allAssessements" width={10} height={10} src={d.imgURL} className="rounded-full w-10 h-10" />
                   </div>
                   <div>{d.text}</div>
                 </div>
