@@ -22,6 +22,7 @@ export default function Community() {
     const [isSmallScreen, setIsSmallScreen] = useState(false);
 
     const checkScreenSize = () => {
+
         setIsSmallScreen(window.innerWidth < 640); // Tailwind's sm breakpoint is 640px
     };
 
@@ -47,7 +48,7 @@ export default function Community() {
                         </div>
                     </div>
                     <Carousel />
-                    <div className="flex flex-col gap-3 overflow-x-clip mt-[250px]">
+                    <div className="flex flex-col gap-3 overflow-x-clip mt-[250px] mr-2">
                         <div className="flex flex-row justify-between">
                             <span className="text-base font-semibold">All Communities</span>
                             <button className="text-sm font-semibold text-[#8c52ff]">See All</button>
@@ -55,9 +56,9 @@ export default function Community() {
                         <div className="w-full gap-3 flex flex-col justify-center">
                             {
                                 Alldata.map((item, index) => (
-                                    <div key={index} className="w-full h-20 bg-[#fff] flex flex-row text-md font-bold justify-between items-center rounded-lg" onClick={() => { toggleHeading(Alldata[index].name); toggleIcon(Alldata[index].svg);handleSmScreen()}}>
+                                    <div key={index} className="w-full h-20 bg-[#fff] flex flex-row text-md font-bold justify-between items-center rounded-lg hover:bg-[#b290f5] cursor-pointer" onClick={() => { toggleHeading(Alldata[index].name); toggleIcon(Alldata[index].svg);handleSmScreen()}}>
                                         <div className="flex flex-row items-center">
-                                            <div className="w-[80px] p-1"><Image src={Alldata[index].svg} alt="img" height={10} width={10} className="w-full" /></div>
+                                            <div className="w-[80px] p-1"><Image src={Alldata[index].svg} alt="img" height={10} width={10}  className="w-full" /></div>
                                             <span className="pl-5">{Alldata[index].name}</span>
                                         </div>
                                         <div className={`w-10 h-10 rounded-full bg-[#8c52ff] text-lg ${Alldata[index].message === 0 ? "hidden" : "flex"} flex justify-center items-center text-[#fff] mr-3`}>{Alldata[index].message}</div>
