@@ -76,7 +76,7 @@ const HomeNavbar = () => {
             Company
           </Link>
           <button className="flex items-center bg-[#8C52FF] text-white pl-4 pr-2 py-2 gap-2 rounded-full">
-            Sign In
+            Login
             <Image
               src={"/home/userNavbar.svg"}
               alt=""
